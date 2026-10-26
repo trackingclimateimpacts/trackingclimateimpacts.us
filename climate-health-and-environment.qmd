@@ -1,5 +1,17 @@
 ---
 title: "Climate, Health and Environment"
+listing:
+  contents:
+    - "indicators/*.qmd"
+    - "!indicators/global-greenhouse-gas-emissions.qmd"
+    - "!indicators/ice-sheets.qmd"
+    - "!indicators/ocean-acidity.qmd"
+    - "!indicators/antarctic-sea-ice.qmd"
+  sort: "title"
+  type: grid
+  sort-ui: false
+  filter-ui: false
+  fields: [title, description]
+  image-height: auto
+page-layout: full
 ---
-
-{{< include /chunks/coming-soon.qmd >}}

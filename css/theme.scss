@@ -11,6 +11,7 @@ $accent-light: #5aa3f0;  // lightened for legibility on the dark footer bar
 $accent-dark:  #1b66bd;  // pressed states
 $ink:          #1e1e1e;  // near-black — navbar and footer
 $ink-soft:     #333333;  // header bar on climate.us proper
+$navbar-bg:    #f2f2f2;  // navbar fill, sampled from the Figma layout
 $body-text:    #464646;
 $panel:        #f4f4f5;  // light grey for cards, sidebar, callouts
 $rule:         #dcdcdc;  // neutral border, one step darker than $panel
@@ -137,11 +138,17 @@ a.quarto-grid-link * {
   text-decoration: none !important;
 }
 
-/* Navbar — the black header bar. `background: dark` in _quarto.yml gets Quarto
-   to emit the light-on-dark variant; this pins the exact shade. */
+/* Navbar — a white header carrying the site title, with the nav items in a
+   light grey pill beneath it (`$navbar-bg`). `background: light` in _quarto.yml
+   gets Quarto to emit the dark-on-light variant. */
 .navbar {
-  background-color: $ink !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background-color: $body-bg !important;
+
+  .navbar-nav .nav-link,
+  .quarto-navbar-tools > a,
+  .quarto-navbar-tools > .quarto-navbar-tool {
+    color: $ink;
+  }
 }
 
 nav.navbar {
@@ -161,8 +168,8 @@ nav.navbar {
   transition: background-color 0.15s ease, color 0.15s ease;
 
   &:hover {
-    background-color: $ink-soft;
-    color: #ffffff;
+    background-color: darken($navbar-bg, 6%);
+    color: $ink;
     text-decoration: none;
   }
 
@@ -180,7 +187,7 @@ nav.navbar {
 
   &.active {
     background-color: transparent;
-    color: #ffffff;
+    color: $ink;
 
     &::after {
       content: "";
@@ -195,21 +202,59 @@ nav.navbar {
 
   // Keep the hover wash on the current item, but let the rule sit on top.
   &.active:hover {
-    background-color: $ink-soft;
+    background-color: darken($navbar-bg, 6%);
   }
 }
 
-// The site title is repeated as the first navbar item, so the Bootstrap brand
-// is redundant on desktop. Keep it for the collapsed mobile navbar, where the
-// nav items are hidden behind the toggle.
+// The nav items sit in a grey pill. Collapsed (mobile) it is the toggled panel.
+#navbarCollapse {
+  background-color: $navbar-bg;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+// Desktop: title centred and large, pill centred beneath it, search tucked in
+// the top-right corner.
 @media (min-width: 992px) {
-  .navbar-brand-container,
-  .navbar .navbar-brand { display: none !important; }
+  .navbar > .navbar-container {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1.25rem;
+  }
+
+  .navbar-brand-container {
+    margin: 0 !important;
+    max-width: 100%;
+  }
+
+  .navbar .navbar-brand {
+    margin: 0;
+
+    .navbar-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: $ink;
+    }
+  }
+
+  #navbarCollapse {
+    flex-grow: 0;
+    border-radius: 999px;
+    padding: 0.9rem 3rem;
+
+    .navbar-nav { margin: 0 !important; }
+  }
+
+  #quarto-search {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.5rem;
+  }
 }
 
 .navbar-nav .nav-link {
   padding: 0.2rem 0.55rem !important;
-  font-size: 0.9rem;
+  font-size: 1rem;
   line-height: 1.2;
 }
 
@@ -243,27 +288,8 @@ nav.navbar {
     }
     .nav-link .menu-text { white-space: normal; text-wrap: balance; }
 
-    // Spacing + dividers between items, in both the left and right groups
-    & {
-      gap: 1.75rem;
-      &.ms-auto { padding-left: 1.75rem; }
-
-      .nav-item + .nav-item {
-        position: relative;
-
-        &::before {
-          content: '';
-          position: absolute;
-          left: -0.875rem;
-          top: 50%;
-          transform: translateY(-50%);
-          width: 1px;
-          height: 1rem;
-          background-color: rgba(255, 255, 255, 0.28);
-          pointer-events: none;
-        }
-      }
-    }
+    // Spacing between items
+    & { gap: 3rem; }
   }
 }
 
@@ -278,19 +304,19 @@ nav.navbar {
 }
 
 .navbar .dropdown-menu {
-  background-color: $ink;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background-color: $navbar-bg;
+  border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 4px;
 
   .dropdown-item {
-    color: rgba(255, 255, 255, 0.85);
+    color: $ink;
     font-size: 0.9rem;
 
     &:hover,
     &:focus,
     &.active {
-      background-color: $ink-soft;
-      color: #ffffff;
+      background-color: darken($navbar-bg, 6%);
+      color: $ink;
     }
   }
 }
