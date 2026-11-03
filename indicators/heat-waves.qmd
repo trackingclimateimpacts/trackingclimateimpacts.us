@@ -120,6 +120,10 @@ figure_caption(meta, "heat_wave_index_annual.csv")
 fig_3(index)
 ```
 
+::: {.callout-note appearance="simple" title="Newer perspectives on this indicator"}
+This heat wave figure was generated using weather station data from the National Weather Service Cooperative Observer Network. Any indicator can be sensitive to choices involved in its construction. For example, this indicator uses the U.S. National Heat Wave Index, which is defined as the average number of heat waves per unit area, where a heat wave is defined as average temperatures exceeding the 1 in 10 year threshold over a period of at least 4 days in a row. The indicator might look a little different if it was based on 1 in 5 year thresholds, or 3 days in a row. However, a recent analysis by Andrew Dessler on August 3rd, 2026, (https://www.theclimatebrink.com/p/fixing-one-of-climates-worst-plots) uncovered a more substantial issue: that this indicator was based on uncorrected data. This new analysis uses well-understood methods for correcting for changes in measurement approaches, such as changes in the time of day when measurements occur, to show a dramatic change in the relative heights of the 1930s peak to present day, with several recent years almost matching (or even exceeding, depending on dataset) the 1930s warmth. Still, the main conclusions of the heat wave indicators taken as a group do not change: the 1930s was a very hot time in the United States, amplified due to poor agricultural practices leading to localized warming during the Dust Bowl, and recent decades have shown substantial warming both domestically and globally, due to elevated concentrations of greenhouse gases.
+:::
+
 This figure shows the annual values of the U.S. Heat Wave Index from 1895 to 2021. These data cover the contiguous 48 states. An index value of 0.2 (for example) could mean that 20 percent of the country experienced one heat wave, 10 percent of the country experienced two heat waves, or some other combination of frequency and area resulted in this value.
 
 <details><summary>Show the data behind this figure</summary>
