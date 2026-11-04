@@ -15,19 +15,46 @@ format:
     link-external-newwindow: false
 ---
 
-# Welcome to climateindicators.us!
-
-{{< include chunks/description.qmd >}}
-
-<br>
-
-{{< include /chunks/coming-soon.qmd >}}
-
-<br>
-
 ```{=html}
-<div class="home-pills">
-  <a class="home-pill" href="about.html"><span class="home-pill-label"><i class="bi bi-info-circle"></i>About</span><span class="home-pill-desc">About the project, the data sources, and the people behind it.</span></a>
-  <a class="home-pill" href="indicators.html"><span class="home-pill-label"><i class="bi bi-graph-up"></i>Indicators</span><span class="home-pill-desc">Browse the full set of climate indicators we track.</span></a>
-</div>
+<section class="home-band home-hero">
+  <div>
+    <div class="home-title" role="heading" aria-level="1">Welcome to Tracking Climate Impacts!</div>
+    <p>TrackingClimateImpacts.us is an open, reproducible collection of climate change impact indicators for the United States. Built entirely from public data--with code and sources published alongside them—these indicators track observed trends in climate-related metrics that matter to people, public health, and the environment. They offer clear, trustworthy information to support evidence-based action and help state, local and public health practitioners plan for climate impacts, while ensuring students, researchers and the public have access to critical data.</p>
+    <p>Our mission, at GW’s Climate and Health Institute, is to maintain and expand these climate change impact indicators as a durable and transparent resource and to strengthen collaboration among data providers, developers, and users across academia and state, local, and community practitioners.</p>
+  </div>
+  <img class="home-hexes" src="images/hexagons.png" alt="">
+</section>
+
+<section class="home-band home-explore">
+  <div class="home-inner">
+    <p class="home-intro">The indicators below track measurable signals of a changing climate in the United States, built from public data with the code and sources published alongside it.</p>
+    <h2>Explore the Indicators</h2>
+    <label class="home-search-wrap"><i class="bi bi-search"></i><input class="home-search" id="home-search" type="search" aria-label="Filter indicator sections"></label>
+  </div>
+</section>
+
+<section class="home-cards-wrap">
+  <div class="home-cards">
+      <a class="home-card weather" href="indicators.html"><div class="card-img"><i class="bi bi-cloud-sun"></i></div><div class="card-body"><div class="card-title">Weather and Extreme Events</div><span class="card-link">Explore &rarr;</span></div></a>
+      <a class="home-card ice" href="indicators.html"><div class="card-img"><i class="bi bi-snow"></i></div><div class="card-body"><div class="card-title">Snow and Ice</div><span class="card-link">Explore &rarr;</span></div></a>
+      <a class="home-card coastal" href="indicators.html"><div class="card-img"><i class="bi bi-tsunami"></i></div><div class="card-body"><div class="card-title">Coastal and Marine</div><span class="card-link">Explore &rarr;</span></div></a>
+      <a class="home-card freshwater" href="indicators.html"><div class="card-img"><i class="bi bi-droplet"></i></div><div class="card-body"><div class="card-title">Freshwater Systems</div><span class="card-link">Explore &rarr;</span></div></a>
+      <a class="home-card ecosystems" href="indicators.html"><div class="card-img"><i class="bi bi-tree"></i></div><div class="card-body"><div class="card-title">Ecosystems</div><span class="card-link">Explore &rarr;</span></div></a>
+      <a class="home-card temp-health" href="indicators.html"><div class="card-img"><i class="bi bi-thermometer-half"></i></div><div class="card-body"><div class="card-title">Temperature-Related Health</div><span class="card-link">Explore &rarr;</span></div></a>
+      <a class="home-card vector" href="indicators.html"><div class="card-img"><i class="bi bi-bug"></i></div><div class="card-body"><div class="card-title">Vector-Related Health</div><span class="card-link">Explore &rarr;</span></div></a>
+      <a class="home-card societal" href="indicators.html"><div class="card-img"><i class="bi bi-house"></i></div><div class="card-body"><div class="card-title">Societal Systems</div><span class="card-link">Explore &rarr;</span></div></a>
+  </div>
+</section>
+
+<section class="home-band home-soft"></section>
+<section class="home-band home-footer"></section>
+
+<script>
+document.getElementById("home-search").addEventListener("input", function (e) {
+  var q = e.target.value.toLowerCase();
+  document.querySelectorAll(".home-card").forEach(function (c) {
+    c.style.display = c.textContent.toLowerCase().includes(q) ? "" : "none";
+  });
+});
+</script>
 ```
