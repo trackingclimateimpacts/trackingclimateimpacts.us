@@ -728,16 +728,20 @@ body:has(.home-band) .quarto-title-block { display: none; }
   &.ruled { border-bottom: 1px solid rgba(0, 0, 0, 0.07); }
 
   .where-img { height: sc(324px); background: $panel; margin-bottom: sc(28px); }
+  .where-img img { width: 100%; height: 100%; object-fit: cover; display: block; margin: 0; }
 }
 
 .where-users {
   padding-top: sc(71px);
   padding-bottom: sc(71px);
 
-  .where-users-head {
+  // Quarto turns this div into a <section>, which the .home-band rule above sets
+  // to display: contents; the extra classes outrank that rule.
+  &.home-band > section.where-users-head.level2 {
     display: grid;
     grid-template-columns: 539fr 729fr;
     column-gap: sc(20px);
+    align-items: start;
     margin-bottom: sc(28px);
   }
   h2 { font-size: sc(42px); line-height: 1.12; }
@@ -778,7 +782,7 @@ body:has(.home-band) .quarto-title-block { display: none; }
 
 @media (max-width: 991.98px) {
   .about-collab, .about-cards { grid-template-columns: 1fr; }
-  .where-users .where-users-head { grid-template-columns: 1fr; row-gap: 1rem; }
+  .where-users.home-band > section.where-users-head.level2 { grid-template-columns: 1fr; row-gap: 1rem; }
 }
 
 @media (max-width: 767.98px) {

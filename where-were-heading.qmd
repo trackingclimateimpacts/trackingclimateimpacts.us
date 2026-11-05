@@ -25,6 +25,7 @@ We are working towards updating these indicators to reflect emerging data, and, 
 The project’s open-source framework creates opportunities for ongoing review, feedback, and contributions from users and experts. In turn, these collaborations help to identify areas of emerging research needs, improve methods, and strengthen connections between data providers and the organizations responding to climate impacts on the ground. The project will help identify gaps in climate impact monitoring while supporting development of actionable indicators.
 
 ::: {.where-img}
+![](images/where_were_heading1.jpg){fig-alt=""}
 :::
 
 As climate impacts science advances and communities consider how best to adapt to changing conditions, so will the indicators. This resource provides a foundation for ongoing research, visualization, communication, and applied learning efforts that make climate impacts understandable, accessible, and actionable.
