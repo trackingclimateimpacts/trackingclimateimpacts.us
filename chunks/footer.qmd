@@ -1,0 +1,62 @@
+::: {.home-band .home-footer}
+
+::: {.home-footer-cols}
+
+::: {.home-footer-org}
+**GW Climate and Health Institute**
+
+950 New Hampshire Ave, NW, 101 — First Floor\
+Washington, DC 20052
+:::
+
+::: {.home-footer-col}
+### About
+
+- About
+- Where We’re Heading
+:::
+
+::: {.home-footer-col}
+### The Whole Story
+
+- The Whole Story
+- Green House Gases
+- Global Climate Indicators
+- Additional Resources
+:::
+
+::: {.home-footer-col}
+### The Indicators
+
+- Weather and Extreme Events
+- Snow and Ice
+- Coastal and Marine
+- Freshwater Systems
+- Ecosystems
+- Temperature-Related Health
+- Vector-Related Health
+- Societal Systems
+:::
+
+::: {.home-footer-col}
+### GW
+
+- Campus Advisories
+- EO/Nondiscrimination Policy
+- Website Privacy Notice
+- Contact GW
+- Accessibility
+- Terms of Use
+- Copyright
+- Report a Barrier to Accessibility
+:::
+
+:::
+
+::: {.home-footer-legal}
+- Terms of Service
+- Privacy Policy
+- Contact Us
+:::
+
+:::

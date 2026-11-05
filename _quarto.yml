@@ -30,15 +30,41 @@ website:
     search: true
     right:
       - text: "About"
-        href: about.qmd
-      - text: "The Whole Story"
         menu:
           - text: "About"
+            href: about.qmd
+          - text: "Where We’re Heading"
+            href: where-were-heading.qmd
+      - text: "The Whole Story"
+        menu:
+          - text: "The Whole Story"
             href: the-whole-story-about.qmd
-          - text: "Indicators"
+          - text: "Greenhouse Gases"
+            href: indicators/global-greenhouse-gas-emissions.qmd
+          - text: "Global Climate Indicators"
             href: the-whole-story-indicators.qmd
+          - text: "Additional Resources"
+            href: additional-resources.qmd
       - text: "Climate, Health, and Environment"
-        href: climate-health-and-environment.qmd
+        menu:
+          - text: "All Indicators"
+            href: climate-health-and-environment.qmd
+          - text: "Weather and Extreme Events"
+            href: weather-and-extreme-events.qmd
+          - text: "Snow and Ice"
+            href: snow-and-ice.qmd
+          - text: "Coastal and Marine"
+            href: coastal-and-marine.qmd
+          - text: "Freshwater Systems"
+            href: freshwater-systems.qmd
+          - text: "Ecosystems"
+            href: ecosystems.qmd
+          - text: "Temperature-Related Health"
+            href: temperature-related-health.qmd
+          - text: "Vector-Related Health"
+            href: vector-related-health.qmd
+          - text: "Societal Systems"
+            href: societal-systems.qmd
       - text: "Methodology"
         href: methodology.qmd
 

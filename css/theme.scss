@@ -436,15 +436,15 @@ main.content {
 /* ---- Home page, from the Figma frame. Full-bleed bands: each .home-band
    breaks out of Quarto's content column to the viewport width. Figma's fixed
    pixel heights are min-heights here so the page reflows on small screens. */
-body:has(.home-hero) { overflow-x: clip; }
+body:has(.home-band) { overflow-x: clip; }
 
 // Let the hero start directly under the navbar.
-body:has(.home-hero) main.content {
+body:has(.home-band) main.content {
   margin-top: 0 !important;
   padding-top: 0 !important;
   padding-bottom: 0;
 }
-body:has(.home-hero) .quarto-title-block { display: none; }
+body:has(.home-band) .quarto-title-block { display: none; }
 
 .home-band {
   width: 100vw;
@@ -458,7 +458,7 @@ body:has(.home-hero) .quarto-title-block { display: none; }
   h1, h2, h3 { font-family: $font-inter; font-weight: 800; border: 0; margin: 0; padding: 0; }
   p { margin: 0; }
   // Quarto wraps each heading in a <section>; keep it out of the layout.
-  section:not([class*="home-"]) { display: contents; }
+  section:not([class*="home-"]):not([class*="about-"]) { display: contents; }
 }
 
 .home-hero {
@@ -521,7 +521,8 @@ body:has(.home-hero) .quarto-title-block { display: none; }
   .home-feature-eyebrow { font-family: $font-inter; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
   .home-feature-link { font-family: $font-inter; font-size: 15px; font-weight: 600; text-decoration: none; padding: 6px 0; }
   .home-feature-img { min-height: sc(300px); }
-  .home-feature-img img { width: 100%; height: 100%; object-fit: cover; display: block; margin: 0; }
+  .home-feature-img { position: relative; }
+  .home-feature-img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; margin: 0; }
 
   &.indicators { background: $home-navy; color: #fff; h2, a { color: #fff; } h2 { font-size: sc(49px); line-height: 1.12; } .home-feature-img { background: rgba(255, 255, 255, 0.12); } }
   &.story { background: $home-sand; color: #000; h2, a { color: #000; } .home-feature-img { background: rgba(0, 0, 0, 0.08); order: -1; } }
@@ -609,6 +610,109 @@ body:has(.home-hero) .quarto-title-block { display: none; }
   .home-section h2, .home-feature h2 { font-size: 2rem; }
   .home-statement p { font-size: 1.3rem; }
   .home-footer .home-footer-legal ul { justify-content: flex-start; }
+}
+
+/* ---- About page, from the Figma frame. Reuses .home-band and the footer. */
+.about-intro {
+  background: $home-navy;
+  color: #fff;
+  padding-top: sc(96px);
+  padding-bottom: sc(59px);
+
+  h2 { font-size: sc(55px); line-height: 1.12; color: #fff; margin-bottom: sc(30px); }
+  p { font-size: sc(20px); line-height: 1.6; max-width: sc(1293px); }
+}
+
+.about-collab-wrap {
+  padding-top: sc(58px);
+  padding-bottom: sc(50px);
+  padding-left: 3.6vw;
+  padding-right: 3.6vw;
+}
+
+.about-collab {
+  display: grid;
+  grid-template-columns: 1.24fr 1fr;
+  min-height: sc(515px);
+  background: $home-green;
+  color: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+
+  .about-collab-text { padding: sc(44px); }
+  h2 { font-size: sc(50px); line-height: 1.12; color: #fff; margin-bottom: sc(24px); }
+  p { font-size: sc(20px); line-height: 1.6; }
+  .about-collab-img { min-height: sc(300px); background: rgba(255, 255, 255, 0.18); }
+  .about-collab-img { position: relative; }
+  .about-collab-img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; margin: 0; }
+}
+
+.about-section {
+  padding-top: sc(50px);
+  padding-bottom: sc(96px);
+
+  h2 { font-size: sc(44px); line-height: 1.12; margin-bottom: sc(28px); }
+  p { font-size: sc(20px); line-height: 1.6; max-width: sc(1094px); margin-bottom: sc(28px); }
+  p:last-child { margin-bottom: 0; }
+
+  &.ruled { border-bottom: 2px solid rgba(0, 0, 0, 0.14); }
+}
+
+.about-cards {
+  display: grid;
+  grid-template-columns: 612fr 662fr;
+  gap: sc(40px);
+  align-items: start;
+  margin-bottom: sc(61px);
+}
+
+.about-card {
+  background: #D1E8C5;
+  border-radius: 12px;
+  padding: sc(28px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+
+  h3 { font-size: sc(32px); line-height: 1.12; margin-bottom: sc(20px); }
+  p { font-size: sc(18px); line-height: 1.6; max-width: none; margin-bottom: sc(20px); }
+  .home-btn { margin-top: 0; background: #1C3A29; color: #fff !important; }
+}
+
+.about-find {
+  background: $home-green;
+  color: #fff;
+  padding-top: sc(96px);
+  padding-bottom: sc(96px);
+
+  h2 { font-size: sc(44px); line-height: 1.12; color: #fff; margin-bottom: sc(28px); }
+  p { font-size: sc(20px); line-height: 1.6; max-width: sc(1316px); margin-bottom: sc(28px); }
+  p:last-child { margin-bottom: 0; }
+}
+
+.about-commit {
+  padding-top: sc(75px);
+
+  ul { list-style: none; margin: 0; padding: 0; }
+  li {
+    font-family: $font-inter;
+    font-size: sc(23px);
+    line-height: 1.6;
+    padding: sc(24px) 0;
+    border-top: 1px solid #B9C7D0;
+    max-width: sc(1000px);
+    box-sizing: content-box;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .about-collab, .about-cards { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 767.98px) {
+  .about-collab-wrap { padding-left: 1.5rem; padding-right: 1.5rem; }
+  .about-collab .about-collab-text { padding: 2rem 1.5rem; }
+  .about-intro h2, .about-collab h2, .about-section h2, .about-find h2 { font-size: 2rem; }
+  .about-intro p, .about-collab p, .about-section p, .about-find p { font-size: 1rem; }
 }
 
 /* ---- Listing cards: Indicators grid (.quarto-grid-item) + any post list
