@@ -22,7 +22,7 @@ $btn-hover:    #708C69;  // download button hover fill
 
 // Home page palette and faces, from the Figma home page frame.
 $home-green:      #78A65D;
-$home-gold:       #B88E00;
+$home-orange:       #FEA702;
 $home-charcoal:   #404040;
 $home-navy:       #363B7C;
 $home-sand:       #FFD380;
@@ -273,7 +273,7 @@ nav.navbar {
 }
 
 // "Climate" in the logo is gold at every width, including the collapsed navbar.
-.navbar .navbar-title .logo-accent { color: $home-gold; }
+.navbar .navbar-title .logo-accent { color: $home-orange; }
 
 .navbar .navbar-nav .nav-link {
   padding: sc(13px) clamp(sc(8px), 1vw, sc(22px)) !important;
