@@ -5,6 +5,7 @@ License: CC-BY-SA
 Encoding: UTF-8
 Imports:
     curl,
+    downlit,
     dplyr,
     echarts4r,
     ggiraph,
@@ -19,4 +20,5 @@ Imports:
     scales,
     sf,
     tidyr,
+    xml2,
     yaml

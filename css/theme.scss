@@ -26,6 +26,8 @@ $home-orange:       #FEA702;
 $home-charcoal:   #404040;
 $home-navy:       #363B7C;
 $home-sand:       #FFD380;
+$where-gold:      #F3AA1E;
+$where-rust:      #A35638;
 $home-gutter:     6.6vw;   // 100px at the Figma 1512px frame
 
 // The Figma frame is drawn for 1512px at 100% browser zoom, which reads large
@@ -704,8 +706,79 @@ body:has(.home-band) .quarto-title-block { display: none; }
   }
 }
 
+/* ---- Where We're Heading, from the Figma frame. Reuses .home-band and the footer. */
+.where-intro {
+  background: $where-gold;
+  color: #fff;
+  padding-top: sc(96px);
+  padding-bottom: sc(96px);
+
+  h2 { font-size: sc(55px); line-height: 1.12; color: #fff; margin-bottom: sc(28px); }
+  p { font-size: sc(22px); line-height: 1.6; max-width: sc(970px); }
+}
+
+.where-section {
+  padding-top: sc(46px);
+  padding-bottom: sc(96px);
+
+  h2 { font-size: sc(44px); line-height: 1.12; margin-bottom: sc(28px); }
+  p { font-size: sc(20px); line-height: 1.6; margin-bottom: sc(28px); }
+  p:last-child { margin-bottom: 0; }
+
+  &.ruled { border-bottom: 1px solid rgba(0, 0, 0, 0.07); }
+
+  .where-img { height: sc(324px); background: $panel; margin-bottom: sc(28px); }
+}
+
+.where-users {
+  padding-top: sc(71px);
+  padding-bottom: sc(71px);
+
+  .where-users-head {
+    display: grid;
+    grid-template-columns: 539fr 729fr;
+    column-gap: sc(20px);
+    margin-bottom: sc(28px);
+  }
+  h2 { font-size: sc(42px); line-height: 1.12; }
+  .where-users-head p { font-size: sc(22px); line-height: 1.6; }
+  .where-users-foot { font-size: sc(17px); line-height: 1.6; margin-top: sc(28px); }
+}
+
+.where-list {
+  max-width: sc(1087px);
+  font-family: $font-inter;
+}
+
+.where-item {
+  display: flex;
+  align-items: center;
+  gap: sc(24px);
+  padding: sc(24px) 0;
+  border-top: 1px solid #B9C7D0;
+
+  .where-num { flex: none; width: sc(32px); font-size: 13px; color: #606866; }
+  p { font-size: sc(18px); line-height: 1.6; font-weight: 400; margin: 0; }
+  strong { font-size: sc(23px); font-weight: 800; }
+}
+
+.where-next {
+  background: $where-rust;
+  color: #fff;
+  padding-top: sc(52px);
+  padding-bottom: sc(96px);
+
+  h2 { font-size: sc(42px); line-height: 1.12; color: #fff; margin-bottom: sc(28px); }
+  p, li { font-size: sc(20px); line-height: 1.6; max-width: sc(970px); }
+  p { margin-bottom: sc(20px); }
+  p:last-child { margin-bottom: 0; }
+  ul { margin: 0 0 sc(20px); padding-left: 1.25rem; }
+  a { color: #fff; text-decoration: underline; }
+}
+
 @media (max-width: 991.98px) {
   .about-collab, .about-cards { grid-template-columns: 1fr; }
+  .where-users .where-users-head { grid-template-columns: 1fr; row-gap: 1rem; }
 }
 
 @media (max-width: 767.98px) {
@@ -713,6 +786,8 @@ body:has(.home-band) .quarto-title-block { display: none; }
   .about-collab .about-collab-text { padding: 2rem 1.5rem; }
   .about-intro h2, .about-collab h2, .about-section h2, .about-find h2 { font-size: 2rem; }
   .about-intro p, .about-collab p, .about-section p, .about-find p { font-size: 1rem; }
+  .where-intro h2, .where-section h2, .where-users h2, .where-next h2 { font-size: 2rem; }
+  .where-intro p, .where-section p, .where-users p, .where-next p, .where-next li { font-size: 1rem; }
 }
 
 /* ---- Listing cards: Indicators grid (.quarto-grid-item) + any post list
