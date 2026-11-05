@@ -50,21 +50,21 @@ website:
           - text: "All Indicators"
             href: climate-health-and-environment.qmd
           - text: "Weather and Extreme Events"
-            href: weather-and-extreme-events.qmd
+            href: categories/weather-and-extreme-events.qmd
           - text: "Snow and Ice"
-            href: snow-and-ice.qmd
+            href: categories/snow-and-ice.qmd
           - text: "Coastal and Marine"
-            href: coastal-and-marine.qmd
+            href: categories/coastal-and-marine.qmd
           - text: "Freshwater Systems"
-            href: freshwater-systems.qmd
+            href: categories/freshwater-systems.qmd
           - text: "Ecosystems"
-            href: ecosystems.qmd
+            href: categories/ecosystems.qmd
           - text: "Temperature-Related Health"
-            href: temperature-related-health.qmd
+            href: categories/temperature-related-health.qmd
           - text: "Vector-Related Health"
-            href: vector-related-health.qmd
+            href: categories/vector-related-health.qmd
           - text: "Societal Systems"
-            href: societal-systems.qmd
+            href: categories/societal-systems.qmd
       - text: "Methodology"
         href: methodology.qmd
 

@@ -1,0 +1,47 @@
+---
+title: ""
+pagetitle: "Coastal and Marine"
+listing:
+  - id: cat-listing
+    contents:
+      - ../indicators/sea-surface-temperature.qmd
+      - ../indicators/sea-level.qmd
+      - ../indicators/coastal-flooding.qmd
+      - ../indicators/marine-heat-waves.qmd
+      - ../indicators/atlantic-coast.qmd
+    type: grid
+    grid-columns: 3
+    sort: false
+    sort-ui: false
+    filter-ui: true
+    fields: [title, description]
+    image-height: auto
+execute:
+  echo: false
+page-layout: full
+toc: false
+anchor-sections: false
+---
+
+::: {.home-band .cat-hero .cat-coastal-marine}
+## Coastal and Marine
+:::
+
+::: {.home-band .cat-body}
+::: {.cat-intro}
+This indicator tracks marine heat waves, sea levels, coastal flooding, ocean acidity, and land loss along the Atlantic coastline.
+:::
+
+::: {.cat-columns}
+{{< include /chunks/category-nav.qmd >}}
+
+::: {.cat-main}
+::: {#cat-listing}
+:::
+
+[View All](/climate-health-and-environment.qmd){.cat-viewall}
+:::
+:::
+:::
+
+{{< include /chunks/footer.qmd >}}

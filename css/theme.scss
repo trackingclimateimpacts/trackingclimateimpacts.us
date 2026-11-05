@@ -4,13 +4,39 @@
 /*-- scss:defaults --*/
 
 // ---------------------------------------------------------------------------
+// Brand palette, from the Figma "Type and Colors" sheet. This is the only place
+// these hex codes are written; everything else in this file refers to them by
+// name. Grouped by hue family, dark to light.
+// ---------------------------------------------------------------------------
+$teal:             #397E9A;
+$teal-light:       #8CBACD;
+$teal-tint:        #E3F0F4;
+$orange:           #FEA702;
+$sand:             #FFD380;
+$sand-tint:        #FCF1DB;
+$navy-dark:        #24284F;
+$navy:             #363B7C;
+$periwinkle:       #858BC2;
+$periwinkle-tint:  #E8E9F4;
+$green-dark:       #315744;
+$green:            #78A65D;
+$green-tint:       #E7EEDF;
+$rust-dark:        #6B4835;
+$rust:             #A35638;
+$rust-light:       #BE7356;
+$cream:            #F7F5EF;
+$tan:              #EAD9B7;
+$stone:            #D3D6CF;
+$charcoal:         #282D35;
+
+// ---------------------------------------------------------------------------
 // Palette, lifted from climate.us. Every tinted rule below derives from these,
 // so re-theming the site means editing this block and nothing else.
 // ---------------------------------------------------------------------------
 $accent:       #2882e6;  // link / brand blue
 $accent-light: #5aa3f0;  // lightened for legibility on the dark footer bar
 $accent-dark:  #1b66bd;  // pressed states
-$ink:          #1e1e1e;  // near-black — navbar and footer
+$ink:          $charcoal;  // near-black — navbar and footer
 $ink-soft:     #333333;  // header bar on climate.us proper
 $nav-outline:  #6b6b6b;  // outline on the current nav item, sampled from the Figma layout
 $navbar-bg:    #f2f2f2;  // navbar fill, sampled from the Figma layout
@@ -18,16 +44,16 @@ $body-text:    #464646;
 $panel:        #f4f4f5;  // light grey for cards, sidebar, callouts
 $rule:         #dcdcdc;  // neutral border, one step darker than $panel
 $muted:        #757575;
-$btn-hover:    #708C69;  // download button hover fill
+$btn-hover:    $green;  // download button hover fill
 
 // Home page palette and faces, from the Figma home page frame.
-$home-green:      #78A65D;
-$home-orange:       #FEA702;
-$home-charcoal:   #404040;
-$home-navy:       #363B7C;
-$home-sand:       #FFD380;
-$where-gold:      #F3AA1E;
-$where-rust:      #A35638;
+$home-green:      $green;
+$home-orange:     $orange;
+$home-charcoal:   $charcoal;
+$home-navy:       $navy;
+$home-sand:       $sand;
+$where-gold:      $orange;
+$where-rust:      $rust;
 $home-gutter:     6.6vw;   // 100px at the Figma 1512px frame
 
 // The Figma frame is drawn for 1512px at 100% browser zoom, which reads large
@@ -490,13 +516,13 @@ body:has(.home-band) .quarto-title-block { display: none; }
   padding-bottom: sc(60px);
 
   p {
-    border-left: 4px solid #7B9669;
-    box-shadow: -2px 0 8px rgba(123, 150, 105, 0.2);
+    border-left: 4px solid $green;
+    box-shadow: -2px 0 8px rgba($green, 0.2);
     padding: sc(20px) 0 sc(20px) sc(24px);
     max-width: sc(1061px);
     font-size: sc(21px);
     line-height: 1.5;
-    color: #1C3A29;
+    color: $green-dark;
   }
 }
 
@@ -670,14 +696,14 @@ body:has(.home-band) .quarto-title-block { display: none; }
 }
 
 .about-card {
-  background: #D1E8C5;
+  background: $green-tint;
   border-radius: 12px;
   padding: sc(28px);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
 
   h3 { font-size: sc(32px); line-height: 1.12; margin-bottom: sc(20px); }
   p { font-size: sc(18px); line-height: 1.6; max-width: none; margin-bottom: sc(20px); }
-  .home-btn { margin-top: 0; background: #1C3A29; color: #fff !important; }
+  .home-btn { margin-top: 0; background: $green-dark; color: #fff !important; }
 }
 
 .about-find {
@@ -843,7 +869,7 @@ body:has(.home-band) .quarto-title-block { display: none; }
   grid-template-columns: 1fr;
   max-width: sc(1090px);
   margin: 0 auto;
-  background: #E8E9F4;
+  background: $periwinkle-tint;
   border-radius: 12px;
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
   padding: sc(83px);
@@ -903,8 +929,8 @@ body:has(.home-band) .quarto-title-block { display: none; }
 }
 
 /* ---- Emissions & Climate Resources ("The Whole Story"), from the Figma frame. Reuses .home-band and the footer. */
-$story-teal: #397E9A;
-$story-mist: #D2E1CA;
+$story-teal: $teal;
+$story-mist: $green-tint;
 
 .story-hero {
   background: $story-teal;
@@ -985,7 +1011,7 @@ $story-mist: #D2E1CA;
 
 .story-btn {
   display: inline-block;
-  background: #1C3A29;
+  background: $green-dark;
   color: #fff !important;
   font-family: $font-inter;
   font-weight: 500;
@@ -1251,7 +1277,7 @@ table thead th {
 }
 
 /* ---- Additional Resources, from the Figma frame. Reuses .home-band and the footer. */
-$res-card-bg: #8CBACD;
+$res-card-bg: $teal-light;
 
 .res-hero {
   background: $story-teal;
@@ -1484,4 +1510,106 @@ $ghg-ink:  #0C0D1B;
 @media (max-width: 767.98px) {
   .gci-hero h2, .gci-section h2 { font-size: 2rem; }
   .gci-hero p, .gci-section p { font-size: 1rem; }
+}
+
+/* ---- Indicator category pages (Weather and Extreme Events, etc.), from the Figma frame.
+   Reuses .home-band and the footer. The hero takes its colour from the same
+   $card-category-map variables as the sidebar; swap in the Figma banner image later. */
+$cat-card-border: #C8C8C8;
+
+@each $name, $colour in (
+  cat-weather-extremes: $cat-weather-extremes, cat-cryosphere: $cat-cryosphere,
+  cat-coastal-marine: $cat-coastal-marine, cat-freshwater: $cat-freshwater,
+  cat-ecosystems: $cat-ecosystems, cat-temperature-health: $cat-temperature-health,
+  cat-vector-health: $cat-vector-health, cat-societal: $cat-societal
+) {
+  .cat-hero.#{$name} { background: $colour; }
+}
+
+.cat-hero {
+  min-height: sc(485px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+
+  h2 { font-size: sc(55px); line-height: 1.2; color: #fff; }
+}
+
+.cat-body { padding-top: sc(70px); padding-bottom: sc(90px); }
+
+.cat-intro {
+  max-width: sc(833px);
+  border-left: 3px solid $green;
+  box-shadow: -2px 0 8px rgba($green, 0.2);
+  padding: sc(30px) 0 sc(30px) sc(28px);
+  margin-bottom: sc(60px);
+  font-size: sc(24px);
+  line-height: 1.5;
+  color: $green-dark;
+}
+
+.cat-columns {
+  display: grid;
+  grid-template-columns: sc(221px) 1fr;
+  column-gap: sc(110px);
+  align-items: start;
+}
+
+.cat-side {
+  .cat-side-title { display: block; font-family: $font-inter; font-size: sc(30px); font-weight: 800; margin-bottom: sc(34px); }
+  ul { list-style: none; padding: 0; margin: 0; }
+  li { margin-bottom: sc(29px); }
+  a { color: #000; font-family: $font-krub; font-size: 16px; line-height: 1.5; text-decoration: none !important; }
+  a:hover { text-decoration: underline !important; }
+  a.is-current { font-weight: 600; }
+}
+
+.cat-main {
+  // Search box from Quarto's listing filter, shaped like the Figma pill.
+  .listing-filter, .quarto-listing-filter input, input.search {
+    width: sc(278px);
+    border: 2px solid #8C8C8C;
+    border-radius: 30px;
+    padding: 0.6rem 1.2rem;
+    font-family: $font-krub;
+    font-size: 18px;
+  }
+  .listing-actions-group { justify-content: flex-start; }
+  .quarto-listing-filter { margin-bottom: sc(24px); .input-group-text { display: none; } }
+
+  .quarto-grid-item.card {
+    border: 2px solid $cat-card-border;
+    border-radius: 21px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+    padding: sc(32px) sc(24px);
+
+    // The category-colour icon the Indicators grid shows is not part of this design.
+    .card-title::before { content: none !important; }
+    .card-title { font-family: $font-inter; font-size: 20px; font-weight: 900; color: #000; }
+    .card-text, .listing-description { font-family: $font-krub; font-size: 15px; color: rgba(0, 0, 0, 0.55); }
+    .card-body::after { content: "Explore \2192"; display: block; margin-top: 12px; font-family: $font-inter; font-size: 15px; font-weight: 900; color: #000; }
+  }
+}
+
+.cat-viewall {
+  display: block;
+  width: fit-content;
+  margin: sc(60px) auto 0;
+  background: $home-charcoal;
+  color: #F5F5F5 !important;
+  font-family: $font-inter;
+  font-size: 24px;
+  font-weight: 900;
+  text-decoration: none !important;
+  border-radius: 20px;
+  padding: 12px 36px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 991.98px) {
+  .cat-columns { grid-template-columns: 1fr; row-gap: 2rem; }
+  .cat-hero h2 { font-size: 2rem; }
+  .cat-intro { font-size: 1.1rem; }
 }

@@ -1,0 +1,52 @@
+---
+title: ""
+pagetitle: "Weather and Extreme Events"
+listing:
+  - id: cat-listing
+    contents:
+      - ../indicators/us-and-global-temperature.qmd
+      - ../indicators/seasonal-temperature.qmd
+      - ../indicators/high-and-low-temperatures.qmd
+      - ../indicators/heat-waves.qmd
+      - ../indicators/heavy-precipitation.qmd
+      - ../indicators/tropical-cyclone-activity.qmd
+      - ../indicators/river-flooding.qmd
+      - ../indicators/drought.qmd
+      - ../indicators/temperature-and-drought-in-the-southwest.qmd
+      - ../indicators/wildfires.qmd
+    type: grid
+    grid-columns: 3
+    sort: false
+    sort-ui: false
+    filter-ui: true
+    fields: [title, description]
+    image-height: auto
+execute:
+  echo: false
+page-layout: full
+toc: false
+anchor-sections: false
+---
+
+::: {.home-band .cat-hero .cat-weather-extremes}
+## Weather and Extreme Events
+:::
+
+::: {.home-band .cat-body}
+::: {.cat-intro}
+This indicator tracks changes in national and global temperatures, precipitation, and extreme weather events, including heat waves, wildfires, tropical cyclones, flooding, and drought.
+:::
+
+::: {.cat-columns}
+{{< include /chunks/category-nav.qmd >}}
+
+::: {.cat-main}
+::: {#cat-listing}
+:::
+
+[View All](/climate-health-and-environment.qmd){.cat-viewall}
+:::
+:::
+:::
+
+{{< include /chunks/footer.qmd >}}

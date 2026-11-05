@@ -1,5 +1,0 @@
----
-title: "Weather and Extreme Events"
----
-
-{{< include /chunks/coming-soon.qmd >}}

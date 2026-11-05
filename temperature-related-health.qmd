@@ -1,5 +1,0 @@
----
-title: "Temperature-Related Health"
----
-
-{{< include /chunks/coming-soon.qmd >}}

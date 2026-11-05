@@ -1,0 +1,18 @@
+::: {.cat-side}
+[Category]{.cat-side-title}
+
+- [Weather and Extreme Events](/categories/weather-and-extreme-events.qmd)
+- [Snow and Ice](/categories/snow-and-ice.qmd)
+- [Coastal and Marine](/categories/coastal-and-marine.qmd)
+- [Freshwater Systems](/categories/freshwater-systems.qmd)
+- [Ecosystems](/categories/ecosystems.qmd)
+- [Temperature-Related Health](/categories/temperature-related-health.qmd)
+- [Vector-Related Health](/categories/vector-related-health.qmd)
+- [Societal Systems](/categories/societal-systems.qmd)
+
+<script>
+document.querySelectorAll(".cat-side a").forEach(function (a) {
+  if (a.pathname.replace(/\.html$/, "") === location.pathname.replace(/\.html$/, "")) a.classList.add("is-current");
+});
+</script>
+:::

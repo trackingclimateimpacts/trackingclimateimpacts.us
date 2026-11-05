@@ -1,0 +1,45 @@
+---
+title: ""
+pagetitle: "Societal Systems"
+listing:
+  - id: cat-listing
+    contents:
+      - ../indicators/heating-and-cooling-degree-days.qmd
+      - ../indicators/residential-energy-use.qmd
+    type: grid
+    grid-columns: 3
+    sort: false
+    sort-ui: false
+    filter-ui: true
+    fields: [title, description]
+    image-height: auto
+execute:
+  echo: false
+page-layout: full
+toc: false
+anchor-sections: false
+---
+
+::: {.home-band .cat-hero .cat-societal}
+## Societal Systems
+:::
+
+::: {.home-band .cat-body}
+<!-- DRAFT intro built from the indicator names; replace with the Figma wording. -->
+::: {.cat-intro}
+These indicators track heating and cooling degree days and residential energy use.
+:::
+
+::: {.cat-columns}
+{{< include /chunks/category-nav.qmd >}}
+
+::: {.cat-main}
+::: {#cat-listing}
+:::
+
+[View All](/climate-health-and-environment.qmd){.cat-viewall}
+:::
+:::
+:::
+
+{{< include /chunks/footer.qmd >}}
