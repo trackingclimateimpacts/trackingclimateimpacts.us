@@ -21,10 +21,12 @@ $muted:        #757575;
 $btn-hover:    #708C69;  // download button hover fill
 
 // Home page palette and faces, from the Figma home page frame.
-$home-green:      #5E967D;
+$home-green:      #78A65D;
 $home-gold:       #B88E00;
-$home-green-soft: rgba(94, 150, 125, 0.55);
 $home-charcoal:   #404040;
+$home-navy:       #363B7C;
+$home-sand:       #FFD380;
+$home-gutter:     6.6vw;   // 100px at the Figma 1512px frame
 
 // The Figma frame is drawn for 1512px at 100% browser zoom, which reads large
 // on a laptop. Every home-page and navbar pixel size passes through sc() so the
@@ -440,170 +442,173 @@ body:has(.home-hero) { overflow-x: clip; }
 body:has(.home-hero) main.content {
   margin-top: 0 !important;
   padding-top: 0 !important;
+  padding-bottom: 0;
 }
 body:has(.home-hero) .quarto-title-block { display: none; }
 
 .home-band {
   width: 100vw;
   margin-left: calc(50% - 50vw);
-  padding: 4rem 1.5rem;
-  color: #fff;
+  padding-left: $home-gutter;
+  padding-right: $home-gutter;
   font-family: $font-krub;
+  color: #000;
+  background: #fff;
 
-  .home-title, h2 {
-    font-family: $font-inter;
-    font-weight: 800;
-    border: 0;
-    color: #fff;
-  }
-}
-
-.home-inner {
-  max-width: sc(1026px);
-  margin: 0 auto;
+  h1, h2, h3 { font-family: $font-inter; font-weight: 800; border: 0; margin: 0; padding: 0; }
+  p { margin: 0; }
+  // Quarto wraps each heading in a <section>; keep it out of the layout.
+  section:not([class*="home-"]) { display: contents; }
 }
 
 .home-hero {
   background: $home-green;
-  min-height: min(sc(949px), 100vh);
-  padding: 3rem 0 3rem sc(98px);
+  color: #fff;
+  min-height: sc(894px);
   display: grid;
-  grid-template-columns: minmax(0, 700px) 1fr;
+  grid-template-columns: minmax(0, sc(855px)) 1fr;
   align-items: center;
+  column-gap: 2rem;
 
-  // Text block: nudged up and right of the grid's centre line.
-  > div:first-child {
-    margin-bottom: 60px;
-    margin-left: 60px;
-  }
+  .home-hero-text h2 { font-size: sc(55px); line-height: sc(60px); color: #fff; margin-bottom: sc(24px); }
+  p { font-size: sc(21px); max-width: sc(665px); }
+  a { color: #fff; }
 
-  .home-title {
-    font-size: 60px;
-    line-height: 1.09;
-    margin-bottom: 1.5rem;
-  }
-
-  p { font-size: 20px; }
-
-  .home-hexes {
+  .home-hero-img {
     justify-self: end;
-    width: 100%;
-    max-width: sc(711px);
-    height: auto;
+    align-self: center;
+    width: sc(520px);
+
+    img { width: 100%; height: auto; display: block; margin: 0; }
   }
 }
 
-.home-explore {
-  background: $home-gold;
-  min-height: min(sc(757px), 100vh);
+.home-mission {
+  padding-top: sc(59px);
+  padding-bottom: sc(60px);
 
-  .home-intro {
-    border-left: 4px solid #fff;
-    padding-left: 1.25rem;
-    font-size: 20px;
-    margin-bottom: 2.4rem;
-  }
-
-  h2 {
-    text-align: center;
-    font-size: sc(64px);
-    line-height: 1.1;
-    margin-bottom: 1.5rem;
+  p {
+    border-left: 4px solid #7B9669;
+    box-shadow: -2px 0 8px rgba(123, 150, 105, 0.2);
+    padding: sc(20px) 0 sc(20px) sc(24px);
+    max-width: sc(1061px);
+    font-size: sc(21px);
+    line-height: 1.5;
+    color: #1C3A29;
   }
 }
 
-.home-search-wrap {
+// Two feature cards: copy on one side, image slot on the other.
+.home-feature {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: sc(606px);
+  margin-bottom: sc(92px);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+
+  .home-feature-text {
+    padding: sc(96px) sc(56px) sc(96px) sc(96px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: sc(26px);
+  }
+  h2 { font-size: sc(44px); line-height: 1.12; }
+  p { font-size: sc(17px); line-height: 1.6; }
+  .home-feature-eyebrow { font-family: $font-inter; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+  .home-feature-link { font-family: $font-inter; font-size: 15px; font-weight: 600; text-decoration: none; padding: 6px 0; }
+  .home-feature-img { min-height: sc(300px); }
+  .home-feature-img img { width: 100%; height: 100%; object-fit: cover; display: block; margin: 0; }
+
+  &.indicators { background: $home-navy; color: #fff; h2, a { color: #fff; } h2 { font-size: sc(49px); line-height: 1.12; } .home-feature-img { background: rgba(255, 255, 255, 0.12); } }
+  &.story { background: $home-sand; color: #000; h2, a { color: #000; } .home-feature-img { background: rgba(0, 0, 0, 0.08); order: -1; } }
+}
+
+.home-section {
+  padding-top: sc(50px);
+  padding-bottom: sc(50px);
+
+  h2 { font-size: sc(44px); line-height: 1.12; margin-bottom: sc(26px); }
+  p { font-size: sc(17px); line-height: 1.6; max-width: sc(1089px); }
+  p a { color: #000; text-decoration: underline; }
+
+  &.first { box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03); h2 { font-size: sc(42px); } }
+}
+
+.home-btn {
+  display: inline-block;
+  margin-top: sc(26px);
+  padding: 12px 16px;
+  background: $home-sand;
+  border-radius: 12px;
+  color: #000 !important;
+  font-family: $font-inter;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.home-statement {
+  background: $home-green;
+  color: #fff;
+  min-height: sc(316px);
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  max-width: sc(740px);
-  margin: 0 auto;
-  padding: 0.75rem 1.25rem;
-  border-radius: 999px;
-  background: #fff;
-  color: $ink;
-}
-
-.home-search {
-  flex: 1;
-  border: 0;
-  outline: 0;
-  background: none;
-  font-family: $font-krub;
-  font-size: 1.1rem;
-}
-
-// The cards sit half over the gold band and half on the white page.
-.home-cards-wrap {
-  position: relative;
-  width: 100vw;
-  margin: sc(-134px) 0 0 calc(50% - 50vw);
-  padding: 0 clamp(1.2rem, 5.2vw, sc(98px)) 3.2rem;
-}
-
-.home-cards {
-  max-width: sc(1316px);
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, sc(313px));
   justify-content: center;
-  gap: sc(21px);
+  text-align: center;
+
+  p { max-width: sc(868px); font-size: sc(32px); font-weight: 700; line-height: 1.35; }
 }
 
-.home-card {
-  display: flex;
-  flex-direction: column;
-  width: sc(313px);
-  height: sc(403px);
-  border-radius: sc(14px);
-  overflow: hidden;
-  background: #fff;
-  color: #000;
-  font-family: $font-krub;
-  text-decoration: none !important;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+.home-footer {
+  background: $home-charcoal;
+  color: #fff;
+  padding-top: sc(129px);
+  padding-bottom: sc(60px);
+  font-family: $font-inter;
 
-  &:hover { color: #000; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); }
-
-  .card-img {
-    height: sc(190px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--c);
-    color: #fff;
-    font-size: 2.8rem;
+  .home-footer-cols {
+    display: grid;
+    grid-template-columns: 1fr repeat(4, minmax(0, auto));
+    gap: sc(60px);
+    padding-bottom: sc(40px);
+    border-bottom: 1px solid #8c8c8c;
   }
+  .home-footer-org { font-size: 14px; }
+  .home-footer-org p { margin: 0 0 1em; color: #fff; }
+  h3 { font-size: 13px; font-weight: 900; color: #fff; margin: 0 0 1.2em; }
+  ul { list-style: none; margin: 0; padding: 0; }
+  li { font-family: $font-krub; font-size: 13px; line-height: 40px; }
 
-  .card-body { padding: 1rem; font-size: 0.85rem; }
-  .card-title { font-family: $font-inter; font-size: 1rem; font-weight: 700; line-height: 1.2; margin-bottom: 0.8rem; }
-  .card-link { font-weight: 700; }
+  .home-footer-legal ul {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: sc(40px);
+    padding-top: sc(24px);
+  }
+  .home-footer-legal li { font-family: $font-inter; font-size: 14px; font-weight: 900; text-transform: uppercase; }
 }
 
-$home-card-colors: (
-  weather:     $cat-weather-extremes,
-  ice:         $cat-cryosphere,
-  coastal:     $cat-coastal-marine,
-  freshwater:  $cat-freshwater,
-  ecosystems:  $cat-ecosystems,
-  temp-health: $cat-temperature-health,
-  vector:      $cat-vector-health,
-  societal:    $cat-societal,
-);
-@each $name, $color in $home-card-colors {
-  .home-card.#{$name} { --c: #{$color}; }
+@media (max-width: 991.98px) {
+  .home-feature { grid-template-columns: 1fr; }
+  .home-feature.story .home-feature-img { order: 0; }
+  .home-footer .home-footer-cols { grid-template-columns: 1fr 1fr; }
 }
-
-.home-soft { background: $home-green-soft; min-height: min(sc(385px), 60vh); }
-.home-footer { background: $home-charcoal; min-height: min(sc(658px), 80vh); }
 
 @media (max-width: 767.98px) {
-  .home-hero { grid-template-columns: 1fr; padding: 3rem 1.5rem 0; }
-  .home-hero .home-hexes { justify-self: center; }
-  .home-hero > div:first-child { margin: 0; }
-  .home-hero .home-title { font-size: 2.25rem; }
-  .home-hero p, .home-explore .home-intro { font-size: 1rem; }
-  .home-explore h2 { font-size: 2.25rem; }
+  .home-band { padding-left: 1.5rem; padding-right: 1.5rem; }
+  .home-hero { grid-template-columns: 1fr; padding-top: 2rem; padding-bottom: 2rem; }
+  .home-hero .home-hero-text h2 { font-size: 2.25rem; line-height: 1.1; }
+  .home-hero p, .home-mission p { font-size: 1rem; }
+  .home-hero .home-hero-img { justify-self: start; margin-top: 1.5rem; }
+  .home-feature .home-feature-text { padding: 2rem 1.5rem; }
+  .home-section h2, .home-feature h2 { font-size: 2rem; }
+  .home-statement p { font-size: 1.3rem; }
+  .home-footer .home-footer-legal ul { justify-content: flex-start; }
 }
 
 /* ---- Listing cards: Indicators grid (.quarto-grid-item) + any post list
