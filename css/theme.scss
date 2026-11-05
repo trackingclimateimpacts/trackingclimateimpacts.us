@@ -1318,3 +1318,144 @@ $res-card-bg: #8CBACD;
   .res-hero h2, .res-reports h2, .res-tools h2 { font-size: 2rem; }
   .res-hero p, .res-reports p, .res-card { font-size: 1rem; }
 }
+
+/* ---- Greenhouse Gases, from the Figma frame. Reuses .home-band and the footer. */
+$ghg-rule: #B9C7D0;
+$ghg-ink:  #0C0D1B;
+
+.ghg-hero {
+  background: $story-teal;
+  color: #fff;
+  min-height: sc(762px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h2 { font-size: sc(55px); line-height: 1.2; color: #fff; margin-bottom: sc(25px); }
+  p { font-size: sc(21px); line-height: 1.6; max-width: sc(544px); }
+}
+
+.ghg-why-wrap { padding-top: sc(136px); padding-bottom: sc(80px); }
+
+.ghg-why,
+.ghg-why-wrap.home-band > section.ghg-why.level2 {
+  display: block;
+  background: $res-card-bg;
+  color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+  padding: sc(115px) sc(56px);
+
+  h2 { font-size: sc(48px); line-height: 1.12; color: #fff; margin-bottom: sc(26px); }
+  p { font-size: sc(20px); line-height: 1.6; max-width: sc(900px); }
+}
+
+.ghg-topics { padding-bottom: sc(60px); }
+
+.ghg-topic {
+  border-top: 1px solid $ghg-rule;
+  padding: sc(15px) 0 sc(24px);
+  max-width: sc(1100px);
+  margin-bottom: sc(30px);
+  font-size: 18px;
+  line-height: 1.6;
+
+  .ghg-topic-title { font-family: $font-inter; font-size: sc(23px); font-weight: 700; }
+}
+
+.ghg-gases {
+  padding-top: sc(60px);
+  padding-bottom: sc(80px);
+
+  h2 { font-size: sc(48px); line-height: 1.2; max-width: sc(1088px); margin-bottom: sc(30px); }
+}
+
+.ghg-table-wrap { overflow-x: auto; border-radius: 15px 15px 0 0; }
+
+.ghg-table {
+  width: 100%;
+  min-width: 720px;
+  border-collapse: collapse;
+  font-family: Roboto, $font-family-sans-serif;
+  color: $ghg-ink;
+
+  th, td { padding: 16px 21px; vertical-align: top; border-right: 1px solid #D2D3DD; border-bottom: 1px solid #D2D3DD; font-size: 19.5px; line-height: 24px; }
+  th:last-child, td:last-child { border-right: 0; }
+  thead th { background: $story-teal; color: #fff; font-size: 21px; font-weight: 700; vertical-align: middle; height: 72px; border-color: rgba(255, 255, 255, 0.33); }
+  tbody th { font-size: 22px; font-weight: 700; padding-left: 11px; width: 212px; text-align: left; }
+  td strong { font-size: 22px; }
+}
+
+.ghg-table-notes {
+  margin-top: sc(30px);
+  font-size: 16px;
+  line-height: 1.25;
+  color: $ghg-ink;
+
+  p { margin-bottom: 12px; }
+}
+
+.ghg-refs-wrap { padding-bottom: sc(60px); }
+
+.ghg-refs {
+  background: #757575;
+  color: #F5F5F5;
+  border-radius: 15px;
+  padding: 40px;
+  font-size: 18px;
+  line-height: 1.6;
+
+  .ghg-refs-title { display: block; font-family: $font-inter; font-size: sc(32px); font-weight: 800; margin-bottom: 28px; }
+  p { margin: 0; }
+  a { color: #F5F5F5; text-decoration: underline; }
+}
+
+.ghg-us {
+  background: $story-teal;
+  color: #fff;
+  padding-top: sc(96px);
+  padding-bottom: sc(96px);
+
+  .ghg-us-source { font-family: $font-inter; font-size: 11px; font-weight: 600; text-transform: uppercase; line-height: 1.4; margin-bottom: sc(26px); }
+  h2 { font-size: sc(49px); line-height: 1.12; color: #fff; margin-bottom: sc(26px); }
+  p { font-size: sc(20px); line-height: 1.6; max-width: sc(1100px); margin-bottom: sc(24px); }
+}
+
+.ghg-section {
+  padding-top: sc(60px);
+  padding-bottom: sc(40px);
+  color: $ghg-ink;
+
+  h2 { font-size: sc(48px); line-height: 1.3; margin-bottom: sc(20px); }
+  h3 { font-size: sc(36px); font-style: italic; line-height: 1.3; margin-bottom: sc(30px); }
+  p { font-size: 18px; line-height: 1.6; max-width: sc(1312px); margin-bottom: 1.2em; }
+}
+
+.ghg-figure-title { display: block; font-size: 16px; font-weight: 700; line-height: 1.4; margin-top: sc(20px); }
+
+.ghg-figure-pair {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: sc(24px);
+}
+
+.ghg-link-card {
+  max-width: sc(1085px);
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 21px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  padding: sc(32px);
+
+  .ghg-link-card-title { display: block; font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+  p { font-size: 15px; color: rgba(0, 0, 0, 0.55); }
+  .ghg-link-card-cta { font-family: $font-inter; font-size: 15px; font-weight: 900; color: #000; text-decoration: none; }
+}
+
+@media (max-width: 767.98px) {
+  .ghg-hero h2, .ghg-why h2, .ghg-gases h2, .ghg-us h2, .ghg-section h2 { font-size: 2rem; }
+  .ghg-section h3 { font-size: 1.5rem; }
+  .ghg-hero p, .ghg-why p, .ghg-us p { font-size: 1rem; }
+  .ghg-why { padding: 2rem 1.5rem; }
+  .ghg-figure-pair { grid-template-columns: 1fr; }
+}

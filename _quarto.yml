@@ -40,7 +40,7 @@ website:
           - text: "Emissions & Climate Resources"
             href: the-whole-story-about.qmd
           - text: "Greenhouse Gases"
-            href: indicators/global-greenhouse-gas-emissions.qmd
+            href: greenhouse-gases.qmd
           - text: "Global Climate Indicators"
             href: the-whole-story-indicators.qmd
           - text: "Additional Resources"
