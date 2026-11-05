@@ -68,7 +68,7 @@ University of Maryland’s Center for Global Sustainability (CGS) has developed 
 
 :::
 
-These resources are linked at The Whole Story. Together, these efforts help ensure that the public, policymakers, researchers, and communities have access to reliable, science‑based information. Future phases of our work will focus on deepening integration across these efforts.
+These resources are linked at Emissions & Climate Resources. Together, these efforts help ensure that the public, policymakers, researchers, and communities have access to reliable, science‑based information. Future phases of our work will focus on deepening integration across these efforts.
 :::
 
 ::: {.home-band .about-find}
@@ -76,7 +76,7 @@ These resources are linked at The Whole Story. Together, these efforts help ensu
 
 TrackingClimateImpacts.us focuses on indicators that connect scientific observation to human and societal consequences. Climate, Health and Environment provides a wide range of climate impact indicators along with detailed technical documentation for each. An overview of the methodology used by EPA (through January, 2025) to identify, develop and document indicators, along with EPA’s most recent Technical Documentation, can be found in Methodology.
 
-Indicators of global and U.S. emissions as well as changes in Earth and climatic systems are included for context. In The Whole Story, we refer to GHGIA for data and figures pertaining to U.S. greenhouse gas emissions. We refer to climate.us for many climate change drivers, variability and other global climate change data. The Whole Story also provides easy access to additional climate change resources.
+Indicators of global and U.S. emissions as well as changes in Earth and climatic systems are included for context. In Emissions & Climate Resources, we refer to GHGIA for data and figures pertaining to U.S. greenhouse gas emissions. We refer to climate.us for many climate change drivers, variability and other global climate change data. Emissions & Climate Resources also provides easy access to additional climate change resources.
 :::
 
 ::: {.home-band .about-section .about-commit}

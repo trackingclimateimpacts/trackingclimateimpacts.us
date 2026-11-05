@@ -1,0 +1,14 @@
+<script>
+// On desktop the navbar dropdowns open on hover (css/theme.scss), so a click on
+// the top-level label goes to that section's main page, the first menu entry.
+// Collapsed (mobile) keeps Bootstrap's tap-to-toggle.
+document.addEventListener("click", function (e) {
+  var toggle = e.target.closest(".navbar-nav .dropdown-toggle");
+  if (!toggle || window.innerWidth < 1200) return;
+  var first = toggle.parentElement.querySelector(".dropdown-menu a[href]");
+  if (!first) return;
+  e.preventDefault();
+  e.stopPropagation();
+  window.location.href = first.href;
+}, true);
+</script>

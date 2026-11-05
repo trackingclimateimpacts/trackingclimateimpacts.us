@@ -11,13 +11,13 @@ project:
     - images/
 
 website:
-  title: climateindicators.us
+  title: TrackingClimateImpacts.us
   llms-txt: true
   site-url: https://climateindicators.us
   repo-url: https://github.com/climateindicators/climateindicators.us
   back-to-top-navigation: true
   open-graph:
-    site-name: https://climateindicators.us
+    site-name: TrackingClimateImpacts.us
   page-footer:
     background: dark
     center:
@@ -35,9 +35,9 @@ website:
             href: about.qmd
           - text: "Where We’re Heading"
             href: where-were-heading.qmd
-      - text: "The Whole Story"
+      - text: "Emissions & Climate Resources"
         menu:
-          - text: "The Whole Story"
+          - text: "Emissions & Climate Resources"
             href: the-whole-story-about.qmd
           - text: "Greenhouse Gases"
             href: indicators/global-greenhouse-gas-emissions.qmd
@@ -45,7 +45,7 @@ website:
             href: the-whole-story-indicators.qmd
           - text: "Additional Resources"
             href: additional-resources.qmd
-      - text: "Climate, Health, and Environment"
+      - text: "Health & Environment Indicators"
         menu:
           - text: "All Indicators"
             href: climate-health-and-environment.qmd
@@ -192,6 +192,7 @@ format:
     smooth-scroll: true
     link-external-newwindow: true
     link-external-icon: false
+    include-after-body: chunks/nav-click.html
     link-external-filter: '^(?:http:|https:)\/\/(?:www\.)?climateindicators\.us'
 
 execute:

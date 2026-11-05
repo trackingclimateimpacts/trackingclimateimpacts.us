@@ -1,5 +1,85 @@
 ---
-title: "Methodology and Technical Documentation"
+title: ""
+pagetitle: "Methodology"
+description: "How the indicators on Tracking Climate Impacts are developed, documented and kept reproducible, and how our approach will evolve."
+execute:
+  echo: false
+  message: false
+  warning: false
+page-layout: full
+toc: false
+anchor-sections: false
 ---
 
-{{< include /chunks/coming-soon.qmd >}}
+::: {.home-band .method-hero}
+## Methodology
+
+This section documents the transparent, reproducible processes that underpin the indicators on TrackingClimateImpacts.us and preserves the methodological foundation developed by the U.S. Environmental Protection Agency (EPA) through January 2025. It also describes how our approach will evolve as new science, data, and partnerships emerge.
+:::
+
+::: {.home-band .method-process}
+## EPA’s Indicator Development Process (through January 2025)
+
+EPA developed climate indicators using a rigorous, multi‑step workflow designed to ensure scientific integrity, transparency, and usefulness for public audiences. Each indicator included detailed technical documentation, while EPA’s methodology page provided overarching guidance on how indicators were identified, evaluated, developed, and reviewed.
+
+**EPA’s process included the following steps:**
+
+::: {.method-steps}
+::: {.method-step}
+[01]{.method-step-num} Identification
+:::
+::: {.method-step}
+[02]{.method-step-num} Evaluation
+:::
+::: {.method-step}
+[03]{.method-step-num} Screening
+:::
+::: {.method-step}
+[04]{.method-step-num} Development
+:::
+::: {.method-step}
+[05]{.method-step-num} Review
+:::
+::: {.method-step}
+[06]{.method-step-num} Revision
+:::
+:::
+:::
+
+::: {.home-band .method-doc-wrap}
+::: {.method-doc}
+[Technical Document]{.method-doc-title}
+
+U.S. Environmental Protection Agency. (2024). Climate change indicators in the United States (Fifth ed., EPA 430-R-24-003)
+
+[Read Here](https://19january2025snapshot.epa.gov/climate-indicators/view-indicators/index.html){.method-doc-btn}
+:::
+:::
+
+::: {.home-band .method-next}
+## Our Approach Moving Forward
+
+TrackingClimateImpacts.us maintains the full technical documentation and methodological detail from EPA’s January 19, 2025 snapshot to ensure continuity, transparency, and trust. As the project advances, we plan to:
+:::
+
+::: {.home-band .method-plan}
+[As the project advances, we plan to:]{.method-plan-title}
+
+::: {.method-plan-item}
+[01]{.method-plan-num} Preserve and update the technical documentation for all replicated indicators.
+:::
+::: {.method-plan-item}
+[02]{.method-plan-num} Develop new documentation for emerging indicators, especially those focused on climate and health.
+:::
+::: {.method-plan-item}
+[03]{.method-plan-num} Maintain an open technical repository with code, data sources, and reproducible workflows for transparency.
+:::
+::: {.method-plan-item}
+[04]{.method-plan-num} Collaborate with data providers, researchers, and communities to refine methods and ensure indicators reflect real‑world needs.
+:::
+::: {.method-plan-item}
+[05]{.method-plan-num} Ensure technical review and credibility.
+:::
+:::
+
+{{< include /chunks/footer.qmd >}}

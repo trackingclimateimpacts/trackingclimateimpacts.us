@@ -1,5 +1,5 @@
 ---
-title: "Climate, Health and Environment"
+title: "Health & Environment Indicators"
 listing:
   contents:
     - "indicators/*.qmd"

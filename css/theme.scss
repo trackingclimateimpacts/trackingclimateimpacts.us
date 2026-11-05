@@ -794,6 +794,223 @@ body:has(.home-band) .quarto-title-block { display: none; }
   .where-intro p, .where-section p, .where-users p, .where-next p, .where-next li { font-size: 1rem; }
 }
 
+/* ---- Methodology, from the Figma frame. Reuses .home-band and the footer. */
+.method-hero {
+  background: $home-navy;
+  color: #fff;
+  min-height: sc(762px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h2 { font-size: sc(48px); line-height: 1.2; font-weight: 900; color: #fff; margin-bottom: sc(24px); }
+  p { font-size: sc(21px); line-height: 1.6; max-width: sc(544px); }
+}
+
+.method-process {
+  padding-top: sc(100px);
+  padding-bottom: sc(60px);
+
+  h2 { font-size: sc(48px); line-height: 1.2; margin-bottom: sc(16px); max-width: sc(993px); }
+  p { font-size: sc(21px); line-height: 1.6; max-width: sc(1198px); margin-bottom: sc(20px); }
+}
+
+.method-steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: sc(40px);
+  margin-top: sc(40px);
+}
+
+.method-step {
+  background: $home-navy;
+  color: #fff;
+  border-radius: 30px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.25);
+  padding: sc(60px) sc(30px);
+  font-family: $font-inter;
+  font-size: sc(40px);
+  font-weight: 800;
+  line-height: 1.45;
+
+  .method-step-num { font-weight: 400; margin-right: 0.25em; }
+}
+
+.method-doc-wrap { padding-top: sc(50px); padding-bottom: sc(90px); }
+
+.method-doc {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: sc(1090px);
+  margin: 0 auto;
+  background: #E8E9F4;
+  border-radius: 12px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+  padding: sc(83px);
+
+  .method-doc-title { font-family: $font-inter; font-size: sc(32px); font-weight: 800; line-height: 1.12; margin-bottom: sc(20px); }
+  p { font-size: sc(18px); line-height: 1.6; max-width: sc(467px); margin-bottom: sc(20px); }
+  .method-doc-btn {
+    justify-self: start;
+    background: #000;
+    color: #fff !important;
+    font-family: $font-inter;
+    font-weight: 500;
+    text-decoration: underline;
+    border-radius: 12px;
+    padding: 12px 16px;
+  }
+}
+
+.method-next {
+  background: $where-rust;
+  color: #fff;
+  padding-top: sc(130px);
+  padding-bottom: sc(110px);
+
+  h2 { font-size: sc(48px); line-height: 1.2; font-weight: 900; color: #fff; margin-bottom: sc(24px); }
+  p { font-size: sc(31px); line-height: 1.5; max-width: sc(1086px); }
+}
+
+.method-plan {
+  padding-top: sc(50px);
+  padding-bottom: sc(96px);
+  font-family: $font-inter;
+
+  .method-plan-title { display: block; font-size: sc(44px); font-weight: 800; line-height: 1.12; margin-bottom: sc(28px); }
+}
+
+.method-plan-item {
+  max-width: sc(1000px);
+  padding: sc(24px) 0;
+  border-top: 1px solid #B9C7D0;
+  font-family: $font-krub;
+  font-size: sc(23px);
+  line-height: 1.6;
+
+  .method-plan-num { font-family: $font-inter; font-size: 13px; color: #606866; display: inline-block; width: sc(40px); }
+}
+
+@media (max-width: 991.98px) {
+  .method-steps { grid-template-columns: 1fr; }
+  .method-doc { padding: 2rem 1.5rem; }
+}
+
+@media (max-width: 767.98px) {
+  .method-hero h2, .method-process h2, .method-next h2, .method-plan .method-plan-title { font-size: 2rem; }
+  .method-hero p, .method-process p, .method-next p, .method-plan-item { font-size: 1rem; }
+  .method-step { font-size: 1.75rem; }
+}
+
+/* ---- Emissions & Climate Resources ("The Whole Story"), from the Figma frame. Reuses .home-band and the footer. */
+$story-teal: #397E9A;
+$story-mist: #D2E1CA;
+
+.story-hero {
+  background: $story-teal;
+  color: #fff;
+  min-height: sc(534px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h2 { font-size: sc(55px); line-height: 1.12; color: #fff; }
+}
+
+.story-arc {
+  padding-top: sc(112px);
+  padding-bottom: sc(70px);
+
+  h2 { font-size: sc(55px); line-height: 1.12; margin-bottom: sc(25px); }
+  > p, section > p { font-size: sc(31px); line-height: 1.12; max-width: sc(1088px); margin-bottom: sc(60px); }
+}
+
+.story-arc-card {
+  background: $story-mist;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+  padding: sc(70px) sc(60px);
+  font-size: sc(20px);
+  line-height: 1.55;
+  max-width: sc(1313px);
+
+  p { max-width: sc(608px); margin-bottom: sc(20px); }
+  .story-link { font-family: $font-inter; font-size: 15px; font-weight: 600; color: #000; text-decoration: none; }
+}
+
+.story-emissions-wrap { padding-top: sc(60px); padding-bottom: sc(60px); }
+
+.story-emissions,
+.story-emissions-wrap.home-band > section.story-emissions.level2 {
+  display: block;
+  background: $home-green;
+  color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+  padding: sc(96px) sc(85px);
+
+  h2 { font-size: sc(48px); line-height: 1.12; color: #fff; margin-bottom: sc(27px); }
+  p { font-size: sc(20px); line-height: 1.6; max-width: sc(1040px); margin-bottom: sc(20px); }
+  p:last-child { margin-bottom: 0; }
+}
+
+.story-local {
+  padding-top: sc(100px);
+  padding-bottom: sc(60px);
+  border-bottom: 2px solid #EDEDED;
+
+  h2 { font-size: sc(44px); line-height: 1.12; margin-bottom: sc(18px); }
+  p { font-size: sc(20px); line-height: 1.6; margin-bottom: sc(28px); }
+}
+
+.story-landscape {
+  padding-top: sc(85px);
+  padding-bottom: sc(96px);
+
+  h2 { font-size: sc(44px); line-height: 1.12; margin-bottom: sc(28px); }
+  p { font-size: sc(20px); line-height: 1.6; max-width: sc(1319px); margin-bottom: sc(24px); }
+}
+
+.story-org {
+  background: $story-mist;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  padding: sc(28px) sc(29px);
+  margin-top: sc(34px);
+  max-width: sc(1319px);
+
+  .story-org-title { display: block; font-family: $font-inter; font-size: sc(32px); font-weight: 600; line-height: 1.12; margin-bottom: sc(20px); }
+  p { font-size: sc(18px); max-width: sc(504px); }
+}
+
+.story-btn {
+  display: inline-block;
+  background: #1C3A29;
+  color: #fff !important;
+  font-family: $font-inter;
+  font-weight: 500;
+  text-decoration: underline;
+  border-radius: 12px;
+  padding: 12px 16px;
+}
+
+.story-refs {
+  background: #757575;
+  color: #F5F5F5;
+  padding-top: sc(60px);
+  padding-bottom: sc(60px);
+
+  h2 { font-size: sc(44px); line-height: 1.12; color: #F5F5F5; margin-bottom: sc(28px); }
+  p { font-size: sc(18px); line-height: 1.6; max-width: sc(1145px); }
+  a { color: #F5F5F5; text-decoration: underline; }
+}
+
+@media (max-width: 767.98px) {
+  .story-hero h2, .story-arc h2, .story-local h2, .story-landscape h2, .story-refs h2, .story-emissions h2 { font-size: 2rem; }
+  .story-arc p, .story-arc-card, .story-emissions p, .story-local p, .story-landscape p, .story-org p { font-size: 1rem; }
+  .story-emissions { padding: 2rem 1.5rem; }
+}
+
 /* ---- Listing cards: Indicators grid (.quarto-grid-item) + any post list
    (.quarto-post). Squared-off borders and a flat accent outline on hover,
    matching climate.us's card treatment rather than a soft glow. */
@@ -1031,4 +1248,73 @@ table thead th {
   &:hover {
     background: $accent-dark;
   }
+}
+
+/* ---- Additional Resources, from the Figma frame. Reuses .home-band and the footer. */
+$res-card-bg: #8CBACD;
+
+.res-hero {
+  background: $story-teal;
+  color: #fff;
+  min-height: sc(762px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h2 { font-size: sc(55px); line-height: 1.12; color: #fff; margin-bottom: sc(25px); }
+  p { font-size: sc(21px); line-height: 1.6; max-width: sc(544px); }
+}
+
+.res-reports {
+  padding-top: sc(130px);
+  padding-bottom: sc(90px);
+
+  h2 { font-size: sc(48px); line-height: 1.2; max-width: sc(645px); margin-bottom: sc(40px); }
+  > p, section > p { font-size: sc(21px); line-height: 1.6; max-width: sc(1039px); margin-bottom: sc(24px); }
+}
+
+.res-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: sc(18px);
+  margin-top: sc(40px);
+}
+
+.res-card {
+  background: $res-card-bg;
+  color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+  padding: sc(50px) sc(46px);
+  font-family: $font-inter;
+  font-size: sc(21px);
+  line-height: 1.4;
+
+  .res-card-title { font-weight: 800; }
+  p { font-family: $font-krub; font-size: 14px; line-height: 1.45; margin-top: sc(26px); }
+  .res-card-link { color: #fff; font-family: $font-krub; font-size: 14px; text-decoration: underline; }
+}
+
+.res-tools {
+  padding-top: sc(50px);
+  padding-bottom: sc(96px);
+
+  h2 { font-size: sc(48px); line-height: 1.2; margin-bottom: sc(28px); }
+}
+
+.res-tool {
+  border-top: 1px solid #B9C7D0;
+  padding: sc(24px) 0;
+  max-width: sc(1000px);
+  font-size: 18px;
+  line-height: 1.65;
+  overflow-wrap: anywhere;
+
+  .res-tool-title { font-family: $font-inter; font-size: sc(23px); font-weight: 700; }
+}
+
+@media (max-width: 767.98px) {
+  .res-cards { grid-template-columns: 1fr; }
+  .res-hero h2, .res-reports h2, .res-tools h2 { font-size: 2rem; }
+  .res-hero p, .res-reports p, .res-card { font-size: 1rem; }
 }
