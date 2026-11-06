@@ -3,6 +3,8 @@
 ::: {.home-footer-cols}
 
 ::: {.home-footer-org}
+![](/images/milken_logo.png){.home-footer-logo fig-alt="Milken logo"}
+
 **GW Climate and Health Institute**
 
 950 New Hampshire Ave, NW, 101 — First Floor\

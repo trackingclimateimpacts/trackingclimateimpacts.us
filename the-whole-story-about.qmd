@@ -11,8 +11,14 @@ toc: false
 anchor-sections: false
 ---
 
-::: {.home-band .story-hero}
+::: {.home-band .story-hero .hero-bg}
+
+::: {.hero-bg-img}
+![](images/rectangle_resources.png){fig-alt=""}
+:::
+
 ## Emissions & Climate Resources
+
 :::
 
 ::: {.home-band .story-arc}

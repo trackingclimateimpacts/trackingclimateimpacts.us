@@ -662,7 +662,7 @@ body:has(.home-band) .quarto-title-block { display: none; }
   display: grid;
   grid-template-columns: 1.24fr 1fr;
   min-height: sc(515px);
-  background: $home-green;
+  background: $periwinkle;
   color: #fff;
   border-radius: 15px;
   overflow: hidden;
@@ -696,18 +696,18 @@ body:has(.home-band) .quarto-title-block { display: none; }
 }
 
 .about-card {
-  background: $green-tint;
+  background: $periwinkle-tint;
   border-radius: 12px;
   padding: sc(28px);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
 
   h3 { font-size: sc(32px); line-height: 1.12; margin-bottom: sc(20px); }
   p { font-size: sc(18px); line-height: 1.6; max-width: none; margin-bottom: sc(20px); }
-  .home-btn { margin-top: 0; background: $green-dark; color: #fff !important; }
+  .home-btn { margin-top: 0; background: $navy; color: #fff !important; }
 }
 
 .about-find {
-  background: $home-green;
+  background: $navy;
   color: #fff;
   padding-top: sc(96px);
   padding-bottom: sc(96px);
@@ -1526,6 +1526,8 @@ $cat-card-border: #C8C8C8;
   .cat-hero.#{$name} { background: $colour; }
 }
 
+.cat-hero.cat-all { background: $home-green; }
+
 .cat-hero {
   min-height: sc(485px);
   display: flex;
@@ -1612,4 +1614,192 @@ $cat-card-border: #C8C8C8;
   .cat-columns { grid-template-columns: 1fr; row-gap: 2rem; }
   .cat-hero h2 { font-size: 2rem; }
   .cat-intro { font-size: 1.1rem; }
+}
+
+/* ---- Climate, Health and Environmental Indicators landing page, from the Figma frame.
+   Reuses .home-band and the footer. Card image slots take the category colour until
+   the Figma images are supplied. */
+.che-hero {
+  // The .home-band rule turns plain sections into display: contents; these
+  // section classes do not contain "home-" or "about-", so restore their boxes.
+  &.home-band > section.che-hero-text.level2 { display: block; }
+  background: $home-green;
+  color: #fff;
+  min-height: sc(762px);
+  display: grid;
+  grid-template-columns: minmax(0, sc(674px)) 1fr;
+  align-items: center;
+  column-gap: 2rem;
+
+  h2 { font-size: sc(55px); line-height: sc(60px); color: #fff; margin-bottom: sc(24px); }
+  p { font-size: sc(24px); line-height: 1.5; max-width: sc(658px); }
+
+  // Flush to the right edge and the full band height, as in the Figma frame.
+  padding-right: 0;
+  .che-hero-img {
+    justify-self: end;
+    align-self: stretch;
+    width: sc(629px);
+    img { width: 100%; height: 100%; object-fit: cover; display: block; margin: 0; }
+  }
+}
+
+.che-indicators {
+  padding-top: sc(80px);
+  padding-bottom: sc(80px);
+
+  h2 { font-size: sc(55px); line-height: 1.2; }
+  // One continuous rule down the heading and the line under it.
+  > h2, > p:first-of-type {
+    border-left: 4px solid $green;
+    padding-left: sc(20px);
+  }
+  > h2 { padding-top: sc(8px); }
+  > p:first-of-type {
+    font-size: sc(31px);
+    padding-bottom: sc(8px);
+    margin-bottom: sc(40px);
+  }
+}
+
+.che-search {
+  display: block;
+  width: sc(278px);
+  border: 2px solid #8C8C8C;
+  border-radius: 30px;
+  padding: 0.6rem 1.2rem;
+  font-family: $font-krub;
+  font-size: 18px;
+  margin-bottom: sc(40px);
+}
+
+.che-cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-rows: repeat(2, auto);
+  grid-auto-flow: column;
+  gap: sc(20px);
+}
+
+.che-card,
+.home-band section.che-card.level3 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 21px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  padding: 0 sc(24px) sc(24px);
+  border-top: sc(199px) solid $stone;
+
+  h3 { font-size: 20px; font-weight: 900; margin: sc(20px) 0 sc(12px); }
+  p { font-size: 15px; color: rgba(0, 0, 0, 0.55); flex: 1; }
+  .che-card-link {
+    margin-top: sc(16px);
+    font-family: $font-inter;
+    font-size: 15px;
+    font-weight: 900;
+    color: #000;
+    text-decoration: none !important;
+    // Stretch the link over the whole card.
+    &::after { content: ""; position: absolute; inset: 0; }
+  }
+}
+
+@each $cls, $colour in (
+  cat-weather-extremes: $cat-weather-extremes, cat-cryosphere: $cat-cryosphere,
+  cat-coastal-marine: $cat-coastal-marine, cat-freshwater: $cat-freshwater,
+  cat-ecosystems: $cat-ecosystems, cat-temperature-health: $cat-temperature-health,
+  cat-vector-health: $cat-vector-health, cat-societal: $cat-societal
+) {
+  .che-card.#{$cls} { border-top-color: $colour; }
+}
+
+.che-about-wrap {
+  padding-bottom: sc(60px);
+}
+
+.che-about,
+.home-band section.che-about.level2 {
+  display: block;
+  background: $rust-dark;
+  color: #fff;
+  border-radius: 15px;
+  padding: sc(96px);
+
+  h2 { font-size: sc(55px); line-height: 1.12; color: #fff; margin-bottom: sc(28px); }
+  p { font-size: sc(18px); line-height: 1.6; margin-bottom: 1.4em; }
+  p:last-child { margin-bottom: 0; }
+}
+
+.che-refs {
+  background: #757575;
+  color: #F5F5F5;
+  padding-top: sc(60px);
+  padding-bottom: sc(60px);
+
+  h2 { font-size: sc(44px); line-height: 1.12; margin-bottom: sc(28px); }
+  p { font-size: sc(18px); line-height: 1.6; margin-bottom: 1em; overflow-wrap: anywhere; }
+  a { color: #F5F5F5; text-decoration: underline; }
+}
+
+@media (max-width: 1199.98px) {
+  .che-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: none; grid-auto-flow: row; }
+}
+
+@media (max-width: 767.98px) {
+  .che-hero { grid-template-columns: 1fr; padding-top: 2rem; padding-bottom: 0; padding-right: 1.5rem; }
+  .che-hero .che-hero-img { justify-self: start; width: 100%; margin-top: 1.5rem; }
+  .che-cards { grid-template-columns: 1fr; grid-template-rows: none; grid-auto-flow: row; }
+  .che-card { border-top-width: 120px; }
+  .che-about { padding: 2rem 1.5rem; }
+  .che-hero h2, .che-indicators h2, .che-about h2 { font-size: 2rem; line-height: 1.15; }
+  .che-hero p, .che-about p, .che-refs p { font-size: 1rem; }
+}
+
+/* ---- Hero with a photo column flush to the right edge (Figma 756 x 762), used by the
+   Methodology, Additional Resources and Greenhouse Gases pages. Declared after the
+   individual hero rules so the grid replaces their flex column. */
+.hero-split {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) sc(756px);
+  align-items: center;
+  column-gap: 2rem;
+  padding-right: 0;
+
+  &.home-band > section.hero-split-text.level2 { display: block; }
+
+  .hero-split-img {
+    align-self: stretch;
+    p { margin: 0; height: 100%; }
+    img { width: 100%; height: 100%; object-fit: cover; display: block; margin: 0; }
+  }
+}
+
+/* ---- Hero with a full-bleed photo behind the heading (Emissions & Climate Resources). */
+.hero-bg {
+  position: relative;
+  overflow: hidden;
+
+  .hero-bg-img {
+    position: absolute;
+    inset: 0;
+    p { margin: 0; height: 100%; }
+    img { width: 100%; height: 100%; object-fit: cover; display: block; margin: 0; }
+  }
+  h2 { position: relative; z-index: 1; }
+}
+
+/* ---- Footer logo (Figma: 202 x 169, above the address). */
+.home-footer .home-footer-logo {
+  display: block;
+  width: sc(202px);
+  height: auto;
+  margin: 0 0 sc(30px);
+}
+
+@media (max-width: 767.98px) {
+  .hero-split { grid-template-columns: 1fr; padding-top: 2rem; padding-bottom: 0; padding-right: 1.5rem; }
+  .hero-split .hero-split-img { margin-top: 1.5rem; }
 }

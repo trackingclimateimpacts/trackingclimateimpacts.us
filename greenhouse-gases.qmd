@@ -11,10 +11,18 @@ toc: false
 anchor-sections: false
 ---
 
-::: {.home-band .ghg-hero}
+::: {.home-band .ghg-hero .hero-split}
+
+::: {.hero-split-text}
 ## Greenhouse Gases
 
 Greenhouse gases from human activities are the most significant driver of observed climate change since the mid-20th century.<sup>1</sup> When comparing emissions of different gases, these indicators use a concept called “global warming potential” to convert amounts of other gases into carbon dioxide equivalents.
+:::
+
+::: {.hero-split-img}
+![](images/Rectangle_ghg.png){fig-alt=""}
+:::
+
 :::
 
 ::: {.home-band .ghg-why-wrap}

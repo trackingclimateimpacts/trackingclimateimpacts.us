@@ -1,25 +1,45 @@
 ---
-title: "Indicators"
+title: ""
+pagetitle: "All Indicators"
 listing:
-  contents:
-    - "indicators/*.qmd"
-    - "!indicators/global-greenhouse-gas-emissions.qmd"
-    - "!indicators/ocean-acidity.qmd"
-    - "!indicators/antarctic-sea-ice.qmd"
-  sort: "title"
-  type: grid
-  sort-ui: false
-  filter-ui: false
-  fields: [title, description]
-  image-height: auto
+  - id: all-listing
+    contents:
+      - "indicators/*.qmd"
+      - "!indicators/global-greenhouse-gas-emissions.qmd"
+      - "!indicators/ocean-acidity.qmd"
+      - "!indicators/antarctic-sea-ice.qmd"
+    type: grid
+    grid-columns: 3
+    sort: "title"
+    sort-ui: false
+    filter-ui: true
+    fields: [title, description]
+    image-height: auto
+execute:
+  echo: false
 page-layout: full
+sidebar: false
+toc: false
+anchor-sections: false
 ---
 
-Each indicator below tracks one measurable signal of a changing climate in the
-United States, built from public data with the code and sources published
-alongside it.
+::: {.home-band .cat-hero .cat-all}
+## All Indicators
+:::
 
-{{< include /chunks/coming-soon.qmd >}}
+::: {.home-band .cat-body}
+::: {.cat-intro}
+Each indicator below tracks one measurable signal of a changing climate in the United States, built from public data with the code and sources published alongside it. Choose a category on the left, or search all indicators.
+:::
 
-<br>
+::: {.cat-columns}
+{{< include /chunks/category-nav.qmd >}}
 
+::: {.cat-main}
+::: {#all-listing}
+:::
+:::
+:::
+:::
+
+{{< include /chunks/footer.qmd >}}

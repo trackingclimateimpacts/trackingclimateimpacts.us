@@ -11,10 +11,18 @@ toc: false
 anchor-sections: false
 ---
 
-::: {.home-band .res-hero}
+::: {.home-band .res-hero .hero-split}
+
+::: {.hero-split-text}
 ## Additional Resources
 
 This section documents the transparent, reproducible processes that underpin the indicators on TrackingClimateImpacts.us and preserves the methodological foundation developed by the U.S. Environmental Protection Agency (EPA) through January 2025. It also describes how our approach will evolve as new science, data, and partnerships emerge.
+:::
+
+::: {.hero-split-img}
+![](images/rectangle_additional.png){fig-alt=""}
+:::
+
 :::
 
 ::: {.home-band .res-reports}
