@@ -1,12 +1,17 @@
-# Indicators
+## All Indicators
 
-Each indicator below tracks one measurable signal of a changing climate in the United States, built from public data with the code and sources published alongside it.
+Each indicator below tracks one measurable signal of a changing climate in the United States, built from public data with the code and sources published alongside it. Choose a category on the left, or search all indicators.
 
-> **NOTE:**
->
-> This site is under construction. Content is being added indicator by indicator — check back soon.
+Category
 
-\
+- [Weather and Extreme Events](categories/weather-and-extreme-events.llms.md)
+- [Snow and Ice](categories/snow-and-ice.llms.md)
+- [Coastal and Marine](categories/coastal-and-marine.llms.md)
+- [Freshwater Systems](categories/freshwater-systems.llms.md)
+- [Ecosystems](categories/ecosystems.llms.md)
+- [Temperature-Related Health](categories/temperature-related-health.llms.md)
+- [Vector-Related Health](categories/vector-related-health.llms.md)
+- [Societal Systems](categories/societal-systems.llms.md)
 
 ##### A Closer Look: Glaciers in Glacier National Park
 
@@ -142,7 +147,7 @@ How the magnitude and frequency of river flooding have changed at stream gauge s
 
 ##### Sea Level
 
-This indicator describes how sea level has changed over time.
+This indicator describes how sea level has changed over time. The indicator describes two types of sea level changes: absolute and relative.
 
 ##### Sea Surface Temperature
 
@@ -187,5 +192,50 @@ This indicator tracks the rate of reported West Nile neuroinvasive disease cases
 ##### Wildfires
 
 This indicator tracks the frequency, extent, and severity of wildfires in the United States.
+
+![Milken logo](./images/milken_logo.png)
+
+**GW Climate and Health Institute**
+
+950 New Hampshire Ave, NW, 101 — First Floor\
+Washington, DC 20052
+
+### About
+
+- [About](about.llms.md)
+- [Where We’re Heading](where-were-heading.llms.md)
+
+### Emissions & Climate Resources
+
+- [Emissions & Climate Resources](emissions-and-climate-resources.llms.md)
+- [Green House Gases](greenhouse-gases.llms.md)
+- [Global Climate Indicators](global-climate-indicators.llms.md)
+- [Additional Resources](additional-resources.llms.md)
+
+### The Indicators
+
+- [Weather and Extreme Events](categories/weather-and-extreme-events.llms.md)
+- [Snow and Ice](categories/snow-and-ice.llms.md)
+- [Coastal and Marine](categories/coastal-and-marine.llms.md)
+- [Freshwater Systems](categories/freshwater-systems.llms.md)
+- [Ecosystems](categories/ecosystems.llms.md)
+- [Temperature-Related Health](categories/temperature-related-health.llms.md)
+- [Vector-Related Health](categories/vector-related-health.llms.md)
+- [Societal Systems](categories/societal-systems.llms.md)
+
+### GW
+
+- [Campus Advisories](https://campusadvisories.gwu.edu/)
+- [EO/Nondiscrimination Policy](https://compliance.gwu.edu/equal-opportunity-nondiscrimination-anti-harassment-and-non-retaliation)
+- [Website Privacy Notice](https://www.gwu.edu/privacy-notice)
+- [Contact GW](https://www.gwu.edu/contact-gw)
+- [Accessibility](https://accessibility.gwu.edu/)
+- [Terms of Use](https://www.gwu.edu/terms-use)
+- [Copyright](https://www.gwu.edu/copyright)
+- [Report a Barrier to Accessibility](https://accessibility.gwu.edu/report-barrier-accessibility)
+
+- Terms of Service
+- Privacy Policy
+- Contact Us
 
 Back to top

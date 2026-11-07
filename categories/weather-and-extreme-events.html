@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>the-whole-story-about – climateindicators.us</title>
+<title>Weather and Extreme Events – TrackingClimateImpacts.us</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -29,24 +29,25 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-2c2dca39f263cc71e5b4595c1097c470.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-listing/list.min.js"></script>
+<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-e5ed6940e8edcb4baf6204fec7eb16bb.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -74,70 +75,172 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-cat-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-cat-listing'] = new List('listing-cat-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+  </script>
 <style>html{ scroll-behavior: smooth; }</style>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
 
-<meta property="og:title" content="climateindicators.us">
-<meta property="og:site_name" content="https://climateindicators.us">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<meta property="og:title" content="Weather and Extreme Events">
+<meta property="og:image" content="https://climateindicators.us/images/weather.jpg">
+<meta property="og:site_name" content="TrackingClimateImpacts.us">
+<meta property="og:image:alt" content="">
+<meta property="og:image:height" content="2027">
+<meta property="og:image:width" content="4096">
 </head>
 
 <body class="nav-fixed quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark" aria-label="Site">
+    <nav class="navbar navbar-expand-xl " data-bs-theme="dark" aria-label="Site">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">climateindicators.us</span>
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Tracking<span class="logo-accent">Climate</span>Impacts</span>
     </a>
   </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="./index.html"> <i class="bi bi-house-door" role="img">
-</i> 
-<span class="menu-text">Home</span></a>
-  </li>  
-</ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="./about.html"> <i class="bi bi-info-circle" role="img">
-</i> 
-<span class="menu-text">About</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./climate-health-and-environment.html"> <i class="bi bi-graph-up" role="img">
-</i> 
-<span class="menu-text">Climate, Health, and Environment</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./indicators.html"> 
-<span class="menu-text">Indicators</span></a>
-  </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-the-whole-story" role="link" data-bs-toggle="dropdown" aria-expanded="false">
-      <i class="bi bi-book" role="img">
-</i> 
- <span class="menu-text">The Whole Story</span>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-about" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">About</span>
     </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-the-whole-story">    
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-about">    
         <li>
-    <a class="dropdown-item" href="./the-whole-story-about.html">
+    <a class="dropdown-item" href="../about.html">
  <span class="dropdown-text">About</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./the-whole-story-indicators.html">
- <span class="dropdown-text">Indicators</span></a>
+    <a class="dropdown-item" href="../where-were-heading.html">
+ <span class="dropdown-text">Where We’re Heading</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-emissions--climate-resources" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Emissions &amp; Climate Resources</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-emissions--climate-resources">    
+        <li>
+    <a class="dropdown-item" href="../emissions-and-climate-resources.html">
+ <span class="dropdown-text">Emissions &amp; Climate Resources</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../greenhouse-gases.html">
+ <span class="dropdown-text">Greenhouse Gases</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../global-climate-indicators.html">
+ <span class="dropdown-text">Global Climate Indicators</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../additional-resources.html">
+ <span class="dropdown-text">Additional Resources</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-health--environment-indicators" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Health &amp; Environment Indicators</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-health--environment-indicators">    
+        <li>
+    <a class="dropdown-item" href="../health-and-environment-indicators.html">
+ <span class="dropdown-text">Health &amp; Environment Indicators</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../indicators.html">
+ <span class="dropdown-text">All Indicators</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../categories/weather-and-extreme-events.html">
+ <span class="dropdown-text">Weather and Extreme Events</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../categories/snow-and-ice.html">
+ <span class="dropdown-text">Snow and Ice</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../categories/coastal-and-marine.html">
+ <span class="dropdown-text">Coastal and Marine</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../categories/freshwater-systems.html">
+ <span class="dropdown-text">Freshwater Systems</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../categories/ecosystems.html">
+ <span class="dropdown-text">Ecosystems</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../categories/temperature-related-health.html">
+ <span class="dropdown-text">Temperature-Related Health</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../categories/vector-related-health.html">
+ <span class="dropdown-text">Vector-Related Health</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../categories/societal-systems.html">
+ <span class="dropdown-text">Societal Systems</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="./methodology.html"> <i class="bi bi-folder2-open" role="img">
-</i> 
+    <a class="nav-link" href="../methodology.html"> 
 <span class="menu-text">Methodology</span></a>
   </li>  
 </ul>
@@ -149,31 +252,273 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
-    </div>
+    
 <!-- main -->
-<main class="content" id="quarto-document-content" tabindex="-1"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content column-page" id="quarto-document-content" tabindex="-1"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
+
+<div class="home-band cat-hero cat-weather-extremes hero-bg">
+<div class="hero-bg-img">
+<p><img src="../images/weather.jpg" class="img-fluid" alt=""></p>
+</div>
+<section id="weather-and-extreme-events" class="level2">
+<h2 data-anchor-id="weather-and-extreme-events">Weather and Extreme Events</h2>
+</section>
+</div>
+<div class="home-band cat-body">
+<div class="cat-intro">
+<p>This indicator tracks changes in national and global temperatures, precipitation, and extreme weather events, including heat waves, wildfires, tropical cyclones, flooding, and drought.</p>
+</div>
+<div class="cat-columns">
+<div class="cat-side">
+<p><span class="cat-side-title">Category</span></p>
+<ul>
+<li><a href="../categories/weather-and-extreme-events.html">Weather and Extreme Events</a></li>
+<li><a href="../categories/snow-and-ice.html">Snow and Ice</a></li>
+<li><a href="../categories/coastal-and-marine.html">Coastal and Marine</a></li>
+<li><a href="../categories/freshwater-systems.html">Freshwater Systems</a></li>
+<li><a href="../categories/ecosystems.html">Ecosystems</a></li>
+<li><a href="../categories/temperature-related-health.html">Temperature-Related Health</a></li>
+<li><a href="../categories/vector-related-health.html">Vector-Related Health</a></li>
+<li><a href="../categories/societal-systems.html">Societal Systems</a></li>
+</ul>
+<script>
+document.querySelectorAll(".cat-side a").forEach(function (a) {
+  if (a.pathname.replace(/\.html$/, "") === location.pathname.replace(/\.html$/, "")) a.classList.add("is-current");
+});
+</script>
+</div>
+<div class="cat-main">
+<div id="listing-cat-listing" class="quarto-listing quarto-listing-container-grid">
+<div class="listing-actions-group">
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
+</div>
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-categories="V2VhdGhlciUyMGFuZCUyMENsaW1hdGUlMkNUZW1wZXJhdHVyZQ==" data-listing-file-modified-sort="1794059386647" data-listing-reading-time-sort="7" data-listing-word-count-sort="1292">
+<a href="../indicators/us-and-global-temperature.html" class="quarto-grid-link no-external-icon">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+U.S. and Global Temperature
+</h5>
+<div class="card-text listing-description">
+<p>How average air temperature has changed across the contiguous United States and worldwide since 1901, and how those changes vary by climate division.</p>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="1" data-categories="V2VhdGhlciUyMGFuZCUyMENsaW1hdGUlMkNUZW1wZXJhdHVyZQ==" data-listing-file-modified-sort="1794059386647" data-listing-reading-time-sort="7" data-listing-word-count-sort="1348">
+<a href="../indicators/seasonal-temperature.html" class="quarto-grid-link no-external-icon">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Seasonal Temperature
+</h5>
+<div class="card-text listing-description">
+<p>Trends in average seasonal air temperature across the contiguous United States since 1896, and how the change varies by season and by state.</p>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="2" data-categories="V2VhdGhlciUyQ1RlbXBlcmF0dXJl" data-listing-file-modified-sort="1794059386645" data-listing-reading-time-sort="12" data-listing-word-count-sort="2229">
+<a href="../indicators/high-and-low-temperatures.html" class="quarto-grid-link no-external-icon">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+High and Low Temperatures
+</h5>
+<div class="card-text listing-description">
+<p>Trends in unusually hot and cold temperatures across the United States.</p>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="3" data-categories="V2VhdGhlciUyQ1RlbXBlcmF0dXJl" data-listing-file-modified-sort="1794059386645" data-listing-reading-time-sort="13" data-listing-word-count-sort="2521">
+<a href="../indicators/heat-waves.html" class="quarto-grid-link no-external-icon">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Heat Waves
+</h5>
+<div class="card-text listing-description">
+<p>Trends in the frequency, duration, season length, and intensity of heat waves in 50 large U.S. cities since 1961, and in the U.S. Annual Heat Wave Index since 1895.</p>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="4" data-categories="V2VhdGhlciUyMGFuZCUyMENsaW1hdGUlMkNQcmVjaXBpdGF0aW9u" data-listing-file-modified-sort="1794059386645" data-listing-reading-time-sort="7" data-listing-word-count-sort="1277">
+<a href="../indicators/heavy-precipitation.html" class="quarto-grid-link no-external-icon">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Heavy Precipitation
+</h5>
+<div class="card-text listing-description">
+<p>This indicator tracks the frequency of heavy precipitation events in the United States.</p>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="5" data-categories="V2VhdGhlciUyMGFuZCUyMENsaW1hdGUlMkNTdG9ybXM=" data-listing-file-modified-sort="1794059386647" data-listing-reading-time-sort="10" data-listing-word-count-sort="1850">
+<a href="../indicators/tropical-cyclone-activity.html" class="quarto-grid-link no-external-icon">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Tropical Cyclone Activity
+</h5>
+<div class="card-text listing-description">
+<p>Frequency, intensity, and duration of hurricanes and other tropical storms in the Atlantic Ocean, Caribbean, and Gulf of Mexico.</p>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="6" data-categories="V2VhdGhlciUyMGFuZCUyMENsaW1hdGUlMkNGbG9vZGluZw==" data-listing-file-modified-sort="1794059386646" data-listing-reading-time-sort="6" data-listing-word-count-sort="1159">
+<a href="../indicators/river-flooding.html" class="quarto-grid-link no-external-icon">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+River Flooding
+</h5>
+<div class="card-text listing-description">
+<p>How the magnitude and frequency of river flooding have changed at stream gauge stations across the United States since 1965.</p>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="7" data-categories="V2VhdGhlciUyMGFuZCUyMENsaW1hdGUlMkNEcm91Z2h0" data-listing-file-modified-sort="1794059386644" data-listing-reading-time-sort="12" data-listing-word-count-sort="2380">
+<a href="../indicators/drought.html" class="quarto-grid-link no-external-icon">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Drought
+</h5>
+<div class="card-text listing-description">
+<p>This indicator measures drought conditions of U.S. lands.</p>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="8" data-categories="V2VhdGhlciUyMGFuZCUyMENsaW1hdGUlMkNEcm91Z2h0JTJDVGVtcGVyYXR1cmU=" data-listing-file-modified-sort="1794059386647" data-listing-reading-time-sort="6" data-listing-word-count-sort="1164">
+<a href="../indicators/temperature-and-drought-in-the-southwest.html" class="quarto-grid-link no-external-icon">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+A Closer Look: Temperature and Drought in the Southwest
+</h5>
+<div class="card-text listing-description">
+<p>A closer look at trends in temperature and drought in the southwestern United States.</p>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="9" data-categories="RW52aXJvbm1lbnQlMkNXaWxkZmlyZXM=" data-listing-file-modified-sort="1794059386647" data-listing-reading-time-sort="16" data-listing-word-count-sort="3067">
+<a href="../indicators/wildfires.html" class="quarto-grid-link no-external-icon">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Wildfires
+</h5>
+<div class="card-text listing-description">
+<p>This indicator tracks the frequency, extent, and severity of wildfires in the United States.</p>
+</div>
+</div>
+</div></a>
+</div>
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div>
+<p><a href="../health-and-environment-indicators.html" class="cat-viewall">View All</a></p>
+</div>
+</div>
+</div>
+<div class="home-band home-footer">
+<div class="home-footer-cols">
+<div class="home-footer-org">
+<p><img src="../images/milken_logo.png" class="home-footer-logo img-fluid" alt="Milken logo"></p>
+<p><strong>GW Climate and Health Institute</strong></p>
+<p>950 New Hampshire Ave, NW, 101 — First Floor<br>
+Washington, DC 20052</p>
+</div>
+<section id="about" class="level3 home-footer-col">
+<h3 data-anchor-id="about">About</h3>
+<ul>
+<li><a href="../about.html">About</a></li>
+<li><a href="../where-were-heading.html">Where We’re Heading</a></li>
+</ul>
+</section>
+<section id="emissions-climate-resources" class="level3 home-footer-col">
+<h3 data-anchor-id="emissions-climate-resources">Emissions &amp; Climate Resources</h3>
+<ul>
+<li><a href="../emissions-and-climate-resources.html">Emissions &amp; Climate Resources</a></li>
+<li><a href="../greenhouse-gases.html">Green House Gases</a></li>
+<li><a href="../global-climate-indicators.html">Global Climate Indicators</a></li>
+<li><a href="../additional-resources.html">Additional Resources</a></li>
+</ul>
+</section>
+<section id="the-indicators" class="level3 home-footer-col">
+<h3 data-anchor-id="the-indicators">The Indicators</h3>
+<ul>
+<li><a href="../categories/weather-and-extreme-events.html">Weather and Extreme Events</a></li>
+<li><a href="../categories/snow-and-ice.html">Snow and Ice</a></li>
+<li><a href="../categories/coastal-and-marine.html">Coastal and Marine</a></li>
+<li><a href="../categories/freshwater-systems.html">Freshwater Systems</a></li>
+<li><a href="../categories/ecosystems.html">Ecosystems</a></li>
+<li><a href="../categories/temperature-related-health.html">Temperature-Related Health</a></li>
+<li><a href="../categories/vector-related-health.html">Vector-Related Health</a></li>
+<li><a href="../categories/societal-systems.html">Societal Systems</a></li>
+</ul>
+</section>
+<section id="gw" class="level3 home-footer-col">
+<h3 data-anchor-id="gw">GW</h3>
+<ul>
+<li><a href="https://campusadvisories.gwu.edu/">Campus Advisories</a></li>
+<li><a href="https://compliance.gwu.edu/equal-opportunity-nondiscrimination-anti-harassment-and-non-retaliation">EO/Nondiscrimination Policy</a></li>
+<li><a href="https://www.gwu.edu/privacy-notice">Website Privacy Notice</a></li>
+<li><a href="https://www.gwu.edu/contact-gw">Contact GW</a></li>
+<li><a href="https://accessibility.gwu.edu/">Accessibility</a></li>
+<li><a href="https://www.gwu.edu/terms-use">Terms of Use</a></li>
+<li><a href="https://www.gwu.edu/copyright">Copyright</a></li>
+<li><a href="https://accessibility.gwu.edu/report-barrier-accessibility">Report a Barrier to Accessibility</a></li>
+</ul>
+</section>
+</div>
+<div class="home-footer-legal">
+<ul>
+<li>Terms of Service</li>
+<li>Privacy Policy</li>
+<li>Contact Us</li>
+</ul>
+</div>
+</div>
 
 
 
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<script>
+// On desktop the navbar dropdowns open on hover (css/theme.scss), so a click on
+// the top-level label goes to that section's main page, the first menu entry.
+// Collapsed (mobile) keeps Bootstrap's tap-to-toggle.
+document.addEventListener("click", function (e) {
+  var toggle = e.target.closest(".navbar-nav .dropdown-toggle");
+  if (!toggle || window.innerWidth < 1200) return;
+  var first = toggle.parentElement.querySelector(".dropdown-menu a[href]");
+  if (!first) return;
+  e.preventDefault();
+  e.stopPropagation();
+  window.location.href = first.href;
+}, true);
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
-    const icon = "";
-    const anchorJS = new window.AnchorJS();
-    anchorJS.options = {
-      placement: 'right',
-      icon: icon
-    };
-    anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
         if (clz.startsWith('code-annotation-')) {                     
@@ -666,26 +1011,9 @@ ul.task-list li input[type="checkbox"] {
   window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
   </script>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
-    <div class="nav-footer-left">
-      &nbsp;
-    </div>   
-    <div class="nav-footer-center">
-      <ul class="footer-items list-unstyled">
-    <li class="nav-item">
- Site made with <i class="bi bi-heart-fill"></i>, <i class="bi bi-git"></i>, and <img src="./images/icon-quarto.svg" width="13" style="vertical-align:-1px;margin-right:0.25em"><a href="https://quarto.org/" target="_blank">Quarto</a>
-  </li>  
-</ul>
-    </div>
-    <div class="nav-footer-right">
-      &nbsp;
-    </div>
-  </div>
-</footer>
 
 
 
 
-<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

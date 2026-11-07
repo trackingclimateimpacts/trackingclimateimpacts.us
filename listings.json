@@ -1,12 +1,5 @@
 [
   {
-    "listing": "/the-whole-story-indicators.html",
-    "items": [
-      "/indicators/global-greenhouse-gas-emissions.html",
-      "/indicators/ocean-acidity.html"
-    ]
-  },
-  {
     "listing": "/indicators.html",
     "items": [
       "/indicators/glaciers-in-glacier-park.html",
@@ -54,6 +47,91 @@
       "/indicators/us-and-global-temperature.html",
       "/indicators/west-nile-virus.html",
       "/indicators/wildfires.html"
+    ]
+  },
+  {
+    "listing": "/categories/weather-and-extreme-events.html",
+    "items": [
+      "/indicators/us-and-global-temperature.html",
+      "/indicators/seasonal-temperature.html",
+      "/indicators/high-and-low-temperatures.html",
+      "/indicators/heat-waves.html",
+      "/indicators/heavy-precipitation.html",
+      "/indicators/tropical-cyclone-activity.html",
+      "/indicators/river-flooding.html",
+      "/indicators/drought.html",
+      "/indicators/temperature-and-drought-in-the-southwest.html",
+      "/indicators/wildfires.html"
+    ]
+  },
+  {
+    "listing": "/categories/temperature-related-health.html",
+    "items": [
+      "/indicators/heat-related-deaths.html",
+      "/indicators/heat-related-workplace-deaths.html",
+      "/indicators/heat-related-illnesses.html",
+      "/indicators/cold-related-deaths.html"
+    ]
+  },
+  {
+    "listing": "/categories/snow-and-ice.html",
+    "items": [
+      "/indicators/glaciers-in-glacier-park.html",
+      "/indicators/lake-ice.html",
+      "/indicators/great-lakes-ice-cover.html",
+      "/indicators/snowfall.html",
+      "/indicators/snowpack.html",
+      "/indicators/permafrost.html",
+      "/indicators/freeze-thaw-conditions.html",
+      "/indicators/ice-sheets.html",
+      "/indicators/alaskan-rivers.html"
+    ]
+  },
+  {
+    "listing": "/categories/ecosystems.html",
+    "items": [
+      "/indicators/length-of-growing-season.html",
+      "/indicators/growing-degree-days.html",
+      "/indicators/ragweed-pollen-season.html",
+      "/indicators/leaf-and-bloom-dates.html",
+      "/indicators/cherry-blossom-bloom.html",
+      "/indicators/marine-species-distribution.html",
+      "/indicators/bird-wintering-ranges.html",
+      "/indicators/black-guillemots-cooper-island.html"
+    ]
+  },
+  {
+    "listing": "/categories/coastal-and-marine.html",
+    "items": [
+      "/indicators/sea-surface-temperature.html",
+      "/indicators/sea-level.html",
+      "/indicators/coastal-flooding.html",
+      "/indicators/marine-heat-waves.html",
+      "/indicators/atlantic-coast.html"
+    ]
+  },
+  {
+    "listing": "/categories/freshwater-systems.html",
+    "items": [
+      "/indicators/streamflow.html",
+      "/indicators/stream-temperature.html",
+      "/indicators/snake-river.html",
+      "/indicators/lake-temperature.html",
+      "/indicators/great-lakes.html"
+    ]
+  },
+  {
+    "listing": "/categories/societal-systems.html",
+    "items": [
+      "/indicators/heating-and-cooling-degree-days.html",
+      "/indicators/residential-energy-use.html"
+    ]
+  },
+  {
+    "listing": "/categories/vector-related-health.html",
+    "items": [
+      "/indicators/lyme-disease.html",
+      "/indicators/west-nile-virus.html"
     ]
   }
 ]
