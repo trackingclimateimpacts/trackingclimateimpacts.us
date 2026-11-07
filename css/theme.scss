@@ -841,10 +841,13 @@ body:has(.home-band) .quarto-title-block { display: none; }
   p { font-size: sc(21px); line-height: 1.6; max-width: sc(1198px); margin-bottom: sc(20px); }
 }
 
+$method-gap: sc(80px);
+$method-squiggle: 12px;   // line thickness band, matches the tile height in the masks below
+
 .method-steps {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: sc(40px);
+  gap: $method-gap;
   margin-top: sc(40px);
 }
 
@@ -1772,7 +1775,8 @@ $cat-card-border: #C8C8C8;
 
   .hero-split-img {
     align-self: stretch;
-    p { margin: 0; height: 100%; }
+    // The hero's own `p` rule caps paragraph width; the photo wrapper is a <p> too.
+    p { margin: 0; height: 100%; max-width: none; }
     img { width: 100%; height: 100%; object-fit: cover; display: block; margin: 0; }
   }
 }
@@ -1802,4 +1806,167 @@ $cat-card-border: #C8C8C8;
 @media (max-width: 767.98px) {
   .hero-split { grid-template-columns: 1fr; padding-top: 2rem; padding-bottom: 0; padding-right: 1.5rem; }
   .hero-split .hero-split-img { margin-top: 1.5rem; }
+}
+
+/* ---- Emissions & Climate Resources: card with the photo on the left, and the two
+   photo-and-caption columns under "Some greenhouse gases also have direct impacts". */
+.story-arc-card {
+  display: grid;
+  grid-template-columns: sc(604px) minmax(0, 1fr);
+  column-gap: sc(60px);
+  align-items: center;
+
+  .story-arc-img p { margin: 0; max-width: none; }
+  .story-arc-img img { width: 100%; height: auto; display: block; margin: 0; border-radius: 15px; }
+}
+
+.story-impacts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: sc(40px);
+  margin-top: sc(24px);
+
+  .story-impact img { width: 100%; height: auto; display: block; margin: 0 0 sc(16px); }
+  .story-impact p { margin-bottom: 0; }
+}
+
+@media (max-width: 767.98px) {
+  .story-arc-card { grid-template-columns: 1fr; row-gap: 1.5rem; padding: 2rem 1.5rem; }
+  .story-impacts { grid-template-columns: 1fr; row-gap: 1.5rem; }
+}
+
+.story-local img { width: 100%; height: auto; display: block; margin: 0; }
+
+// Organisation cards: text on the left, photo on the right.
+.story-org {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) sc(310px);
+  column-gap: sc(40px);
+  align-items: center;
+
+  .story-org-img p { margin: 0; max-width: none; }
+  .story-org-img img { width: 100%; height: auto; display: block; margin: 0; }
+}
+
+@media (max-width: 767.98px) {
+  .story-org { grid-template-columns: 1fr; row-gap: 1.5rem; }
+}
+
+/* ---- Methodology: wavy connectors between the process steps, in reading order
+   (01 > 02 > 03, then down and back across to 04, then 04 > 05 > 06). The line is a
+   mask over a $home-navy fill, so it takes its colour from the variable. */
+$squiggle-h: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='12' viewBox='0 0 24 12'%3E%3Cpath d='M0 6 Q6 0 12 6 T24 6' fill='none' stroke='black' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E");
+$squiggle-v: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='24' viewBox='0 0 12 24'%3E%3Cpath d='M6 0 Q0 6 6 12 T6 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E");
+
+.method-step {
+  position: relative;
+
+  &::before, &::after { content: ""; position: absolute; background: $home-navy; pointer-events: none; }
+
+  // Across the column gap, to the next step in the same row.
+  &:is(:nth-child(1), :nth-child(2), :nth-child(4), :nth-child(5))::after {
+    left: 100%;
+    top: 50%;
+    width: $method-gap;
+    height: $method-squiggle;
+    margin-top: calc(#{$method-squiggle} / -2);
+    -webkit-mask: $squiggle-h round no-repeat center / auto 100%;
+    mask: $squiggle-h round no-repeat center / auto 100%;
+  }
+
+  // Step 03 to step 04: down into the row gap, back across to the first column, down again.
+  &:nth-child(3)::after,
+  &:nth-child(4)::before {
+    left: 50%;
+    width: $method-squiggle;
+    height: $method-gap * 0.5;
+    margin-left: calc(#{$method-squiggle} / -2);
+    -webkit-mask: $squiggle-v no-repeat round center / 100% auto;
+    mask: $squiggle-v no-repeat round center / 100% auto;
+  }
+  &:nth-child(3)::after { top: 100%; }
+  &:nth-child(4)::before { bottom: 100%; }
+
+  &:nth-child(3)::before {
+    right: 50%;
+    top: calc(100% + #{$method-gap * 0.5});
+    width: calc(200% + #{$method-gap * 2});
+    height: $method-squiggle;
+    margin-top: calc(#{$method-squiggle} / -2);
+    -webkit-mask: $squiggle-h round no-repeat center / auto 100%;
+    mask: $squiggle-h round no-repeat center / auto 100%;
+  }
+}
+
+// One column: a short vertical squiggle under every step except the last.
+@media (max-width: 991.98px) {
+  .method-steps .method-step::before { display: none; }
+  .method-steps .method-step:not(:last-child)::after {
+    left: 50%;
+    top: 100%;
+    width: $method-squiggle;
+    height: $method-gap;
+    margin: 0 0 0 calc(#{$method-squiggle} / -2);
+    -webkit-mask: $squiggle-v no-repeat round center / 100% auto;
+    mask: $squiggle-v no-repeat round center / 100% auto;
+  }
+}
+
+/* ---- Methodology: description card that opens over a step on hover or keyboard focus
+   (tabindex on the step makes a tap or Tab reveal it too). Same width as the step,
+   square top-left corner so it reads as the step box opening up. */
+.method-step {
+  &:focus { outline: none; }
+  &:focus-visible { outline: 3px solid $accent; outline-offset: 4px; }
+
+  .method-step-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    width: 100%;
+    min-height: 100%;
+    box-sizing: border-box;
+    background: #fff;
+    color: #000;
+    border-radius: 0 sc(30px) sc(30px) sc(30px);
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.25);
+    padding: sc(50px);
+    font-weight: 400;
+    text-align: left;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.15s ease, visibility 0.15s;
+
+    .method-step-card-title { display: block; padding: sc(10px); font-family: $font-inter; font-size: sc(40px); font-weight: 800; line-height: 1.45; }
+    p, ul { font-family: $font-krub; font-size: sc(17px); line-height: 1.4; padding: 0 sc(10px); margin: 0 0 1em; }
+    strong { font-weight: 600; }
+    ul { list-style: disc; padding-left: sc(36px); margin-bottom: 0; }
+    li { margin-bottom: 0.5em; }
+  }
+
+  &:is(:hover, :focus-within) .method-step-card { opacity: 1; visibility: visible; }
+}
+
+// Technical Document card: text on the left, report cover on the right.
+.method-doc {
+  grid-template-columns: minmax(0, 1fr) sc(344px);
+  column-gap: sc(40px);
+  align-items: center;
+
+  .method-doc-img p { margin: 0; max-width: none; }
+  .method-doc-img img { width: 100%; height: auto; display: block; margin: 0; }
+}
+
+@media (max-width: 767.98px) {
+  .method-doc { grid-template-columns: 1fr; row-gap: 1.5rem; }
+}
+
+// Footer (desktop): sit the logo and address block low enough that the address lines
+// level with the Terms of Service row under the divider. Stacked layouts keep the normal flow.
+@media (min-width: 992px) {
+  .home-footer .home-footer-org {
+    align-self: end;
+    margin-bottom: sc(-155px);
+  }
 }
