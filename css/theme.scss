@@ -207,6 +207,15 @@ nav.navbar {
   min-height: 0;
 }
 
+// Quarto's own CSS keeps #quarto-header in place with `transform: none !important`
+// while headroom.js marks it unpinned (scrolling down). Override it so the bar
+// slides away on scroll down and returns on scroll up; the shadow is dropped so
+// its blur does not peek below the top edge.
+header#quarto-header.headroom.headroom--unpinned {
+  transform: translateY(-100%) !important;
+  nav.navbar { box-shadow: none; }
+}
+
 // Shared hover/active "block" effect for left-side nav items and right-side
 // tools. Quarto renders `tools:` entries as `.quarto-navbar-tools > a`, which
 // bypasses the `.nav-link` selectors — so they must be listed explicitly.
@@ -1381,15 +1390,21 @@ $ghg-ink:  #0C0D1B;
 
 .ghg-why,
 .ghg-why-wrap.home-band > section.ghg-why.level2 {
-  display: block;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) sc(420px);
+  column-gap: sc(56px);
+  align-items: center;
   background: $res-card-bg;
   color: #fff;
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
   padding: sc(115px) sc(56px);
 
-  h2 { font-size: sc(48px); line-height: 1.12; color: #fff; margin-bottom: sc(26px); }
-  p { font-size: sc(20px); line-height: 1.6; max-width: sc(900px); }
+  h2 { grid-column: 1; font-size: sc(48px); line-height: 1.12; color: #fff; margin-bottom: sc(26px); }
+  p { grid-column: 1; font-size: sc(20px); line-height: 1.6; max-width: sc(900px); }
+  .ghg-why-img { grid-column: 2; grid-row: 1 / span 2; }
+  .ghg-why-img p { margin: 0; }
+  .ghg-why-img img { display: block; width: 100%; height: auto; border-radius: 15px; }
 }
 
 .ghg-topics { padding-bottom: sc(60px); }
@@ -1501,7 +1516,8 @@ img.ghg-figure-img { display: block; max-width: sc(976px); width: 100%; height: 
   .ghg-hero h2, .ghg-why h2, .ghg-gases h2, .ghg-us h2, .ghg-section h2 { font-size: 2rem; }
   .ghg-section h3 { font-size: 1.5rem; }
   .ghg-hero p, .ghg-why p, .ghg-us p { font-size: 1rem; }
-  .ghg-why { padding: 2rem 1.5rem; }
+  .ghg-why { padding: 2rem 1.5rem; grid-template-columns: 1fr; }
+  .ghg-why .ghg-why-img { grid-column: 1; grid-row: auto; margin-top: 1.5rem; }
   .ghg-figure-pair { grid-template-columns: 1fr; }
 }
 
