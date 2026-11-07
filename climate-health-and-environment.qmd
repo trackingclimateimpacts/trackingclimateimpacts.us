@@ -36,6 +36,10 @@ Each indicator below is grouped by category.
 ::: {.che-cards}
 
 ::: {.che-card .cat-weather-extremes}
+::: {.che-card-img}
+![](images/weather.jpg){fig-alt=""}
+:::
+
 ### Weather and Extreme Events
 
 This indicator tracks changes in national and global temperatures, precipitation, and extreme weather events, including heat waves, wildfires, tropical cyclones, flooding, and drought.
@@ -44,6 +48,10 @@ This indicator tracks changes in national and global temperatures, precipitation
 :::
 
 ::: {.che-card .cat-ecosystems}
+::: {.che-card-img}
+![](images/ecosystems.jpg){fig-alt=""}
+:::
+
 ### Ecosystems
 
 This indicator tracks changes in growing seasons, plant and pollen timing, and the seasonal patterns of birds and marine species.
@@ -52,6 +60,10 @@ This indicator tracks changes in growing seasons, plant and pollen timing, and t
 :::
 
 ::: {.che-card .cat-cryosphere}
+::: {.che-card-img}
+![](images/snow.jpg){fig-alt=""}
+:::
+
 ### Snow and Ice
 
 This indicator tracks changes in lake ice, Great Lakes ice cover, snowfall, snow cover, snowpack, permafrost, freeze-thaw conditions, glaciers, and river ice breakup.
@@ -60,6 +72,10 @@ This indicator tracks changes in lake ice, Great Lakes ice cover, snowfall, snow
 :::
 
 ::: {.che-card .cat-temperature-health}
+::: {.che-card-img}
+![](images/temperature.jpg){fig-alt=""}
+:::
+
 ### Temperature-Related Health
 
 This indicator tracks heat-related deaths, including workplace deaths, as well as heat-related illnesses and cold-related deaths.
@@ -68,6 +84,10 @@ This indicator tracks heat-related deaths, including workplace deaths, as well a
 :::
 
 ::: {.che-card .cat-coastal-marine}
+::: {.che-card-img}
+![](images/coastal.jpg){fig-alt=""}
+:::
+
 ### Coastal and Marine
 
 This indicator tracks marine heat waves, sea levels, coastal flooding, ocean acidity, and land loss along the Atlantic coastline.
@@ -76,6 +96,10 @@ This indicator tracks marine heat waves, sea levels, coastal flooding, ocean aci
 :::
 
 ::: {.che-card .cat-vector-health}
+::: {.che-card-img}
+![](images/vector.jpg){fig-alt=""}
+:::
+
 ### Vector-Related Health
 
 This indicator tracks rates of Lyme disease and West Nile Virus.
@@ -84,6 +108,10 @@ This indicator tracks rates of Lyme disease and West Nile Virus.
 :::
 
 ::: {.che-card .cat-freshwater}
+::: {.che-card-img}
+![](images/freshwater.jpg){fig-alt=""}
+:::
+
 ### Freshwater Systems
 
 This indicator tracks changes in streamflow, stream and lake temperatures, and Great Lakes water levels and temperatures.
@@ -92,6 +120,10 @@ This indicator tracks changes in streamflow, stream and lake temperatures, and G
 :::
 
 ::: {.che-card .cat-societal}
+::: {.che-card-img}
+![](images/societal.jpg){fig-alt=""}
+:::
+
 ### Societal Systems
 
 This indicator tracks changes in heating and cooling days as well as residential energy use in summer and winter.
