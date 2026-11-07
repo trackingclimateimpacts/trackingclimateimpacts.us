@@ -109,7 +109,7 @@ indicators.qmd           listing grid, fed by each indicator's front matter
 chunks/                  reusable includes (coming-soon, description)
 css/theme.scss           the single theme: scss:defaults palette + scss:rules
 images/                  site-level images only (no per-indicator images)
-indicators/<category>/<category>.qmd   the category's landing page
+indicators/<category>/index.qmd   the category's landing page
 indicators/<category>/<slug>.qmd       one page per indicator, in its category folder
 R/common.R               helpers every page uses
 R/<slug>.R               figures for the indicator page <slug>.qmd, one file per page
@@ -308,7 +308,7 @@ Two navbar details that are easy to break:
   `css/theme.scss` hides it from the open menu. In the collapsed menu the
   label only toggles, so the entry shows there. Keep the landing page first.
 - Indicators live in one folder per category under `indicators/`, next to
-  that category's landing page (`indicators/<category>/<category>.qmd`).
+  that category's landing page (`indicators/<category>/index.qmd`).
 - There is one docked sidebar per category in `_quarto.yml`, titled with the
   category name and listing only that category's indicators; Quarto shows on
   each page the sidebar that contains it. It is styled like the category

@@ -49,21 +49,21 @@ website:
           - text: "All Indicators"
             href: indicators.qmd
           - text: "Weather and Extreme Events"
-            href: indicators/weather-and-extreme-events/weather-and-extreme-events.qmd
+            href: indicators/weather-and-extreme-events/index.qmd
           - text: "Snow and Ice"
-            href: indicators/snow-and-ice/snow-and-ice.qmd
+            href: indicators/snow-and-ice/index.qmd
           - text: "Coastal and Marine"
-            href: indicators/coastal-and-marine/coastal-and-marine.qmd
+            href: indicators/coastal-and-marine/index.qmd
           - text: "Freshwater Systems"
-            href: indicators/freshwater-systems/freshwater-systems.qmd
+            href: indicators/freshwater-systems/index.qmd
           - text: "Ecosystems"
-            href: indicators/ecosystems/ecosystems.qmd
+            href: indicators/ecosystems/index.qmd
           - text: "Temperature-Related Health"
-            href: indicators/temperature-related-health/temperature-related-health.qmd
+            href: indicators/temperature-related-health/index.qmd
           - text: "Vector-Related Health"
-            href: indicators/vector-related-health/vector-related-health.qmd
+            href: indicators/vector-related-health/index.qmd
           - text: "Societal Systems"
-            href: indicators/societal-systems/societal-systems.qmd
+            href: indicators/societal-systems/index.qmd
       - text: "Methodology"
         href: methodology.qmd
 
@@ -73,7 +73,7 @@ website:
       background: light
       contents:
         - text: "Weather and Extreme Events"
-          href: indicators/weather-and-extreme-events/weather-and-extreme-events.qmd
+          href: indicators/weather-and-extreme-events/index.qmd
         - text: "U.S. and Global Temperature"
           href: indicators/weather-and-extreme-events/us-and-global-temperature.qmd
         - text: "Seasonal Temperature"
@@ -99,7 +99,7 @@ website:
       background: light
       contents:
         - text: "Snow and Ice"
-          href: indicators/snow-and-ice/snow-and-ice.qmd
+          href: indicators/snow-and-ice/index.qmd
         - text: "A Closer Look: Glaciers in Glacier National Park"
           href: indicators/snow-and-ice/glaciers-in-glacier-park.qmd
         - text: "Lake Ice"
@@ -121,7 +121,7 @@ website:
       background: light
       contents:
         - text: "Coastal and Marine"
-          href: indicators/coastal-and-marine/coastal-and-marine.qmd
+          href: indicators/coastal-and-marine/index.qmd
         - text: "Sea Surface Temperature"
           href: indicators/coastal-and-marine/sea-surface-temperature.qmd
         - text: "Sea Level"
@@ -141,7 +141,7 @@ website:
       background: light
       contents:
         - text: "Freshwater Systems"
-          href: indicators/freshwater-systems/freshwater-systems.qmd
+          href: indicators/freshwater-systems/index.qmd
         - text: "Streamflow"
           href: indicators/freshwater-systems/streamflow.qmd
         - text: "Stream Temperature"
@@ -157,7 +157,7 @@ website:
       background: light
       contents:
         - text: "Ecosystems"
-          href: indicators/ecosystems/ecosystems.qmd
+          href: indicators/ecosystems/index.qmd
         - text: "Length of Growing Season"
           href: indicators/ecosystems/length-of-growing-season.qmd
         - text: "Growing Degree Days"
@@ -179,7 +179,7 @@ website:
       background: light
       contents:
         - text: "Temperature-Related Health"
-          href: indicators/temperature-related-health/temperature-related-health.qmd
+          href: indicators/temperature-related-health/index.qmd
         - text: "Heat-Related Deaths"
           href: indicators/temperature-related-health/heat-related-deaths.qmd
         - text: "Heat-Related Workplace Deaths"
@@ -193,7 +193,7 @@ website:
       background: light
       contents:
         - text: "Vector-Related Health"
-          href: indicators/vector-related-health/vector-related-health.qmd
+          href: indicators/vector-related-health/index.qmd
         - text: "Lyme Disease"
           href: indicators/vector-related-health/lyme-disease.qmd
         - text: "West Nile Virus"
@@ -203,7 +203,7 @@ website:
       background: light
       contents:
         - text: "Societal Systems"
-          href: indicators/societal-systems/societal-systems.qmd
+          href: indicators/societal-systems/index.qmd
         - text: "Heating and Cooling Degree Days"
           href: indicators/societal-systems/heating-and-cooling-degree-days.qmd
         - text: "Residential Energy Use"

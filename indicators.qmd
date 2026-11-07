@@ -6,14 +6,14 @@ listing:
     contents:
       - "indicators/**/*.qmd"
       - "!indicators/global-greenhouse-gas-emissions.qmd"
-      - "!indicators/coastal-and-marine/coastal-and-marine.qmd"
-      - "!indicators/ecosystems/ecosystems.qmd"
-      - "!indicators/freshwater-systems/freshwater-systems.qmd"
-      - "!indicators/snow-and-ice/snow-and-ice.qmd"
-      - "!indicators/societal-systems/societal-systems.qmd"
-      - "!indicators/temperature-related-health/temperature-related-health.qmd"
-      - "!indicators/vector-related-health/vector-related-health.qmd"
-      - "!indicators/weather-and-extreme-events/weather-and-extreme-events.qmd"
+      - "!indicators/coastal-and-marine/index.qmd"
+      - "!indicators/ecosystems/index.qmd"
+      - "!indicators/freshwater-systems/index.qmd"
+      - "!indicators/snow-and-ice/index.qmd"
+      - "!indicators/societal-systems/index.qmd"
+      - "!indicators/temperature-related-health/index.qmd"
+      - "!indicators/vector-related-health/index.qmd"
+      - "!indicators/weather-and-extreme-events/index.qmd"
     type: grid
     grid-columns: 3
     sort: "title"

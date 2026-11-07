@@ -30,14 +30,14 @@ Washington, DC 20052
 ::: {.home-footer-col}
 ### The Indicators
 
-- [Weather and Extreme Events](/indicators/weather-and-extreme-events/weather-and-extreme-events.qmd)
-- [Snow and Ice](/indicators/snow-and-ice/snow-and-ice.qmd)
-- [Coastal and Marine](/indicators/coastal-and-marine/coastal-and-marine.qmd)
-- [Freshwater Systems](/indicators/freshwater-systems/freshwater-systems.qmd)
-- [Ecosystems](/indicators/ecosystems/ecosystems.qmd)
-- [Temperature-Related Health](/indicators/temperature-related-health/temperature-related-health.qmd)
-- [Vector-Related Health](/indicators/vector-related-health/vector-related-health.qmd)
-- [Societal Systems](/indicators/societal-systems/societal-systems.qmd)
+- [Weather and Extreme Events](/indicators/weather-and-extreme-events/index.qmd)
+- [Snow and Ice](/indicators/snow-and-ice/index.qmd)
+- [Coastal and Marine](/indicators/coastal-and-marine/index.qmd)
+- [Freshwater Systems](/indicators/freshwater-systems/index.qmd)
+- [Ecosystems](/indicators/ecosystems/index.qmd)
+- [Temperature-Related Health](/indicators/temperature-related-health/index.qmd)
+- [Vector-Related Health](/indicators/vector-related-health/index.qmd)
+- [Societal Systems](/indicators/societal-systems/index.qmd)
 :::
 
 ::: {.home-footer-col}
