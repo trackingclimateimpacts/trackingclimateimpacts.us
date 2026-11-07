@@ -63,7 +63,7 @@ Rising temperatures, shifting snow and rainfall patterns, and more frequent extr
 
 Climate indicators illuminate the full arc of climate change—from trends in the greenhouse gas emissions that drive planetary warming, to shifts in Earth’s systems, to the impacts felt in communities and ecosystems. While [TrackingClimateImpacts.us]{.underline} provides a range of indicators and focuses on the impacts of climate change in the United States, understanding those impacts requires seeing them within the broader context of global change.
 
-[Understand the context ↗](the-whole-story-about.qmd){.home-feature-link}
+[Understand the context ↗](emissions-and-climate-resources.qmd){.home-feature-link}
 :::
 
 ::: {.home-feature-img}

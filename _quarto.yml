@@ -35,17 +35,17 @@ website:
       - text: "Emissions & Climate Resources"
         menu:
           - text: "Emissions & Climate Resources"
-            href: the-whole-story-about.qmd
+            href: emissions-and-climate-resources.qmd
           - text: "Greenhouse Gases"
             href: greenhouse-gases.qmd
           - text: "Global Climate Indicators"
-            href: the-whole-story-indicators.qmd
+            href: global-climate-indicators.qmd
           - text: "Additional Resources"
             href: additional-resources.qmd
-      - text: "Climate, Health & Environment"
+      - text: "Health & Environment Indicators"
         menu:
-          - text: "Climate, Health & Environment"
-            href: climate-health-and-environment.qmd
+          - text: "Health & Environment Indicators"
+            href: health-and-environment-indicators.qmd
           - text: "All Indicators"
             href: indicators.qmd
           - text: "Weather and Extreme Events"

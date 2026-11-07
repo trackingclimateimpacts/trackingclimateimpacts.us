@@ -49,7 +49,7 @@ This indicator tracks changes in national and global temperatures, precipitation
 ::: {#cat-listing}
 :::
 
-[View All](/climate-health-and-environment.qmd){.cat-viewall}
+[View All](/health-and-environment-indicators.qmd){.cat-viewall}
 :::
 :::
 :::

@@ -21,9 +21,9 @@ Washington, DC 20052
 ::: {.home-footer-col}
 ### Emissions & Climate Resources
 
-- [Emissions & Climate Resources](/the-whole-story-about.qmd)
+- [Emissions & Climate Resources](/emissions-and-climate-resources.qmd)
 - [Green House Gases](/greenhouse-gases.qmd)
-- [Global Climate Indicators](/the-whole-story-indicators.qmd)
+- [Global Climate Indicators](/global-climate-indicators.qmd)
 - [Additional Resources](/additional-resources.qmd)
 :::
 

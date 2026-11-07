@@ -48,7 +48,7 @@ This indicator tracks changes in lake ice, Great Lakes ice cover, snowfall, snow
 ::: {#cat-listing}
 :::
 
-[View All](/climate-health-and-environment.qmd){.cat-viewall}
+[View All](/health-and-environment-indicators.qmd){.cat-viewall}
 :::
 :::
 :::
