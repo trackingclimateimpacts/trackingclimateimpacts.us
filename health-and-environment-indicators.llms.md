@@ -8,11 +8,15 @@ Rising temperatures, shifting snow and rainfall patterns, and more frequent extr
 
 Each indicator below is grouped by category.
 
+![](images/weather.jpg)
+
 ### Weather and Extreme Events
 
 This indicator tracks changes in national and global temperatures, precipitation, and extreme weather events, including heat waves, wildfires, tropical cyclones, flooding, and drought.
 
 [Explore →](categories/weather-and-extreme-events.llms.md)
+
+![](images/ecosystems.jpg)
 
 ### Ecosystems
 
@@ -20,11 +24,15 @@ This indicator tracks changes in growing seasons, plant and pollen timing, and t
 
 [Explore →](categories/ecosystems.llms.md)
 
+![](images/snow.jpg)
+
 ### Snow and Ice
 
 This indicator tracks changes in lake ice, Great Lakes ice cover, snowfall, snow cover, snowpack, permafrost, freeze-thaw conditions, glaciers, and river ice breakup.
 
 [Explore →](categories/snow-and-ice.llms.md)
+
+![](images/temperature.jpg)
 
 ### Temperature-Related Health
 
@@ -32,11 +40,15 @@ This indicator tracks heat-related deaths, including workplace deaths, as well a
 
 [Explore →](categories/temperature-related-health.llms.md)
 
+![](images/coastal.jpg)
+
 ### Coastal and Marine
 
 This indicator tracks marine heat waves, sea levels, coastal flooding, ocean acidity, and land loss along the Atlantic coastline.
 
 [Explore →](categories/coastal-and-marine.llms.md)
+
+![](images/vector.jpg)
 
 ### Vector-Related Health
 
@@ -44,11 +56,15 @@ This indicator tracks rates of Lyme disease and West Nile Virus.
 
 [Explore →](categories/vector-related-health.llms.md)
 
+![](images/freshwater.jpg)
+
 ### Freshwater Systems
 
 This indicator tracks changes in streamflow, stream and lake temperatures, and Great Lakes water levels and temperatures.
 
 [Explore →](categories/freshwater-systems.llms.md)
+
+![](images/societal.jpg)
 
 ### Societal Systems
 
