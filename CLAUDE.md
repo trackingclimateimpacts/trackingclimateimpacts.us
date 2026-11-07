@@ -300,6 +300,12 @@ Two navbar details that are easy to break:
 
 - Navbar left: the site title (`climateindicators.us`, linking home), About,
   Indicators. Right: GitHub and search.
+- **The first entry of every navbar `menu:` is that section's landing page.**
+  Quarto drops a menu whose parent item also has an `href`, so the landing page
+  cannot sit on the parent. Instead, at desktop width (≥1200px)
+  `chunks/nav-click.html` sends a click on the label to that first entry and
+  `css/theme.scss` hides it from the open menu. In the collapsed menu the
+  label only toggles, so the entry shows there. Keep the landing page first.
 - One docked sidebar, titled "Indicators", that appears on `indicators.qmd` and
   all pages under `indicators/`. Indicators are grouped into sections by theme
   (e.g. "Temperature-Related Health").

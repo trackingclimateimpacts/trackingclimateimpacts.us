@@ -26,7 +26,9 @@ fig_1_plot <- function(d) {
   ggplot(d, aes(x = year, y = value, colour = region, group = site)) +
     geom_line(linewidth = 0.6) +
     geom_point_interactive(
-      aes(data_id = paste(site, year),
+      # Row index, not site and year: ggiraph rejects the apostrophes in
+      # native site names such as "C'uul C'ena'" inside a data_id attribute.
+      aes(data_id = seq_along(site),
           tooltip = sprintf("%d, %s\n%.1f°F", year, site, value)),
       size = 0.8
     ) +

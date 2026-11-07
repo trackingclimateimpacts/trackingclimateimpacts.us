@@ -370,6 +370,13 @@ nav.navbar {
   }
 }
 
+// The first entry of each navbar menu is that section's landing page. On
+// desktop the label itself links there (chunks/nav-click.html), so the entry
+// is hidden; in the collapsed menu the label only toggles, so it stays.
+@media (min-width: 1200px) {
+  .navbar .dropdown-menu > li:first-child { display: none; }
+}
+
 .navbar .dropdown-menu {
   background-color: $navbar-bg;
   border: 1px solid rgba(0, 0, 0, 0.08);

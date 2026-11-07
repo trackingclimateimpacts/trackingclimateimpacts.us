@@ -42,7 +42,7 @@ These indicators track changes in the occurrence of Lyme disease and West Nile v
 ::: {#cat-listing}
 :::
 
-[View All](/climate-health-and-environment.qmd){.cat-viewall}
+[View All](/health-and-environment-indicators.qmd){.cat-viewall}
 :::
 :::
 :::
