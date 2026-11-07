@@ -14,7 +14,7 @@ Each indicator below is grouped by category.
 
 This indicator tracks changes in national and global temperatures, precipitation, and extreme weather events, including heat waves, wildfires, tropical cyclones, flooding, and drought.
 
-[Explore →](indicators/weather-and-extreme-events/weather-and-extreme-events.llms.md)
+[Explore →](indicators/weather-and-extreme-events/index.llms.md)
 
 ![](images/ecosystems.jpg)
 
@@ -22,7 +22,7 @@ This indicator tracks changes in national and global temperatures, precipitation
 
 This indicator tracks changes in growing seasons, plant and pollen timing, and the seasonal patterns of birds and marine species.
 
-[Explore →](indicators/ecosystems/ecosystems.llms.md)
+[Explore →](indicators/ecosystems/index.llms.md)
 
 ![](images/snow.jpg)
 
@@ -30,7 +30,7 @@ This indicator tracks changes in growing seasons, plant and pollen timing, and t
 
 This indicator tracks changes in lake ice, Great Lakes ice cover, snowfall, snow cover, snowpack, permafrost, freeze-thaw conditions, glaciers, and river ice breakup.
 
-[Explore →](indicators/snow-and-ice/snow-and-ice.llms.md)
+[Explore →](indicators/snow-and-ice/index.llms.md)
 
 ![](images/temperature.jpg)
 
@@ -38,7 +38,7 @@ This indicator tracks changes in lake ice, Great Lakes ice cover, snowfall, snow
 
 This indicator tracks heat-related deaths, including workplace deaths, as well as heat-related illnesses and cold-related deaths.
 
-[Explore →](indicators/temperature-related-health/temperature-related-health.llms.md)
+[Explore →](indicators/temperature-related-health/index.llms.md)
 
 ![](images/coastal.jpg)
 
@@ -46,7 +46,7 @@ This indicator tracks heat-related deaths, including workplace deaths, as well a
 
 This indicator tracks marine heat waves, sea levels, coastal flooding, ocean acidity, and land loss along the Atlantic coastline.
 
-[Explore →](indicators/coastal-and-marine/coastal-and-marine.llms.md)
+[Explore →](indicators/coastal-and-marine/index.llms.md)
 
 ![](images/vector.jpg)
 
@@ -54,7 +54,7 @@ This indicator tracks marine heat waves, sea levels, coastal flooding, ocean aci
 
 This indicator tracks rates of Lyme disease and West Nile Virus.
 
-[Explore →](indicators/vector-related-health/vector-related-health.llms.md)
+[Explore →](indicators/vector-related-health/index.llms.md)
 
 ![](images/freshwater.jpg)
 
@@ -62,7 +62,7 @@ This indicator tracks rates of Lyme disease and West Nile Virus.
 
 This indicator tracks changes in streamflow, stream and lake temperatures, and Great Lakes water levels and temperatures.
 
-[Explore →](indicators/freshwater-systems/freshwater-systems.llms.md)
+[Explore →](indicators/freshwater-systems/index.llms.md)
 
 ![](images/societal.jpg)
 
@@ -70,7 +70,7 @@ This indicator tracks changes in streamflow, stream and lake temperatures, and G
 
 This indicator tracks changes in heating and cooling days as well as residential energy use in summer and winter.
 
-[Explore →](indicators/societal-systems/societal-systems.llms.md)
+[Explore →](indicators/societal-systems/index.llms.md)
 
 ## About the Indicators
 
@@ -115,14 +115,14 @@ Washington, DC 20052
 
 ### The Indicators
 
-- [Weather and Extreme Events](indicators/weather-and-extreme-events/weather-and-extreme-events.llms.md)
-- [Snow and Ice](indicators/snow-and-ice/snow-and-ice.llms.md)
-- [Coastal and Marine](indicators/coastal-and-marine/coastal-and-marine.llms.md)
-- [Freshwater Systems](indicators/freshwater-systems/freshwater-systems.llms.md)
-- [Ecosystems](indicators/ecosystems/ecosystems.llms.md)
-- [Temperature-Related Health](indicators/temperature-related-health/temperature-related-health.llms.md)
-- [Vector-Related Health](indicators/vector-related-health/vector-related-health.llms.md)
-- [Societal Systems](indicators/societal-systems/societal-systems.llms.md)
+- [Weather and Extreme Events](indicators/weather-and-extreme-events/index.llms.md)
+- [Snow and Ice](indicators/snow-and-ice/index.llms.md)
+- [Coastal and Marine](indicators/coastal-and-marine/index.llms.md)
+- [Freshwater Systems](indicators/freshwater-systems/index.llms.md)
+- [Ecosystems](indicators/ecosystems/index.llms.md)
+- [Temperature-Related Health](indicators/temperature-related-health/index.llms.md)
+- [Vector-Related Health](indicators/vector-related-health/index.llms.md)
+- [Societal Systems](indicators/societal-systems/index.llms.md)
 
 ### GW
 

@@ -1,13 +1,21 @@
 [
   {
-    "listing": "/indicators/vector-related-health/vector-related-health.html",
+    "listing": "/indicators/weather-and-extreme-events/index.html",
     "items": [
-      "/indicators/vector-related-health/lyme-disease.html",
-      "/indicators/vector-related-health/west-nile-virus.html"
+      "/indicators/weather-and-extreme-events/us-and-global-temperature.html",
+      "/indicators/weather-and-extreme-events/seasonal-temperature.html",
+      "/indicators/weather-and-extreme-events/high-and-low-temperatures.html",
+      "/indicators/weather-and-extreme-events/heat-waves.html",
+      "/indicators/weather-and-extreme-events/heavy-precipitation.html",
+      "/indicators/weather-and-extreme-events/tropical-cyclone-activity.html",
+      "/indicators/weather-and-extreme-events/river-flooding.html",
+      "/indicators/weather-and-extreme-events/drought.html",
+      "/indicators/weather-and-extreme-events/temperature-and-drought-in-the-southwest.html",
+      "/indicators/weather-and-extreme-events/wildfires.html"
     ]
   },
   {
-    "listing": "/indicators/temperature-related-health/temperature-related-health.html",
+    "listing": "/indicators/temperature-related-health/index.html",
     "items": [
       "/indicators/temperature-related-health/heat-related-deaths.html",
       "/indicators/temperature-related-health/heat-related-workplace-deaths.html",
@@ -16,7 +24,14 @@
     ]
   },
   {
-    "listing": "/indicators/snow-and-ice/snow-and-ice.html",
+    "listing": "/indicators/societal-systems/index.html",
+    "items": [
+      "/indicators/societal-systems/heating-and-cooling-degree-days.html",
+      "/indicators/societal-systems/residential-energy-use.html"
+    ]
+  },
+  {
+    "listing": "/indicators/snow-and-ice/index.html",
     "items": [
       "/indicators/snow-and-ice/glaciers-in-glacier-park.html",
       "/indicators/snow-and-ice/lake-ice.html",
@@ -29,26 +44,15 @@
     ]
   },
   {
-    "listing": "/indicators/freshwater-systems/freshwater-systems.html",
+    "listing": "/indicators/coastal-and-marine/index.html",
     "items": [
-      "/indicators/freshwater-systems/streamflow.html",
-      "/indicators/freshwater-systems/stream-temperature.html",
-      "/indicators/freshwater-systems/snake-river.html",
-      "/indicators/freshwater-systems/lake-temperature.html",
-      "/indicators/freshwater-systems/great-lakes.html"
-    ]
-  },
-  {
-    "listing": "/indicators/ecosystems/ecosystems.html",
-    "items": [
-      "/indicators/ecosystems/length-of-growing-season.html",
-      "/indicators/ecosystems/growing-degree-days.html",
-      "/indicators/ecosystems/ragweed-pollen-season.html",
-      "/indicators/ecosystems/leaf-and-bloom-dates.html",
-      "/indicators/ecosystems/cherry-blossom-bloom.html",
-      "/indicators/ecosystems/marine-species-distribution.html",
-      "/indicators/ecosystems/bird-wintering-ranges.html",
-      "/indicators/ecosystems/black-guillemots-cooper-island.html"
+      "/indicators/coastal-and-marine/sea-surface-temperature.html",
+      "/indicators/coastal-and-marine/sea-level.html",
+      "/indicators/coastal-and-marine/coastal-flooding.html",
+      "/indicators/coastal-and-marine/marine-heat-waves.html",
+      "/indicators/coastal-and-marine/atlantic-coast.html",
+      "/indicators/coastal-and-marine/antarctic-sea-ice.html",
+      "/indicators/coastal-and-marine/ocean-acidity.html"
     ]
   },
   {
@@ -104,37 +108,33 @@
     ]
   },
   {
-    "listing": "/indicators/coastal-and-marine/coastal-and-marine.html",
+    "listing": "/indicators/ecosystems/index.html",
     "items": [
-      "/indicators/coastal-and-marine/sea-surface-temperature.html",
-      "/indicators/coastal-and-marine/sea-level.html",
-      "/indicators/coastal-and-marine/coastal-flooding.html",
-      "/indicators/coastal-and-marine/marine-heat-waves.html",
-      "/indicators/coastal-and-marine/atlantic-coast.html",
-      "/indicators/coastal-and-marine/antarctic-sea-ice.html",
-      "/indicators/coastal-and-marine/ocean-acidity.html"
+      "/indicators/ecosystems/length-of-growing-season.html",
+      "/indicators/ecosystems/growing-degree-days.html",
+      "/indicators/ecosystems/ragweed-pollen-season.html",
+      "/indicators/ecosystems/leaf-and-bloom-dates.html",
+      "/indicators/ecosystems/cherry-blossom-bloom.html",
+      "/indicators/ecosystems/marine-species-distribution.html",
+      "/indicators/ecosystems/bird-wintering-ranges.html",
+      "/indicators/ecosystems/black-guillemots-cooper-island.html"
     ]
   },
   {
-    "listing": "/indicators/societal-systems/societal-systems.html",
+    "listing": "/indicators/freshwater-systems/index.html",
     "items": [
-      "/indicators/societal-systems/heating-and-cooling-degree-days.html",
-      "/indicators/societal-systems/residential-energy-use.html"
+      "/indicators/freshwater-systems/streamflow.html",
+      "/indicators/freshwater-systems/stream-temperature.html",
+      "/indicators/freshwater-systems/snake-river.html",
+      "/indicators/freshwater-systems/lake-temperature.html",
+      "/indicators/freshwater-systems/great-lakes.html"
     ]
   },
   {
-    "listing": "/indicators/weather-and-extreme-events/weather-and-extreme-events.html",
+    "listing": "/indicators/vector-related-health/index.html",
     "items": [
-      "/indicators/weather-and-extreme-events/us-and-global-temperature.html",
-      "/indicators/weather-and-extreme-events/seasonal-temperature.html",
-      "/indicators/weather-and-extreme-events/high-and-low-temperatures.html",
-      "/indicators/weather-and-extreme-events/heat-waves.html",
-      "/indicators/weather-and-extreme-events/heavy-precipitation.html",
-      "/indicators/weather-and-extreme-events/tropical-cyclone-activity.html",
-      "/indicators/weather-and-extreme-events/river-flooding.html",
-      "/indicators/weather-and-extreme-events/drought.html",
-      "/indicators/weather-and-extreme-events/temperature-and-drought-in-the-southwest.html",
-      "/indicators/weather-and-extreme-events/wildfires.html"
+      "/indicators/vector-related-health/lyme-disease.html",
+      "/indicators/vector-related-health/west-nile-virus.html"
     ]
   }
 ]
