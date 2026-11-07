@@ -78,14 +78,14 @@ Washington, DC 20052
 
 ### The Indicators
 
-- [Weather and Extreme Events](categories/weather-and-extreme-events.llms.md)
-- [Snow and Ice](categories/snow-and-ice.llms.md)
-- [Coastal and Marine](categories/coastal-and-marine.llms.md)
-- [Freshwater Systems](categories/freshwater-systems.llms.md)
-- [Ecosystems](categories/ecosystems.llms.md)
-- [Temperature-Related Health](categories/temperature-related-health.llms.md)
-- [Vector-Related Health](categories/vector-related-health.llms.md)
-- [Societal Systems](categories/societal-systems.llms.md)
+- [Weather and Extreme Events](indicators/weather-and-extreme-events/weather-and-extreme-events.llms.md)
+- [Snow and Ice](indicators/snow-and-ice/snow-and-ice.llms.md)
+- [Coastal and Marine](indicators/coastal-and-marine/coastal-and-marine.llms.md)
+- [Freshwater Systems](indicators/freshwater-systems/freshwater-systems.llms.md)
+- [Ecosystems](indicators/ecosystems/ecosystems.llms.md)
+- [Temperature-Related Health](indicators/temperature-related-health/temperature-related-health.llms.md)
+- [Vector-Related Health](indicators/vector-related-health/vector-related-health.llms.md)
+- [Societal Systems](indicators/societal-systems/societal-systems.llms.md)
 
 ### GW
 

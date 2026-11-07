@@ -4,6 +4,8 @@ Multiple metrics provide clear signals of global change in temperature, sea leve
 
 A more complete set of indicators and narratives focused on climate drivers and variability can be found at [climate.us](https://www.climate.us/). We provide several examples from climate.us (CC BY-SA 4.0 Attribution-ShareAlike 4.0 International).
 
+![](images/Rectangle_global.png)
+
 ## Global surface temperature
 
 Temperature is a fundamental measurement for describing the climate, and the temperature in particular places can have wide-ranging effects on human life and ecosystems. For example, increases in air temperature can lead to more intense heat waves, which can cause illness and death, especially in vulnerable populations. Annual and seasonal temperature patterns also determine the types of animals and plants that can survive in particular locations. Changes in temperature can disrupt a wide range of natural processes, particularly if these changes occur more quickly than plant and animal species can adapt.
@@ -52,7 +54,9 @@ Sea Level
 
 This indicator describes how sea level has changed over time.
 
-[Explore →](indicators/sea-level.llms.md)
+[Explore →](indicators/coastal-and-marine/sea-level.llms.md)
+
+![Sea level](images/sea_level.png)
 
 ![Milken logo](./images/milken_logo.png)
 
@@ -75,14 +79,14 @@ Washington, DC 20052
 
 ### The Indicators
 
-- [Weather and Extreme Events](categories/weather-and-extreme-events.llms.md)
-- [Snow and Ice](categories/snow-and-ice.llms.md)
-- [Coastal and Marine](categories/coastal-and-marine.llms.md)
-- [Freshwater Systems](categories/freshwater-systems.llms.md)
-- [Ecosystems](categories/ecosystems.llms.md)
-- [Temperature-Related Health](categories/temperature-related-health.llms.md)
-- [Vector-Related Health](categories/vector-related-health.llms.md)
-- [Societal Systems](categories/societal-systems.llms.md)
+- [Weather and Extreme Events](indicators/weather-and-extreme-events/weather-and-extreme-events.llms.md)
+- [Snow and Ice](indicators/snow-and-ice/snow-and-ice.llms.md)
+- [Coastal and Marine](indicators/coastal-and-marine/coastal-and-marine.llms.md)
+- [Freshwater Systems](indicators/freshwater-systems/freshwater-systems.llms.md)
+- [Ecosystems](indicators/ecosystems/ecosystems.llms.md)
+- [Temperature-Related Health](indicators/temperature-related-health/temperature-related-health.llms.md)
+- [Vector-Related Health](indicators/vector-related-health/vector-related-health.llms.md)
+- [Societal Systems](indicators/societal-systems/societal-systems.llms.md)
 
 ### GW
 

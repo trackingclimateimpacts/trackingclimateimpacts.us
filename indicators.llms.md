@@ -1,17 +1,19 @@
+![](images/all_indicators.jpg)
+
 ## All Indicators
 
 Each indicator below tracks one measurable signal of a changing climate in the United States, built from public data with the code and sources published alongside it. Choose a category on the left, or search all indicators.
 
 Category
 
-- [Weather and Extreme Events](categories/weather-and-extreme-events.llms.md)
-- [Snow and Ice](categories/snow-and-ice.llms.md)
-- [Coastal and Marine](categories/coastal-and-marine.llms.md)
-- [Freshwater Systems](categories/freshwater-systems.llms.md)
-- [Ecosystems](categories/ecosystems.llms.md)
-- [Temperature-Related Health](categories/temperature-related-health.llms.md)
-- [Vector-Related Health](categories/vector-related-health.llms.md)
-- [Societal Systems](categories/societal-systems.llms.md)
+- [Weather and Extreme Events](indicators/weather-and-extreme-events/weather-and-extreme-events.llms.md)
+- [Snow and Ice](indicators/snow-and-ice/snow-and-ice.llms.md)
+- [Coastal and Marine](indicators/coastal-and-marine/coastal-and-marine.llms.md)
+- [Freshwater Systems](indicators/freshwater-systems/freshwater-systems.llms.md)
+- [Ecosystems](indicators/ecosystems/ecosystems.llms.md)
+- [Temperature-Related Health](indicators/temperature-related-health/temperature-related-health.llms.md)
+- [Vector-Related Health](indicators/vector-related-health/vector-related-health.llms.md)
+- [Societal Systems](indicators/societal-systems/societal-systems.llms.md)
 
 ##### A Closer Look: Glaciers in Glacier National Park
 
@@ -32,6 +34,10 @@ A closer look at trends in temperature and drought in the southwestern United St
 ##### A Closer Look: The Black Guillemots of Cooper Island
 
 This feature explores changes in bird populations on an island along Alaska’s Arctic northern coast.
+
+##### Antarctic Sea Ice
+
+This indicator tracks the extent of sea ice around Antarctica.
 
 ##### Bird Wintering Ranges
 
@@ -129,6 +135,10 @@ This indicator tracks the occurrence of unusually high temperatures in U.S. coas
 
 This indicator examines changes in the location of fish, shellfish, and other marine species along U.S. coasts.
 
+##### Ocean Acidity
+
+This indicator describes changes in the chemistry of the ocean that relate to the amount of carbon dioxide dissolved in the water.
+
 ##### Permafrost
 
 This indicator shows trends in permafrost temperature at select sites in Alaska.
@@ -214,14 +224,14 @@ Washington, DC 20052
 
 ### The Indicators
 
-- [Weather and Extreme Events](categories/weather-and-extreme-events.llms.md)
-- [Snow and Ice](categories/snow-and-ice.llms.md)
-- [Coastal and Marine](categories/coastal-and-marine.llms.md)
-- [Freshwater Systems](categories/freshwater-systems.llms.md)
-- [Ecosystems](categories/ecosystems.llms.md)
-- [Temperature-Related Health](categories/temperature-related-health.llms.md)
-- [Vector-Related Health](categories/vector-related-health.llms.md)
-- [Societal Systems](categories/societal-systems.llms.md)
+- [Weather and Extreme Events](indicators/weather-and-extreme-events/weather-and-extreme-events.llms.md)
+- [Snow and Ice](indicators/snow-and-ice/snow-and-ice.llms.md)
+- [Coastal and Marine](indicators/coastal-and-marine/coastal-and-marine.llms.md)
+- [Freshwater Systems](indicators/freshwater-systems/freshwater-systems.llms.md)
+- [Ecosystems](indicators/ecosystems/ecosystems.llms.md)
+- [Temperature-Related Health](indicators/temperature-related-health/temperature-related-health.llms.md)
+- [Vector-Related Health](indicators/vector-related-health/vector-related-health.llms.md)
+- [Societal Systems](indicators/societal-systems/societal-systems.llms.md)
 
 ### GW
 
