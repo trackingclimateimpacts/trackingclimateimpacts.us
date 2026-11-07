@@ -8,6 +8,8 @@ Greenhouse gases from human activities are the most significant driver of observ
 
 As greenhouse gas emissions from human activities increase, they build up in the atmosphere and warm the climate, leading to many other changes around the world—in the atmosphere, on land, and in the oceans. The indicators in other sections of this website illustrate many of these changes, which have both positive and negative effects on people, society, and the environment—including plants and animals. Because many of the major greenhouse gases stay in the atmosphere for tens to hundreds of years after being released, their warming effects on the climate persist over a long time and can therefore affect both present and future generations.
 
+![Satellite view of Earth's clouds and continents](images/earth_resources.png)
+
 U.S. Greenhouse Gas Emissions\
 In the United States, carbon dioxide accounts for most of the nation’s emissions. Transportation is the largest source of 2022 greenhouse gas emissions in the United States, followed by electricity generation.
 
