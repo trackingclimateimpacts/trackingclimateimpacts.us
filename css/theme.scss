@@ -50,6 +50,7 @@ $btn-hover:    $green;  // download button hover fill
 $home-green:      $green;
 $home-orange:     $orange;
 $home-charcoal:   $charcoal;
+$footer-grey:     #404040;  // footer band, from the Figma frames; lighter than $home-charcoal
 $home-navy:       $navy;
 $home-sand:       $sand;
 $where-gold:      $orange;
@@ -593,7 +594,7 @@ body:has(.home-band) .quarto-title-block { display: none; }
 }
 
 .home-footer {
-  background: $home-charcoal;
+  background: $footer-grey;
   color: #fff;
   padding-top: sc(129px);
   padding-bottom: sc(60px);
@@ -611,6 +612,8 @@ body:has(.home-band) .quarto-title-block { display: none; }
   h3 { font-size: 13px; font-weight: 900; color: #fff; margin: 0 0 1.2em; }
   ul { list-style: none; margin: 0; padding: 0; }
   li { font-family: $font-krub; font-size: 13px; line-height: 40px; }
+  a { color: #fff; text-decoration: none !important; }
+  a:hover { text-decoration: underline !important; }
 
   .home-footer-legal ul {
     display: flex;

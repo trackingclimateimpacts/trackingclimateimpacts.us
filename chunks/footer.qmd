@@ -14,43 +14,43 @@ Washington, DC 20052
 ::: {.home-footer-col}
 ### About
 
-- About
-- Where We’re Heading
+- [About](/about.qmd)
+- [Where We’re Heading](/where-were-heading.qmd)
 :::
 
 ::: {.home-footer-col}
 ### Emissions & Climate Resources
 
-- Emissions & Climate Resources
-- Green House Gases
-- Global Climate Indicators
-- Additional Resources
+- [Emissions & Climate Resources](/the-whole-story-about.qmd)
+- [Green House Gases](/greenhouse-gases.qmd)
+- [Global Climate Indicators](/the-whole-story-indicators.qmd)
+- [Additional Resources](/additional-resources.qmd)
 :::
 
 ::: {.home-footer-col}
 ### The Indicators
 
-- Weather and Extreme Events
-- Snow and Ice
-- Coastal and Marine
-- Freshwater Systems
-- Ecosystems
-- Temperature-Related Health
-- Vector-Related Health
-- Societal Systems
+- [Weather and Extreme Events](/categories/weather-and-extreme-events.qmd)
+- [Snow and Ice](/categories/snow-and-ice.qmd)
+- [Coastal and Marine](/categories/coastal-and-marine.qmd)
+- [Freshwater Systems](/categories/freshwater-systems.qmd)
+- [Ecosystems](/categories/ecosystems.qmd)
+- [Temperature-Related Health](/categories/temperature-related-health.qmd)
+- [Vector-Related Health](/categories/vector-related-health.qmd)
+- [Societal Systems](/categories/societal-systems.qmd)
 :::
 
 ::: {.home-footer-col}
 ### GW
 
-- Campus Advisories
-- EO/Nondiscrimination Policy
-- Website Privacy Notice
-- Contact GW
-- Accessibility
-- Terms of Use
-- Copyright
-- Report a Barrier to Accessibility
+- [Campus Advisories](https://campusadvisories.gwu.edu/)
+- [EO/Nondiscrimination Policy](https://compliance.gwu.edu/equal-opportunity-nondiscrimination-anti-harassment-and-non-retaliation)
+- [Website Privacy Notice](https://www.gwu.edu/privacy-notice)
+- [Contact GW](https://www.gwu.edu/contact-gw)
+- [Accessibility](https://accessibility.gwu.edu/)
+- [Terms of Use](https://www.gwu.edu/terms-use)
+- [Copyright](https://www.gwu.edu/copyright)
+- [Report a Barrier to Accessibility](https://accessibility.gwu.edu/report-barrier-accessibility)
 :::
 
 :::
