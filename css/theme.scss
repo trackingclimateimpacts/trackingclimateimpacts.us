@@ -1713,7 +1713,13 @@ $cat-card-border: #C8C8C8;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
   overflow: hidden;
   padding: 0 sc(24px) sc(24px);
-  border-top: sc(199px) solid $stone;
+
+  .che-card-img {
+    margin: 0 sc(-24px);
+    height: sc(199px);
+    p { margin: 0; height: 100%; }
+    img { display: block; width: 100%; height: 100%; object-fit: cover; }
+  }
 
   h3 { font-size: 20px; font-weight: 900; margin: sc(20px) 0 sc(12px); }
   p { font-size: 15px; color: rgba(0, 0, 0, 0.55); flex: 1; }
@@ -1727,15 +1733,6 @@ $cat-card-border: #C8C8C8;
     // Stretch the link over the whole card.
     &::after { content: ""; position: absolute; inset: 0; }
   }
-}
-
-@each $cls, $colour in (
-  cat-weather-extremes: $cat-weather-extremes, cat-cryosphere: $cat-cryosphere,
-  cat-coastal-marine: $cat-coastal-marine, cat-freshwater: $cat-freshwater,
-  cat-ecosystems: $cat-ecosystems, cat-temperature-health: $cat-temperature-health,
-  cat-vector-health: $cat-vector-health, cat-societal: $cat-societal
-) {
-  .che-card.#{$cls} { border-top-color: $colour; }
 }
 
 .che-about-wrap {
@@ -1774,7 +1771,7 @@ $cat-card-border: #C8C8C8;
   .che-hero { grid-template-columns: 1fr; padding-top: 2rem; padding-bottom: 0; padding-right: 1.5rem; }
   .che-hero .che-hero-img { justify-self: start; width: 100%; margin-top: 1.5rem; }
   .che-cards { grid-template-columns: 1fr; grid-template-rows: none; grid-auto-flow: row; }
-  .che-card { border-top-width: 120px; }
+  .che-card .che-card-img { height: 120px; }
   .che-about { padding: 2rem 1.5rem; }
   .che-hero h2, .che-indicators h2, .che-about h2 { font-size: 2rem; line-height: 1.15; }
   .che-hero p, .che-about p, .che-refs p { font-size: 1rem; }
