@@ -1,4 +1,4 @@
-# Figures for indicators/stream-temperature.qmd.
+# Figures for indicators/freshwater-systems/stream-temperature.qmd.
 
 REPO <- "stream-temperature"
 

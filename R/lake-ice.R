@@ -1,4 +1,4 @@
-# Figures for indicators/lake-ice.qmd.
+# Figures for indicators/snow-and-ice/lake-ice.qmd.
 
 REPO <- "lake-ice"
 

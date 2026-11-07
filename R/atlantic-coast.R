@@ -1,4 +1,4 @@
-# Figures for indicators/atlantic-coast.qmd.
+# Figures for indicators/coastal-and-marine/atlantic-coast.qmd.
 
 REPO <- "atlantic-coast"
 

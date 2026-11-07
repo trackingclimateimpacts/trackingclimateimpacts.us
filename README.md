@@ -20,7 +20,7 @@ quarto render    # build the full site into _site/
 - `index.qmd` — home page
 - `about.qmd` — about the project
 - `indicators.qmd` — listing page for all indicators
-- `indicators/*.qmd` — one page per indicator
+- `indicators/<category>/` — one folder per category: its landing page plus one page per indicator
 - `chunks/` — reusable content snippets pulled in with `{{< include >}}`
 - `css/theme.scss` — custom theme (single `$accent` variable drives the palette)
 - `images/` — static assets

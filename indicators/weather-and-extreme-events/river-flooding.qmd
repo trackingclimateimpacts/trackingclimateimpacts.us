@@ -1,0 +1,191 @@
+---
+title: "River Flooding"
+description: "How the magnitude and frequency of river flooding have changed at stream gauge stations across the United States since 1965."
+categories: [Weather and Climate, Flooding]
+execute:
+  eval: true
+---
+
+```{r}
+#| label: setup
+#| include: false
+source(here::here("R", "common.R"))
+source(here::here("R", "river-flooding.R"))
+
+meta      <- read_meta(REPO)
+magnitude <- read_indicator(REPO, "river_flooding_magnitude.csv")
+frequency <- read_indicator(REPO, "river_flooding_frequency.csv")
+```
+
+## Figures
+
+::::: {.panel-tabset}
+
+### Figure 1
+
+```{r}
+#| label: caption-1
+#| echo: false
+#| output: asis
+figure_caption(meta, "river_flooding_magnitude.csv")
+```
+
+<div class="d-flex flex-wrap gap-2 mb-3">
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/climateindicators/river-flooding/main/data/river_flooding_magnitude.csv" download><i class="bi bi-filetype-csv"></i> Figure data (CSV)</a>
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/climateindicators/river-flooding/main/data-raw/river-flooding_fig-1.csv" download><i class="bi bi-filetype-csv"></i> EPA source data (CSV)</a>
+</div>
+
+```{r}
+#| label: chart-1
+#| echo: false
+fig_1(magnitude)
+```
+
+This figure shows changes in the size of flooding events in rivers and streams in the United States between 1965 and 2015. Blue upward-pointing symbols show locations where floods have become larger; brown downward-pointing symbols show locations where floods have become smaller. The larger, solid-color symbols represent stations where the change was statistically significant.
+
+```{r}
+#| label: chart-1-offmap-intro
+#| echo: false
+#| output: asis
+cat(sprintf(
+  "%s stations fall outside the map above and are shown here on the same scale, by trend value:\n",
+  offmap_summary(magnitude)
+))
+```
+
+```{r}
+#| label: chart-1-offmap
+#| echo: false
+fig_1_offmap(magnitude)
+```
+
+```{r}
+#| label: chart-1-note
+#| echo: false
+#| output: asis
+significance_note(meta, "river_flooding_magnitude.csv")
+```
+
+<details><summary>Show the data behind this figure</summary>
+
+```{r}
+#| label: table-1
+#| echo: false
+knitr::kable(fig_1_table(magnitude))
+```
+
+</details>
+
+### Figure 2
+
+```{r}
+#| label: caption-2
+#| echo: false
+#| output: asis
+figure_caption(meta, "river_flooding_frequency.csv")
+```
+
+<div class="d-flex flex-wrap gap-2 mb-3">
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/climateindicators/river-flooding/main/data/river_flooding_frequency.csv" download><i class="bi bi-filetype-csv"></i> Figure data (CSV)</a>
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/climateindicators/river-flooding/main/data-raw/river-flooding_fig-2.csv" download><i class="bi bi-filetype-csv"></i> EPA source data (CSV)</a>
+</div>
+
+```{r}
+#| label: chart-2
+#| echo: false
+fig_2(frequency)
+```
+
+This figure shows changes in the frequency of flooding events in rivers and streams in the United States between 1965 and 2015. Blue upward-pointing symbols show locations where floods have become more frequent; brown downward-pointing symbols show locations where floods have become less frequent. The larger, solid-color symbols represent stations where the change was statistically significant.
+
+```{r}
+#| label: chart-2-offmap-intro
+#| echo: false
+#| output: asis
+cat(sprintf(
+  "%s stations fall outside the map above and are shown here on the same scale, by trend value:\n",
+  offmap_summary(frequency)
+))
+```
+
+```{r}
+#| label: chart-2-offmap
+#| echo: false
+fig_2_offmap(frequency)
+```
+
+```{r}
+#| label: chart-2-note
+#| echo: false
+#| output: asis
+significance_note(meta, "river_flooding_frequency.csv")
+```
+
+<details><summary>Show the data behind this figure</summary>
+
+```{r}
+#| label: table-2
+#| echo: false
+knitr::kable(fig_2_table(frequency))
+```
+
+</details>
+
+:::::
+
+## Key Points
+
+- Floods have generally become larger in rivers and streams across large parts of the Northeast and Midwest. Flood magnitude has generally decreased in the West, southern Appalachia, and northern Michigan (see Figure 1).
+- Large floods have become more frequent across the Northeast, Pacific Northwest, and northern Great Plains. Flood frequency has decreased in some other parts of the country, especially the Southwest and the Rockies (see Figure 2).
+- Increases and decreases in frequency and magnitude of river flood events generally coincide with increases and decreases in the frequency of heavy rainfall events.^2,3^
+
+## Background
+
+Rivers and streams experience flooding as a natural result of large rain storms or spring snowmelt that quickly drains into streams and rivers. Although the risk for flooding varies across the United States, most areas are susceptible to floods, even in dry and mountainous regions. The size, or magnitude, of flood events is influenced by how much water enters the waterway upstream—and how quickly. Flood frequency largely depends on the frequency of weather events.
+
+Large flood events can damage homes, roads, bridges, and other infrastructure; wipe out farmers' crops; and harm or displace people. Although regular flooding helps to maintain the nutrient balance of soils in the flood plain, larger or more frequent floods could disrupt ecosystems by displacing aquatic life, impairing water quality, and increasing soil erosion. By inundating water treatment systems with sediment and contaminants, and promoting the growth of harmful microbes, floods can directly affect the water supplies that communities depend on.
+
+Climate change may cause river floods to become larger or more frequent than they used to be in some places, yet become smaller and less frequent in other places. As warmer temperatures cause more water to evaporate from the land and oceans, changes in the size and frequency of heavy precipitation events may in turn affect the size and frequency of river flooding (see the [Heavy Precipitation](/indicators/weather-and-extreme-events/heavy-precipitation.qmd) indicator).^1^ Changes in streamflow, the timing of snowmelt (see the [Streamflow indicator](/indicators/freshwater-systems/streamflow.qmd)), and the amount of snowpack that accumulates in the winter (see the [Snowpack](/indicators/snow-and-ice/snowpack.qmd) indicator) can also affect flood patterns.
+
+## About the Indicator
+
+The U.S. Geological Survey maintains thousands of stream gauges across the United States. Each gauge measures water level and discharge—the amount of water flowing past the gauge. This indicator uses total daily discharge data from about 500 long-term stream gauge stations where trends are not substantially influenced by dams, reservoir management, wastewater treatment facilities, or land-use change.
+
+One way to determine whether the magnitude of flooding has changed is by studying the largest flood event from each year. This indicator examines the maximum discharge from every year at every station to identify whether peak flows have generally increased or decreased. This indicator also analyzes whether large flood events have become more or less frequent over time, based on daily discharge records.
+
+This indicator starts in 1965 because flood data have been available for a large number of sites to support a national-level analysis since then.
+
+## Indicator Notes
+
+This indicator is based on U.S. stream gauges that have recorded data consistently since 1965. Besides climate change, many other types of human influences could affect the frequency and magnitude of floods—for example, dams, floodwater management activities, agricultural practices, and changes in land use. To remove these influences, this indicator focuses on a set of sites that are not heavily influenced by human activities, in watersheds that do not have a large proportion of impervious surfaces such as concrete and asphalt. Increased flooding does not necessarily result in an increased risk to people or property if an area has protective infrastructure, such as levees or floodwalls.
+
+## Data Sources
+
+Daily stream gauge data were collected by the U.S. Geological Survey. These data came from a set of gauges in watersheds with minimal human impacts, which have been classified as reference gauges.^6^ Daily discharge data are stored in the National Water Information System and are publicly available at: <http://waterdata.usgs.gov/nwis>.
+
+## Technical Documentation
+
+```{r}
+#| label: td-link
+#| echo: false
+#| output: asis
+technical_documentation_link(meta)
+```
+
+## References
+
+1. Mallakpour, I., G. Villarini. 2015. The changing nature of flooding across the central United States. Nature Climate Change 5:250–254.
+2. Mallakpour, I., G. Villarini. 2015. The changing nature of flooding across the central United States. Nature Climate Change 5:250–254.
+3. USGCRP (U.S. Global Change Research Program). 2017. Climate science special report: Fourth National Climate Assessment, volume I. Wuebbles, D.J., D.W. Fahey, K.A. Hibbard, D.J. Dokken, B.C. Stewart, and T.K. Maycock, eds. <https://science2017.globalchange.gov>. doi:10.7930/J0J964J6.
+4. Slater, L., and G. Villarini. 2016 update and expansion to data originally published in: Mallakpour, I., G. Villarini. 2015. The changing nature of flooding across the central United States. Nature Climate Change 5:250–254.
+5. Slater, L., and G. Villarini. 2016 update and expansion to data originally published in: Mallakpour, I., G. Villarini. 2015. The changing nature of flooding across the central United States. Nature Climate Change 5:250–254.
+6. Lins, H.F. 2012. USGS Hydro-Climatic Data Network 2009 (HCDN-2009). U.S. Geological Survey Fact Sheet 2012-3047.
+
+::: {.callout-note appearance="simple" icon=false}
+Text on this page is EPA's own published wording (a U.S. Government work, not
+subject to domestic copyright), extracted from EPA's published indicator page
+and verified paragraph by paragraph against the archived HTML. Data, chart
+code, and the full extraction pipeline are maintained in the
+[river-flooding](https://github.com/climateindicators/river-flooding)
+repository, which this page reads its data from directly.
+:::

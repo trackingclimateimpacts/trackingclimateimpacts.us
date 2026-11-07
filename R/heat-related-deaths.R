@@ -1,4 +1,4 @@
-# Figures for indicators/heat-related-deaths.qmd.
+# Figures for indicators/temperature-related-health/heat-related-deaths.qmd.
 
 REPO <- "heat-related-deaths-new"
 

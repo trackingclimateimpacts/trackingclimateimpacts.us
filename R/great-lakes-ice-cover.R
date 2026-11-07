@@ -1,4 +1,4 @@
-# Figures for indicators/great-lakes-ice-cover.qmd.
+# Figures for indicators/snow-and-ice/great-lakes-ice-cover.qmd.
 
 REPO <- "great-lakes-ice-cover"
 

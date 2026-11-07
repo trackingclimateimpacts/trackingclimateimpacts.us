@@ -1,4 +1,4 @@
-# Figures for indicators/residential-energy-use.qmd.
+# Figures for indicators/societal-systems/residential-energy-use.qmd.
 
 REPO <- "residential-energy-use"
 

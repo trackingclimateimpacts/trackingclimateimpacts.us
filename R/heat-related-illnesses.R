@@ -1,4 +1,4 @@
-# Figures for indicators/heat-related-illnesses.qmd.
+# Figures for indicators/temperature-related-health/heat-related-illnesses.qmd.
 
 REPO <- "heat-related-illness-new"
 

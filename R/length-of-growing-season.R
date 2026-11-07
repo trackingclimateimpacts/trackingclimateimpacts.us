@@ -1,4 +1,4 @@
-# Figures for indicators/length-of-growing-season.qmd.
+# Figures for indicators/ecosystems/length-of-growing-season.qmd.
 
 REPO <- "length-of-growing-season"
 

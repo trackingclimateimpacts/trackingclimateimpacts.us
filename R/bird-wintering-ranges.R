@@ -1,4 +1,4 @@
-# Figures for indicators/bird-wintering-ranges.qmd.
+# Figures for indicators/ecosystems/bird-wintering-ranges.qmd.
 
 REPO <- "bird-wintering-ranges"
 

@@ -1,4 +1,4 @@
-# Figures for indicators/wildfires.qmd.
+# Figures for indicators/weather-and-extreme-events/wildfires.qmd.
 
 REPO <- "wildfires"
 

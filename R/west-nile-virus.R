@@ -1,4 +1,4 @@
-# Figures for indicators/west-nile-virus.qmd.
+# Figures for indicators/vector-related-health/west-nile-virus.qmd.
 
 REPO <- "west-nile-virus"
 

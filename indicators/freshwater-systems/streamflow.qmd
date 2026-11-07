@@ -1,0 +1,312 @@
+---
+title: "Streamflow"
+description: "How the amount and timing of streamflow in rivers and streams across the United States have changed since 1940."
+categories: [Weather and Climate, Streamflow]
+execute:
+  eval: true
+---
+
+```{r}
+#| label: setup
+#| include: false
+source(here::here("R", "common.R"))
+source(here::here("R", "streamflow.R"))
+
+meta          <- read_meta(REPO)
+low_flow      <- read_indicator(REPO, "streamflow_seven_day_low.csv")
+high_flow     <- read_indicator(REPO, "streamflow_three_day_high.csv")
+avg_flow      <- read_indicator(REPO, "streamflow_annual_average.csv")
+runoff_timing <- read_indicator(REPO, "streamflow_runoff_timing.csv")
+low_flow_days <- read_indicator(REPO, "streamflow_low_flow_days.csv")
+```
+
+## Figures
+
+::::: {.panel-tabset}
+
+### Figure 1
+
+```{r}
+#| label: caption-1
+#| echo: false
+#| output: asis
+figure_caption(meta, "streamflow_seven_day_low.csv")
+```
+
+<div class="d-flex flex-wrap gap-2 mb-3">
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/climateindicators/streamflow/main/data/streamflow_seven_day_low.csv" download><i class="bi bi-filetype-csv"></i> Figure data (CSV)</a>
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/climateindicators/streamflow/main/data-raw/streamflow_fig-1.csv" download><i class="bi bi-filetype-csv"></i> EPA source data (CSV)</a>
+</div>
+
+```{r}
+#| label: chart-1
+#| echo: false
+fig_1(low_flow)
+```
+
+This map shows percentage changes in the minimum annual streamflow for rivers and streams across the country, based on the long-term rate of change from 1940 to 2022. Minimum streamflow is based on the consecutive seven-day period with the lowest average flow during a given year.
+
+```{r}
+#| label: chart-1-offmap-intro
+#| echo: false
+#| output: asis
+cat(sprintf(
+  "%s stations fall outside the map above and are shown here on the same scale, by trend value:\n",
+  offmap_summary(low_flow)
+))
+```
+
+```{r}
+#| label: chart-1-offmap
+#| echo: false
+fig_1_offmap(low_flow)
+```
+
+<details><summary>Show the data behind this figure</summary>
+
+```{r}
+#| label: table-1
+#| echo: false
+knitr::kable(fig_1_table(low_flow))
+```
+
+</details>
+
+### Figure 2
+
+```{r}
+#| label: caption-2
+#| echo: false
+#| output: asis
+figure_caption(meta, "streamflow_three_day_high.csv")
+```
+
+<div class="d-flex flex-wrap gap-2 mb-3">
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/climateindicators/streamflow/main/data/streamflow_three_day_high.csv" download><i class="bi bi-filetype-csv"></i> Figure data (CSV)</a>
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/climateindicators/streamflow/main/data-raw/streamflow_fig-2.csv" download><i class="bi bi-filetype-csv"></i> EPA source data (CSV)</a>
+</div>
+
+```{r}
+#| label: chart-2
+#| echo: false
+fig_2(high_flow)
+```
+
+This map shows percentage changes in the maximum annual streamflow for rivers and streams across the country, based on the long-term rate of change from 1940 to 2022. Maximum streamflow is based on the consecutive three-day period with the highest average flow during a given year.
+
+```{r}
+#| label: chart-2-offmap-intro
+#| echo: false
+#| output: asis
+cat(sprintf(
+  "%s stations fall outside the map above and are shown here on the same scale, by trend value:\n",
+  offmap_summary(high_flow)
+))
+```
+
+```{r}
+#| label: chart-2-offmap
+#| echo: false
+fig_2_offmap(high_flow)
+```
+
+<details><summary>Show the data behind this figure</summary>
+
+```{r}
+#| label: table-2
+#| echo: false
+knitr::kable(fig_2_table(high_flow))
+```
+
+</details>
+
+### Figure 3
+
+```{r}
+#| label: caption-3
+#| echo: false
+#| output: asis
+figure_caption(meta, "streamflow_annual_average.csv")
+```
+
+<div class="d-flex flex-wrap gap-2 mb-3">
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/climateindicators/streamflow/main/data/streamflow_annual_average.csv" download><i class="bi bi-filetype-csv"></i> Figure data (CSV)</a>
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/climateindicators/streamflow/main/data-raw/streamflow_fig-3.csv" download><i class="bi bi-filetype-csv"></i> EPA source data (CSV)</a>
+</div>
+
+```{r}
+#| label: chart-3
+#| echo: false
+fig_3(avg_flow)
+```
+
+This map shows percentage changes in the annual average streamflow for rivers and streams across the country, based on the long-term rate of change from 1940 to 2022. This map is based on daily streamflow measurements, averaged over the entire year.
+
+```{r}
+#| label: chart-3-offmap-intro
+#| echo: false
+#| output: asis
+cat(sprintf(
+  "%s stations fall outside the map above and are shown here on the same scale, by trend value:\n",
+  offmap_summary(avg_flow)
+))
+```
+
+```{r}
+#| label: chart-3-offmap
+#| echo: false
+fig_3_offmap(avg_flow)
+```
+
+<details><summary>Show the data behind this figure</summary>
+
+```{r}
+#| label: table-3
+#| echo: false
+knitr::kable(fig_3_table(avg_flow))
+```
+
+</details>
+
+### Figure 4
+
+```{r}
+#| label: caption-4
+#| echo: false
+#| output: asis
+figure_caption(meta, "streamflow_runoff_timing.csv")
+```
+
+<div class="d-flex flex-wrap gap-2 mb-3">
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/climateindicators/streamflow/main/data/streamflow_runoff_timing.csv" download><i class="bi bi-filetype-csv"></i> Figure data (CSV)</a>
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/climateindicators/streamflow/main/data-raw/streamflow_fig-4.csv" download><i class="bi bi-filetype-csv"></i> EPA source data (CSV)</a>
+</div>
+
+```{r}
+#| label: chart-4
+#| echo: false
+fig_4(runoff_timing)
+```
+
+This map shows changes in the timing of annual high winter-spring flow carried by rivers and streams from 1940 to 2022. This analysis focuses on parts of the country where streamflow is strongly influenced by snowmelt. Trends are based on the winter-spring center of volume, which is the date when half of the total January 1–July 31 streamflow (in the West) or half of the total January 1–May 31 streamflow (in the East) has passed by each streamflow gauge, reflecting the timing of spring snowmelt.
+
+<details><summary>Show the data behind this figure</summary>
+
+```{r}
+#| label: table-4
+#| echo: false
+knitr::kable(fig_4_table(runoff_timing))
+```
+
+</details>
+
+### Figure 5
+
+```{r}
+#| label: caption-5
+#| echo: false
+#| output: asis
+figure_caption(meta, "streamflow_low_flow_days.csv")
+```
+
+<div class="d-flex flex-wrap gap-2 mb-3">
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/climateindicators/streamflow/main/data/streamflow_low_flow_days.csv" download><i class="bi bi-filetype-csv"></i> Figure data (CSV)</a>
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/climateindicators/streamflow/main/data-raw/streamflow_fig-5.csv" download><i class="bi bi-filetype-csv"></i> EPA source data (CSV)</a>
+</div>
+
+```{r}
+#| label: chart-5
+#| echo: false
+fig_5(low_flow_days)
+```
+
+This map shows changes in the number of days with very low streamflow for rivers and streams across the country, from 1940 to 2022. This map is based on the number of daily flow values below the 2-percentile flow (Q2) threshold. Positive trends (upward brown triangles) indicate an increase in the number of days per year at or below the Q2 threshold (drier conditions); negative trends (downward blue triangles) indicate a trend toward fewer very low flow days (wetter conditions).
+
+```{r}
+#| label: chart-5-offmap-intro
+#| echo: false
+#| output: asis
+cat(sprintf(
+  "%s stations fall outside the map above and are shown here on the same scale, by trend value:\n",
+  offmap_summary(low_flow_days)
+))
+```
+
+```{r}
+#| label: chart-5-offmap
+#| echo: false
+fig_5_offmap(low_flow_days)
+```
+
+<details><summary>Show the data behind this figure</summary>
+
+```{r}
+#| label: table-5
+#| echo: false
+knitr::kable(fig_5_table(low_flow_days))
+```
+
+</details>
+
+:::::
+
+## Key Points
+
+- During the past 83 years, seven-day low flows have generally increased in the Northeast and Midwest (in other words, on the days of lowest flows, streams in these areas are carrying more water than before). Low flows have generally decreased in parts of the Southeast and the Pacific Northwest (that is, streams are carrying less water than before). Overall, more sites have experienced increases than decreases (see Figure 1).
+- Three-day high-flow trends vary from region to region across the country. For example, high flows have generally increased or changed little in parts of the Mid-Atlantic and Midwest since 1940, whereas high flows have increased in some West Coast streams and decreased in others. Overall, more sites have experienced increases than decreases (see Figure 2).
+- Annual average streamflow has increased at many sites in the Northeast and Midwest, while other regions have seen few substantial changes. Overall, sites show more increases than decreases (see Figure 3).
+- In parts of the country with substantial snowmelt, winter-spring runoff is happening at least five days earlier than in the mid-20<sup>th</sup> century at most gauges. The largest changes have occurred in the Pacific Northwest and Northeast (see Figure 4).
+- The number of days that met the Q2 threshold, a measure of dryness, decreased at many streams in the Northeast and Midwest, meaning the number of days with very low streamflow decreased through time. Dryness increased at many streams in the Southeast, the Northwest, and California (see Figure 5). These results generally align with the geographic patterns in seven-day low flows (Figure 1).
+
+## Background
+
+Streamflow is a measure of the rate at which water is carried by rivers and streams, and it represents a critical resource for people and the environment. Changes in streamflow can directly influence the supply of drinking water and the amount of water available for irrigating crops, generating electricity, and other needs. In addition, many plants and animals depend on streamflow for habitat and survival.
+
+Streamflow naturally varies over the course of a year. For example, rivers and streams in many parts of the country have their highest flow when snow melts in the spring and their lowest flow in late summer. The amount of streamflow is important because very high flows can cause erosion and damaging floods, while very low flows can diminish water quality, harm fish, reduce the amount of water available for people to use, and disrupt economic activities like river shipping. The timing of high flow is important because it affects the ability of reservoir managers to store water to meet needs later in the year. In addition, some plants and animals (such as fish that migrate) depend on a particular pattern of streamflow as part of their life cycles.
+
+Climate change can affect streamflow in several ways. Changes in the amount of spring snowpack (see the [Snowpack](/indicators/snow-and-ice/snowpack.qmd) indicator) and air temperatures that influence melting can alter the size and timing of high spring streamflows. More precipitation is expected to cause higher average streamflow in some places, while heavier storms (see the [Heavy Precipitation](/indicators/weather-and-extreme-events/heavy-precipitation.qmd) indicator) could lead to larger peak flows. More frequent or severe droughts, however, could reduce streamflow in certain areas.
+
+## About the Indicator
+
+The U.S. Geological Survey measures streamflow in rivers and streams across the United States using continuous monitoring devices called stream gauges. This indicator is based on data from 189 stream gauges located in areas where trends are not substantially influenced by dams, reservoir management, wastewater treatment facilities, or land-use change. The indicator also excludes stream gauges with watershed areas that overlap substantially.
+
+This indicator examines five important measures of streamflow conditions that occur during the course of a year. Figure 1 shows trends in the lowest flows each year, which are commonly calculated by averaging the lowest seven consecutive days of streamflow. Figure 2 shows trends in high flow conditions, which are commonly calculated by averaging the highest three consecutive days of streamflow in a year. Three days is an optimal length of time to characterize runoff associated with large storms and peak snowmelt. Figure 3 shows changes in the annual average streamflow, which is calculated by averaging daily flows through the entire year.
+
+Figure 4 shows trends in the timing of winter and spring runoff. This measure is limited to 56 stream gauges in areas where at least 30 percent of annual precipitation falls as snow. Scientists look at the total volume of water that passes by a gauge between January 1 and July 31 for the western United States, and January 1 and May 31 for the eastern United States, then determine the date when exactly half of that water has gone by. This date is called the winter-spring center-of-volume date. A long-term trend toward an earlier date could be caused by earlier spring snowmelt, more precipitation falling as rain instead of snow, or other changes in precipitation patterns.
+
+Figure 5 shows trends in the number of days each year with very low flow, which indicates whether streams are becoming drier or wetter during the period. The figure shows the annual number of days that daily average streamflow is equal to or lower than the long-term 2-percentile flow (Q2) threshold. In general, daily average flows are equal to or lower than the Q2 threshold about seven days of the year.
+
+## About the Data
+
+### Indicator Notes
+
+Streamflow measurements were used from gauges in areas where streamflow is minimally affected by human influences such as dams, land development, or changes in land cover. Changes in land cover and land use over time, however, could still influence streamflow trends at some streams. The gauges used for this indicator are not evenly distributed across the country, due to variation in the availability of long-term data.
+
+### Data Sources
+
+Streamflow data were collected by the U.S. Geological Survey. These data came from a set of gauges in watersheds with minimal human impacts, which have been classified as reference gauges.^[2](#ref-2)^ Daily average streamflow data are stored in the National Water Information System and are publicly available at: <https://waterdata.usgs.gov/nwis/sw>.
+
+## Technical Documentation
+
+```{r}
+#| label: td-link
+#| echo: false
+#| output: asis
+technical_documentation_link(meta)
+```
+
+## References
+
+<ol class="references">
+  <li id="ref-1">USGS (U.S. Geological Survey). (2023). Analysis of data from the National Water Information System. Retrieved September 2023.</li>
+  <li id="ref-2">Lins, H. F. (2012). <em>USGS</em> <em>Hydro-Climatic Data Network 2009 (HCDN-2009)</em> (Fact Sheet 2012–3047). U.S. Geological Survey. [https://pubs.usgs.gov/fs/2012/3047](https://pubs.usgs.gov/fs/2012/3047)</li>
+</ol>
+
+::: {.callout-note appearance="simple" icon=false}
+Text on this page is EPA's own published wording (a U.S. Government work, not
+subject to domestic copyright), extracted from EPA's published indicator page
+and verified paragraph by paragraph against the archived HTML. Data, chart
+code, and the full extraction pipeline are maintained in the
+[streamflow](https://github.com/climateindicators/streamflow)
+repository, which this page reads its data from directly.
+:::

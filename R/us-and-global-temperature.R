@@ -1,4 +1,4 @@
-# Figures for indicators/us-and-global-temperature.qmd.
+# Figures for indicators/weather-and-extreme-events/us-and-global-temperature.qmd.
 
 REPO <- "us-and-global-temperature"
 

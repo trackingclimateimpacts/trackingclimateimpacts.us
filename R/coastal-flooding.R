@@ -1,4 +1,4 @@
-# Figures for indicators/coastal-flooding.qmd.
+# Figures for indicators/coastal-and-marine/coastal-flooding.qmd.
 
 REPO <- "coastal-flooding"
 

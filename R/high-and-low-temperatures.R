@@ -1,4 +1,4 @@
-# Figures for indicators/high-and-low-temperatures.qmd.
+# Figures for indicators/weather-and-extreme-events/high-and-low-temperatures.qmd.
 
 REPO <- "high-and-low-temperatures"
 

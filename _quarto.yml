@@ -49,138 +49,165 @@ website:
           - text: "All Indicators"
             href: indicators.qmd
           - text: "Weather and Extreme Events"
-            href: categories/weather-and-extreme-events.qmd
+            href: indicators/weather-and-extreme-events/weather-and-extreme-events.qmd
           - text: "Snow and Ice"
-            href: categories/snow-and-ice.qmd
+            href: indicators/snow-and-ice/snow-and-ice.qmd
           - text: "Coastal and Marine"
-            href: categories/coastal-and-marine.qmd
+            href: indicators/coastal-and-marine/coastal-and-marine.qmd
           - text: "Freshwater Systems"
-            href: categories/freshwater-systems.qmd
+            href: indicators/freshwater-systems/freshwater-systems.qmd
           - text: "Ecosystems"
-            href: categories/ecosystems.qmd
+            href: indicators/ecosystems/ecosystems.qmd
           - text: "Temperature-Related Health"
-            href: categories/temperature-related-health.qmd
+            href: indicators/temperature-related-health/temperature-related-health.qmd
           - text: "Vector-Related Health"
-            href: categories/vector-related-health.qmd
+            href: indicators/vector-related-health/vector-related-health.qmd
           - text: "Societal Systems"
-            href: categories/societal-systems.qmd
+            href: indicators/societal-systems/societal-systems.qmd
       - text: "Methodology"
         href: methodology.qmd
 
   sidebar:
-    - title: "Indicators"
+    - id: weather-and-extreme-events
       style: "docked"
       background: light
       contents:
-        - text: "All Indicators"
-          href: indicators.qmd
-
-        - section: "Weather and Extreme Events"
-          contents:
-            - text: "U.S. and Global Temperature"
-              href: indicators/us-and-global-temperature.qmd
-            - text: "Seasonal Temperature"
-              href: indicators/seasonal-temperature.qmd
-            - text: "High and Low Temperatures"
-              href: indicators/high-and-low-temperatures.qmd
-            - text: "Heat Waves"
-              href: indicators/heat-waves.qmd
-            - text: "Heavy Precipitation"
-              href: indicators/heavy-precipitation.qmd
-            - text: "Tropical Cyclone Activity"
-              href: indicators/tropical-cyclone-activity.qmd
-            - text: "River Flooding"
-              href: indicators/river-flooding.qmd
-            - text: "Drought"
-              href: indicators/drought.qmd
-            - text: "A Closer Look: Temperature and Drought in the Southwest"
-              href: indicators/temperature-and-drought-in-the-southwest.qmd
-            - text: "Wildfires"
-              href: indicators/wildfires.qmd
-        - section: "Snow and Ice"
-          contents:
-            - text: "A Closer Look: Glaciers in Glacier National Park"
-              href: indicators/glaciers-in-glacier-park.qmd
-            - text: "Lake Ice"
-              href: indicators/lake-ice.qmd
-            - text: "Great Lakes Ice Cover"
-              href: indicators/great-lakes-ice-cover.qmd
-            - text: "Snowfall"
-              href: indicators/snowfall.qmd
-            - text: "Snowpack"
-              href: indicators/snowpack.qmd
-            - text: "Permafrost"
-              href: indicators/permafrost.qmd
-            - text: "Freeze-Thaw Conditions"
-              href: indicators/freeze-thaw-conditions.qmd
-            - text: "Ice Sheets"
-              href: indicators/ice-sheets.qmd
-            - text: "Community Connection: Ice Breakup in Three Alaskan Rivers"
-              href: indicators/alaskan-rivers.qmd
-        - section: "Coastal and Marine"
-          contents:
-            - text: "Sea Surface Temperature"
-              href: indicators/sea-surface-temperature.qmd
-            - text: "Sea Level"
-              href: indicators/sea-level.qmd
-            - text: "Coastal Flooding"
-              href: indicators/coastal-flooding.qmd
-            - text: "Marine Heat Waves"
-              href: indicators/marine-heat-waves.qmd
-            - text: "A Closer Look: Land Loss Along the Atlantic Coast"
-              href: indicators/atlantic-coast.qmd
-        - section: "Freshwater Systems"
-          contents:
-            - text: "Streamflow"
-              href: indicators/streamflow.qmd
-            - text: "Stream Temperature"
-              href: indicators/stream-temperature.qmd
-            - text: "Tribal Connection: Trends in Stream Temperature in the Snake River"
-              href: indicators/snake-river.qmd
-            - text: "Lake Temperature"
-              href: indicators/lake-temperature.qmd
-            - text: "Great Lakes Water Levels and Temperatures"
-              href: indicators/great-lakes.qmd
-        - section: "Ecosystems"
-          contents:
-            - text: "Length of Growing Season"
-              href: indicators/length-of-growing-season.qmd
-            - text: "Growing Degree Days"
-              href: indicators/growing-degree-days.qmd
-            - text: "Ragweed Pollen Season"
-              href: indicators/ragweed-pollen-season.qmd
-            - text: "Leaf and Bloom Dates"
-              href: indicators/leaf-and-bloom-dates.qmd
-            - text: "Community Connection: Cherry Blossom Bloom Dates in Washington, D.C."
-              href: indicators/cherry-blossom-bloom.qmd
-            - text: "Marine Species Distribution"
-              href: indicators/marine-species-distribution.qmd
-            - text: "Bird Wintering Ranges"
-              href: indicators/bird-wintering-ranges.qmd
-            - text: "A Closer Look: The Black Guillemots of Cooper Island"
-              href: indicators/black-guillemots-cooper-island.qmd
-        - section: "Temperature-Related Health"
-          contents:
-            - text: "Heat-Related Deaths"
-              href: indicators/heat-related-deaths.qmd
-            - text: "Heat-Related Workplace Deaths"
-              href: indicators/heat-related-workplace-deaths.qmd
-            - text: "Heat-Related Illnesses"
-              href: indicators/heat-related-illnesses.qmd
-            - text: "Cold-Related Deaths"
-              href: indicators/cold-related-deaths.qmd
-        - section: "Vector-Related Health"
-          contents:
-            - text: "Lyme Disease"
-              href: indicators/lyme-disease.qmd
-            - text: "West Nile Virus"
-              href: indicators/west-nile-virus.qmd
-        - section: "Societal Systems"
-          contents:
-            - text: "Heating and Cooling Degree Days"
-              href: indicators/heating-and-cooling-degree-days.qmd
-            - text: "Residential Energy Use"
-              href: indicators/residential-energy-use.qmd
+        - text: "Weather and Extreme Events"
+          href: indicators/weather-and-extreme-events/weather-and-extreme-events.qmd
+        - text: "U.S. and Global Temperature"
+          href: indicators/weather-and-extreme-events/us-and-global-temperature.qmd
+        - text: "Seasonal Temperature"
+          href: indicators/weather-and-extreme-events/seasonal-temperature.qmd
+        - text: "High and Low Temperatures"
+          href: indicators/weather-and-extreme-events/high-and-low-temperatures.qmd
+        - text: "Heat Waves"
+          href: indicators/weather-and-extreme-events/heat-waves.qmd
+        - text: "Heavy Precipitation"
+          href: indicators/weather-and-extreme-events/heavy-precipitation.qmd
+        - text: "Tropical Cyclone Activity"
+          href: indicators/weather-and-extreme-events/tropical-cyclone-activity.qmd
+        - text: "River Flooding"
+          href: indicators/weather-and-extreme-events/river-flooding.qmd
+        - text: "Drought"
+          href: indicators/weather-and-extreme-events/drought.qmd
+        - text: "A Closer Look: Temperature and Drought in the Southwest"
+          href: indicators/weather-and-extreme-events/temperature-and-drought-in-the-southwest.qmd
+        - text: "Wildfires"
+          href: indicators/weather-and-extreme-events/wildfires.qmd
+    - id: snow-and-ice
+      style: "docked"
+      background: light
+      contents:
+        - text: "Snow and Ice"
+          href: indicators/snow-and-ice/snow-and-ice.qmd
+        - text: "A Closer Look: Glaciers in Glacier National Park"
+          href: indicators/snow-and-ice/glaciers-in-glacier-park.qmd
+        - text: "Lake Ice"
+          href: indicators/snow-and-ice/lake-ice.qmd
+        - text: "Great Lakes Ice Cover"
+          href: indicators/snow-and-ice/great-lakes-ice-cover.qmd
+        - text: "Snowpack"
+          href: indicators/snow-and-ice/snowpack.qmd
+        - text: "Permafrost"
+          href: indicators/snow-and-ice/permafrost.qmd
+        - text: "Freeze-Thaw Conditions"
+          href: indicators/snow-and-ice/freeze-thaw-conditions.qmd
+        - text: "Ice Sheets"
+          href: indicators/snow-and-ice/ice-sheets.qmd
+        - text: "Community Connection: Ice Breakup in Three Alaskan Rivers"
+          href: indicators/snow-and-ice/alaskan-rivers.qmd
+    - id: coastal-and-marine
+      style: "docked"
+      background: light
+      contents:
+        - text: "Coastal and Marine"
+          href: indicators/coastal-and-marine/coastal-and-marine.qmd
+        - text: "Sea Surface Temperature"
+          href: indicators/coastal-and-marine/sea-surface-temperature.qmd
+        - text: "Sea Level"
+          href: indicators/coastal-and-marine/sea-level.qmd
+        - text: "Coastal Flooding"
+          href: indicators/coastal-and-marine/coastal-flooding.qmd
+        - text: "Marine Heat Waves"
+          href: indicators/coastal-and-marine/marine-heat-waves.qmd
+        - text: "A Closer Look: Land Loss Along the Atlantic Coast"
+          href: indicators/coastal-and-marine/atlantic-coast.qmd
+        - text: "Antarctic Sea Ice"
+          href: indicators/coastal-and-marine/antarctic-sea-ice.qmd
+        - text: "Ocean Acidity"
+          href: indicators/coastal-and-marine/ocean-acidity.qmd
+    - id: freshwater-systems
+      style: "docked"
+      background: light
+      contents:
+        - text: "Freshwater Systems"
+          href: indicators/freshwater-systems/freshwater-systems.qmd
+        - text: "Streamflow"
+          href: indicators/freshwater-systems/streamflow.qmd
+        - text: "Stream Temperature"
+          href: indicators/freshwater-systems/stream-temperature.qmd
+        - text: "Tribal Connection: Trends in Stream Temperature in the Snake River"
+          href: indicators/freshwater-systems/snake-river.qmd
+        - text: "Lake Temperature"
+          href: indicators/freshwater-systems/lake-temperature.qmd
+        - text: "Great Lakes Water Levels and Temperatures"
+          href: indicators/freshwater-systems/great-lakes.qmd
+    - id: ecosystems
+      style: "docked"
+      background: light
+      contents:
+        - text: "Ecosystems"
+          href: indicators/ecosystems/ecosystems.qmd
+        - text: "Length of Growing Season"
+          href: indicators/ecosystems/length-of-growing-season.qmd
+        - text: "Growing Degree Days"
+          href: indicators/ecosystems/growing-degree-days.qmd
+        - text: "Ragweed Pollen Season"
+          href: indicators/ecosystems/ragweed-pollen-season.qmd
+        - text: "Leaf and Bloom Dates"
+          href: indicators/ecosystems/leaf-and-bloom-dates.qmd
+        - text: "Community Connection: Cherry Blossom Bloom Dates in Washington, D.C."
+          href: indicators/ecosystems/cherry-blossom-bloom.qmd
+        - text: "Marine Species Distribution"
+          href: indicators/ecosystems/marine-species-distribution.qmd
+        - text: "Bird Wintering Ranges"
+          href: indicators/ecosystems/bird-wintering-ranges.qmd
+        - text: "A Closer Look: The Black Guillemots of Cooper Island"
+          href: indicators/ecosystems/black-guillemots-cooper-island.qmd
+    - id: temperature-related-health
+      style: "docked"
+      background: light
+      contents:
+        - text: "Temperature-Related Health"
+          href: indicators/temperature-related-health/temperature-related-health.qmd
+        - text: "Heat-Related Deaths"
+          href: indicators/temperature-related-health/heat-related-deaths.qmd
+        - text: "Heat-Related Workplace Deaths"
+          href: indicators/temperature-related-health/heat-related-workplace-deaths.qmd
+        - text: "Heat-Related Illnesses"
+          href: indicators/temperature-related-health/heat-related-illnesses.qmd
+        - text: "Cold-Related Deaths"
+          href: indicators/temperature-related-health/cold-related-deaths.qmd
+    - id: vector-related-health
+      style: "docked"
+      background: light
+      contents:
+        - text: "Vector-Related Health"
+          href: indicators/vector-related-health/vector-related-health.qmd
+        - text: "Lyme Disease"
+          href: indicators/vector-related-health/lyme-disease.qmd
+        - text: "West Nile Virus"
+          href: indicators/vector-related-health/west-nile-virus.qmd
+    - id: societal-systems
+      style: "docked"
+      background: light
+      contents:
+        - text: "Societal Systems"
+          href: indicators/societal-systems/societal-systems.qmd
+        - text: "Heating and Cooling Degree Days"
+          href: indicators/societal-systems/heating-and-cooling-degree-days.qmd
+        - text: "Residential Energy Use"
+          href: indicators/societal-systems/residential-energy-use.qmd
 
 format:
   html:

@@ -1,4 +1,4 @@
-# Figures for indicators/ragweed-pollen-season.qmd.
+# Figures for indicators/ecosystems/ragweed-pollen-season.qmd.
 
 REPO <- "ragweed-pollen-season"
 

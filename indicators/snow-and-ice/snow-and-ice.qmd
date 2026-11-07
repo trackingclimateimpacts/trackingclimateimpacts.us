@@ -1,0 +1,56 @@
+---
+title: ""
+pagetitle: "Snow and Ice"
+listing:
+  - id: cat-listing
+    contents:
+      - glaciers-in-glacier-park.qmd
+      - lake-ice.qmd
+      - great-lakes-ice-cover.qmd
+      - snowpack.qmd
+      - permafrost.qmd
+      - freeze-thaw-conditions.qmd
+      - ice-sheets.qmd
+      - alaskan-rivers.qmd
+    type: grid
+    grid-columns: 3
+    sort: false
+    sort-ui: false
+    filter-ui: true
+    fields: [title, description]
+    image-height: auto
+execute:
+  echo: false
+page-layout: full
+sidebar: false
+toc: false
+anchor-sections: false
+---
+
+::: {.home-band .cat-hero .cat-cryosphere .hero-bg}
+
+::: {.hero-bg-img}
+![](../../images/snow.jpg){fig-alt=""}
+:::
+
+## Snow and Ice
+:::
+
+::: {.home-band .cat-body}
+::: {.cat-intro}
+This indicator tracks changes in lake ice, Great Lakes ice cover, snowfall, snow cover, snowpack, permafrost, freeze-thaw conditions, glaciers, and river ice breakup.
+:::
+
+::: {.cat-columns}
+{{< include /chunks/category-nav.qmd >}}
+
+::: {.cat-main}
+::: {#cat-listing}
+:::
+
+[View All](/health-and-environment-indicators.qmd){.cat-viewall}
+:::
+:::
+:::
+
+{{< include /chunks/footer.qmd >}}

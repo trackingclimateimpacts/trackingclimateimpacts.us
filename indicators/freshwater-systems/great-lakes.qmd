@@ -1,0 +1,177 @@
+---
+title: "Great Lakes Water Levels and Temperatures"
+description: "This indicator measures water levels and surface water temperatures in the Great Lakes."
+categories: [Weather and Climate, Great Lakes]
+execute:
+  eval: true
+---
+
+```{r}
+#| label: setup
+#| include: false
+source(here::here("R", "common.R"))
+source(here::here("R", "great-lakes.R"))
+
+meta         <- read_meta(REPO)
+water_levels <- read_indicator(REPO, "great_lakes_water_levels.csv")
+annual       <- read_indicator(REPO, "great_lakes_temp_annual.csv")
+daily        <- read_indicator(REPO, "great_lakes_temp_daily.csv")
+```
+
+## Figures
+
+::::: {.panel-tabset}
+
+### Figure 1
+
+```{r}
+#| label: caption-1
+#| echo: false
+#| output: asis
+figure_caption(meta, "great_lakes_water_levels.csv", ref = 8)
+```
+
+<div class="d-flex flex-wrap gap-2 mb-3">
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/climateindicators/great-lakes/main/data/great_lakes_water_levels.csv" download><i class="bi bi-filetype-csv"></i> Figure data (CSV)</a>
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/climateindicators/great-lakes/main/data-raw/great-lakes_fig-1.csv" download><i class="bi bi-filetype-csv"></i> EPA source data (CSV)</a>
+</div>
+
+```{r}
+#| label: chart-1
+#| echo: false
+fig_1(water_levels)
+```
+
+This figure displays how water levels in each of the Great Lakes have changed since 1860. For each year, the shaded band shows the range of monthly average water levels, and the line in the middle shows the annual average. The graph uses the 1981 to 2010 average as a baseline for depicting change. Choosing a different baseline period would not change the shape of the data over time. Lakes Michigan and Huron are shown together because they are connected at the same water level.
+
+<details><summary>Show the data behind this figure</summary>
+
+::: {.table-scroll}
+```{r}
+#| label: table-1
+#| echo: false
+knitr::kable(fig_1_table(water_levels), digits = 2)
+```
+:::
+
+</details>
+
+### Figure 2
+
+```{r}
+#| label: caption-2
+#| echo: false
+#| output: asis
+figure_caption(meta, "great_lakes_temp_annual.csv", ref = 9)
+```
+
+<div class="d-flex flex-wrap gap-2 mb-3">
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/climateindicators/great-lakes/main/data/great_lakes_temp_annual.csv" download><i class="bi bi-filetype-csv"></i> Annual averages (CSV)</a>
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/climateindicators/great-lakes/main/data/great_lakes_temp_daily.csv" download><i class="bi bi-filetype-csv"></i> Daily averages (CSV)</a>
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/climateindicators/great-lakes/main/data-raw/great-lakes_fig-2.csv" download><i class="bi bi-filetype-csv"></i> EPA source data (CSV)</a>
+</div>
+
+```{r}
+#| label: chart-2-annual
+#| echo: false
+fig_2_annual(annual)
+```
+
+```{r}
+#| label: chart-2-daily
+#| echo: false
+fig_2_daily(daily)
+```
+
+This figure shows the average surface water temperatures in each of the Great Lakes, as measured by satellites. The graphs on the left show annual averages for the full time period, while the graphs on the right show how average daily temperatures have changed between two time periods for comparison: 2014–2023 versus 1995–2004.
+
+*Note: on this page, the annual averages are in the first chart and the daily comparison is in the second, below it.*
+
+<details><summary>Show the data behind this figure</summary>
+
+Annual averages:
+
+::: {.table-scroll}
+```{r}
+#| label: table-2-annual
+#| echo: false
+knitr::kable(fig_2_annual_table(annual), digits = 2)
+```
+:::
+
+Daily averages by period:
+
+::: {.table-scroll}
+```{r}
+#| label: table-2-daily
+#| echo: false
+knitr::kable(fig_2_daily_table(daily), digits = 2)
+```
+:::
+
+</details>
+
+:::::
+
+## Key Points
+
+- Water levels in the Great Lakes have fluctuated since 1860. Over the last few decades, water levels have declined slightly for most of the Great Lakes (see Figure 1). The past few years, however, have shown notable increases toward the top of the historical range. At the end of 2023, water levels sat slightly above average for all of the Great Lakes.
+- Since 1995, average surface water temperatures have increased slightly for each of the Great Lakes (see Figure 2).
+- Recent increases in water temperature have mostly been driven by warming during the spring and summer months (see Figure 2). These trends could relate in part to an earlier thawing of winter ice (see the [Lake Ice](/indicators/snow-and-ice/lake-ice.qmd) indicator).
+
+## Background
+
+The Great Lakes, which are Lake Superior, Lake Michigan, Lake Huron, Lake Erie, and Lake Ontario, form the largest group of freshwater lakes on Earth. These lakes support a variety of ecosystems and play a vital role in the economy of the eight neighboring states and the Canadian province of Ontario, providing drinking water, shipping lanes, fisheries, recreational opportunities, and more.
+
+Water level and water temperature are two important and interrelated indicators of weather and climate change in the Great Lakes. Water level (the height of the lake surface above sea level) is influenced by many factors, including precipitation, snowmelt runoff, drought, evaporation rates, and people withdrawing water for multiple uses. Water temperature is influenced by many factors, too, but most directly by air temperature.
+
+In some recent years, high precipitation has contributed to higher-than-average and sometimes record-breaking water levels in the Great Lakes.^[1](#ref-1)^ In other recent years, warmer surface water temperatures in the Great Lakes have contributed to lower water levels by increasing rates of evaporation and causing lake ice to form later than usual (see the [Lake Ice](/indicators/snow-and-ice/lake-ice.qmd) indicator), which extends the season for evaporation.^[2](#ref-2),[3](#ref-3)^ Lower water levels in the Great Lakes forced ships to reduce their cargo tonnage by 5 to 8 percent between 1997 and 2000, which increased shipping costs.^[4](#ref-4)^ Lower water levels can also affect water supplies, the usability of infrastructure such as docks and piers, and shoreline ecosystems. Scientists who use computer models to simulate future climate change are not sure whether Great Lakes water levels will increase or decrease overall in the future, but they generally agree that there will be larger year-to-year variability, driven by periods of drought and extreme precipitation.^[1](#ref-1)^
+
+Another possible effect of warmer water, reduced ice cover, and increased evaporation is a corresponding increase in precipitation over nearby land, especially “lake effect” snow (see the [Snowfall](/indicators/snowfall.qmd) indicator).^[5](#ref-5)^ Rising water temperatures are also expected to expand the ranges of and give new advantages to some invasive species such as the zebra mussel, and to encourage the growth of certain waterborne bacteria that can make people ill.^[6](#ref-6),[7](#ref-7)^
+
+## About the Indicator
+
+This indicator analyzes water levels and surface water temperatures in the Great Lakes. Water levels are recorded by gauges along the shore of each lake, some of which have been operated since the 1800s. Pre-1918 data came from one water level gauge per lake. Data since 1918 have come from a designated set of gauges in each lake. Figure 1 shows annual water level anomalies in each lake from 1860 to 2023; anomalies are differences, in feet, compared with a baseline (in this case, the 1981–2010 average). Lakes Michigan and Huron are combined because they are connected at the same water level.
+
+Surface water temperatures are measured by satellites. Figure 2 shows annual average temperatures over the entire surface of each lake, along with the pattern of daily temperatures over the course of the year. This figure’s data begin in 1995, which was the first year with complete satellite data for all five lakes.
+
+## Indicator Notes
+
+While climate change influences water levels, human activities such as dredging can also play a role. For example, the St. Clair River opening was enlarged in the 1910s, 1930s, and 1960s, contributing to greater outflows from Lakes Michigan and Huron.^[10](#ref-10)^ Similarly, natural year-to-year variability and other factors such as human use and wastewater discharges can influence water temperatures.
+
+## Data Sources
+
+Water level data were provided by the Canadian Hydrographic Service and the National Oceanic and Atmospheric Administration’s Center for Operational Oceanographic Products and Services, and can be downloaded from: [www.glerl.noaa.gov/data/wlevels/dashboard/](https://www.glerl.noaa.gov/data/wlevels/dashboard/). Surface water temperature data were provided by the National Oceanic and Atmospheric Administration’s Great Lakes Environmental Research Laboratory (satellite data at: <https://apps.glerl.noaa.gov/erddap/info/glsea-avgtemps2/index.html>).
+
+## Technical Documentation
+
+```{r}
+#| label: td-link
+#| echo: false
+#| output: asis
+technical_documentation_link(meta)
+```
+
+## References
+
+<ol class="references">
+  <li id="ref-1">Lamie, C., Bader, D., Graziano, K., Horton, R., John, K., O’Hern, N., &amp; Spungin, S. (2024). Chapter 2: New York State’s Changing Climate. In <em>New York State Climate Impacts Assessment</em> (Interim version for public release).</li>
+  <li id="ref-2">Gronewold, A. D., Fortin, V., Lofgren, B., Clites, A., Stow, C. A., &amp; Quinn, F. (2013). Coasts, water levels, and climate change: A Great Lakes perspective. <em>Climatic Change</em>, 120(4), 697–711. <a href="https://doi.org/10.1007/s10584-013-0840-2">https://doi.org/10.1007/s10584-013-0840-2</a></li>
+  <li id="ref-3">Wilson, A. B., Baker, J. M., Ainsworth, E. A., Andresen, J., Austin, J. A., Dukes, J. S., Gibbons, E., Hoppe, B. O., LeDee, O. E., Noel, J., Roop, H. A., Smith, S. A., Todey, D. P., Wolf, R., &amp; Wood, J. D. (2023). Chapter 24: Midwest. In USGCRP (U.S. Global Change Research Program), <em>Fifth National Climate Assessment</em>. <a href="https://doi.org/10.7930/NCA5.2023.CH24">https://doi.org/10.7930/NCA5.2023.CH24</a></li>
+  <li id="ref-4">Posey, J. (2012). Climate change impacts on transportation in the Midwest. In <em>U.S. National Climate Assessment: Midwest Technical Input Report.</em> Great Lakes Integrated Sciences and Assessments (GLISA). <a href="http://glisa.msu.edu/docs/NCA/MTIT_Transportation.pdf">http://glisa.msu.edu/docs/NCA/MTIT_Transportation.pdf</a></li>
+  <li id="ref-5">Burnett, A. W., Kirby, M. E., Mullins, H. T., &amp; Patterson, W. P. (2003). Increasing Great Lake–effect snowfall during the twentieth century: A regional response to global warming? <em>Journal of Climate</em>, 16(21), 3535–3542. <a href="https://doi.org/10.1175/1520-0442(2003)016%3C3535:IGLSDT%3E2.0.CO;2">https://doi.org/10.1175/1520-0442(2003)016%3C3535:IGLSDT%3E2.0.CO;2</a></li>
+  <li id="ref-6">Rahel, F. J., &amp; Olden, J. D. (2008). Assessing the effects of climate change on aquatic invasive species. <em>Conservation Biology</em>, 22(3), 521–533. <a href="https://doi.org/10.1111/j.1523-1739.2008.00950.x">https://doi.org/10.1111/j.1523-1739.2008.00950.x</a></li>
+  <li id="ref-7">Kanoshina, I., Lips, U., &amp; Leppänen, J.-M. (2003). The influence of weather conditions (temperature and wind) on cyanobacterial bloom development in the Gulf of Finland (Baltic Sea). <em>Harmful Algae</em>, 2(1), 29–41. <a href="https://doi.org/10.1016/S1568-9883(02)00085-9">https://doi.org/10.1016/S1568-9883(02)00085-9</a></li>
+  <li id="ref-8">NOAA (National Oceanic and Atmospheric Administration) Great Lakes Environmental Research Laboratory. (2024). <em>Great Lakes water level dashboard</em>. Retrieved March 14, 2024, from <a href="https://www.glerl.noaa.gov/data/wlevels/dashboard/">www.glerl.noaa.gov/data/wlevels/dashboard</a></li>
+  <li id="ref-9">NOAA (National Oceanic and Atmospheric Administration). (2024). <em>NOAA CoastWatch Great Lakes node.</em> Retrieved March 14, 2024, from <a href="https://apps.glerl.noaa.gov/erddap/index.html">https://apps.glerl.noaa.gov/erddap/index.html</a></li>
+  <li id="ref-10">Quinn, F. H. (1985). Temporal effects of St. Clair river dredging on lakes St. Clair and Erie water levels and connecting channel flow. <em>Journal of Great Lakes Research</em>, 11(3), 400–403. <a href="https://doi.org/10.1016/S0380-1330(85)71784-4">https://doi.org/10.1016/S0380-1330(85)71784-4</a></li>
+</ol>
+
+::: {.callout-note appearance="simple" icon=false}
+Text on this page is EPA's own published wording (a U.S. Government work, not
+subject to domestic copyright), extracted from EPA's published indicator page
+and verified paragraph by paragraph against the archived HTML. Data, chart
+code, and the full extraction pipeline are maintained in the
+[great-lakes](https://github.com/climateindicators/great-lakes)
+repository, which this page reads its data from directly.
+:::

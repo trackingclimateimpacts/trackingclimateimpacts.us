@@ -1,0 +1,276 @@
+---
+title: "Length of Growing Season"
+description: "How the length of the growing season, and the timing of spring and fall frosts, has changed across the contiguous 48 states since 1895."
+categories: [Society, Temperature, Ecosystems]
+execute:
+  eval: true
+---
+
+This indicator measures the length of the growing season in the contiguous 48 states.
+
+```{r}
+#| label: setup
+#| include: false
+source(here::here("R", "common.R"))
+source(here::here("R", "length-of-growing-season.R"))
+
+meta          <- read_meta(REPO)
+national      <- read_indicator(REPO, "length_of_growing_season_national.csv")
+east_west     <- read_indicator(REPO, "length_of_growing_season_east_west.csv")
+by_state      <- read_indicator(REPO, "length_of_growing_season_by_state.csv")
+frost_timing  <- read_indicator(REPO, "length_of_growing_season_frost_timing.csv")
+last_frost    <- read_indicator(REPO, "last_spring_frost_by_state.csv")
+first_frost   <- read_indicator(REPO, "first_fall_frost_by_state.csv")
+```
+
+## Figures
+
+::::: {.panel-tabset}
+
+### Figure 1
+
+```{r}
+#| label: caption-1
+#| echo: false
+#| output: asis
+figure_caption(meta, "length_of_growing_season_national.csv")
+```
+
+<div class="d-flex flex-wrap gap-2 mb-3">
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/climateindicators/length-of-growing-season/main/data/length_of_growing_season_national.csv" download><i class="bi bi-filetype-csv"></i> Figure data (CSV)</a>
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/climateindicators/length-of-growing-season/main/data-raw/growing-season_fig-1.csv" download><i class="bi bi-filetype-csv"></i> EPA source data (CSV)</a>
+</div>
+
+```{r}
+#| label: chart-1
+#| echo: false
+fig_1(national)
+```
+
+This figure shows the length of the growing season in the contiguous 48 states compared with a long-term average. For each year, the line represents the number of days shorter or longer than average. The line was smoothed using an 11-year moving average. Choosing a different long-term average for comparison would not change the shape of the data over time.^[2](#ref-2)^
+
+<details><summary>Show the data behind this figure</summary>
+
+```{r}
+#| label: table-1
+#| echo: false
+knitr::kable(fig_1_table(national))
+```
+
+</details>
+
+### Figure 2
+
+```{r}
+#| label: caption-2
+#| echo: false
+#| output: asis
+figure_caption(meta, "length_of_growing_season_east_west.csv")
+```
+
+<div class="d-flex flex-wrap gap-2 mb-3">
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/climateindicators/length-of-growing-season/main/data/length_of_growing_season_east_west.csv" download><i class="bi bi-filetype-csv"></i> Figure data (CSV)</a>
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/climateindicators/length-of-growing-season/main/data-raw/growing-season_fig-2.csv" download><i class="bi bi-filetype-csv"></i> EPA source data (CSV)</a>
+</div>
+
+```{r}
+#| label: chart-2
+#| echo: false
+fig_2(east_west)
+```
+
+This figure shows the length of the growing season in the western and eastern United States compared with a long-term average. For each year, the line represents the number of days shorter or longer than average. The lines were smoothed using an 11-year moving average. Choosing a different long-term average for comparison would not change the shape of the data over time.^[2](#ref-2)^
+
+<details><summary>Show the data behind this figure</summary>
+
+```{r}
+#| label: table-2
+#| echo: false
+knitr::kable(fig_2_table(east_west))
+```
+
+</details>
+
+### Figure 3
+
+```{r}
+#| label: caption-3
+#| echo: false
+#| output: asis
+figure_caption(meta, "length_of_growing_season_by_state.csv")
+```
+
+<div class="d-flex flex-wrap gap-2 mb-3">
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/climateindicators/length-of-growing-season/main/data/length_of_growing_season_by_state.csv" download><i class="bi bi-filetype-csv"></i> Figure data (CSV)</a>
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/climateindicators/length-of-growing-season/main/data-raw/growing-season_fig-3.csv" download><i class="bi bi-filetype-csv"></i> EPA source data (CSV)</a>
+</div>
+
+```{r}
+#| label: chart-3
+#| echo: false
+fig_3(by_state)
+```
+
+This map shows the total change in length of the growing season from 1895 to 2023 for each of the contiguous 48 states.^[3](#ref-3)^ It is rendered here as a ranked bar chart rather than EPA's choropleth map, carrying the same state-level values with the ranking made explicit.
+
+<details><summary>Show the data behind this figure</summary>
+
+```{r}
+#| label: table-3
+#| echo: false
+knitr::kable(fig_3_table(by_state))
+```
+
+</details>
+
+### Figure 4
+
+```{r}
+#| label: caption-4
+#| echo: false
+#| output: asis
+figure_caption(meta, "length_of_growing_season_frost_timing.csv")
+```
+
+<div class="d-flex flex-wrap gap-2 mb-3">
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/climateindicators/length-of-growing-season/main/data/length_of_growing_season_frost_timing.csv" download><i class="bi bi-filetype-csv"></i> Figure data (CSV)</a>
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/climateindicators/length-of-growing-season/main/data-raw/growing-season_fig-4.csv" download><i class="bi bi-filetype-csv"></i> EPA source data (CSV)</a>
+</div>
+
+```{r}
+#| label: chart-4
+#| echo: false
+fig_4(frost_timing)
+```
+
+This figure shows the timing of the last spring frost and the first fall frost in the contiguous 48 states compared with a long-term average. Positive values indicate that the frost occurred later in the year, and negative values indicate that the frost occurred earlier in the year. The lines were smoothed using an 11-year moving average. Choosing a different long-term average for comparison would not change the shape of the data over time.^[2](#ref-2)^
+
+<details><summary>Show the data behind this figure</summary>
+
+```{r}
+#| label: table-4
+#| echo: false
+knitr::kable(fig_4_table(frost_timing))
+```
+
+</details>
+
+### Figure 5
+
+```{r}
+#| label: caption-5
+#| echo: false
+#| output: asis
+figure_caption(meta, "last_spring_frost_by_state.csv")
+```
+
+<div class="d-flex flex-wrap gap-2 mb-3">
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/climateindicators/length-of-growing-season/main/data/last_spring_frost_by_state.csv" download><i class="bi bi-filetype-csv"></i> Figure data (CSV)</a>
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/climateindicators/length-of-growing-season/main/data-raw/growing-season_fig-5.csv" download><i class="bi bi-filetype-csv"></i> EPA source data (CSV)</a>
+</div>
+
+```{r}
+#| label: chart-5
+#| echo: false
+fig_5(last_frost)
+```
+
+This map shows the total change in last spring frost date from 1895 to 2023 for each of the contiguous 48 states.^[3](#ref-3)^ It is rendered here as a ranked bar chart rather than EPA's choropleth map, carrying the same state-level values with the ranking made explicit.
+
+<details><summary>Show the data behind this figure</summary>
+
+```{r}
+#| label: table-5
+#| echo: false
+knitr::kable(fig_5_table(last_frost))
+```
+
+</details>
+
+### Figure 6
+
+```{r}
+#| label: caption-6
+#| echo: false
+#| output: asis
+figure_caption(meta, "first_fall_frost_by_state.csv")
+```
+
+<div class="d-flex flex-wrap gap-2 mb-3">
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/climateindicators/length-of-growing-season/main/data/first_fall_frost_by_state.csv" download><i class="bi bi-filetype-csv"></i> Figure data (CSV)</a>
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/climateindicators/length-of-growing-season/main/data-raw/growing-season_fig-6.csv" download><i class="bi bi-filetype-csv"></i> EPA source data (CSV)</a>
+</div>
+
+```{r}
+#| label: chart-6
+#| echo: false
+fig_6(first_frost)
+```
+
+This map shows the total change in first fall frost date from 1895 to 2023 for each of the contiguous 48 states.^[3](#ref-3)^ It is rendered here as a ranked bar chart rather than EPA's choropleth map, carrying the same state-level values with the ranking made explicit.
+
+<details><summary>Show the data behind this figure</summary>
+
+```{r}
+#| label: table-6
+#| echo: false
+knitr::kable(fig_6_table(first_frost))
+```
+
+</details>
+
+:::::
+
+## Key Points
+
+- The average length of the growing season in the contiguous 48 states has increased by more than two weeks since the beginning of the 20<sup>th</sup> century. A particularly large and steady increase has occurred since the 1970s (Figure 1).
+- The length of the growing season has increased more rapidly in the West than in the East. In the West, the length of the growing season has increased at an average rate of about 2.2 days per decade since 1895, compared with a rate of nearly one day per decade in the East (Figure 2).
+- The length of the growing season has increased in almost every state. States in the West (e.g., California and Washington) have seen the most dramatic increase. In contrast, the growing season has become slightly shorter in Georgia (Figure 3).
+- In recent years, the final spring frost has been occurring earlier than at any point since 1895, and the first fall frost has been arriving later. Since 1980, the last spring frost has occurred an average of more than three days earlier than the long-term average, and the first fall frost has occurred about three days later (Figure 4).
+- Patterns in the timing of spring and fall frost (Figures 5 and 6) largely mirror the overall patterns in the length of growing season (Figure 3). States that saw an increased length of growing season had comparable changes in frost-free days for both the spring and fall.
+
+## Background
+
+The length of the growing season in any given region refers to the number of days when plant growth takes place. The growing season often determines which crops can be grown in an area, as some crops require long growing seasons, while others mature rapidly. Growing season length is limited by many different factors. Depending on the region and the climate, the growing season is influenced by air temperatures, frost days, rainfall, or daylight hours.
+
+Changes in the length of the growing season can have both positive and negative effects on the yield and prices of particular crops. Overall, warming is expected to have negative effects on yields of major crops, but crops in some individual locations may benefit.^[1](#ref-1)^ A longer growing season could allow farmers to diversify crops or have multiple harvests from the same plot. However, it could also limit the types of crops grown, encourage invasive species or weed growth, or increase demand for irrigation. A longer growing season could also disrupt the function and structure of a region's ecosystems and could, for example, alter the range and types of animal species in the area.
+
+## About the Indicator
+
+This indicator looks at the impact of temperature on the length of the growing season in the contiguous 48 states, as well as trends in the timing of spring and fall frosts. For this indicator, the length of the growing season is defined as the period of time between the last frost of spring and the first frost of fall, when the air temperature drops below the freezing point of 32°F. This is referred to as the frost-free season. This indicator complements the [Growing Degree Days indicator](/indicators/ecosystems/growing-degree-days.qmd), which is also based on specific temperature thresholds, as well as the Freeze-Thaw Conditions indicator, which focuses on changes in the number of days the ground is frozen or unfrozen. Changes in growing season have been calculated using temperature data from 597 weather stations throughout the contiguous 48 states. These data were compiled by the National Oceanic and Atmospheric Administration's National Centers for Environmental Information. Growing season length and the timing of spring and fall frosts were averaged across the nation, then compared with long-term average numbers (1895–2023) to determine how each year differed from the long-term average.
+
+## About the Data
+
+### Indicator Notes
+
+Changes in measurement techniques and instruments over time can affect trends. This indicator includes only data from weather stations with a consistent record of data points for the time period. Methods for producing state, regional, and national values by year were designed to provide spatial representativeness regardless of station density.
+
+### Data Sources
+
+All six figures are based on temperature data compiled by the National Oceanic and Atmospheric Administration's National Centers for Environmental Information, and these data are available online at: [www.ncei.noaa.gov](https://www.ncei.noaa.gov). Analysis of frost timing and growing season length was provided by Kunkel (2024).^[2](#ref-2)^
+
+## Technical Documentation
+
+```{r}
+#| label: td-link
+#| echo: false
+#| output: asis
+technical_documentation_link(meta)
+```
+
+## References
+
+<ol class="references">
+  <li id="ref-1"></li>
+  <li id="ref-2">Kunkel, K. E. (2024). Update to data originally published in: Kunkel, K. E., Easterling, D. R., Hubbard, K., & Redmond, K. (2004). Temporal variations in frost‐free season in the United States: 1895–2000. <em>Geophysical Research Letters</em>, <em>31</em>(3), L03201. [doi.org/10.1029/2003GL018624](https://doi.org/10.1029/2003GL018624)</li>
+  <li id="ref-3">Kunkel, K. E. (2024). Expanded analysis of data originally published in: Kunkel, K. E., Easterling, D. R., Hubbard, K., & Redmond, K. (2004). Temporal variations in frost‐free season in the United States: 1895–2000. <em>Geophysical Research Letters, 31</em>(3), L03201. [doi.org/10.1029/2003GL018624](https://doi.org/10.1029/2003GL018624)</li>
+</ol>
+
+::: {.callout-note appearance="simple" icon=false}
+Text on this page is EPA's own published wording (a U.S. Government work, not
+subject to domestic copyright), extracted from EPA's published indicator page
+and verified paragraph by paragraph against the archived HTML. Data, chart
+code, and the full extraction pipeline are maintained in the
+[length-of-growing-season](https://github.com/climateindicators/length-of-growing-season)
+repository, which this page reads its data from directly.
+:::

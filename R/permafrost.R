@@ -1,4 +1,4 @@
-# Figures for indicators/permafrost.qmd.
+# Figures for indicators/snow-and-ice/permafrost.qmd.
 
 REPO <- "permafrost"
 

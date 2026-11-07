@@ -90,9 +90,10 @@ $card-category-map: (
     "heat-waves", "heavy-precipitation", "tropical-cyclone-activity", "river-flooding",
     "drought", "temperature-and-drought-in-the-southwest", "wildfires"
   ),
-  $cat-coastal-marine: ("sea-surface-temperature", "sea-level", "coastal-flooding", "marine-heat-waves", "atlantic-coast"),
+  $cat-coastal-marine: ("sea-surface-temperature", "sea-level", "coastal-flooding", "marine-heat-waves", "atlantic-coast",
+    "antarctic-sea-ice", "ocean-acidity"),
   $cat-cryosphere: (
-    "glaciers-in-glacier-park", "lake-ice", "great-lakes-ice-cover", "snowfall", "snowpack",
+    "glaciers-in-glacier-park", "lake-ice", "great-lakes-ice-cover", "snowpack",
     "permafrost", "freeze-thaw-conditions", "ice-sheets", "alaskan-rivers"
   ),
   $cat-temperature-health: (
@@ -109,7 +110,7 @@ $card-category-map: (
   $cat-freshwater: (
     "streamflow", "stream-temperature", "snake-river", "lake-temperature", "great-lakes"
   ),
-  $cat-whole-story: ("global-greenhouse-gas-emissions", "ocean-acidity"),
+  $cat-whole-story: ("global-greenhouse-gas-emissions"),
 );
 
 // One Bootstrap Icon glyph per category, keyed the same as $card-category-map
@@ -414,27 +415,30 @@ header#quarto-header.headroom.headroom--unpinned {
   color: $accent !important;
 }
 
-// Section subtitles ("Weather and Extreme Events", "Cryosphere", ...) each get
-// their own colour, both on the label and its collapse chevron. Quarto gives
-// every section's toggle links a shared data-bs-target rather than a class
-// naming the section, so that attribute is what's addressed here, in the
-// order sections appear in _quarto.yml (see the $cat-* variables above).
-#quarto-sidebar {
-  [data-bs-target="#quarto-sidebar-section-1"] { color: $cat-weather-extremes; }
-  [data-bs-target="#quarto-sidebar-section-2"] { color: $cat-cryosphere; }
-  [data-bs-target="#quarto-sidebar-section-3"] { color: $cat-coastal-marine; }
-  [data-bs-target="#quarto-sidebar-section-4"] { color: $cat-freshwater; }
-  [data-bs-target="#quarto-sidebar-section-5"] { color: $cat-ecosystems; }
-  [data-bs-target="#quarto-sidebar-section-6"] { color: $cat-temperature-health; }
-  [data-bs-target="#quarto-sidebar-section-7"] { color: $cat-vector-health; }
-  [data-bs-target="#quarto-sidebar-section-8"] { color: $cat-societal; }
-}
-
 // Tinted panel in the shape of climate.us's .usa-sidenav-list. Needs the id to
 // outrank Quarto's own `#quarto-sidebar` background rule.
 #quarto-sidebar.sidebar-navigation {
   background-color: $panel;
   border-right: 1px solid $rule;
+}
+
+// Each indicator page's sidebar lists only its own category, shaped like the
+// category pages' left list (.cat-side below).
+#quarto-sidebar {
+  .sidebar-item { margin-bottom: 1.1rem; }
+  .sidebar-item-container .sidebar-link,
+  .sidebar-item-container .sidebar-link:hover {
+    color: #000;
+    font-family: $font-krub;
+    font-size: 16px;
+    line-height: 1.5;
+    text-decoration: none;
+  }
+  .sidebar-item-container .sidebar-link:hover { text-decoration: underline; }
+  .sidebar-item-container .active { color: #000 !important; font-weight: 600 !important; }
+  // First item is the category itself: bold heading that links to its landing page.
+  .sidebar-item:first-child { margin-bottom: 1.5rem; }
+  .sidebar-item:first-child .sidebar-link { font-family: $font-inter; font-size: 20px; font-weight: 800 !important; }
 }
 
 /* Footer */

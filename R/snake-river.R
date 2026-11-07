@@ -1,4 +1,4 @@
-# Figures for indicators/snake-river.qmd.
+# Figures for indicators/freshwater-systems/snake-river.qmd.
 
 REPO <- "snake-river"
 

@@ -1,4 +1,4 @@
-# Figures for indicators/temperature-and-drought-in-the-southwest.qmd.
+# Figures for indicators/weather-and-extreme-events/temperature-and-drought-in-the-southwest.qmd.
 
 REPO <- "temperature-and-drought-in-the-southwest"
 

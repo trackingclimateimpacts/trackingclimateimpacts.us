@@ -1,0 +1,112 @@
+---
+title: "Community Connection: Cherry Blossom Bloom Dates in Washington, D.C."
+description: "How the peak bloom date of Washington, D.C.'s Yoshino cherry trees has changed since 1921, alongside the dates of the National Cherry Blossom Festival."
+categories: [Ecosystems, Temperature]
+execute:
+  eval: true
+---
+
+This feature tracks the annual peak bloom date of Washington, D.C.’s famous cherry trees.
+
+```{r}
+#| label: setup
+#| include: false
+source(here::here("R", "common.R"))
+source(here::here("R", "cherry-blossom-bloom.R"))
+
+meta   <- read_meta(REPO)
+annual <- read_indicator(REPO, "cherry_blossom_bloom.csv")
+```
+
+## Figures
+
+::::: {.panel-tabset}
+
+### Figure 1
+
+```{r}
+#| label: caption-1
+#| echo: false
+#| output: asis
+figure_caption(meta, "cherry_blossom_bloom.csv")
+```
+
+<div class="d-flex flex-wrap gap-2 mb-3">
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/climateindicators/cherry-blossom-bloom/main/data/cherry_blossom_bloom.csv" download><i class="bi bi-filetype-csv"></i> Figure data (CSV)</a>
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/climateindicators/cherry-blossom-bloom/main/data-raw/cherry-blossoms_fig-1.csv" download><i class="bi bi-filetype-csv"></i> EPA source data (CSV)</a>
+</div>
+
+```{r}
+#| label: chart-1
+#| echo: false
+fig_1(annual)
+```
+
+This figure shows the timing of peak bloom each year for the main type of cherry tree around the Tidal Basin in Washington, D.C. The peak bloom date occurs when 70 percent of the blossoms are in full bloom. The shaded band shows the timing of the annual National Cherry Blossom Festival. The festival began in 1934 but was not held during World War II.
+
+<details><summary>Show the data behind this figure</summary>
+
+```{r}
+#| label: table-1
+#| echo: false
+knitr::kable(fig_1_table(annual))
+```
+
+</details>
+
+:::::
+
+## Key Points
+
+- Based on the entire 104 years of data, the average peak bloom date for Washington’s cherry blossoms is April 3.
+- Peak bloom date for the cherry trees is occurring earlier than it did in the past. Since 1921, peak bloom dates have shifted earlier by approximately eight days. The peak bloom date has occurred before April 3 in 15 of the past 20 years.
+- While the length of the National Cherry Blossom Festival has expanded over time, the cherry trees have bloomed near the beginning of the festival in recent years. During some years, like 2024, the festival missed early peak bloom dates entirely.
+
+## Background
+
+In Washington, D.C., the arrival of spring brings a splash of color as the city’s iconic cherry trees burst into bloom. The city has enjoyed cherry blossoms each year dating back to 1912, when Japan gave about 3,000 cherry trees to the United States as a gift of friendship. These trees surround Washington’s Tidal Basin, and the beautiful blooms set against the backdrop of the national monuments bring more than 1.5 million visitors to the area every year during the National Cherry Blossom Festival. Not surprisingly, the festival is planned to coincide with the peak bloom of the cherry trees.
+
+The exact timing of peak bloom varies from year to year, and it is largely driven by local temperatures during the winter and early spring. Many plants are sensitive to and respond to environmental cues such as when temperature reaches a certain threshold. As the [Leaf and Bloom Dates indicator](/indicators/ecosystems/leaf-and-bloom-dates.qmd) explains, scientists have very high confidence that recent warming trends in global climate are causing spring events such as leaf growth and flower blooms to happen earlier.^[1](#ref-1)^ In the case of Washington’s cherry blossoms, earlier bloom dates could affect tourism and the local economy.
+
+The peak bloom date for the most common type of cherry tree around Washington’s Tidal Basin—the Yoshino variety—has been carefully estimated and recorded since 1921 by the National Park Service. The peak bloom date is defined as the day when 70 percent of the blossoms are in full bloom.
+
+Figure 1 shows how the peak bloom date of the Yoshino cherry trees has changed since 1921. It also shows the dates of the National Cherry Blossom Festival, which has grown to several weeks as its popularity has expanded. There is considerable variability in the peak bloom date, which makes predicting the exact timing difficult. Anticipation of the peak bloom captivates meteorologists, city planners, the National Park Service, residents, and tourists each year.
+
+For this and other examples of community connections to observed climate-related changes, see the StoryMap at: <https://storymaps.arcgis.com/stories/ebd8dcbb0b6048cd81caa6eb450b8974>.
+
+## About the Data
+
+### Notes
+
+In addition to winter and early spring temperatures, the timing of the peak bloom for cherry trees can be affected by other weather, climate, and location factors. For example, extended growing periods and warmer autumns could affect bloom dates by altering other stages of cherry tree growth.^[4](#ref-4)^
+
+### Data Sources
+
+Peak bloom dates and festival dates were provided by the National Park Service and organizers of the National Cherry Blossom Festival. Bloom dates and other information about Washington’s cherry trees can be found online at: [https://www.nationalcherryblossomfestival.org](https://www.nationalcherryblossomfestival.org/) and: [www.nps.gov/subjects/cherryblossom/index.htm](https://www.nps.gov/subjects/cherryblossom/index.htm).
+
+## Technical Documentation
+
+```{r}
+#| label: td-link
+#| echo: false
+#| output: asis
+technical_documentation_link(meta)
+```
+
+## References
+
+<ol class="references">
+  <li id="ref-1">IPCC (Intergovernmental Panel on Climate Change). (2022). <em>Climate change 2022—Impacts, adaptation and vulnerability: Working Group II contribution to the Sixth Assessment Report of the Intergovernmental Panel on Climate Chang</em>e (H.-O. Pörtner, D. C. Roberts, M. Tignor, E. S. Poloczanska, K. Mintenbeck, A. Alegría, M. Craig, S. Langsdorf, S. Löschke, V. Möller, A. Okem, & B. Rama, Eds.). Cambridge University Press. [https://doi.org/10.1017/9781009325844](https://doi.org/10.1017/9781009325844)</li>
+  <li id="ref-2">National Cherry Blossom Festival. (2024). <em>Bloom watch</em>. Retrieved March 21, 2024, from [https://nationalcherryblossomfestival.org/bloom-watch](https://nationalcherryblossomfestival.org/bloom-watch/)</li>
+  <li id="ref-3">National Park Service. (2024). <em>Bloom watch</em>. Retrieved March 21, 2024, from [www.nps.gov/subjects/cherryblossom/bloom-watch.htm](https://www.nps.gov/subjects/cherryblossom/bloom-watch.htm)</li>
+  <li id="ref-4">Chung, U., Mack, L., Yun, J. I., & Kim, S.-H. (2011). Predicting the timing of cherry blossoms in Washington, DC and Mid-Atlantic states in response to climate change. <em>PLoS ONE</em>, <em>6</em>(11), e27439. [https://doi.org/10.1371/journal.pone.0027439](https://doi.org/10.1371/journal.pone.0027439)</li>
+</ol>
+
+::: {.callout-note appearance="simple" icon=false}
+Text on this page is EPA's own published wording (a U.S. Government work, not
+subject to domestic copyright), extracted from EPA's published indicator page
+and verified paragraph by paragraph against the archived HTML. Data, chart
+code, and the full extraction pipeline are maintained in the
+[cherry-blossom-bloom](https://github.com/climateindicators/cherry-blossom-bloom)
+repository, which this page reads its data from directly.
+:::

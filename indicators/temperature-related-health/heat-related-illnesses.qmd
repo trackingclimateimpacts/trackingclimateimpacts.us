@@ -1,0 +1,196 @@
+---
+title: "Heat-Related Illnesses"
+description: "Hospitalizations in the United States attributed to extreme heat."
+categories: [Health, Temperature]
+execute:
+  eval: true
+---
+
+
+```{r}
+#| label: setup
+#| include: false
+source(here::here("R", "common.R"))
+source(here::here("R", "heat-related-illnesses.R"))
+
+meta       <- read_meta(REPO)
+annual     <- read_indicator(REPO, "heat_illness_annual_rate.csv")
+by_state   <- read_indicator(REPO, "heat_illness_rate_by_state.csv")
+by_sex_age <- read_indicator(REPO, "heat_illness_by_sex_and_age.csv")
+```
+
+## Figures
+
+::::: {.panel-tabset}
+
+### Figure 1
+
+```{r}
+#| label: caption-1
+#| echo: false
+#| output: asis
+figure_caption(meta, "heat_illness_annual_rate.csv")
+```
+
+<div class="d-flex flex-wrap gap-2 mb-3">
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/climateindicators/heat-related-illness-new/main/data/heat_illness_annual_rate.csv" download><i class="bi bi-filetype-csv"></i> Figure data (CSV)</a>
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/climateindicators/heat-related-illness-new/main/data-raw/heat-illnesses_fig-1.csv" download><i class="bi bi-filetype-csv"></i> EPA source file (CSV)</a>
+</div>
+
+```{r}
+#| label: chart-1
+#| echo: false
+fig_1(annual)
+```
+
+This graph shows the annual rate of hospitalizations classified as "heat-related" by medical professionals in 20 states that participate in CDC's hospitalization tracking program, from 2001 to 2010. The rate is based on hospital discharge records for May 1 to September 30 of every year. The rate has been age-adjusted to account for the effects of population change over time—for example, if the proportion of older adults has increased.
+
+<details><summary>Show the data behind this figure</summary>
+
+```{r}
+#| label: table-1
+#| echo: false
+knitr::kable(fig_1_table(annual))
+```
+
+</details>
+
+### Figure 2
+
+```{r}
+#| label: caption-2
+#| echo: false
+#| output: asis
+figure_caption(meta, "heat_illness_rate_by_state.csv")
+```
+
+<div class="d-flex flex-wrap gap-2 mb-3">
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/climateindicators/heat-related-illness-new/main/data/heat_illness_rate_by_state.csv" download><i class="bi bi-filetype-csv"></i> Figure data (CSV)</a>
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/climateindicators/heat-related-illness-new/main/data-raw/heat-illnesses_fig-2.csv" download><i class="bi bi-filetype-csv"></i> EPA source file (CSV)</a>
+</div>
+
+```{r}
+#| label: chart-2
+#| echo: false
+fig_2(by_state)
+```
+
+This map shows the 2001–2010 average rate of hospitalizations classified as "heat-related" by medical professionals in 23 states that participate in CDC's hospitalization tracking program. Rates are based on hospital discharge records for May 1 to September 30 of every year. Rates have been age-adjusted to account for differences in the population distribution over time and between states—for example, if one state has a higher proportion of older adults than another.
+
+EPA published this figure as a map; it is drawn here as a ranked bar chart of the same state-level values.
+
+<details><summary>Show the data behind this figure</summary>
+
+```{r}
+#| label: table-2
+#| echo: false
+knitr::kable(fig_2_table(by_state))
+```
+
+</details>
+
+### Figure 3
+
+```{r}
+#| label: caption-3
+#| echo: false
+#| output: asis
+figure_caption(meta, "heat_illness_by_sex_and_age.csv")
+```
+
+<div class="d-flex flex-wrap gap-2 mb-3">
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/climateindicators/heat-related-illness-new/main/data/heat_illness_by_sex_and_age.csv" download><i class="bi bi-filetype-csv"></i> Figure data (CSV)</a>
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/climateindicators/heat-related-illness-new/main/data-raw/heat-illnesses_fig-3.csv" download><i class="bi bi-filetype-csv"></i> EPA source file (CSV)</a>
+</div>
+
+```{r}
+#| label: chart-3
+#| echo: false
+fig_3(by_sex_age)
+```
+
+This graph shows the total number of hospitalizations classified as "heat-related" by medical professionals in 20 states that participate in CDC's hospitalization tracking program, from 2001 to 2010. Totals are broken out by sex and by age group. The graph shows 10-year totals based on hospital discharge records for May 1 to September 30 of every year.
+
+The sex breakdown and the age breakdown are two independent totals of the same underlying hospitalizations; they differ by 14 hospitalizations in EPA's own published figures (28,133 by sex versus 28,119 by age).
+
+<details><summary>Show the data behind this figure</summary>
+
+```{r}
+#| label: table-3
+#| echo: false
+knitr::kable(fig_3_table(by_sex_age))
+```
+
+</details>
+
+:::::
+
+## Key Points
+
+- From 2001 to 2010, the 20 states covered in Figure 1 recorded a total of about 28,000 heat-related hospitalizations.^[6](#ref-6)^ The resulting annual rates ranged from 1.1 cases per 100,000 people in 2004 to 2.5 cases per 100,000 people in 2006, with a 10-year average rate of 1.8 cases per 100,000 people (see Figure 1).
+- The pattern in Figure 1 largely matches the pattern in heat-related deaths during the same period (see the [Heat-Related Deaths](/indicators/temperature-related-health/heat-related-deaths.qmd) indicator), including a low value in 2004 and a peak in 2006. Considerable year-to-year variability makes it difficult to determine whether heat-related illnesses have increased or decreased to a meaningful degree since 2001.
+- Heat-related hospitalization rates vary widely among the 23 states studied (see Figure 2). Average rates from 2001 to 2010 ranged from fewer than one case per 100,000 people in some states to nearly four cases per 100,000 people in others. The highest rates occurred in Kansas, Louisiana, Missouri, South Carolina, and Tennessee. Relatively high hospitalization rates in the Southeast and Midwest suggest a connection between hotter and more humid summers and increased rates of heat-related illness, compared with other regions.^[7](#ref-7)^
+- People aged 65+ accounted for more heat-related hospitalizations than any other age group from 2001 to 2010, and males were hospitalized for heat-related illnesses more than twice as often as females (see Figure 3). Men tend to have a higher risk of heat-related illness than women because they are more likely to work in outdoor occupations such as construction.^[8](#ref-8)^
+- This indicator could overlook illnesses that were not diagnosed as heat-related, did not result in a hospitalization, or were not fully documented or reported.
+
+## Background
+
+Heat-related illnesses can occur when a person is exposed to high temperatures, such that their body cannot cool itself sufficiently through sweating. Symptoms range from mild swelling, rashes, or cramps to potentially deadly heat exhaustion and heat stroke. Heat is the leading weather-related killer in the United States (see the [Heat-Related Deaths](/indicators/temperature-related-health/heat-related-deaths.qmd) indicator), and it causes many people to visit the emergency room or be admitted to the hospital.
+
+Any person can suffer from heat stress, regardless of age, sex, or health status. Older adults and children, however, have a higher-than-average risk of becoming ill due to exposure to extreme heat.^[1](#ref-1)^ People working outdoors, the socially isolated and economically disadvantaged, those with chronic illnesses, and some communities of color are also especially vulnerable to heat.^[2](#ref-2)^
+
+Unusually hot summer temperatures have become more common across the contiguous 48 states in recent decades^[3](#ref-3)^ (see the [High and Low Temperatures](/indicators/weather-and-extreme-events/high-and-low-temperatures.qmd) indicator), and extreme heat events (heat waves) are expected to become more frequent and more intense in the future.^[4](#ref-4)^ As a result, the risk of heat-related illness is expected to increase.^[5](#ref-5)^ Hospitalization rates can also change, however, as people acclimate to higher temperatures and as communities strengthen their heat response plans and take other steps to continue to adapt.
+
+## About the Indicator
+
+This indicator shows hospitalization rates for "heat-related" illnesses such as heat exhaustion, heat cramps, mild heat edema (swelling in the legs and hands), heat syncope (fainting), and heat stroke. It is based on hospital discharge records for patients who are admitted to the hospital for 23 hours or more. Every discharge record includes a diagnosis determined by a physician or other medical professional.
+
+This indicator covers states across a wide range of regions and climate zones that have participated in a national hospital data tracking program since at least 2001. All of these states require hospitals to submit discharge data to a state organization, which then compiles and reports the data to the U.S. Centers for Disease Control and Prevention (CDC). Dividing the annual number of hospitalizations by the corresponding state population, then multiplying by 100,000, gives the hospitalization rates (per 100,000 people) shown in this indicator.
+
+Figure 1 shows annual hospitalization rates, averaged over a group of 20 states. Figure 2 shows state-specific rates for 23 states, averaged over the period from 2001 to 2010. Figure 3 shows the total number of hospitalizations across the same 20 states shown in Figure 1, broken out by sex and by age group. Because excessive heat events are associated with summer months, this indicator is limited to hospitalizations occurring in May through September. Reporting of illnesses and processing of records can involve a time lag of several years, so this indicator currently only shows data through 2010.
+
+## About the Data
+
+### Indicator Notes
+
+Several factors influence this indicator's ability to estimate the true number of hospitalizations associated with extreme heat events: the indicator is limited to a subset of states; it uses records that have only been collected comprehensively since 2001; it relies on the judgment of thousands of individual medical professionals to accurately diagnose and explicitly document heat-related illnesses; and it assumes that hospitals fulfill their state-mandated reporting obligations. Nonetheless, this data set represents the best available source of observed data for tracking heat-related hospitalizations across multiple states. Focusing exclusively on the months from May 1 to September 30 may help to exclude incorrect reports, but it could also exclude legitimate heat-related illnesses that occur in other months.
+
+Hospitals' practice of recording heat stress as a diagnosis does not signify that high temperatures are the only factor that causes or contributes to a hospitalization. Pre-existing medical conditions can significantly increase an individual's vulnerability to heat. Other important factors, such as the overall vulnerability of the population, the extent to which people have adapted and acclimated to higher temperatures, and the local climate and topography, can affect trends in "heat-related" hospitalizations. Heat response measures, such as early warning and surveillance systems, air conditioning, health care, public education, cooling centers, infrastructure standards, and air quality management, can also make a big difference in heat-related hospitalization rates.
+
+### Data Sources
+
+Data for this indicator were provided by CDC. This analysis was developed by CDC's Environmental Public Health Tracking Program, which publishes state-level hospitalization data online at: [www.cdc.gov/nceh/tracking](http://www.cdc.gov/nceh/tracking/).
+
+## Technical Documentation
+
+```{r}
+#| label: td-link
+#| echo: false
+#| output: asis
+technical_documentation_link(meta)
+```
+
+## References
+
+<ol class="references">
+  <li id="ref-1">Sarofim, M.C., S. Saha, M.D. Hawkins, D.M. Mills, J. Hess, R. Horton, P. Kinney, J. Schwartz, and A. St. Juliana. 2016. Chapter 2: Temperature-related death and illness. The impacts of climate change on human health in the United States: A scientific assessment. U.S. Global Change Research Program. [https://health2016.globalchange.gov](https://health2016.globalchange.gov/).</li>
+  <li id="ref-2">Sarofim, M.C., S. Saha, M.D. Hawkins, D.M. Mills, J. Hess, R. Horton, P. Kinney, J. Schwartz, and A. St. Juliana. 2016. Chapter 2: Temperature-related death and illness. The impacts of climate change on human health in the United States: A scientific assessment. U.S. Global Change Research Program. [https://health2016.globalchange.gov](https://health2016.globalchange.gov/).</li>
+  <li id="ref-3">USGCRP (U.S. Global Change Research Program). 2017. Climate science special report: Fourth National Climate Assessment, volume I. Wuebbles, D.J., D.W. Fahey, K.A. Hibbard, D.J. Dokken, B.C. Stewart, and T.K. Maycock, eds. [https://science2017.globalchange.gov](https://science2017.globalchange.gov). doi:10.7930/J0J964J6</li>
+  <li id="ref-4">USGCRP (U.S. Global Change Research Program). 2017. Climate science special report: Fourth National Climate Assessment, volume I. Wuebbles, D.J., D.W. Fahey, K.A. Hibbard, D.J. Dokken, B.C. Stewart, and T.K. Maycock, eds. [https://science2017.globalchange.gov](https://science2017.globalchange.gov). doi:10.7930/J0J964J6</li>
+  <li id="ref-5">IPCC (Intergovernmental Panel on Climate Change). 2014. Climate change 2014: Impacts, adaptation, and vulnerability. Working Group II contribution to the IPCC Fifth Assessment Report. Cambridge, United Kingdom: Cambridge University Press. [www.ipcc.ch/report/ar5/wg2](http://www.ipcc.ch/report/ar5/wg2).</li>
+  <li id="ref-6">Choudhary, E. and A. Vaidyanathan. 2014. Heat stress illness hospitalizations—Environmental public health tracking program, 20 states, 2001-2010. Surveillance Summaries 63(SS13):1-10. [www.cdc.gov/mmwr/preview/mmwrhtml/ss6313a1.htm](https://www.cdc.gov/mmwr/preview/mmwrhtml/ss6313a1.htm).</li>
+  <li id="ref-7">Choudhary, E. and A. Vaidyanathan. 2014. Heat stress illness hospitalizations—Environmental public health tracking program, 20 states, 2001-2010. Surveillance Summaries 63(SS13):1-10. [www.cdc.gov/mmwr/preview/mmwrhtml/ss6313a1.htm](https://www.cdc.gov/mmwr/preview/mmwrhtml/ss6313a1.htm).</li>
+  <li id="ref-8">Choudhary, E. and A. Vaidyanathan. 2014. Heat stress illness hospitalizations—Environmental public health tracking program, 20 states, 2001-2010. Surveillance Summaries 63(SS13):1-10. [www.cdc.gov/mmwr/preview/mmwrhtml/ss6313a1.htm](https://www.cdc.gov/mmwr/preview/mmwrhtml/ss6313a1.htm).</li>
+  <li id="ref-9">Choudhary, E. and A. Vaidyanathan. 2014. Heat stress illness hospitalizations—Environmental public health tracking program, 20 states, 2001-2010. Surveillance Summaries 63(SS13):1-10. [www.cdc.gov/mmwr/preview/mmwrhtml/ss6313a1.htm](https://www.cdc.gov/mmwr/preview/mmwrhtml/ss6313a1.htm).</li>
+  <li id="ref-10">CDC (U.S. Centers for Disease Control and Prevention). 2016. Environmental Public Health Tracking Program: Heat stress hospitalizations indicator data. Accessed March 2016. [https://ephtracking.cdc.gov/](https://ephtracking.cdc.gov/).</li>
+  <li id="ref-11">Choudhary, E. and A. Vaidyanathan. 2014. Heat stress illness hospitalizations—Environmental public health tracking program, 20 states, 2001-2010. Surveillance Summaries 63(SS13):1-10. [www.cdc.gov/mmwr/preview/mmwrhtml/ss6313a1.htm](https://www.cdc.gov/mmwr/preview/mmwrhtml/ss6313a1.htm).</li>
+</ol>
+
+::: {.callout-note appearance="simple" icon=false}
+Text on this page is EPA's own published wording (a U.S. Government work, not
+subject to domestic copyright), extracted from EPA's published indicator page
+and verified paragraph by paragraph against the archived HTML. Data, chart
+code, and the full extraction pipeline are maintained in the
+[heat-related-illness-new](https://github.com/climateindicators/heat-related-illness-new)
+repository, which this page reads its data from directly.
+:::

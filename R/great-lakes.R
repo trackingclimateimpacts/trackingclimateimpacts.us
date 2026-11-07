@@ -1,4 +1,4 @@
-# Figures for indicators/great-lakes.qmd.
+# Figures for indicators/freshwater-systems/great-lakes.qmd.
 
 REPO <- "great-lakes"
 

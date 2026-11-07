@@ -1,0 +1,181 @@
+---
+title: "A Closer Look: Temperature and Drought in the Southwest"
+description: "A closer look at trends in temperature and drought in the southwestern United States."
+categories: [Weather and Climate, Drought, Temperature]
+execute:
+  eval: true
+---
+
+```{r}
+#| label: setup
+#| include: false
+source(here::here("R", "common.R"))
+source(here::here("R", "temperature-and-drought-in-the-southwest.R"))
+
+meta    <- read_meta(REPO)
+anomaly <- read_indicator(REPO, "southwest_temperature_anomaly.csv")
+monitor <- read_indicator(REPO, "southwest_drought_monitor_area.csv")
+palmer  <- read_indicator(REPO, "southwest_palmer_index.csv")
+```
+
+This feature provides a closer look at trends in temperature and drought in the southwestern United States.
+
+## Figures
+
+::::: {.panel-tabset}
+
+### Figure 1
+
+```{r}
+#| label: caption-1
+#| echo: false
+#| output: asis
+figure_caption(meta, "southwest_temperature_anomaly.csv")
+```
+
+<div class="d-flex flex-wrap gap-2 mb-3">
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/climateindicators/temperature-and-drought-in-the-southwest/main/data/southwest_temperature_anomaly.csv" download><i class="bi bi-filetype-csv"></i> Figure data (CSV)</a>
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/climateindicators/temperature-and-drought-in-the-southwest/main/data-raw/southwest_fig-1.csv" download><i class="bi bi-filetype-csv"></i> EPA source file (CSV)</a>
+</div>
+
+```{r}
+#| label: chart-1
+#| echo: false
+fig_1(anomaly)
+```
+
+This map shows how the average air temperature from 2000 to 2023 has differed from the long-term average (1895–2023). To provide more detailed information, each state has been divided into climate divisions, which are zones that share similar climate features.
+
+::: {.callout-note appearance="simple" icon=false}
+EPA draws this figure as a map of the region's NOAA climate divisions. Climate-division boundaries are not published alongside the indicator data, so each division is drawn here as one point on the temperature-departure axis, grouped by its state. Every division EPA maps is on the chart; none has been averaged away.
+:::
+
+<details><summary>Show the data behind this figure</summary>
+
+```{r}
+#| label: table-1
+#| echo: false
+knitr::kable(fig_1_table(anomaly))
+```
+
+</details>
+
+### Figure 2
+
+```{r}
+#| label: caption-2
+#| echo: false
+#| output: asis
+figure_caption(meta, "southwest_drought_monitor_area.csv")
+```
+
+<div class="d-flex flex-wrap gap-2 mb-3">
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/climateindicators/temperature-and-drought-in-the-southwest/main/data/southwest_drought_monitor_area.csv" download><i class="bi bi-filetype-csv"></i> Figure data (CSV)</a>
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/climateindicators/temperature-and-drought-in-the-southwest/main/data-raw/southwest_fig-2.csv" download><i class="bi bi-filetype-csv"></i> EPA source file (CSV)</a>
+</div>
+
+```{r}
+#| label: chart-2
+#| echo: false
+fig_2(monitor)
+```
+
+This chart shows the percentage of land area in six southwestern states (Arizona, California, Colorado, Nevada, New Mexico, and Utah) classified under drought conditions from 2000 through 2023. This figure uses the U.S. Drought Monitor classification system, which is described in the table in the [Drought](/indicators/weather-and-extreme-events/drought.qmd) indicator.
+
+<details><summary>Show the data behind this figure</summary>
+
+```{r}
+#| label: table-2
+#| echo: false
+knitr::kable(fig_2_table(monitor))
+```
+
+</details>
+
+### Figure 3
+
+```{r}
+#| label: caption-3
+#| echo: false
+#| output: asis
+figure_caption(meta, "southwest_palmer_index.csv")
+```
+
+<div class="d-flex flex-wrap gap-2 mb-3">
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/climateindicators/temperature-and-drought-in-the-southwest/main/data/southwest_palmer_index.csv" download><i class="bi bi-filetype-csv"></i> Figure data (CSV)</a>
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/climateindicators/temperature-and-drought-in-the-southwest/main/data-raw/southwest_fig-3.csv" download><i class="bi bi-filetype-csv"></i> EPA source file (CSV)</a>
+</div>
+
+```{r}
+#| label: chart-3
+#| echo: false
+fig_3(palmer)
+```
+
+This chart shows annual values of the Palmer Drought Severity Index, averaged over six states in the Southwest (Arizona, California, Colorado, Nevada, New Mexico, and Utah). Positive values represent wetter-than-average conditions, while negative values represent drier-than-average conditions. A value between -2 and -3 indicates moderate drought, -3 to -4 is severe drought, and -4 or below indicates extreme drought. The thicker line is a nine-year weighted average.
+
+<details><summary>Show the data behind this figure</summary>
+
+```{r}
+#| label: table-3
+#| echo: false
+knitr::kable(fig_3_table(palmer), digits = 3)
+```
+
+</details>
+
+:::::
+
+## Key Points
+
+- Every part of the Southwest experienced higher average temperatures between 2000 and 2023 than the long-term average (1895–2023). Some areas were more than 2°F warmer than average (see Figure 1).
+- Large portions of the Southwest have experienced drought conditions since weekly Drought Monitor records began in 2000. For extended periods from 2002 to 2005 and from 2012 to 2023, nearly the entire region was abnormally dry or even drier (see Figure 2).
+- Based on the long-term Palmer Index, drought conditions in the Southwest have varied since 1895. Since the early 1900s, the Southwest has experienced wetter conditions during three main periods: the 1900s, 1940s, and 1980s. Drier conditions occurred through the 1920s/1930s, again in the 1950s, and since 1990, when the Southwest has seen some of the most persistent droughts on record (see Figure 3).
+
+## Background
+
+The American Southwest might evoke images of a hot, dry landscape—a land of rock, canyons, and deserts baked by the sun. Indeed, much of this region has low annual rainfall and seasonally high temperatures that contribute to its characteristic desert climate. Yet this landscape actually supports a vast array of plants and animals, along with millions of people who call the Southwest home. All of these plants, animals, and people need water to survive.
+
+Water is already scarce in the Southwest, so every drop is a precious resource. People in the Southwest are particularly dependent on surface water supplies like Lake Mead, which are vulnerable to evaporation. Thus, even a small increase in temperature (which drives evaporation) or a decrease in precipitation in this already arid region can seriously threaten natural systems and society. Droughts also contribute to increased pest outbreaks and wildfires, both of which damage local economies, and they reduce the amount of water available for generating electricity—for example, at the Hoover Dam.^[1](#ref-1)^
+
+While two other indicators present information about unusually high or low temperatures and drought on a national scale (see the [High and Low Temperatures](/indicators/weather-and-extreme-events/high-and-low-temperatures.qmd) indicator and the [Drought](/indicators/weather-and-extreme-events/drought.qmd) indicator), this feature highlights the Southwest because of its particular sensitivity to temperature and drought. Parts of the Southwest are also experiencing long-term reductions in mountain snowpack (see the [Snowpack](/indicators/snow-and-ice/snowpack.qmd) indicator), which accounts for a large portion of the region's water supply. This feature focuses on six states that are commonly thought of as "southwestern" and characterized at least in part by arid landscapes and scarce water supplies: Arizona, California, Colorado, Nevada, New Mexico, and Utah. Temperature and drought data come from a network of thousands of weather stations overseen by the National Weather Service.
+
+The map in Figure 1 shows how average annual temperatures in the Southwest from 2000 to 2023 differed from the average over the entire period since widespread temperature records became available (1895–2023).
+
+Figures 2 and 3 show two ways of measuring drought in the Southwest: the Drought Monitor and the Palmer Drought Severity Index. The Palmer Index is calculated from precipitation and temperature measurements at weather stations, and has been used widely for many years. The Drought Monitor is a more recent and more detailed index based on several other indices (including Palmer), along with additional factors such as snow water content, groundwater levels, reservoir storage, pasture/range conditions, and other impacts. See the [Drought](/indicators/weather-and-extreme-events/drought.qmd) indicator for more information about these indices.
+
+For this and other examples of community connections to observed climate-related changes, see the StoryMap at: <https://storymaps.arcgis.com/stories/ebd8dcbb0b6048cd81caa6eb450b8974>.
+
+## Indicator Notes
+
+Natural variability, changes in irrigation practices, and other diversions of water for human use can influence certain drought-related measurements. Soil moisture, ground water, and streamflow are part of Drought Monitor calculations (Figure 2), and they are all sensitive to human activities.
+
+## Data Sources
+
+Data for Figures 1 and 3 were obtained from the National Oceanic and Atmospheric Administration's National Centers for Environmental Information, which maintains a large collection of climate data online at: [www.ncei.noaa.gov/access/monitoring/climate-at-a-glance](http://www.ncei.noaa.gov/access/monitoring/climate-at-a-glance/). Data for Figure 2 were provided by the National Drought Mitigation Center, which gives historical data in table form at: <https://droughtmonitor.unl.edu/DmData/DataTables.aspx>.
+
+## Technical Documentation
+
+```{r}
+#| label: td-link
+#| echo: false
+#| output: asis
+technical_documentation_link(meta)
+```
+
+## References
+
+<ol class="references">
+  <li id="ref-1">MacDonald, G. M. (2010). Water, climate change, and sustainability in the southwest. <em>Proceedings of the National Academy of Sciences, 107</em>(50), 21256–21262. <a href="https://doi.org/10.1073/pnas.0909651107">https://doi.org/10.1073/pnas.0909651107</a></li>
+  <li id="ref-2">NOAA (National Oceanic and Atmospheric Administration). (2024). <em>Climate at a glance</em>. Retrieved December 3, 2024, from <a href="https://www.ncei.noaa.gov/access/monitoring/climate-at-a-glance/">www.ncei.noaa.gov/access/monitoring/climate-at-a-glance</a></li>
+  <li id="ref-3">National Drought Mitigation Center. (2024). <em>Data tables</em>. Retrieved December 3, 2024, from <a href="https://droughtmonitor.unl.edu/DmData/DataTables.aspx">https://droughtmonitor.unl.edu/DmData/DataTables.aspx</a></li>
+</ol>
+
+::: {.callout-note appearance="simple" icon=false}
+Text on this page is EPA's own published wording (a U.S. Government work, not
+subject to domestic copyright), extracted from EPA's published indicator page
+and verified paragraph by paragraph against the archived HTML. Data, chart
+code, and the full extraction pipeline are maintained in the
+[temperature-and-drought-in-the-southwest](https://github.com/climateindicators/temperature-and-drought-in-the-southwest)
+repository, which this page reads its data from directly.
+:::

@@ -1,4 +1,4 @@
-# Figures for indicators/marine-species-distribution.qmd.
+# Figures for indicators/ecosystems/marine-species-distribution.qmd.
 
 REPO <- "marine-species-distribution"
 

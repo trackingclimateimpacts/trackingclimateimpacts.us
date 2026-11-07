@@ -1,4 +1,4 @@
-# Figures for indicators/antarctic-sea-ice.qmd.
+# Figures for indicators/coastal-and-marine/antarctic-sea-ice.qmd.
 
 REPO <- "antarctic-sea-ice"
 

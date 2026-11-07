@@ -1,0 +1,166 @@
+---
+title: "Great Lakes Ice Cover"
+description: "This indicator measures the area and duration of ice cover in the Great Lakes."
+categories: [Cryosphere]
+execute:
+  eval: true
+---
+
+```{r}
+#| label: setup
+#| include: false
+source(here::here("R", "common.R"))
+source(here::here("R", "great-lakes-ice-cover.R"))
+
+meta     <- read_meta(REPO)
+area     <- read_indicator(REPO, "great_lakes_ice_max_cover.csv")
+duration <- read_indicator(REPO, "great_lakes_ice_duration.csv")
+```
+
+## Figures
+
+::::: {.panel-tabset}
+
+### Figure 1
+
+```{r}
+#| label: caption-1
+#| echo: false
+#| output: asis
+figure_caption(meta, "great_lakes_ice_max_cover.csv", ref = 5)
+```
+
+<div class="d-flex flex-wrap gap-2 mb-3">
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/climateindicators/great-lakes-ice-cover/main/data/great_lakes_ice_max_cover.csv" download><i class="bi bi-filetype-csv"></i> Figure data (CSV)</a>
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/climateindicators/great-lakes-ice-cover/main/data-raw/great-lakes-ice_fig-1.csv" download><i class="bi bi-filetype-csv"></i> EPA source data (CSV)</a>
+</div>
+
+```{r}
+#| label: chart-1
+#| echo: false
+fig_1(area)
+```
+
+These graphs show the percentage of surface area in each of the Great Lakes that froze on the maximum day (the “most frozen” day) of each year since 1973. The graph at the lower right is an area-weighted average of all five lakes.
+
+<details><summary>Show the data behind this figure</summary>
+
+```{r}
+#| label: table-1
+#| echo: false
+knitr::kable(fig_1_table(area))
+```
+
+</details>
+
+### Figure 2
+
+```{r}
+#| label: caption-2
+#| echo: false
+#| output: asis
+figure_caption(meta, "great_lakes_ice_duration.csv", ref = 6)
+```
+
+<div class="d-flex flex-wrap gap-2 mb-3">
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/climateindicators/great-lakes-ice-cover/main/data/great_lakes_ice_duration.csv" download><i class="bi bi-filetype-csv"></i> Figure data (CSV)</a>
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/climateindicators/great-lakes-ice-cover/main/data-raw/great-lakes-ice_fig-2.csv" download><i class="bi bi-filetype-csv"></i> EPA source data (CSV)</a>
+</div>
+
+```{r}
+#| label: chart-2
+#| echo: false
+fig_2(duration)
+```
+
+These graphs show the number of frozen days per year in each of the Great Lakes since 1973. A frozen day is defined here as a day when at least 5 percent of the lake’s surface area was covered with ice.
+
+<details><summary>Show the data behind this figure</summary>
+
+```{r}
+#| label: table-2
+#| echo: false
+knitr::kable(fig_2_table(duration))
+```
+
+</details>
+
+### Figure 3
+
+**Figure 3. Change in Ice Cover Duration in the Great Lakes, 1973–2019**
+
+Data source: NOAA, 2019^[7](#ref-7)^ <br> Web update: April 2021
+
+This map shows the average annual rate of change in the duration of ice cover in the Great Lakes from 1973 to 2019. Duration is measured as the number of days in which each pixel on the map was at least 10 percent covered by ice. Gray areas are labeled “no trend” because the change over time is not statistically significant (using a 90-percent confidence level).
+
+::: {.callout-note appearance="simple" icon=false}
+EPA's page offers no data download for this map, so it is not reproduced on this page and there is no data table for it.
+:::
+
+:::::
+
+## Key Points
+
+- Since 1973, the maximum area covered in ice on the Great Lakes has varied considerably from year to year. Adding the five Great Lakes together, maximum frozen area has ranged from less than 20 percent in some years to more than 90 percent in others (see Figure 1). All five lakes have experienced some degree of long-term decrease, but the decrease is only statistically significant in one lake (Superior). Years with much-lower-than-normal ice cover appear to have become more frequent during the past two decades, especially in lakes like Erie and Superior that have a history of freezing almost completely.
+- Since 1973, the number of frozen days (duration) on all five Great Lakes has declined. Ice duration on these lakes has decreased at rates ranging from approximately one-fifth of a day per year in Lake Huron to almost a full day per year in Lakes Ontario and Superior (see Figure 2). Overall, this means the Great Lakes are frozen for eight to 46 fewer days now than they were in the early 1970s. The decreases in Lakes Ontario and Superior are statistically significant.
+- A detailed map (see Figure 3) shows that many areas of the Great Lakes have experienced significant decreases in ice cover duration, but other parts of the lakes have not changed significantly. Duration has decreased the most in areas near the shore.
+
+## Background
+
+The Great Lakes—Lake Superior, Lake Michigan, Lake Huron, Lake Erie, and Lake Ontario—form the largest group of freshwater lakes on Earth. These lakes support a variety of ecosystems and play a vital role in the economy of the eight neighboring states and the Canadian province of Ontario, providing drinking water, shipping lanes, fisheries, recreational opportunities, and more.
+
+Parts of the Great Lakes typically freeze every winter. As the Earth’s climate changes, though, rising air temperatures (see the [U.S. and Global Temperature](/indicators/weather-and-extreme-events/us-and-global-temperature.qmd) indicator) and water temperatures (see the [Great Lakes Water Levels and Temperatures](/indicators/freshwater-systems/great-lakes.qmd) indicator) have led to less ice cover on many lakes in North America, including the Great Lakes.^[1](#ref-1)^  Ice cover is expected to decline further as the climate continues to warm.^[2](#ref-2)^
+
+The area that freezes and the length of time that the lakes remain frozen can have a wide range of effects on people and ecosystems. As with other lakes (see the [Lake Ice](/indicators/snow-and-ice/lake-ice.qmd) indicator), ice cover on the Great Lakes can affect aquatic ecosystems, as well as recreational opportunities such as ice fishing. Due to the size of the Great Lakes, ice cover also plays an important role in regional weather patterns and the shipping industry. While reduced ice cover could lengthen the shipping season, it also allows more water to evaporate from the lakes, which can lead to lower water levels (see the [Great Lakes Water Levels and Temperatures](/indicators/freshwater-systems/great-lakes.qmd) indicator) and restrict shipping channels.^[3](#ref-3)^  More evaporation can also lead to an increase in precipitation over nearby land, especially “lake effect” snow (see the [Snowfall](/indicators/snowfall.qmd) indicator).^[4](#ref-4)^
+
+## About the Indicator
+
+This indicator presents two related ways of measuring ice cover in the Great Lakes: area (the percentage of the lake surface area that is frozen) and duration (the length of time the lakes stay frozen). Both parts of this indicator are based on daily and weekly charts and maps created by the Canadian Ice Service and the U.S. National Ice Center, which are derived from a long-running collection of observations from ships, shore, aircraft, and satellites. Complete data are available back to 1973 for each lake.
+
+Figure 1 shows the maximum portion of each lake’s surface area that was frozen in each year. Figure 2 tracks duration by showing the total number of days per year in which at least 5 percent of the lake surface was frozen. In each case, the period analyzed runs from December through May, with this entire “season” considered part of the same year. For example, “2020” represents conditions from December 2019 through May 2020.
+
+The map in Figure 3 shows how the length of time the Great Lakes stay frozen has changed over time, and how these changes vary by location. Data for this part of the indicator were available through 2019. Figure 3 only shows a rate of change for pixels where the trend is statistically significant.
+
+## About the Data
+
+### Indicator Notes
+
+Temperature trends influence ice-covered area and duration, but natural year-to-year variations and decadal climate cycles may play a bigger role.^[8](#ref-8),[9](#ref-9)^  With more than four decades of data, though, this indicator clearly shows meaningful long-term trends and variations that relate to the regional climate of the Great Lakes, which is linked to broader global weather and climate patterns.^[10](#ref-10),[11](#ref-11)^
+
+### Data Sources
+
+Ice cover area and duration data were provided by the National Oceanic and Atmospheric Administration’s Great Lakes Environmental Research Laboratory at: [www.glerl.noaa.gov/data/ice/#historical](https://www.glerl.noaa.gov/data/ice/#historical). Similar data can be downloaded from the Great Lakes Aquatic Habitat Framework website at: [www.glahf.org/data](https://www.glahf.org/data).
+
+## Technical Documentation
+
+```{r}
+#| label: td-link
+#| echo: false
+#| output: asis
+technical_documentation_link(meta)
+```
+
+## References
+
+<ol class="references">
+  <li id="ref-1">Angel, J., C. Swanston, B.M. Boustead, K.C. Conlon, K.R. Hall, J.L. Jorns, K.E. Kunkel, M.C. Lemos, B. Lofgren, T.A. Ontl, J. Posey, K. Stone, G. Takle, and D. Todey. 2018. Midwest. In: USGCRP (U.S. Global Change Research Program). 2018. Impacts, risks, and adaptation in the United States: Fourth National Climate Assessment, volume II. Reidmiller, D.R., C.W. Avery, D.R. Easterling, K.E. Kunkel, K.L.M. Lewis, T.K. Maycock, and B.C. Stewart (eds.). <a href="https://nca2018.globalchange.gov">https://nca2018.globalchange.gov</a>. doi:10.7930/NCA4.2018.</li>
+  <li id="ref-2">USGCRP (U.S. Global Change Research Program). 2018. Impacts, risks, and adaptation in the United States: Fourth National Climate Assessment, volume II. Reidmiller, D.R., C.W. Avery, D.R. Easterling, K.E. Kunkel, K.L.M. Lewis, T.K. Maycock, and B.C. Stewart (eds.). <a href="https://nca2018.globalchange.gov">https://nca2018.globalchange.gov</a>. doi:10.7930/NCA4.2018</li>
+  <li id="ref-3">Angel, J., C. Swanston, B.M. Boustead, K.C. Conlon, K.R. Hall, J.L. Jorns, K.E. Kunkel, M.C. Lemos, B. Lofgren, T.A. Ontl, J. Posey, K. Stone, G. Takle, and D. Todey. 2018. Midwest. In: USGCRP (U.S. Global Change Research Program). 2018. Impacts, risks, and adaptation in the United States: Fourth National Climate Assessment, volume II. Reidmiller, D.R., C.W. Avery, D.R. Easterling, K.E. Kunkel, K.L.M. Lewis, T.K. Maycock, and B.C. Stewart (eds.). <a href="https://nca2018.globalchange.gov">https://nca2018.globalchange.gov</a>. doi:10.7930/NCA4.2018</li>
+  <li id="ref-4">Burnett, A.W., M.E. Kirby, H.T. Mullins, and W.P. Patterson. 2003. Increasing Great Lake-effect snowfall during the twentieth century: A regional response to global warming? J. Climate 16:3535–3542</li>
+  <li id="ref-5">NOAA (National Oceanic and Atmospheric Administration). 2021. Great Lakes Environmental Research Laboratory: Historical ice cover. Accessed March 2021. <a href="https://www.glerl.noaa.gov/data/ice/#historical">www.glerl.noaa.gov/data/ice/#historical</a>.</li>
+  <li id="ref-6">NOAA (National Oceanic and Atmospheric Administration). 2021. Great Lakes Environmental Research Laboratory: Historical ice cover. Accessed March 2021. <a href="https://www.glerl.noaa.gov/data/ice/#historical">www.glerl.noaa.gov/data/ice/#historical</a>.</li>
+  <li id="ref-7">NOAA (National Oceanic and Atmospheric Administration). 2019. Great Lakes Environmental Research Laboratory: Historical ice cover. Accessed December 2019. <a href="https://www.glerl.noaa.gov/data/ice/#historical">www.glerl.noaa.gov/data/ice/#historical</a>.</li>
+  <li id="ref-8">Wang, J., X. Bai, H. Hu, A. Clites, M. Colton, and B. Lofgren. 2012b. Temporal and spatial variability of Great Lakes ice cover, 1973–2010. J. Climate 25(4):1318–1329. <a href="https://journals.ametsoc.org/view/journals/clim/25/4/2011jcli4066.1.xml">https://journals.ametsoc.org/view/journals/clim/25/4/2011jcli4066.1.xml</a>. doi:10.1175/2011JCL14066.1.</li>
+  <li id="ref-9">Wang, J., R.A. Assel, S. Walterscheid, A.H. Clites, and X. Bai. 2012a. Great Lakes ice cover climatology update: Winters 2006–2011 description of the digital ice cover data set. NOAA Technical Memorandum GLERL-155. <a href="https://www.glerl.noaa.gov/pubs/tech_reports/glerl-155/tm-155.pdf">www.glerl.noaa.gov/pubs/tech_reports/glerl-155/tm-155.pdf</a>.</li>
+  <li id="ref-10">Bai, X., J. Wang, C. Sellinger, A. Clites, and R. Assel. 2012. Interannual variability of Great Lakes ice cover and its relationship to NAO and ENSO. J. Geophys. Res. 117:C03002. <a href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2010JC006932">https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2010JC006932</a>. doi:10.1029/2010JC006932.</li>
+  <li id="ref-11">Wang, J., R.A. Assel, S. Walterscheid, A.H. Clites, and X. Bai. 2012. Great Lakes ice cover climatology update: Winters 2006–2011 description of the digital ice cover data set. NOAA Technical Memorandum GLERL-155. <a href="https://www.glerl.noaa.gov/pubs/tech_reports/glerl-155/tm-155.pdf">www.glerl.noaa.gov/pubs/tech_reports/glerl-155/tm-155.pdf</a>.</li>
+</ol>
+
+::: {.callout-note appearance="simple" icon=false}
+Text on this page is EPA's own published wording (a U.S. Government work, not
+subject to domestic copyright), extracted from EPA's published indicator page
+and verified paragraph by paragraph against the archived HTML. Data, chart
+code, and the full extraction pipeline are maintained in the
+[great-lakes-ice-cover](https://github.com/climateindicators/great-lakes-ice-cover)
+repository, which this page reads its data from directly.
+:::

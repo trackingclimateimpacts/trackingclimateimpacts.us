@@ -1,0 +1,113 @@
+---
+title: "Community Connection: Ice Breakup in Three Alaskan Rivers"
+description: "This feature examines the timing of spring river ice breakup in three communities that have kept detailed records for more than 100 years."
+categories: [Cryosphere]
+execute:
+  eval: true
+---
+
+This feature examines the timing of spring river ice breakup in three communities that have kept detailed records for more than 100 years.
+
+```{r}
+#| label: setup
+#| include: false
+source(here::here("R", "common.R"))
+source(here::here("R", "alaskan-rivers.R"))
+
+meta    <- read_meta(REPO)
+breakup <- read_indicator(REPO, "alaskan_rivers_ice_breakup.csv")
+```
+
+## Figures
+
+::::: {.panel-tabset}
+
+### Figure 1
+
+**Figure 1. Ice Breakup Dates for Three Alaskan Rivers, 1896-2024**
+
+Data sources: National Snow and Ice Data Center, 2024^[4](#ref-4)^; Yukon River Breakup, 2024^[5](#ref-5)^; Kuskokwim Ice Classic, 2024^[6](#ref-6)^; National Weather Service, 2024^[7](#ref-7)^ <br> Web update: December 2024
+
+<div class="d-flex flex-wrap gap-2 mb-3">
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/climateindicators/alaskan-rivers/main/data/alaskan_rivers_ice_breakup.csv" download><i class="bi bi-filetype-csv"></i> Figure data (CSV)</a>
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/climateindicators/alaskan-rivers/main/data-raw/river-ice_fig-1_0.csv" download><i class="bi bi-filetype-csv"></i> EPA source data (CSV)</a>
+</div>
+
+```{r}
+#| label: chart-1
+#| echo: false
+fig_1(breakup)
+```
+
+This figure shows the date each year when ice breaks up at three locations: the town of Nenana on the Tanana River, Dawson City on the Yukon River, and Bethel on the Kuskokwim River. The annual data for each river have been plotted using a nine-year moving average.
+
+<details><summary>Show the data behind this figure</summary>
+
+```{r}
+#| label: table-1
+#| echo: false
+knitr::kable(fig_1_table(breakup))
+```
+
+</details>
+
+:::::
+
+## Key Points
+
+- The Tanana, Yukon, and Kuskokwim rivers all demonstrate long-term trends toward earlier ice breakup in the spring. The ice breakup dates for all three rivers have shifted earlier by seven to nine days over their respective periods of record.
+- At all three locations, the earliest breakup dates on record have occurred within the past six years.
+- Despite the overall trend toward earlier breakup, most of the recent breakup dates for the rivers are within the range of historical variation.
+
+## Background
+
+Regions in the far north such as Alaska are warming more quickly than other parts of the world, and this pattern is expected to continue^[1](#ref-1),[2](#ref-2)^ (see the Arctic Sea Ice indicator; for more information about regional temperature changes, see the [U.S. and Global Temperature indicator](/indicators/weather-and-extreme-events/us-and-global-temperature.qmd)). The Tanana, Yukon, and Kuskokwim rivers in Alaska provide a particularly noteworthy record of northern climate. For a century or more, local citizens have recorded the date when the ice on these rivers starts to move or break up each spring. In fact, some towns have annual competitions to guess when ice breakup will occur.
+
+Since 1917, the Nenana Ice Classic competition on the Tanana River in central Alaska has paid several million dollars in winnings to the people who come closest to guessing the exact date and time of day when the river ice will break up. Similar traditions exist on the Kuskokwim River in Bethel, where breakup dates have been recorded since 1924, and in Dawson City on the Yukon River, just across the border in Canada, where breakup dates have been recorded since 1896.
+
+River ice breakup is more than just a friendly competition, though. Ice breakup is an important time of transition for communities that rely on these relatively remote and free-flowing wild rivers for transportation, subsistence hunting and fishing, and other needs. In addition, early thawing can lead to severe ice movement, jamming, damage to infrastructure, and destructive floods.^[3](#ref-3)^
+
+The data collected by these communities highlight how the river ice breakup dates in Nenana, Dawson City, and Bethel have changed over time. The towns all use the same method to measure the date and time of river ice breakup. Residents place a tripod on the ice in the center of the river. This tripod is attached by a cable to a clock on the shore. When the ice under the tripod breaks or starts to move, the tripod moves, pulling the cable and stopping the clock.
+
+For this and other examples of community connections to observed climate-related changes, see the StoryMap at: <https://storymaps.arcgis.com/stories/ebd8dcbb0b6048cd81caa6eb450b8974>.
+
+## About the Data
+
+### Notes
+
+Besides climate change, natural year-to-year variations and other factors, such as local development and land-use patterns, can influence ice breakup dates. The three locations featured here are relatively remote and undeveloped, so the ice breakup dates are more likely to reflect natural changes in weather and climate conditions. However, corresponding measurements of water conditions and air temperature are useful to help understand the connection between changes in river ice breakup and changes in climate. A recent comparison with satellite measurements of freeze/thaw conditions at ground level (basically a way of measuring surface temperature) showed a close correlation between regional temperature conditions and actual Tanana River breakup dates.^[8](#ref-8)^
+
+### Data Sources
+
+Ice breakup dates for the Tanana River at Nenana, the Yukon River at Dawson City, and the Kuskokwim River at Bethel have been recorded and made publicly available as part of three long-running community competitions: the Nenana Ice Classic, the Yukon River Breakup, and the Kuskokwim Ice Classic. The data shown here and other information can be found online at: [www.nenanaakiceclassic.com](http://www.nenanaakiceclassic.com/), <https://nsidc.org/data/nsidc-0064/versions/2>, [www.yukonriverbreakup.com/statistics](https://yukonriverbreakup.com/statistics/), <http://iceclassic.org/historical-data>, and additional sources linked from these websites. Ice breakup dates for these rivers are also archived by the National Snow and Ice Data Center at: <https://nsidc.org/data/g01377/versions/1> and the National Weather Service at: [www.weather.gov/aprfc/breakupDB](https://www.weather.gov/aprfc/breakupDB).
+
+## Technical Documentation
+
+```{r}
+#| label: td-link
+#| echo: false
+#| output: asis
+technical_documentation_link(meta)
+```
+
+## References
+
+<ol class="references">
+  <li id="ref-1">Marvel, K., Su, W., Delgado, R., Aarons, S., Chatterjee, A., Garcia, M. E., Hausfather, Z., Hayhoe, K., Hence, D. A., Jewett, E. B., Robel, A., Singh, D., Tripati, A., &amp; Vose, R. S. (2023). Chapter 2: Climate trends. In USGCRP (U.S. Global Change Research Program), <em>Fifth National Climate Assessment</em>. <a href="https://doi.org/10.7930/NCA5.2023.CH2">https://doi.org/10.7930/NCA5.2023.CH2</a></li>
+  <li id="ref-2">IPCC (Intergovernmental Panel on Climate Change). (2021). <em>Climate change 2021—The physical science basis: Working Group I contribution to the Sixth Assessment Report of the Intergovernmental Panel on Climate Change</em> (V. Masson-Delmotte, P. Zhai, A. Pirani, S. L. Connors, C. Péan, S. Berger, N. Caud, Y. Chen, L. Goldfarb, M. I. Gomis, M. Huang, K. Leitzell, E. Lonnoy, J. B. R. Matthews, T. K. Maycock, T. Waterfield, O. Yelekçi, R. Yu, &amp; B. Zhou, Eds.). Cambridge University Press. <a href="https://doi.org/10.1017/9781009157896">https://doi.org/10.1017/9781009157896</a></li>
+  <li id="ref-3">Beltaos, S., &amp; Burrell, B. C. (2003). Climatic change and river ice breakup. <em>Canadian Journal of Civil Engineering</em>, <em>30</em>(1), 145–155. <a href="https://doi.org/10.1139/l02-042">https://doi.org/10.1139/l02-042</a></li>
+  <li id="ref-4">NSIDC (National Snow and Ice Data Center). (2024). <em>Nenana Ice Classic: Tanana river ice annual breakup dates</em> (NSIDC-0064; Version 2) [Data set]. NASA National Snow and Ice Data Center Distributed Active Archive Center. Retrieved November 15, 2024, from <a href="https://doi.org/10.5067/CAQ58H42LQY2">https://doi.org/10.5067/CAQ58H42LQY2</a></li>
+  <li id="ref-5">Yukon River Breakup. (2024). <em>Yukon River breakup</em>. Retrieved November 15, 2024, from <a href="https://yukonriverbreakup.com">https://yukonriverbreakup.com</a></li>
+  <li id="ref-6">Kuskokwim Ice Classic. (2024). <em>Kuskokwim Ice Classic</em>. Retrieved November 15, 2024, from <a href="http://iceclassic.org">http://iceclassic.org</a></li>
+  <li id="ref-7">National Weather Service. (2024). <em>Alaska-Pacific River Forecast Center: Break up database</em>. Retrieved November 15, 2024, from <a href="https://www.weather.gov/aprfc/breakupDB">www.weather.gov/aprfc/breakupDB</a></li>
+  <li id="ref-8">Kim, Y., Kimball, J. S., Glassy, J., &amp; Du, J. (2017). An extended global Earth system data record on daily landscape freeze–thaw status determined from satellite passive microwave remote sensing. <em>Earth System Science Data</em>, <em>9</em>(1), 133–147. <a href="https://doi.org/10.5194/essd-9-133-2017">https://doi.org/10.5194/essd-9-133-2017</a></li>
+</ol>
+
+::: {.callout-note appearance="simple" icon=false}
+Text on this page is EPA's own published wording (a U.S. Government work, not
+subject to domestic copyright), extracted from EPA's published indicator page
+and verified paragraph by paragraph against the archived HTML. Data, chart
+code, and the full extraction pipeline are maintained in the
+[alaskan-rivers](https://github.com/climateindicators/alaskan-rivers)
+repository, which this page reads its data from directly.
+:::

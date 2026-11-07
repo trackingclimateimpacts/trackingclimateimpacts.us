@@ -1,0 +1,224 @@
+---
+title: "Marine Species Distribution"
+description: "This indicator examines changes in the location of fish, shellfish, and other marine species along U.S. coasts."
+categories: [Environment, Ecosystems]
+execute:
+  eval: true
+---
+
+```{r}
+#| label: setup
+#| include: false
+source(here::here("R", "common.R"))
+source(here::here("R", "marine-species-distribution.R"))
+
+meta      <- read_meta(REPO)
+overall   <- read_indicator(REPO, "marine_species_latitude_depth.csv")
+northeast <- read_indicator(REPO, "marine_species_northeast.csv")
+bering    <- read_indicator(REPO, "marine_species_bering_sea.csv")
+southeast <- read_indicator(REPO, "marine_species_southeast.csv")
+```
+
+## Figures
+
+::::: {.panel-tabset}
+### Figure 1
+
+```{r}
+#| label: caption-1
+#| echo: false
+#| output: asis
+figure_caption(meta, "marine_species_latitude_depth.csv", ref = 3)
+```
+
+<div class="d-flex flex-wrap gap-2 mb-3">
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/climateindicators/marine-species-distribution/main/data/marine_species_latitude_depth.csv" download><i class="bi bi-filetype-csv"></i> Figure data (CSV)</a>
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/climateindicators/marine-species-distribution/main/data-raw/marine-species_fig-1.csv" download><i class="bi bi-filetype-csv"></i> EPA source data (CSV)</a>
+</div>
+
+```{r}
+#| label: chart-1
+#| echo: false
+fig_1(overall)
+```
+
+These graphs show the annual change in latitude (movement in miles) and depth (feet) of 41 marine species along the Northeast coast, 58 in the eastern Bering Sea, and 58 along the Southeast coast. The multi-region average consists of 157 unique species. Changes in the centers of biomass have been aggregated across all species and by region. For each region, the change in latitude and change in depth are set at zero for a base year, 1989.
+
+<details><summary>Show the data behind this figure</summary>
+
+::: {.table-scroll}
+```{r}
+#| label: table-1
+#| echo: false
+knitr::kable(fig_1_table(overall), digits = 2)
+```
+:::
+
+</details>
+### Figure 2
+
+```{r}
+#| label: caption-2
+#| echo: false
+#| output: asis
+figure_caption(meta, "marine_species_northeast.csv", ref = 3)
+```
+
+<div class="d-flex flex-wrap gap-2 mb-3">
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/climateindicators/marine-species-distribution/main/data/marine_species_northeast.csv" download><i class="bi bi-filetype-csv"></i> Figure data (CSV)</a>
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/climateindicators/marine-species-distribution/main/data-raw/marine-species_fig-2.csv" download><i class="bi bi-filetype-csv"></i> EPA source data (CSV)</a>
+</div>
+
+```{r}
+#| label: chart-2
+#| echo: false
+fig_2(northeast)
+```
+
+This chart shows the annual centers of biomass for three species in the northeastern United States from 1974 to 2022. Dots are shaded from light to dark to show change over time.
+
+<details><summary>Show the data behind this figure</summary>
+
+::: {.table-scroll}
+```{r}
+#| label: table-2
+#| echo: false
+knitr::kable(fig_2_table(northeast), digits = 2)
+```
+:::
+
+</details>
+### Figure 3
+
+```{r}
+#| label: caption-3
+#| echo: false
+#| output: asis
+figure_caption(meta, "marine_species_bering_sea.csv", ref = 3)
+```
+
+<div class="d-flex flex-wrap gap-2 mb-3">
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/climateindicators/marine-species-distribution/main/data/marine_species_bering_sea.csv" download><i class="bi bi-filetype-csv"></i> Figure data (CSV)</a>
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/climateindicators/marine-species-distribution/main/data-raw/marine-species_fig-3.csv" download><i class="bi bi-filetype-csv"></i> EPA source data (CSV)</a>
+</div>
+
+```{r}
+#| label: chart-3
+#| echo: false
+fig_3(bering)
+```
+
+This chart shows the annual centers of biomass for three species in the eastern Bering Sea from 1985 to 2022. Dots are shaded from light to dark to show change over time.
+
+<details><summary>Show the data behind this figure</summary>
+
+::: {.table-scroll}
+```{r}
+#| label: table-3
+#| echo: false
+knitr::kable(fig_3_table(bering), digits = 2)
+```
+:::
+
+</details>
+### Figure 4
+
+```{r}
+#| label: caption-4
+#| echo: false
+#| output: asis
+figure_caption(meta, "marine_species_southeast.csv", ref = 3)
+```
+
+<div class="d-flex flex-wrap gap-2 mb-3">
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/climateindicators/marine-species-distribution/main/data/marine_species_southeast.csv" download><i class="bi bi-filetype-csv"></i> Figure data (CSV)</a>
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/climateindicators/marine-species-distribution/main/data-raw/marine-species_fig-4.csv" download><i class="bi bi-filetype-csv"></i> EPA source data (CSV)</a>
+</div>
+
+```{r}
+#| label: chart-4
+#| echo: false
+fig_4(southeast)
+```
+
+This chart shows the annual centers of biomass for three species in the southeastern United States from 1989 to 2019. Dots are shaded from light to dark to show change over time.
+
+<details><summary>Show the data behind this figure</summary>
+
+::: {.table-scroll}
+```{r}
+#| label: table-4
+#| echo: false
+knitr::kable(fig_4_table(southeast), digits = 2)
+```
+:::
+
+</details>
+:::::
+
+## Key Points
+
+- The average center of biomass for 157 marine fish and invertebrate species shifted northward by nearly 17 miles between 1989 and 2019 (see Figure 1). These species also moved an average of 0.6 feet deeper.
+- In waters off the northeastern United States, several economically important species have shifted northward since the 1970s (see Figure 2). The three species shown in Figure 2 (American lobster, red hake, and black sea bass) have moved northward by an average of 145 miles.
+- In the Bering Sea, walleye pollock, snow crab, and Pacific halibut have generally shifted away from the coast since the 1980s (see Figure 3). They have also moved northward by an average of 41 miles.
+- In waters off the southeastern United States, several species have shifted northward since the late 1980s (see Figure 4). The three species shown in Figure 4 (Atlantic croaker, banded drum, and smooth butterfly ray) have moved northward by an average of 169 miles.
+
+## Background
+
+Changes in water temperature can affect the environments where fish, shellfish, and other marine species live. Certain fish species naturally migrate in response to seasonal temperature changes, moving northward or to deeper, cooler waters in the summer and migrating back during the winter. As climate change causes the oceans to become warmer year-round (see the Ocean Heat and [Sea Surface Temperature](/indicators/coastal-and-marine/sea-surface-temperature.qmd) indicators), however, populations of some species may adapt by shifting away from areas that have become too warm and toward areas that were previously cooler. Along U.S. coasts, this means a shift northward or to deeper waters that may have a more suitable temperature. As smaller prey species shift their habitats, larger predator species may follow them.
+
+Marine species represent a particularly good indicator of warming oceans because they are sensitive to climate and because they have been studied and tracked for many years. Fish are especially mobile, and they may shift their location more easily than species on land because they face fewer physical barriers.^[1](#ref-1)^ Also, many marine species, especially fish, do not have fixed nesting places or dwellings that might otherwise compel them to stay in one place. Populations of many marine species have been measured consistently for several decades across various types of ocean habitats. Tracking data from many species is useful because if a change in behavior or distribution occurs across a large range of species, it is more likely the result of a more systematic or common cause.
+
+The movement of species based on their preferred temperature conditions can affect commercial and recreational fisheries, with implications for fisheries management and the economy of communities that rely on fisheries.^[2](#ref-2)^ Climate-related fishery losses have already resulted in billions of dollars of lost catch in recent years, directly harming jobs, livelihoods, and local culture.^[2](#ref-2)^ Temperature-driven changes in suitable habitats are expected to continue in the future.^[2](#ref-2)^
+
+## About the Indicator
+
+This indicator tracks marine animal species in terms of their “center of biomass,” which is a point on the map that represents the center of each species’ distribution by weight. If a fish population were to shift generally northward, the center of biomass would shift northward as well. This approach is similar to the way changes in bird population distributions have been measured (see the [Bird Wintering Ranges indicator](/indicators/ecosystems/bird-wintering-ranges.qmd)).
+
+Data for this indicator were collected by the National Oceanic and Atmospheric Administration’s National Marine Fisheries Service and other agencies. These agencies monitor marine species populations by conducting annual surveys in which they trawl the ocean at regular intervals along the coast. By recording what they catch at each location, scientists can calculate each species’ center of biomass in terms of latitude, longitude, and depth.
+
+This indicator focuses on three survey regions that have the most continuous and longest-running sampling: the Northeast, the eastern Bering Sea off the coast of Alaska, and the Southeast. Figure 1 shows the average change in the center of biomass across 157 species in these regions as well as changes by region. For consistency, each line in Figure 1 is limited to species with the most complete records throughout the timeframe shown. Figures 2, 3, and 4 show detailed changes for three species in each region. These species were chosen because they represent a variety of habitats and species types (a mixture of fish and shellfish) and because they tend to be fairly abundant. Some of these species support major fisheries, but are presumed not to be heavily affected by overfishing, reducing the chance that fishing is unduly influencing the observed trends. Northeast data come from surveys that have been conducted every spring since 1974, Bering Sea data come from summer surveys that have been conducted consistently since 1985, and Southeast data come from surveys that have been conducted every spring since 1989.
+
+## Indicator Notes
+
+Water temperature is not the only factor that can cause marine animal populations to shift. Other factors could include interactions with other species, harvesting, ocean circulation patterns, habitat change, and species’ ability to disperse and adapt. As a result, species might have moved northward for reasons other than, or in addition to, changing sea temperatures. This indicator is limited to the Northeast, the eastern Bering Sea, and the Southeast because these areas have used consistent survey methods and because they do not have coastlines that would prevent species from moving northward in response to warming (in contrast to regions like the Gulf of Mexico, where the coast blocks northward migration).
+
+## Data Sources
+
+Data for this indicator were collected by the National Oceanic and Atmospheric Administration’s National Marine Fisheries Service during annual bottom trawl fisheries surveys. These data have been processed and made publicly available through the Distribution Mapping and Analysis Portal at: <https://apps-st.fisheries.noaa.gov/dismap/DisMAP.html>. Data from these surveys have been used to support a wide variety of studies.^[1](#ref-1),[4](#ref-4)^
+
+## Technical Documentation
+
+```{r}
+#| label: td-link
+#| echo: false
+#| output: asis
+technical_documentation_link(meta)
+```
+
+## References
+
+<ol class="references">
+  <li id="ref-1">Pinsky, M. L., Worm, B., Fogarty, M. J., Sarmiento, J. L., &amp; Levin, S. A. (2013). Marine taxa track local climate velocities. <em>Science, 341</em>(6151), 1239–1242. <a href="https://doi.org/10.1126/science.1239352">https://doi.org/10.1126/science.1239352</a></li>
+  <li id="ref-2">Mills, K. E., Osborne, E. B., Bell, R. J., Colgan, C. S., Cooley, S. R., Goldstein, M. C., Griffis, R. B., Holsman, K., Jacox, M., &amp; Micheli, F. (2023). Chapter 10: Ocean ecosystems and marine resources. In USGCRP (U.S. Global Change Research Program), <em>Fifth National Climate Assessment.</em> <a href="https://doi.org/10.7930/NCA5.2023.CH10">https://doi.org/10.7930/NCA5.2023.CH10</a></li>
+  <li id="ref-3">NOAA (National Oceanic and Atmospheric Administration). (2024). <em>DisMAP data records.</em> Distribution Mapping and Analysis Portal. Retrieved May 6, 2024, from <a href="https://apps-st.fisheries.noaa.gov/dismap/DisMAP.html">https://apps-st.fisheries.noaa.gov/dismap/DisMAP.html</a></li>
+  <li id="ref-4">Morley, J. W., Selden, R. L., Latour, R. J., Frölicher, T. L., Seagraves, R. J., &amp; Pinsky, M. L. (2018). Projecting shifts in thermal habitat for 686 species on the North American continental shelf. <em>PLOS ONE, 13</em>(5), e0196127. <a href="https://doi.org/10.1371/journal.pone.0196127">https://doi.org/10.1371/journal.pone.0196127</a></li>
+  <li id="ref-5">USGCRP (U.S. Global Change Research Program). (2018). Impacts, risks, and adaptation in the United States: Fourth National Climate Assessment, volume II (D. R. Reidmiller, C. W. Avery, D. R. Easterling, K. E. Kunkel, K. L. M. Lewis, T. K. Maycock, &amp; B. C. Stewart, Eds.). <a href="https://doi.org/10.7930/NCA4.2018.RiB">https://doi.org/10.7930/NCA4.2018.RiB</a></li>
+  <li id="ref-6">USGCRP (U.S. Global Change Research Program). (2021). <em>USGCRP indicators: Marine species distribution</em>. <a href="https://www.globalchange.gov/indicators/marine-species-distribution">www.globalchange.gov/indicators/marine-species-distribution</a></li>
+</ol>
+
+::: {.callout-note appearance="simple" icon=false}
+Text on this page is EPA's own published wording (a U.S. Government work, not
+subject to domestic copyright), extracted from EPA's published indicator page
+and verified paragraph by paragraph against the archived HTML. Data, chart
+code, and the full extraction pipeline are maintained in the
+[marine-species-distribution](https://github.com/climateindicators/marine-species-distribution)
+repository, which this page reads its data from directly.
+
+Two changes were made to EPA's wording. EPA's published heading for Figure 4
+gives the period as 1984–2019, but the data and EPA's own description of the
+figure run from 1989 to 2019, so the period is given as 1989–2019 here. And
+EPA's descriptions of Figures 2, 3, and 4 say "This map shows", but the figures
+on this page plot latitude against longitude without a base map, so they say
+"This chart shows".
+:::

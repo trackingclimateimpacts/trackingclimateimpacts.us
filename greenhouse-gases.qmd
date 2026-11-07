@@ -20,7 +20,7 @@ Greenhouse gases from human activities are the most significant driver of observ
 :::
 
 ::: {.hero-split-img}
-![](images/Rectangle_ghg.png){fig-alt=""}
+![](images/Rectangle_ghg.jpg){fig-alt=""}
 :::
 
 :::

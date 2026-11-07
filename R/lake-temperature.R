@@ -1,4 +1,4 @@
-# Figures for indicators/lake-temperature.qmd.
+# Figures for indicators/freshwater-systems/lake-temperature.qmd.
 
 REPO <- "lake-temperature"
 

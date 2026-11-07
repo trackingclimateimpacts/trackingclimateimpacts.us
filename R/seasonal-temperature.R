@@ -1,4 +1,4 @@
-# Figures for indicators/seasonal-temperature.qmd.
+# Figures for indicators/weather-and-extreme-events/seasonal-temperature.qmd.
 
 REPO <- "seasonal-temperature"
 
