@@ -1,4 +1,4 @@
-# Figures for indicators/lyme-disease.qmd.
+# Figures for indicators/vector-related-health/lyme-disease.qmd.
 
 REPO <- "lyme-disease"
 

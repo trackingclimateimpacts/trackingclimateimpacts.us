@@ -4,10 +4,16 @@ pagetitle: "All Indicators"
 listing:
   - id: all-listing
     contents:
-      - "indicators/*.qmd"
+      - "indicators/**/*.qmd"
       - "!indicators/global-greenhouse-gas-emissions.qmd"
-      - "!indicators/ocean-acidity.qmd"
-      - "!indicators/antarctic-sea-ice.qmd"
+      - "!indicators/coastal-and-marine/coastal-and-marine.qmd"
+      - "!indicators/ecosystems/ecosystems.qmd"
+      - "!indicators/freshwater-systems/freshwater-systems.qmd"
+      - "!indicators/snow-and-ice/snow-and-ice.qmd"
+      - "!indicators/societal-systems/societal-systems.qmd"
+      - "!indicators/temperature-related-health/temperature-related-health.qmd"
+      - "!indicators/vector-related-health/vector-related-health.qmd"
+      - "!indicators/weather-and-extreme-events/weather-and-extreme-events.qmd"
     type: grid
     grid-columns: 3
     sort: "title"
@@ -23,7 +29,12 @@ toc: false
 anchor-sections: false
 ---
 
-::: {.home-band .cat-hero .cat-all}
+::: {.home-band .cat-hero .cat-all .hero-bg}
+
+::: {.hero-bg-img}
+![](images/all_indicators.jpg){fig-alt=""}
+:::
+
 ## All Indicators
 :::
 

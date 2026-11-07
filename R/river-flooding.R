@@ -1,4 +1,4 @@
-# Figures for indicators/river-flooding.qmd.
+# Figures for indicators/weather-and-extreme-events/river-flooding.qmd.
 
 REPO <- "river-flooding"
 

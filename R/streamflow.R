@@ -1,4 +1,4 @@
-# Figures for indicators/streamflow.qmd.
+# Figures for indicators/freshwater-systems/streamflow.qmd.
 
 REPO <- "streamflow"
 

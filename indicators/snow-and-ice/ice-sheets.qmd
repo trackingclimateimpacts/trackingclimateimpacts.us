@@ -1,0 +1,121 @@
+---
+title: "Ice Sheets"
+description: "This indicator examines the balance between snow accumulation and melting in the ice sheets that cover Greenland and Antarctica."
+categories: [Oceans]
+execute:
+  eval: true
+---
+
+```{r}
+#| label: setup
+#| include: false
+source(here::here("R", "common.R"))
+source(here::here("R", "ice-sheets.R"))
+
+meta         <- read_meta(REPO)
+mass_balance <- read_indicator(REPO, "ice_sheet_mass_balance.csv")
+```
+
+## Figures
+
+::::: {.panel-tabset}
+
+### Figure 1
+
+**Figure 1. Cumulative Mass Balance of Greenland and Antarctica, 1992–2023**
+
+Data sources: Otosaka et al., 2023;^[3](#ref-3)^ NASA, 2024^[5](#ref-5)^ <br> Web update: June 2024
+
+<div class="d-flex flex-wrap gap-2 mb-3">
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/climateindicators/ice-sheets/main/data/ice_sheet_mass_balance.csv" download><i class="bi bi-filetype-csv"></i> Figure data (CSV)</a>
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/climateindicators/ice-sheets/main/data-raw/ice_sheets_fig-1.csv" download><i class="bi bi-filetype-csv"></i> EPA source data (CSV)</a>
+</div>
+
+```{r}
+#| label: chart-1
+#| echo: false
+fig_1(mass_balance)
+```
+
+This figure shows the cumulative change in mass in the ice sheets of Greenland and Antarctica since 1992. The dark “combined” lines are based on more than 20 different studies that have been combined for each region. Shading shows the uncertainty estimates from the various data sets that feed into the combined average. The two “NASA JPL” lines have been added to show results from one commonly cited analysis, including seasonal variations. All estimates are centered at zero in 2002 to provide a consistent point of reference. Thus, a downward slope indicates a net loss of ice and snow. For reference, 1,000 billion metric tons is equal to about 260 cubic miles of ice—enough to raise sea level by about 3 millimeters.^[4](#ref-4)^
+
+<details><summary>Show the data behind this figure</summary>
+
+::: {.table-scroll}
+```{r}
+#| label: table-1
+#| echo: false
+knitr::kable(fig_1_table(mass_balance), align = "r")
+```
+:::
+
+</details>
+
+:::::
+
+## Key Points
+
+- Since 1992, Greenland and Antarctica have both lost ice overall (see Figure 1), with Greenland losing an average of about 175 billion metric tons of ice per year and Antarctica losing more than 90 billion per year.
+- The total amount of ice lost by Greenland and Antarctica from 1992 to 2020 was enough to raise sea level worldwide by an average of three-quarters of an inch or more.^[3](#ref-3)^ By comparison, global average sea level increased by about 3 inches overall during this period (see the Sea Level indicator).
+- Ice sheets naturally fluctuate with seasonal variations in temperature, precipitation, and other factors. The NASA JPL data points in Figure 1 show these types of seasonal patterns, particularly for Greenland. With nearly three decades of data, though, Figure 1 shows that the overall shrinking of the ice sheets far exceeds seasonal and year-to-year variations.
+- Observations of ice sheets losing mass are consistent with trends in small glaciers (see the Glaciers indicator) as well as warming trends in global temperatures during this period (see the [U.S. and Global Temperature](/indicators/weather-and-extreme-events/us-and-global-temperature.qmd) indicator).
+
+## Background
+
+Ice sheets are large bodies of ice on land that cover hundreds of thousands of square miles on Greenland and Antarctica. Greenland’s ice sheet reaches more than 1 mile thick on average in the interior and contains an estimated 700,000 cubic miles of ice, while Antarctica’s ice is nearly 3 miles thick in some places, with a volume of about 7 million cubic miles.^[1](#ref-1)^ Together, these ice sheets hold nearly 70 percent of the world’s fresh water. Some of this ice has been in place for more than 1 million years.
+
+Ice sheets accumulate snowfall—just like small glaciers (see the Glaciers indicator) but at a larger scale. Over time, this snow becomes compacted into layers of ice, and the weight of this ice causes it to flow downhill and outward toward the ocean. When an ice sheet is in equilibrium, new snow accumulation is balanced by melting at the surface, runoff, and calving (ice breaking off to form icebergs) at the ocean.
+
+A warmer climate affects ice sheets in several ways. The most evident impact observed to date is a loss of ice due to warmer air and ocean waters. Warmer air causes the ice to melt more quickly and flow more rapidly to the sea, especially in low-elevation regions near the edges of the ice sheets. Warmer ocean waters melt the edge and base of the ice sheet and accelerate the process of calving. In addition, warmer ocean waters weaken the floating ice shelves that form in key places along the coast, especially in Antarctica. These ice shelves help to hold back the flow of ice on land, so as ice shelves shrink or disappear, ice from the ice sheet can flow into the ocean more quickly. Some of the losses are offset, because warmer air allows very cold interior regions in Greenland and Antarctica to receive more snowfall. Overall, though, both ice sheets are experiencing a net loss of ice. Ultimately, as the ice sheets shrink, the water they add to the ocean raises sea level around the world (see the Sea Level indicator). Melting of Greenland and Antarctica’s ice sheets accounted for about one-third of observed global sea level rise between 2006 and 2015.^[2](#ref-2)^ Thus, ice sheets are important indicators not only because of their sensitivity to changes in climate, but also for their role in global sea level rise.
+
+## About the Indicator
+
+Because Greenland and Antarctica are so large and remote, satellite instruments offer the most effective way to measure changes in their ice sheets. Scientists have used three main measurement techniques to do this:
+
+- Measuring the height of the ice sheet surface, relative to sea level. This technique is called altimetry and it typically uses radar or laser instruments.
+- Measuring changes in the weight of the ice on Greenland and Antarctica, based on slight variations in the Earth’s gravitational field caused by changes in the density of the Earth’s crust and the amount of ice or water that may be piled on top of that crust. This technique uses a pair of satellites called the GRACE Mission, which launched in 2002.
+- Using the “input-output” method, which combines various sources of information on ice accumulation (e.g., models of surface mass balance) and discharge into the ocean (e.g., based on radar, satellite images, and other data).
+
+Estimates of the exact rate of ice gain or loss in Greenland and Antarctica vary depending on the measurement technique and the methods used to process the data. Each technique has advantages and disadvantages. Therefore, to get a more complete picture, scientists have combined many different estimates from a variety of organizations. This indicator offers a combined estimate from an international program called the Ice Sheet Mass Balance Inter-comparison Exercise (IMBIE). IMBIE is supported by the National Aeronautics and Space Administration (NASA) and the European Space Agency (ESA). The IMBIE team combined 27 peer-reviewed estimates of ice sheet mass balance for Greenland and 23 for Antarctica, going back as far as 1992 and representing all three major techniques. Figure 1 represents the results from their combined averages.
+
+Figure 1 also shows estimates from a specific analysis of GRACE data by NASA’s Jet Propulsion Laboratory (JPL). These data are shown for reference and comparison because NASA JPL is a widely cited, influential source, and because the results show seasonal patterns.
+
+## Indicator Notes
+
+The relationship between climate change and ice sheet mass balance is complex, particularly in Antarctica, where large areas will continue to be too cold to experience appreciable surface melting, some areas may experience more snowfall that offsets the other effects of warming, and rates of ice loss can be heavily influenced by specific “tipping point” events such as the collapse of an ice shelf. Scientists who study Antarctica’s ice sheets often divide the continent into three main regions—East Antarctica, West Antarctica, and the Antarctic Peninsula—because each of these regions has distinct geological characteristics and weather patterns that influence their vulnerability to climate change.
+
+Data are not available prior to 1992 for these two featured data sets. However, studies using other methods provide a longer historical perspective.^[6](#ref-6),[7](#ref-7)^ Unlike smaller land ice features such as glaciers (see the Glaciers indicator), the vast ice sheets of Greenland and Antarctica do not have enough widespread, repeated measurements collected onsite to permit reliable estimates of changes in overall mass balance. This indicator presents results from multiple measurement methodologies for comparison and to expand the temporal coverage of the time series for ice sheet mass balance of Greenland and Antarctica. The NASA time series each have a gap from mid-2017 to mid-2018, reflecting the gap between the original GRACE satellite mission and the GRACE Follow On satellites that launched in 2018.
+
+## Data Sources
+
+The IMBIE team and NASA JPL processed the data for Figure 1. The IMBIE data have been published at: <http://imbie.org>, along with documentation. The JPL data have been published on NASA’s “Vital Signs” website at: <https://climate.nasa.gov/vital-signs/land-ice>, along with documentation.
+
+## Technical Documentation
+
+```{r}
+#| label: td-link
+#| echo: false
+#| output: asis
+technical_documentation_link(meta)
+```
+
+## References
+
+<ol class="references">
+  <li id="ref-1">NSIDC (National Snow and Ice Data Center). (2024). <em>Ice sheets: Quick facts.</em> Retrieved February 29, 2024, from <a href="https://nsidc.org/learn/parts-cryosphere/ice-sheets/ice-sheet-quick-facts">https://nsidc.org/learn/parts-cryosphere/ice-sheets/ice-sheet-quick-facts</a></li>
+  <li id="ref-2">IPCC (Intergovernmental Panel on Climate Change). (2019). Summary for policymakers. In <em>The ocean and cryosphere in a changing climate: Special report of the Intergovernmental Panel on Climate Change.</em> Cambridge University Press. <a href="https://doi.org/10.1017/9781009157964.001">https://doi.org/10.1017/9781009157964.001</a></li>
+  <li id="ref-3">Otosaka, I. N., Shepherd, A., Ivins, E. R., Schlegel, N.-J., Amory, C., Van Den Broeke, M. R., Horwath, M., Joughin, I., King, M. D., Krinner, G., Nowicki, S., Payne, A. J., Rignot, E., Scambos, T., Simon, K. M., Smith, B. E., Sørensen, L. S., Velicogna, I., Whitehouse, P. L., … Wouters, B. (2023). Mass balance of the Greenland and Antarctic ice sheets from 1992 to 2020. <em>Earth System Science Data, 15</em>(4), 1597–1616. <a href="https://doi.org/10.5194/essd-15-1597-2023">https://doi.org/10.5194/essd-15-1597-2023</a></li>
+  <li id="ref-4">IPCC (Intergovernmental Panel on Climate Change). (2013). <em>Climate change 2013—The physical science basis: Contribution of Working Group I to the Fifth Assessment Report of the Intergovernmental Panel on Climate Change</em> (T. F. Stocker, D. Qin, G.-K. Plattner, M. Tignor, S. K. Allen, A. Boschung, A. Nauels, Y. Xia, V. Bex, &amp; Midgley, Eds.). Cambridge University Press. <a href="https://www.ipcc.ch/report/ar5/wg1">www.ipcc.ch/report/ar5/wg1</a></li>
+  <li id="ref-5">NASA (National Aeronautics and Space Administration). (2024). <em>Vital signs: Ice sheets.</em> Retrieved February 29, 2024, from <a href="https://climate.nasa.gov/vital-signs/ice-sheets">https://climate.nasa.gov/vital-signs/ice-sheets</a></li>
+  <li id="ref-6">Mouginot, J., Rignot, E., Bjørk, A. A., Van Den Broeke, M., Millan, R., Morlighem, M., Noël, B., Scheuchl, B., &amp; Wood, M. (2019). Forty-six years of Greenland Ice Sheet mass balance from 1972 to 2018. <em>Proceedings of the National Academy of Sciences, 116</em>(19), 9239–9244. <a href="https://doi.org/10.1073/pnas.1904242116">https://doi.org/10.1073/pnas.1904242116</a></li>
+  <li id="ref-7">Rignot, E., Mouginot, J., Scheuchl, B., Van Den Broeke, M., Van Wessem, M. J., &amp; Morlighem, M. (2019). Four decades of Antarctic Ice Sheet mass balance from 1979–2017. <em>Proceedings of the National Academy of Sciences, 116</em>(4), 1095–1103. <a href="https://doi.org/10.1073/pnas.1812883116">https://doi.org/10.1073/pnas.1812883116</a></li>
+</ol>
+
+::: {.callout-note appearance="simple" icon=false}
+Text on this page is EPA's own published wording (a U.S. Government work, not
+subject to domestic copyright), extracted from EPA's published indicator page
+and verified paragraph by paragraph against the archived HTML. Data, chart
+code, and the full extraction pipeline are maintained in the
+[ice-sheets](https://github.com/climateindicators/ice-sheets)
+repository, which this page reads its data from directly.
+:::

@@ -1,4 +1,4 @@
-# Figures for indicators/marine-heat-waves.qmd. Figures 1 and 2 are drawn here
+# Figures for indicators/coastal-and-marine/marine-heat-waves.qmd. Figures 1 and 2 are drawn here
 # from EPA's published data. Figures 3 and 4 are maps EPA published without
 # data, so the page shows EPA's images and has no code for them.
 

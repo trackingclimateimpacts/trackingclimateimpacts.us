@@ -1,0 +1,150 @@
+---
+title: "Bird Wintering Ranges"
+description: "This indicator examines changes in the winter ranges of North American birds."
+categories: [Environment, Ecosystems]
+execute:
+  eval: true
+---
+
+```{r}
+#| label: setup
+#| include: false
+source(here::here("R", "common.R"))
+source(here::here("R", "bird-wintering-ranges.R"))
+
+meta     <- read_meta(REPO)
+latitude <- read_indicator(REPO, "bird_center_latitude_change.csv")
+coast    <- read_indicator(REPO, "bird_center_coast_distance_change.csv")
+```
+
+## Figures
+
+::::: {.panel-tabset}
+
+### Figure 1
+
+```{r}
+#| label: caption-1
+#| echo: false
+#| output: asis
+figure_caption(meta, "bird_center_latitude_change.csv", ref = 3)
+```
+
+<div class="d-flex flex-wrap gap-2 mb-3">
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/climateindicators/bird-wintering-ranges/main/data/bird_center_latitude_change.csv" download><i class="bi bi-filetype-csv"></i> Figure data (CSV)</a>
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/climateindicators/bird-wintering-ranges/main/data-raw/bird-ranges_fig-1.csv" download><i class="bi bi-filetype-csv"></i> EPA source data (CSV)</a>
+</div>
+
+```{r}
+#| label: chart-1
+#| echo: false
+fig_1(latitude)
+```
+
+This figure shows annual change in latitude of bird center of abundance for 305 widespread bird species in North America from 1966 to 2013. Each winter is represented by the year in which it began (for example, winter 2013–2014 is shown as 2013). The shaded band shows the likely range for the average, based on how all the individual species have moved over time.
+
+<details><summary>Show the data behind this figure</summary>
+
+::: {.table-scroll}
+```{r}
+#| label: table-1
+#| echo: false
+knitr::kable(fig_1_table(latitude), digits = 2)
+```
+:::
+
+</details>
+
+### Figure 2
+
+```{r}
+#| label: caption-2
+#| echo: false
+#| output: asis
+figure_caption(meta, "bird_center_coast_distance_change.csv", ref = 3)
+```
+
+<div class="d-flex flex-wrap gap-2 mb-3">
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/climateindicators/bird-wintering-ranges/main/data/bird_center_coast_distance_change.csv" download><i class="bi bi-filetype-csv"></i> Figure data (CSV)</a>
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/climateindicators/bird-wintering-ranges/main/data-raw/bird-ranges_fig-2.csv" download><i class="bi bi-filetype-csv"></i> EPA source data (CSV)</a>
+</div>
+
+```{r}
+#| label: chart-2
+#| echo: false
+fig_2(coast)
+```
+
+This figure shows annual change in distance to the coast of bird center of abundance for 272 widespread bird species in North America from 1966 to 2013. This figure covers 272 species instead of the 305 species shown in Figure 1 because 33 of the species in Figure 1 need access to salt water, which means they cannot move inland. Each winter is represented by the year in which it began (for example, winter 2013–2014 is shown as 2013). The shaded band shows the likely range for the average, based on how all the individual species have moved over time.
+
+<details><summary>Show the data behind this figure</summary>
+
+::: {.table-scroll}
+```{r}
+#| label: table-2
+#| echo: false
+knitr::kable(fig_2_table(coast), digits = 2)
+```
+:::
+
+</details>
+
+:::::
+
+## Key Points
+
+- Among 305 widespread North American bird species, the average mid-December to early January center of abundance moved northward by more than 40 miles between 1966 and 2013 (see Figure 1). Trends in the center of abundance moving northward can be closely related to increasing winter temperatures.^[2](#ref-2)^
+- On average, bird species have also moved their wintering grounds farther from the coast since the 1960s (see Figure 2). A shift away from the coasts can also relate to changes in winter temperatures. Inland areas tend to experience more extreme cold than coastal areas, but those extremes are becoming less severe as the climate warms overall.^[2](#ref-2)^
+- Some species have moved farther than others. A total of 48 species have moved northward by more than 200 miles. Of the 305 species studied, 186 (61 percent) have shifted their wintering grounds northward since the 1960s, while 82 (27 percent) have shifted southward. Some others have not moved at all.
+
+## Background
+
+Changes in climate can affect ecosystems by influencing animal behavior and ranges. Birds are a particularly good indicator of environmental change for several reasons:
+
+- Each species of bird has adapted or evolved to favor certain habitat types, food sources, and temperature ranges. In addition, the timing of certain events in their life cycles—such as migration and reproduction—is driven by cues from the environment. For example, many North American birds follow a regular seasonal migration pattern, moving north to feed and breed in the summer, then moving south to spend the winter in warmer areas. Changing conditions can influence the distribution of both migratory and non-migratory birds as well as the timing of important life cycle events.^[1](#ref-1)^
+- Birds are easy to identify and count, and thus there is a wealth of scientific knowledge about their distribution and abundance. People have kept detailed records of bird observations for more than a century.
+- There are many different species of birds living in a variety of habitats, including water birds, coastal birds, and land birds. If a change in behavior or range occurs across a range of bird types, it suggests that a common external factor might be the cause.
+
+Temperature and precipitation patterns are changing across the United States (see the [U.S. and Global Temperature indicator](/indicators/weather-and-extreme-events/us-and-global-temperature.qmd) and the U.S. and Global Precipitation indicator). Some bird species can adapt to generally warmer temperatures by changing where they live—for example, by migrating farther north in the summer but not as far south in the winter, or by shifting inland as winter temperature extremes grow less severe. Non-migratory species might shift as well, expanding into newly suitable habitats while moving out of areas that become less suitable. Other types of birds might not adapt to changing conditions and could experience a population decline as a result. Climate change can also alter the timing of events that are based on temperature cues, such as migration and breeding (especially egg-laying).
+
+## About the Indicator
+
+This indicator looks collectively at the “center of abundance” of hundreds of widespread North American bird species over a 48-year period. The center of abundance is a point on the map that represents the middle of each species’ distribution. If a whole population of birds were to shift generally northward, one would see the center of abundance shift northward as well.
+
+For year-to-year consistency, this indicator uses observations from the National Audubon Society’s Christmas Bird Count, which takes place every year in early winter. The Christmas Bird Count is a long-running citizen-science program in which individuals are organized by the National Audubon Society, Bird Studies Canada, local Audubon chapters, and other bird clubs to identify and count bird species. The data presented in this indicator were collected from more than 2,000 locations throughout the United States and parts of Canada. At each location, skilled observers follow a standard counting procedure to estimate the number of birds within a 15-mile diameter “count circle” over a 24-hour period. Study methods remain generally consistent from year to year. Data produced by the Christmas Bird Count go through several levels of review before Audubon scientists analyze the final data, which have been used to support a wide variety of peer-reviewed studies.
+
+## Indicator Notes
+
+Many factors can influence bird ranges, including food availability, habitat alteration, and interactions with other species. As a result, some of the birds included in this indicator might have moved north for reasons other than changing temperatures. This indicator does not show how responses to climate change vary among different types of birds. For example, a more detailed National Audubon Society analysis found large differences among coastal birds, grassland birds, and birds adapted to feeders, which all have different abilities to adapt to temperature changes.^[2](#ref-2)^
+
+Some data variations can be caused by differences among count circles, such as inconsistent level of effort by volunteer observers, but these differences are carefully corrected in Audubon’s statistical analysis.
+
+## Data Sources
+
+Bird center-of-abundance data were collected by the annual Christmas Bird Count organized by the National Audubon Society and Bird Studies Canada. Recent and historical Christmas Bird Count data are available at: [www.audubon.org/community-science/christmas-bird-count](https://www.audubon.org/community-science/christmas-bird-count). The National Audubon Society published a previous version of this analysis in 2009,^[2](#ref-2)^ summarized at: <https://hogisland.audubon.org/sites/default/files/documents/AB_109_CBC_and_Climate_Change.pdf>.
+
+## Technical Documentation
+
+```{r}
+#| label: td-link
+#| echo: false
+#| output: asis
+technical_documentation_link(meta)
+```
+
+## References
+
+<ol class="references">
+  <li id="ref-1">La Sorte, F. A., &amp; Thompson III, F. R. (2007). Poleward shifts in winter ranges of North American birds. <em>Ecology, 88</em>(7), 1803–1812. <a href="https://doi.org/10.1890/06-1072.1">https://doi.org/10.1890/06-1072.1</a></li>
+  <li id="ref-2">Niven, D. K., Butcher, G. S., &amp; Bancroft, G. T. (2009). Christmas Bird Counts and climate change: Northward shifts in early winter abundance. <em>American Birds, 63</em>, 10–15. <a href="https://hogisland.audubon.org/sites/default/files/documents/AB_109_CBC_and_Climate_Change.pdf">https://hogisland.audubon.org/sites/default/files/documents/AB_109_CBC_and_Climate_Change.pdf</a></li>
+  <li id="ref-3">National Audubon Society. (2014). Update to data originally published in a supplement to Niven, D. K., Butcher, G. S., &amp; Bancroft, G. T. (2009). Christmas Bird Counts and climate change: Northward shifts in early winter abundance. <em>American Birds, 63</em>, 10–15. <a href="https://hogisland.audubon.org/sites/default/files/documents/AB_109_CBC_and_Climate_Change.pdf">https://hogisland.audubon.org/sites/default/files/documents/AB_109_CBC_and_Climate_Change.pdf</a></li>
+</ol>
+
+::: {.callout-note appearance="simple" icon=false}
+Text on this page is EPA's own published wording (a U.S. Government work, not
+subject to domestic copyright), extracted from EPA's published indicator page
+and verified paragraph by paragraph against the archived HTML. Data, chart
+code, and the full extraction pipeline are maintained in the
+[bird-wintering-ranges](https://github.com/climateindicators/bird-wintering-ranges)
+repository, which this page reads its data from directly.
+:::

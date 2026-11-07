@@ -1,4 +1,4 @@
-# Figures for indicators/sea-surface-temperature.qmd.
+# Figures for indicators/coastal-and-marine/sea-surface-temperature.qmd.
 
 REPO <- "sea-surface-temperature"
 

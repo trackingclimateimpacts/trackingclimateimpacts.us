@@ -1,0 +1,173 @@
+---
+title: "Marine Heat Waves"
+description: "This indicator tracks the occurrence of unusually high temperatures in U.S. coastal waters."
+categories: [Oceans]
+execute:
+  eval: true
+---
+
+```{r}
+#| label: setup
+#| include: false
+source(here::here("R", "common.R"))
+source(here::here("R", "marine-heat-waves.R"))
+
+meta   <- read_meta(REPO)
+area   <- read_indicator(REPO, "marine_heat_waves_area_by_region.csv")
+events <- read_indicator(REPO, "marine_heat_waves_events_by_protected_area.csv")
+```
+
+## Figures
+
+::::: {.panel-tabset}
+
+### Figure 1
+
+```{r}
+#| label: caption-1
+#| echo: false
+#| output: asis
+figure_caption(meta, "marine_heat_waves_area_by_region.csv", ref = 4, number = 1)
+```
+
+<div class="d-flex flex-wrap gap-2 mb-3">
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/climateindicators/marine-heat-waves/main/data/marine_heat_waves_area_by_region.csv" download><i class="bi bi-filetype-csv"></i> Figure data (CSV)</a>
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/climateindicators/marine-heat-waves/main/data-raw/marine-heat-waves_fig-3.csv" download><i class="bi bi-filetype-csv"></i> EPA source data (CSV)</a>
+</div>
+
+```{r}
+#| label: chart-1
+#| echo: false
+fig_1(area)
+```
+
+These graphs show the percentage of each coastal region’s area that experienced at least one marine heat wave in a given year. The stacked segments show severity levels (see definitions in the technical documentation) for the most severe heat wave at a location, while the total height of the stack represents the total area that experienced a marine heat wave of any severity. For example, in 2023, 100 percent of the Northeast region experienced at least one heat wave of moderate severity or higher, while 35 percent of the region’s area experienced at least one severe heat wave and 8 percent experienced an extreme heat wave. Data are broken into six regions whose boundaries include the area within the U.S. exclusive economic zone.
+
+<details><summary>Show the data behind this figure</summary>
+
+::: {.table-scroll}
+```{r}
+#| label: table-1
+#| echo: false
+knitr::kable(fig_1_table(area))
+```
+:::
+
+</details>
+
+### Figure 2
+
+```{r}
+#| label: caption-2
+#| echo: false
+#| output: asis
+figure_caption(meta, "marine_heat_waves_events_by_protected_area.csv", ref = 4, number = 2)
+```
+
+<div class="d-flex flex-wrap gap-2 mb-3">
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/climateindicators/marine-heat-waves/main/data/marine_heat_waves_events_by_protected_area.csv" download><i class="bi bi-filetype-csv"></i> Figure data (CSV)</a>
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/climateindicators/marine-heat-waves/main/data-raw/marine-heat-waves_fig-4.csv" download><i class="bi bi-filetype-csv"></i> EPA source data (CSV)</a>
+</div>
+
+```{r}
+#| label: chart-2
+#| echo: false
+fig_2(events)
+```
+
+These graphs show a timeline of marine heat wave events for five marine protected areas selected from different parts of the U.S. coastline. The columns in each graph show each individual event’s duration (width of the column), intensity (height), and severity level (color; see definitions in the technical documentation). The distribution of vertical columns reflects the frequency of heat waves. The small map to the right shows the areas analyzed (blue).
+
+*Note: EPA's published data for this figure does not include the boundaries of the five areas, so the chart on this page does not carry the small locator map.*
+
+<details><summary>Show the data behind this figure</summary>
+
+::: {.table-scroll}
+```{r}
+#| label: table-2
+#| echo: false
+knitr::kable(fig_2_table(events))
+```
+:::
+
+</details>
+
+### Figure 3
+
+**Figure 3. Change in Annual Cumulative Intensity of Marine Heat Waves in the United States, 1982–2023**
+
+Data source: NOAA, 2024^[4](#ref-4)^ <br> Web update: June 2024
+
+![](https://19january2025snapshot.epa.gov/system/files/images/2024-06/marine-heat-waves_figure1_2024.png){fig-alt="Three maps of U.S. coastal waters showing the total change in annual cumulative marine heat wave intensity from 1982 to 2023, in degree days: the contiguous United States on the right, Alaska at upper left and Hawaii at lower left. Almost all waters show increases, shown in red. The largest are off the northeastern coast, above 500 degree days, and in the Bering Sea and waters around southwestern Alaska. The Gulf of Mexico, the Southeast and the West Coast show smaller increases, and a few small areas, off the Southeast coast and central California, show slight decreases in blue." fig-align="center"}
+
+This map shows the change in annual cumulative intensity of marine heat waves along U.S. coasts from 1982 to 2023. Cumulative intensity is measured in degree days—marine heat wave intensity multiplied by duration. Areas with increases are shown in red, with darker colors indicating greater change. The map shows total change, which is the annual rate of change (trend slope) multiplied by the number of years analyzed. The boundaries include the area within the U.S. exclusive economic zone.
+
+*Note: EPA published this map as an image only and released no underlying data, so it is shown here as EPA published it rather than redrawn, and there is no data table or download.*
+
+### Figure 4
+
+**Figure 4. Change in Cumulative Intensity of Marine Heat Waves in the United States by Season, 1982–2023**
+
+Data source: NOAA, 2024^[4](#ref-4)^ <br> Web update: June 2024
+
+![](https://19january2025snapshot.epa.gov/system/files/images/2024-06/marine-heat-waves_figure2_2024.png){fig-alt="Four sets of maps, one each for winter, spring, summer and fall, showing the change in cumulative marine heat wave intensity from 1982 to 2023 for the contiguous United States, Alaska and Hawaii. Increases appear in red almost everywhere. The largest are off the Northeast in spring and fall, in Alaskan waters in summer, and in a smaller area off the Northeast in summer. Winter shows mostly small changes, with slight decreases in blue off California and the Southeast." fig-align="center"}
+
+This set of maps shows the change in cumulative intensity of marine heat waves along U.S. coasts from 1982 to 2023 by season. The calculation approach and geographic area are the same as in Figure 3. Seasons are defined as follows: December, January, and February for winter; March, April, and May for spring; June, July, and August for summer; and September, October, and November for fall.
+
+*Note: EPA published this map as an image only and released no underlying data, so it is shown here as EPA published it rather than redrawn, and there is no data table or download.*
+
+:::::
+
+## Key Points
+
+- Over the period shown (1982–2023), the annual cumulative intensity of marine heat waves has increased in most coastal U.S. waters, with the largest changes in waters off the northeastern U.S. and Alaskan coasts (Figure 3). Changes were particularly pronounced in the spring in the Northeast and the summer in Alaska (Figure 4).
+- Marine heat wave events have become more widespread and more severe in most U.S. coastal regions in recent years (Figure 1). Region-wide changes in the Northeast and Alaska are particularly evident, as are the location-specific changes in frequency, duration, and intensity at marine protected areas in the Northeast, Alaska, and Hawaii (Figure 2).
+
+## Background
+
+Temperature is an important physical characteristic of ocean water. As the [Sea Surface Temperature](/indicators/coastal-and-marine/sea-surface-temperature.qmd) indicator explains, the range of temperature conditions plays an important role in determining what species of plants, animals, and microbes can survive or thrive in a particular area. Long-term changes in these temperature ranges can affect ecological communities by shifting species’ geographic distribution (see the [Marine Species Distribution](/indicators/ecosystems/marine-species-distribution.qmd) indicator), influencing migration and breeding patterns, and ultimately altering habitat and the movement of nutrients.^[1](#ref-1)^
+
+Short-term spikes in temperature also pose a concern. Just like heat waves based on air temperature (see the [Heat Waves](/indicators/weather-and-extreme-events/heat-waves.qmd) indicator), marine heat waves are an extreme condition that can severely disrupt marine life. This disruption can cause harm as ocean creatures—particularly those that are stationary, like corals—are not able to escape waters that become too warm to tolerate for an extended period. Marine heat waves are associated with some of the largest disruptions to marine life in recent years. For example, persistent marine heat wave conditions in the northern Pacific have fed harmful algal blooms that then led to closures in the Dungeness crab fishery and deaths of sea lions.^[2](#ref-2)^
+
+Daily, weekly, and seasonal variation in sea surface temperature is natural. Ocean temperatures can also vary year to year, due to multi-year cycles such as the El Niño–Southern Oscillation. As ocean waters become warmer overall, though, marine heat waves will become more common and more extreme.^[2](#ref-2),[3](#ref-3)^
+
+## About the Indicator
+
+This indicator reports on observed trends in the occurrence and intensity of marine heat waves along U.S. coasts over the past four decades, based on daily sea surface temperature measurements. Sea surface temperature records come from the National Oceanic and Atmospheric Administration and are based on satellite measurements of water temperature, with additional data from buoys and ships providing confirmation and helping to fill occasional gaps in measurement coverage. The indicator starts in 1982, which was the first full year with available satellite data.
+
+For this indicator, a marine heat wave is a period of at least five days in a row in which the sea surface temperature at a given location is hotter than at least 90 percent of past observations at that location on that particular day of the year. For example, this means the temperature on August 15 at a particular location is compared with August 15 temperatures from many prior years at that location. Thus, a marine heat wave can occur at any time of year—even in winter—if the temperature is much warmer than usual. The indicator uses a 30-year historical reference period of 1982–2011 to establish these thresholds.
+
+Each marine heat wave event can be characterized by its duration (length in days) and its intensity (the number of degrees by which the temperature exceeded the 90 percent threshold). Figure 3 combines the duration, intensity, and frequency of marine heat waves into a single metric called cumulative intensity, measured in degree-days. For example, an event lasting 10 days with an intensity of 5 degrees in each day would have a cumulative intensity of 50 degree-days. This indicator adds degree-days for all events to get an annual total. If a location experiences an increase in annual cumulative intensity over time, that means marine heat waves are becoming either more common, longer, more intense, or some combination of the three.
+
+Figure 3 shows the long-term change in annual cumulative intensity at locations within the U.S. exclusive economic zone, which generally extends up to 200 nautical miles from the coast. Figure 4 follows the same approach but presents trends by season, as certain seasons are important times of year for food source availability and life cycle events like spawning and migration. Figure 1 provides a more detailed look at marine heat waves by coastal region, showing the portion of each region’s area affected by marine heat waves in each year, and the strength of each year’s most severe marine heat wave. Figure 2 provides a detailed timeline of marine heat wave events showing the duration, intensity, and level of severity of each event, focusing on five specific locations as case studies. The five locations are designated marine protected areas, which are areas with particular importance for protecting marine species populations. Examples have been selected from each of the different coastal regions.
+
+## Indicator Notes
+
+Sea surface temperature varies seasonally, but a marine heat wave can happen at any time of year if the water temperature is much higher than normal. Temperatures can also vary as a result of year-to-year climate patterns, such as the El Niño–Southern Oscillation.
+
+The five areas selected for Figure 2 are not meant to be representative of conditions along the entire coastline, but they can be thought of as case studies that more closely illustrate location-specific marine heat wave conditions in ecologically sensitive and protected areas.
+
+## Data Sources
+
+This indicator is based on daily sea surface temperature data provided by the National Oceanic and Atmospheric Administration’s National Centers for Environmental Information. These data are available online at: [www.ncei.noaa.gov/products/optimum-interpolation-sst](https://www.ncei.noaa.gov/products/optimum-interpolation-sst).
+
+## Technical Documentation
+
+The technical documentation for this indicator is published only on EPA's website, so it is not available on this site.
+
+## References
+
+<ol class="references">
+  <li id="ref-1">Cooley, S., Schoeman, D., Bopp, L., Boyd, P., Donner, S., Ghebrehiwet, D. Y., Ito, S.-I., Kiessling, W., Martinetto, P., Ojea, E., Racault, M.-F., Rost, B., &amp; Skern-Mauritzen, M. (2022). Chapter 3: Oceans and coastal ecosystems and their services. In IPCC (Intergovernmental Panel on Climate Change), <em>Climate change 2022—Impacts, adaptation and vulnerability: Working Group II contribution to the Sixth Assessment Report of the Intergovernmental Panel on Climate Change</em>. Cambridge University Press. <a href="https://doi.org/10.1017/9781009325844.005">https://doi.org/10.1017/9781009325844.005</a></li>
+  <li id="ref-2">Mills, K. E., Osborne, E. B., Bell, R. J., Colgan, C. S., Cooley, S. R., Goldstein, M. C., Griffis, R. B., Holsman, K., Jacox, M., &amp; Micheli, F. (2023). Chapter 10: Ocean ecosystems and marine resources. In USGCRP (U.S. Global Change Research Program), <em>Fifth National Climate Assessment</em>. <a href="https://doi.org/10.7930/NCA5.2023.CH10">https://doi.org/10.7930/NCA5.2023.CH10</a></li>
+  <li id="ref-3">IPCC (Intergovernmental Panel on Climate Change). (2019). Summary for policymakers. In <em>The ocean and cryosphere in a changing climate: Special report of the Intergovernmental Panel on Climate Change</em>. Cambridge University Press. <a href="https://doi.org/10.1017/9781009157964.001">https://doi.org/10.1017/9781009157964.001</a></li>
+  <li id="ref-4">NOAA (National Oceanic and Atmospheric Administration). (2024). <em>Optimum interpolation SST</em>. Retrieved March 1, 2024, from <a href="https://www.ncei.noaa.gov/products/optimum-interpolation-sst">www.ncei.noaa.gov/products/optimum-interpolation-sst</a></li>
+</ol>
+
+::: {.callout-note appearance="simple" icon=false}
+Text on this page is EPA's own published wording (a U.S. Government work, not
+subject to domestic copyright), extracted from EPA's published indicator page
+and verified paragraph by paragraph against the archived HTML. Data, chart
+code, and the full extraction pipeline are maintained in the
+[marine-heat-waves](https://github.com/climateindicators/marine-heat-waves)
+repository, which this page reads its data from directly.
+:::

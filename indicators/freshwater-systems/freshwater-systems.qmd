@@ -1,0 +1,54 @@
+---
+title: ""
+pagetitle: "Freshwater Systems"
+listing:
+  - id: cat-listing
+    contents:
+      - streamflow.qmd
+      - stream-temperature.qmd
+      - snake-river.qmd
+      - lake-temperature.qmd
+      - great-lakes.qmd
+    type: grid
+    grid-columns: 3
+    sort: false
+    sort-ui: false
+    filter-ui: true
+    fields: [title, description]
+    image-height: auto
+execute:
+  echo: false
+page-layout: full
+sidebar: false
+toc: false
+anchor-sections: false
+---
+
+::: {.home-band .cat-hero .cat-freshwater .hero-bg}
+
+::: {.hero-bg-img}
+![](../../images/freshwater.jpg){fig-alt=""}
+:::
+
+## Freshwater Systems
+:::
+
+::: {.home-band .cat-body}
+<!-- DRAFT intro built from the indicator names; replace with the Figma wording. -->
+::: {.cat-intro}
+These indicators track changes in streamflow, stream temperature, lake temperature, and Great Lakes water levels and temperatures.
+:::
+
+::: {.cat-columns}
+{{< include /chunks/category-nav.qmd >}}
+
+::: {.cat-main}
+::: {#cat-listing}
+:::
+
+[View All](/health-and-environment-indicators.qmd){.cat-viewall}
+:::
+:::
+:::
+
+{{< include /chunks/footer.qmd >}}

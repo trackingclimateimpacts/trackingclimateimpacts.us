@@ -1,4 +1,4 @@
-# Figures for indicators/ice-sheets.qmd.
+# Figures for indicators/snow-and-ice/ice-sheets.qmd.
 
 REPO <- "ice-sheets"
 

@@ -44,7 +44,7 @@ Each indicator below is grouped by category.
 
 This indicator tracks changes in national and global temperatures, precipitation, and extreme weather events, including heat waves, wildfires, tropical cyclones, flooding, and drought.
 
-[Explore →](categories/weather-and-extreme-events.qmd){.che-card-link}
+[Explore →](indicators/weather-and-extreme-events/weather-and-extreme-events.qmd){.che-card-link}
 :::
 
 ::: {.che-card .cat-ecosystems}
@@ -56,7 +56,7 @@ This indicator tracks changes in national and global temperatures, precipitation
 
 This indicator tracks changes in growing seasons, plant and pollen timing, and the seasonal patterns of birds and marine species.
 
-[Explore →](categories/ecosystems.qmd){.che-card-link}
+[Explore →](indicators/ecosystems/ecosystems.qmd){.che-card-link}
 :::
 
 ::: {.che-card .cat-cryosphere}
@@ -68,7 +68,7 @@ This indicator tracks changes in growing seasons, plant and pollen timing, and t
 
 This indicator tracks changes in lake ice, Great Lakes ice cover, snowfall, snow cover, snowpack, permafrost, freeze-thaw conditions, glaciers, and river ice breakup.
 
-[Explore →](categories/snow-and-ice.qmd){.che-card-link}
+[Explore →](indicators/snow-and-ice/snow-and-ice.qmd){.che-card-link}
 :::
 
 ::: {.che-card .cat-temperature-health}
@@ -80,7 +80,7 @@ This indicator tracks changes in lake ice, Great Lakes ice cover, snowfall, snow
 
 This indicator tracks heat-related deaths, including workplace deaths, as well as heat-related illnesses and cold-related deaths.
 
-[Explore →](categories/temperature-related-health.qmd){.che-card-link}
+[Explore →](indicators/temperature-related-health/temperature-related-health.qmd){.che-card-link}
 :::
 
 ::: {.che-card .cat-coastal-marine}
@@ -92,7 +92,7 @@ This indicator tracks heat-related deaths, including workplace deaths, as well a
 
 This indicator tracks marine heat waves, sea levels, coastal flooding, ocean acidity, and land loss along the Atlantic coastline.
 
-[Explore →](categories/coastal-and-marine.qmd){.che-card-link}
+[Explore →](indicators/coastal-and-marine/coastal-and-marine.qmd){.che-card-link}
 :::
 
 ::: {.che-card .cat-vector-health}
@@ -104,7 +104,7 @@ This indicator tracks marine heat waves, sea levels, coastal flooding, ocean aci
 
 This indicator tracks rates of Lyme disease and West Nile Virus.
 
-[Explore →](categories/vector-related-health.qmd){.che-card-link}
+[Explore →](indicators/vector-related-health/vector-related-health.qmd){.che-card-link}
 :::
 
 ::: {.che-card .cat-freshwater}
@@ -116,7 +116,7 @@ This indicator tracks rates of Lyme disease and West Nile Virus.
 
 This indicator tracks changes in streamflow, stream and lake temperatures, and Great Lakes water levels and temperatures.
 
-[Explore →](categories/freshwater-systems.qmd){.che-card-link}
+[Explore →](indicators/freshwater-systems/freshwater-systems.qmd){.che-card-link}
 :::
 
 ::: {.che-card .cat-societal}
@@ -128,7 +128,7 @@ This indicator tracks changes in streamflow, stream and lake temperatures, and G
 
 This indicator tracks changes in heating and cooling days as well as residential energy use in summer and winter.
 
-[Explore →](categories/societal-systems.qmd){.che-card-link}
+[Explore →](indicators/societal-systems/societal-systems.qmd){.che-card-link}
 :::
 
 :::

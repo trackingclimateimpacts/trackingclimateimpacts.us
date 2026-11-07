@@ -1,4 +1,4 @@
-# Figures for indicators/freeze-thaw-conditions.qmd.
+# Figures for indicators/snow-and-ice/freeze-thaw-conditions.qmd.
 
 REPO <- "freeze-thaw-conditions"
 

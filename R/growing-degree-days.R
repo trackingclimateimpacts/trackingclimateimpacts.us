@@ -1,4 +1,4 @@
-# Figures for indicators/growing-degree-days.qmd.
+# Figures for indicators/ecosystems/growing-degree-days.qmd.
 
 REPO <- "growing-degree-days"
 

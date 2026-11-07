@@ -109,9 +109,10 @@ indicators.qmd           listing grid, fed by each indicator's front matter
 chunks/                  reusable includes (coming-soon, description)
 css/theme.scss           the single theme: scss:defaults palette + scss:rules
 images/                  site-level images only (no per-indicator images)
-indicators/<slug>.qmd    one page per indicator
+indicators/<category>/<category>.qmd   the category's landing page
+indicators/<category>/<slug>.qmd       one page per indicator, in its category folder
 R/common.R               helpers every page uses
-R/<slug>.R               figures for indicators/<slug>.qmd, one file per page
+R/<slug>.R               figures for the indicator page <slug>.qmd, one file per page
 DESCRIPTION              package dependencies the GitHub Action installs
 ```
 
@@ -202,7 +203,7 @@ Rules for these files:
 
 ### Page Structure
 
-Each `indicators/<slug>.qmd` sets `execute: eval: true` in its front matter
+Each indicator page (`indicators/<category>/<slug>.qmd`) sets `execute: eval: true` in its front matter
 (the site default is `eval: false`) and opens with:
 
 ```r
@@ -306,13 +307,16 @@ Two navbar details that are easy to break:
   `chunks/nav-click.html` sends a click on the label to that first entry and
   `css/theme.scss` hides it from the open menu. In the collapsed menu the
   label only toggles, so the entry shows there. Keep the landing page first.
-- One docked sidebar, titled "Indicators", that appears on `indicators.qmd` and
-  all pages under `indicators/`. Indicators are grouped into sections by theme
-  (e.g. "Temperature-Related Health").
-- Global Greenhouse Gas Emissions and Ocean Acidity belong to "The
-  Whole Story" rather than the sidebar: they are listed as cards on
-  `tracking-the-whole-climate-change-story.qmd` and excluded from the
-  `indicators.qmd` grid. Antarctic Sea Ice is left out of both.
+- Indicators live in one folder per category under `indicators/`, next to
+  that category's landing page (`indicators/<category>/<category>.qmd`).
+- There is one docked sidebar per category in `_quarto.yml`, titled with the
+  category name and listing only that category's indicators; Quarto shows on
+  each page the sidebar that contains it. It is styled like the category
+  pages' left list (`.cat-side`).
+- Snowfall and Global Greenhouse Gas Emissions stay directly in `indicators/`
+  and belong to no category, so their pages show no sidebar. Global Greenhouse
+  Gas Emissions is excluded from the `indicators.qmd` grid; the category
+  landing pages are excluded from it too.
 
 ## Content Development
 
@@ -321,11 +325,12 @@ Two navbar details that are easy to break:
 1. Confirm the indicator's own repository exists under the `climateindicators`
    org and publishes `data/*.csv` plus `data/meta.yml` on `main`
 2. Create `R/<slug>.R` following the shape described above
-3. Create `indicators/<slug>.qmd` with front matter carrying `title`,
+3. Create `indicators/<category>/<slug>.qmd` with front matter carrying `title`,
    `description`, `categories`, and `execute: eval: true` — the `description`
    feeds the listing grid on `indicators.qmd`, so it is not optional (the grid
    deliberately shows no categories, neither on cards nor as a filter panel)
-4. Add a sidebar entry under the appropriate section in `_quarto.yml`
+4. Add a sidebar entry to that category's sidebar in `_quarto.yml`, and the
+   file to the category page's `listing: contents`
 5. Add the slug to the matching section in `$card-category-map` in
    `css/theme.scss`. That map is what gives the indicator's listing card its
    section icon and border colour; a slug missing from it gets neither

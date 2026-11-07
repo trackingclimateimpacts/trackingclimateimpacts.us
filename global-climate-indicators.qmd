@@ -11,12 +11,20 @@ toc: false
 anchor-sections: false
 ---
 
-::: {.home-band .gci-hero}
+::: {.home-band .gci-hero .hero-split}
+
+::: {.hero-split-text}
 ## Global Climate Indicators
 
 Multiple metrics provide clear signals of global change in temperature, sea level, ice sheets, ocean heat, and more. Several key indicators are highlighted here. Extensive documentation and discussion regarding drivers of climate change, earth systems, attribution, and variability can also be found in the climate assessment literature linked at [Additional Climate Change Resources](additional-resources.qmd).
 
 A more complete set of indicators and narratives focused on climate drivers and variability can be found at [climate.us](https://www.climate.us/). We provide several examples from climate.us (CC BY-SA 4.0 Attribution-ShareAlike 4.0 International).
+:::
+
+::: {.hero-split-img}
+![](images/Rectangle_global.png){fig-alt=""}
+:::
+
 :::
 
 ::: {.home-band .ghg-section .gci-section}
@@ -70,12 +78,20 @@ Worldwide, most glaciers are shrinking or disappearing altogether. The “climat
 ::: {.home-band .ghg-section .gci-section}
 ### Information regarding Global Sea Level Rise can be found here:
 
-::: {.ghg-link-card}
+::: {.ghg-link-card .has-img}
+
+::: {.ghg-link-card-text}
 [Sea Level]{.ghg-link-card-title}
 
 This indicator describes how sea level has changed over time.
 
-[Explore →](indicators/sea-level.qmd){.ghg-link-card-cta}
+[Explore →](indicators/coastal-and-marine/sea-level.qmd){.ghg-link-card-cta}
+:::
+
+::: {.ghg-link-card-img}
+![](images/sea_level.png){fig-alt="Sea level"}
+:::
+
 :::
 :::
 

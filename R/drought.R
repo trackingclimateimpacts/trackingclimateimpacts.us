@@ -1,4 +1,4 @@
-# Figures for indicators/drought.qmd.
+# Figures for indicators/weather-and-extreme-events/drought.qmd.
 
 REPO <- "drought"
 

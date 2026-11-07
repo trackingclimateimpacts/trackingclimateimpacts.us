@@ -1,4 +1,4 @@
-# Figures for indicators/heating-and-cooling-degree-days.qmd.
+# Figures for indicators/societal-systems/heating-and-cooling-degree-days.qmd.
 
 REPO <- "heating-and-cooling-degree-days"
 

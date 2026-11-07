@@ -1,4 +1,4 @@
-# Figures for indicators/black-guillemots-cooper-island.qmd.
+# Figures for indicators/ecosystems/black-guillemots-cooper-island.qmd.
 
 REPO <- "black-guillemots-cooper-island"
 

@@ -1,4 +1,4 @@
-# Figures for indicators/heat-waves.qmd.
+# Figures for indicators/weather-and-extreme-events/heat-waves.qmd.
 
 REPO <- "heat-waves"
 

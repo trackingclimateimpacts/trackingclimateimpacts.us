@@ -1,4 +1,4 @@
-# Figures for indicators/tropical-cyclone-activity.qmd.
+# Figures for indicators/weather-and-extreme-events/tropical-cyclone-activity.qmd.
 
 REPO <- "tropical-cyclone-activity"
 

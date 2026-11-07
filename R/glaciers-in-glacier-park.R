@@ -1,4 +1,4 @@
-# Figures for indicators/glaciers-in-glacier-park.qmd.
+# Figures for indicators/snow-and-ice/glaciers-in-glacier-park.qmd.
 
 REPO <- "glaciers-in-glacier-park"
 

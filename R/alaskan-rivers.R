@@ -1,4 +1,4 @@
-# Figures for indicators/alaskan-rivers.qmd.
+# Figures for indicators/snow-and-ice/alaskan-rivers.qmd.
 
 REPO <- "alaskan-rivers"
 

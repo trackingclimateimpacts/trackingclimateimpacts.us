@@ -1,4 +1,4 @@
-# Figures for indicators/heavy-precipitation.qmd.
+# Figures for indicators/weather-and-extreme-events/heavy-precipitation.qmd.
 
 REPO <- "heavy-precipitation"
 

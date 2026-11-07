@@ -1,4 +1,4 @@
-# Figures for indicators/ocean-acidity.qmd.
+# Figures for indicators/coastal-and-marine/ocean-acidity.qmd.
 
 REPO <- "ocean-acidity"
 

@@ -1,4 +1,4 @@
-# Figures for indicators/leaf-and-bloom-dates.qmd.
+# Figures for indicators/ecosystems/leaf-and-bloom-dates.qmd.
 
 REPO <- "leaf-and-bloom-dates"
 

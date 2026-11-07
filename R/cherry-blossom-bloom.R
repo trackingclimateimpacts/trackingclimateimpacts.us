@@ -1,4 +1,4 @@
-# Figures for indicators/cherry-blossom-bloom.qmd.
+# Figures for indicators/ecosystems/cherry-blossom-bloom.qmd.
 
 REPO <- "cherry-blossom-bloom"
 
