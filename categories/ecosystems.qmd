@@ -26,7 +26,12 @@ toc: false
 anchor-sections: false
 ---
 
-::: {.home-band .cat-hero .cat-ecosystems}
+::: {.home-band .cat-hero .cat-ecosystems .hero-bg}
+
+::: {.hero-bg-img}
+![](../images/ecosystems.jpg){fig-alt=""}
+:::
+
 ## Ecosystems
 :::
 

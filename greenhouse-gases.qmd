@@ -109,6 +109,8 @@ The University of Maryland’s Center for Global Sustainability provides compreh
 The figure below shows the trend in both gross and net U.S. GHG emissions and removals since 1990. In 2024, total gross emissions were 6,205.3 million metric tons of carbon dioxide equivalent (MMT CO~2~ Eq.). This total is a 5.1 percent decrease from 1990 and a 0.04 percent annual increase from 2023. The decreasing trend from around 2005 is associated primarily with a decrease in CO~2~ emissions from fossil fuel combustion. The factors influencing this change, including declining emissions from electricity production, are discussed in more detail in Chapter 2 (Trends) and in Chapter 3 (Energy). In 2024, total net U.S. GHG emissions, including emissions and sinks from LULUCF, were 5,298.8 MMT CO~2~ Eq. This total is a 3.8 percent decrease from 1990 and a 0.2 percent annual increase from 2023. Sequestration of CO~2~ in the LULUCF sector offset the equivalent of 14.6 percent of total gross emissions in 2024 (906.5 MMT CO~2~ Eq.). Figure ES-1: U.S. Gross and Net Emissions
 
 [U.S. Gross and Net Emissions]{.ghg-figure-title}
+
+![](images/graph_1.png){.ghg-figure-img fig-alt="Trend in gross and net U.S. greenhouse gas emissions and removals since 1990"}
 :::
 
 ::: {.home-band .ghg-section}
@@ -117,9 +119,17 @@ The figure below shows the trend in both gross and net U.S. GHG emissions and re
 The figure on the left indicates the largest categories that contributed to overall GHG emissions in 2024. The figure on the right shows categories that have experienced significant changes since 1990. Together, these categories are a subset of the inventory formally defined as “key categories” by the IPCC because they have the most significant impact on overall results.
 
 ::: {.ghg-figure-pair}
+::: {}
 [Key Categories for 2024 and Their Emissions (Gross)]{.ghg-figure-title}
 
+![](images/graph_2.png){.ghg-figure-img fig-alt="Largest source categories of U.S. gross greenhouse gas emissions in 2024"}
+:::
+
+::: {}
 [Key Categories with the Largest Changes Since 1990]{.ghg-figure-title}
+
+![](images/graph_3.png){.ghg-figure-img fig-alt="Key categories with the largest changes in U.S. emissions since 1990"}
+:::
 :::
 :::
 
@@ -129,6 +139,8 @@ The figure on the left indicates the largest categories that contributed to over
 This figure shows the trend in emissions and removals since 1990 by greenhouse gas. CO~2~ makes up the largest share of emissions in each year, and the 4.3 percent decline since 1990 is also the largest contributor to the overall reduction in emissions. On a percentage basis, CH~4~, PFCs, and SF~6~ also declined significantly since 1990, while HFCs experienced the largest growth, N~2~O emissions did not change significantly in aggregate, but category level changes (e.g. in mobile combustion) are discussed in the GHGIA report.
 
 [Trends in Greenhouse Gas Emissions and Sinks by Gas]{.ghg-figure-title}
+
+![](images/graph_4.png){.ghg-figure-img fig-alt="Trends in U.S. greenhouse gas emissions and sinks by gas since 1990"}
 :::
 
 ::: {.home-band .ghg-section}
@@ -137,17 +149,27 @@ This figure shows the trend in emissions and removals since 1990 by greenhouse g
 This figure presents GHG emissions categorized by commonly used economic sectors. It shows how economic activities consume fossil fuels for energy, which is by far the largest category of emissions. The figure depicts the relative contribution of these sectors and their emission changes over time. Electric power was the largest economic sector in 1990 but was overtaken by transportation in 2017.
 
 [Trends by Economic Sector]{.ghg-figure-title}
+
+![](images/graph_5.png){.ghg-figure-img fig-alt="Trends in U.S. greenhouse gas emissions by economic sector"}
 :::
 
 ::: {.home-band .ghg-section}
 ### Information regarding Global Greenhouse Gas Emissions can be found here:
 
-::: {.ghg-link-card}
+::: {.ghg-link-card .has-img}
+
+::: {.ghg-link-card-text}
 [Global GHG emissions]{.ghg-link-card-title}
 
 Additional information and clarification pertaining to the historical global GHG emissions data sources used, their differences as well as key advantages and disadvantages can be found here: [Frequently Asked Questions | Climate Watch](https://www.climatewatchdata.org/about/faq/ghg).
 
 [Explore →](indicators/global-greenhouse-gas-emissions.qmd){.ghg-link-card-cta}
+:::
+
+::: {.ghg-link-card-img}
+![](images/air_sub.png){fig-alt="Smokestack releasing a plume of smoke into a blue sky"}
+:::
+
 :::
 :::
 
@@ -155,6 +177,8 @@ Additional information and clarification pertaining to the historical global GHG
 ## Atmospheric Concentration of Carbon Dioxide
 
 Each year, human activities release more carbon dioxide into the atmosphere than natural processes can remove, raising atmospheric carbon dioxide levels. The global average carbon dioxide set a new record high in 2025: 425.62 parts per million ("ppm" for short). The increase over 2024 amounts was 2.83 ppm, which makes it the third-largest one-year increase on record. Atmospheric carbon dioxide is now 50 percent higher than it was before the Industrial Revolution. The annual rate of increase in atmospheric carbon dioxide over the past 60 years is about 100 times faster than previous natural increases, such as those that occurred at the end of the last ice age 11,000-17,000 years ago. (climate.us)
+
+![](images/graph_6.png){.ghg-figure-img fig-alt="Monthly average carbon dioxide at Mauna Loa Observatory since 1958"}
 
 [Monthly average carbon dioxide at Mauna Loa Observatory since 1958 in parts per million (ppm). The seasonal cycle of highs and lows (small peaks and valleys) is driven by the Northern Hemisphere growing season. The long-term trend of rising carbon dioxide levels is driven by human activities. At Mauna Loa, the highest monthly value each year occurs in May. In May 2026, carbon dioxide hit 432.34 ppm, a new record. Climate.us image, based on Mauna Loa monthly mean data from NOAA Global Monitoring Lab.]{.ghg-figure-title}
 :::
@@ -165,6 +189,8 @@ Each year, human activities release more carbon dioxide into the atmosphere than
 Unlike oxygen and nitrogen, the most abundant gases in the atmosphere which are transparent to outgoing heat, greenhouse gases absorb heat energy and radiate it back into their surroundings, including back toward Earth’s surface. Without them, Earth's average surface temperature would be below freezing instead of around 60 degrees Fahrenheit. Since the onset of the Industrial Revolution, human activities have been adding heat-trapping gases to the atmosphere. By adding extra greenhouse gases, we are amplifying the natural greenhouse effect and causing Earth's surface temperature to rise.
 
 How much are human-produced greenhouse gases influencing today’s climate? NOAA’s Annual Greenhouse Gas Index ("AGGI") estimates the direct warming influence of human-produced greenhouse gases has risen 54 percent since 1990. Most of the warming influence (66 percent) is due to carbon dioxide. Methane is the second-largest contributor (16 percent). The third-largest contributor is the chlorofluorocarbons (CFCs) category (8.4 percent). (Although CFCs are now controlled, because they are extremely long-lived in the atmosphere, they continue to play a role in Earth's heating imbalance.) climate.us
+
+![](images/graph_7.png){.ghg-figure-img fig-alt="Heating influence of major human-produced greenhouse gases since 1750"}
 
 [This graph shows the heating influence caused by the major human-produced greenhouse gases: carbon dioxide (gray), methane (dark purple), nitrous oxide (medium purple), chlorofluorocarbons (CFCs, lavender), hydrochlorofluorocarbons (HCFCs, blue), and hydrofluorocarbons (HFCs, light blue). Relative to conditions in 1750, today's atmosphere absorbs 3.54 extra Watts of energy per square meter of Earth's surface The colored shapes in this graph show how much each greenhouse gas contributes to the total heating imbalance in Earth’s atmosphere.]{.ghg-figure-title}
 :::

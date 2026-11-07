@@ -23,7 +23,12 @@ toc: false
 anchor-sections: false
 ---
 
-::: {.home-band .cat-hero .cat-freshwater}
+::: {.home-band .cat-hero .cat-freshwater .hero-bg}
+
+::: {.hero-bg-img}
+![](../images/freshwater.jpg){fig-alt=""}
+:::
+
 ## Freshwater Systems
 :::
 

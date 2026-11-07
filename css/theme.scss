@@ -200,6 +200,8 @@ a.quarto-grid-link * {
 }
 
 nav.navbar {
+  // Figma's navbar shadow: lifts the bar off the page content when it is scrolled over.
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.25);
   padding-top: $navbar-padding-y !important;
   padding-bottom: $navbar-padding-y !important;
   min-height: 0;
@@ -305,9 +307,10 @@ nav.navbar {
 .navbar .navbar-title .logo-accent { color: $home-orange; }
 
 .navbar .navbar-nav .nav-link {
-  padding: sc(13px) clamp(sc(8px), 1vw, sc(22px)) !important;
+  padding: sc(13px) clamp(sc(6px), 0.7vw, sc(22px)) !important;
   font-family: $font-inter;
-  font-size: 16px;
+  // 16px on wide screens, easing down toward 12px at 1200px so the links keep clear of the logo.
+  font-size: clamp(12px, 1vw, 16px);
   font-weight: 700;
   line-height: normal;
   color: #000;
@@ -1465,7 +1468,10 @@ $ghg-ink:  #0C0D1B;
 
 .ghg-figure-title { display: block; font-size: 16px; font-weight: 700; line-height: 1.4; margin-top: sc(20px); }
 
+img.ghg-figure-img { display: block; max-width: sc(976px); width: 100%; height: auto; }
+
 .ghg-figure-pair {
+  align-items: start;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: sc(24px);
@@ -1533,6 +1539,9 @@ $cat-card-border: #C8C8C8;
 }
 
 .cat-hero.cat-all { background: $home-green; }
+
+// Darkens the category photo so the white heading stays readable.
+.cat-hero.hero-bg .hero-bg-img::after { content: ""; position: absolute; inset: 0; background: rgba(0, 0, 0, 0.35); }
 
 .cat-hero {
   min-height: sc(485px);
@@ -1972,4 +1981,22 @@ $squiggle-v: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' w
     align-self: end;
     margin-bottom: sc(-155px);
   }
+}
+
+// Global GHG emissions link card: text on the left, photo filling the right edge.
+.ghg-link-card.has-img {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) sc(465px);
+  padding: 0;
+  overflow: hidden;
+
+  .ghg-link-card-text { padding: sc(32px); align-self: center; }
+  .ghg-link-card-img { min-height: 100%; }
+  .ghg-link-card-img p { margin: 0; height: 100%; }
+  .ghg-link-card-img img { width: 100%; height: 100%; object-fit: cover; display: block; margin: 0; }
+}
+
+@media (max-width: 767.98px) {
+  .ghg-link-card.has-img { grid-template-columns: 1fr; }
+  .ghg-link-card.has-img .ghg-link-card-img img { height: auto; }
 }
