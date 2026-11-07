@@ -1,6 +1,6 @@
 ---
 title: "Sea Level"
-description: "This indicator describes how sea level has changed over time."
+description: "This indicator describes how sea level has changed over time. The indicator describes two types of sea level changes: absolute and relative."
 categories: [Oceans]
 execute:
   eval: true

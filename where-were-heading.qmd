@@ -1,0 +1,113 @@
+---
+title: ""
+pagetitle: "Where We’re Heading"
+description: "Where Tracking Climate Impacts is heading: ongoing research, who the indicators serve, and the next generation of indicators."
+execute:
+  echo: false
+  message: false
+  warning: false
+page-layout: full
+toc: false
+anchor-sections: false
+---
+
+::: {.home-band .where-intro}
+## Where We’re Heading
+
+Currently, each indicator includes technical documentation, data sources, and reproducible code. Future updates will continue this approach to transparency while expanding and contextualizing impact indicators, incorporating new research, and reflecting input from data providers, students, scientists, and community partners.
+:::
+
+::: {.home-band .where-section .ruled}
+## An Ongoing Research and Communication Effort
+
+We are working towards updating these indicators to reflect emerging data, and, in particular, expanding and contextualizing U.S. impact indicators to reach new audiences and applications. The next phase will leverage growing research, support the development of new climate‑health expertise, and connect students, scientists, and practitioners to ensure indicators remain robust, accessible, and relevant.
+
+The project’s open-source framework creates opportunities for ongoing review, feedback, and contributions from users and experts. In turn, these collaborations help to identify areas of emerging research needs, improve methods, and strengthen connections between data providers and the organizations responding to climate impacts on the ground. The project will help identify gaps in climate impact monitoring while supporting development of actionable indicators.
+
+::: {.where-img}
+![](images/where_were_heading1.jpg){fig-alt=""}
+:::
+
+As climate impacts science advances and communities consider how best to adapt to changing conditions, so will the indicators. This resource provides a foundation for ongoing research, visualization, communication, and applied learning efforts that make climate impacts understandable, accessible, and actionable.
+:::
+
+::: {.home-band .where-users}
+
+::: {.where-users-head}
+## Applying and Advancing Climate Indicators
+
+Climate impact indicators transform complex data into meaningful insights that support decisions, strengthen resilience, and inform public understanding. Key users may include:
+:::
+
+::: {.where-list}
+
+::: {.where-item}
+[01]{.where-num}
+
+::: {}
+**Local and state decision‑makers**\
+who use indicators to inform planning, resilience investments, policy development, and public communication.
+:::
+:::
+
+::: {.where-item}
+[02]{.where-num}
+
+::: {}
+**Public health practitioners**\
+who use indicators to assess climate‑related health risks, identify vulnerable populations, and support preparedness efforts.
+:::
+:::
+
+::: {.where-item}
+[03]{.where-num}
+
+::: {}
+**Students and educators**\
+who use indicators to explore how climate impacts are measured, analyzed and communicated.
+:::
+:::
+
+::: {.where-item}
+[04]{.where-num}
+
+::: {}
+**Researchers and data providers**\
+who contribute new data streams, refine methods, and develop new indicators.
+:::
+:::
+
+::: {.where-item}
+[05]{.where-num}
+
+::: {}
+**Community organizations**\
+who use indicators to support planning, engagement, outreach, and local action.
+:::
+:::
+
+:::
+
+::: {.where-users-foot}
+Looking ahead, we are exploring audience-specific resources that feature examples, case studies, and practical applications. New formats such as blog posts, StoryMaps, data stories, and short features will broaden access to climate impact indicators and deepen public engagement.
+:::
+
+:::
+
+::: {.home-band .where-next}
+## The Next Generation of Indicators
+
+The science of climate change and its impacts on health, communities, infrastructure and ecosystems continues to evolve and [TrackingClimateImpacts.us](https://trackingclimateimpacts.us) is designed to evolve with it.
+
+**Future work will focus on:**
+
+- Developing new climate impact indicators grounded in transparent, reproducible methods.
+- Engaging students, scientists, and practitioners through applied research and experiential learning opportunities.
+- Evaluating promising new metrics and candidate indicators where data and methods are still emerging.
+- Creating meaningful pathways for stakeholder and community input.
+- Expanding partnerships that strengthen practical application and durability of the platform.
+
+This forward‑looking approach ensures indicators remain relevant, scientifically grounded, and responsive to real‑world needs.
+:::
+
+{{< include /chunks/footer.qmd >}}

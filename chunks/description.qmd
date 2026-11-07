@@ -1,4 +1,4 @@
-**climateindicators.us** is an open, reproducible collection of climate
+**TrackingClimateImpacts.us** is an open, reproducible collection of climate
 indicators for the United States --- the measurable signals that show how a
 changing climate is affecting people, health, infrastructure, and the
 environment. Every indicator is built from public data, with the code and

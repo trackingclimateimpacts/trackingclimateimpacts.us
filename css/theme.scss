@@ -1,6 +1,33 @@
+@import "https://fonts.googleapis.com/css2?family=Inter:wght@700;800&family=Krub:wght@400;700&display=swap";
 @import "https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;0,900;1,400;1,600&display=swap";
 
 /*-- scss:defaults --*/
+
+// ---------------------------------------------------------------------------
+// Brand palette, from the Figma "Type and Colors" sheet. This is the only place
+// these hex codes are written; everything else in this file refers to them by
+// name. Grouped by hue family, dark to light.
+// ---------------------------------------------------------------------------
+$teal:             #397E9A;
+$teal-light:       #8CBACD;
+$teal-tint:        #E3F0F4;
+$orange:           #FEA702;
+$sand:             #FFD380;
+$sand-tint:        #FCF1DB;
+$navy-dark:        #24284F;
+$navy:             #363B7C;
+$periwinkle:       #858BC2;
+$periwinkle-tint:  #E8E9F4;
+$green-dark:       #315744;
+$green:            #78A65D;
+$green-tint:       #E7EEDF;
+$rust-dark:        #6B4835;
+$rust:             #A35638;
+$rust-light:       #BE7356;
+$cream:            #F7F5EF;
+$tan:              #EAD9B7;
+$stone:            #D3D6CF;
+$charcoal:         #282D35;
 
 // ---------------------------------------------------------------------------
 // Palette, lifted from climate.us. Every tinted rule below derives from these,
@@ -9,13 +36,33 @@
 $accent:       #2882e6;  // link / brand blue
 $accent-light: #5aa3f0;  // lightened for legibility on the dark footer bar
 $accent-dark:  #1b66bd;  // pressed states
-$ink:          #1e1e1e;  // near-black — navbar and footer
+$ink:          $charcoal;  // near-black — navbar and footer
 $ink-soft:     #333333;  // header bar on climate.us proper
+$nav-outline:  #6b6b6b;  // outline on the current nav item, sampled from the Figma layout
+$navbar-bg:    #f2f2f2;  // navbar fill, sampled from the Figma layout
 $body-text:    #464646;
 $panel:        #f4f4f5;  // light grey for cards, sidebar, callouts
 $rule:         #dcdcdc;  // neutral border, one step darker than $panel
 $muted:        #757575;
-$btn-hover:    #708C69;  // download button hover fill
+$btn-hover:    $green;  // download button hover fill
+
+// Home page palette and faces, from the Figma home page frame.
+$home-green:      $green;
+$home-orange:     $orange;
+$home-charcoal:   $charcoal;
+$footer-grey:     #404040;  // footer band, from the Figma frames; lighter than $home-charcoal
+$home-navy:       $navy;
+$home-sand:       $sand;
+$where-gold:      $orange;
+$where-rust:      $rust;
+$home-gutter:     6.6vw;   // 100px at the Figma 1512px frame
+
+// The Figma frame is drawn for 1512px at 100% browser zoom, which reads large
+// on a laptop. Every home-page and navbar pixel size passes through sc() so the
+// whole layout can be re-tuned from this one number (0.8 matches 80% zoom).
+$home-scale: 0.8;
+@function sc($px) { @return $px * $home-scale; }
+$navbar-height: 112px;   // 25% shorter than Figma's 150px
 
 // Sidebar section colours, one per top-level grouping in the "Indicators"
 // sidebar (website.sidebar.contents in _quarto.yml). Order here must track
@@ -93,7 +140,9 @@ $body-color: $body-text;
 $font-family-sans-serif: "Source Sans 3", "Source Sans Pro", Helvetica, Arial, sans-serif;
 $font-family-base:       $font-family-sans-serif;
 $headings-font-family:   $font-family-sans-serif;
-$navbar-font-family:     $font-family-sans-serif;
+$font-krub:             "Krub", $font-family-sans-serif;
+$font-inter:            "Inter", $font-family-sans-serif;
+$navbar-font-family:     $font-krub;
 $headings-font-weight:   700;
 
 // Page layout
@@ -137,14 +186,22 @@ a.quarto-grid-link * {
   text-decoration: none !important;
 }
 
-/* Navbar — the black header bar. `background: dark` in _quarto.yml gets Quarto
-   to emit the light-on-dark variant; this pins the exact shade. */
+/* Navbar — a white header carrying the site title, with the nav items in a
+   light grey pill beneath it (`$navbar-bg`). `background: light` in _quarto.yml
+   gets Quarto to emit the dark-on-light variant. */
 .navbar {
-  background-color: $ink !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background-color: $body-bg !important;
+
+  .navbar-nav .nav-link,
+  .quarto-navbar-tools > a,
+  .quarto-navbar-tools > .quarto-navbar-tool {
+    color: $ink;
+  }
 }
 
 nav.navbar {
+  // Figma's navbar shadow: lifts the bar off the page content when it is scrolled over.
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.25);
   padding-top: $navbar-padding-y !important;
   padding-bottom: $navbar-padding-y !important;
   min-height: 0;
@@ -161,8 +218,8 @@ nav.navbar {
   transition: background-color 0.15s ease, color 0.15s ease;
 
   &:hover {
-    background-color: $ink-soft;
-    color: #ffffff;
+    background-color: darken($navbar-bg, 6%);
+    color: $ink;
     text-decoration: none;
   }
 
@@ -171,46 +228,92 @@ nav.navbar {
   }
 }
 
-// Current section: a thin, square-ended blue rule under the label, with no
-// background fill. Drawn as a pseudo-element rather than an inset box-shadow
-// or border-bottom — both of those inherit the link's 6px border-radius and
-// bow upward at the ends.
+// Current section: an outlined pill. Every link carries a transparent border
+// so the active one can show its outline without shifting the layout.
 .navbar-nav .nav-link {
-  position: relative;
+  border: 2px solid transparent;
+  border-radius: 10px;
 
   &.active {
     background-color: transparent;
-    color: #ffffff;
+    border-color: $nav-outline;
+    color: $ink;
+  }
 
-    &::after {
-      content: "";
-      position: absolute;
-      left: 0.55rem;   // matches the link's horizontal padding so the rule
-      right: 0.55rem;  // tracks the label, not the wider hover block
-      bottom: 0;
-      height: 2px;
-      background-color: $accent;
+  &.active:hover {
+    background-color: darken($navbar-bg, 6%);
+  }
+}
+
+// The nav items sit in a grey pill. Collapsed (mobile) it is the toggled panel.
+#navbarCollapse {
+  background-color: $navbar-bg;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+// Desktop, from the Figma frame (scaled): a 112px white bar, logo on the left,
+// nav items on the right. Below 1200px Quarto collapses the nav into the toggler
+// (collapse-below: xl in _quarto.yml) so labels never wrap to a second line.
+@media (min-width: 1200px) {
+  nav.navbar {
+    height: $navbar-height;
+    padding: 0 !important;
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar > .navbar-container {
+    padding: 0 clamp(sc(24px), calc(#{sc(48px)} + (100vw - 1200px) * 0.13), sc(98px));
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.6rem;
+  }
+
+  .navbar-brand-container { margin: 0 !important; flex-shrink: 0; }
+
+  .navbar .navbar-brand {
+    margin: 0;
+    overflow: visible;
+
+    .navbar-title {
+      font-size: clamp(22px, 2.4vw, 30px);
+      line-height: 27px;
+      font-weight: 700;
+      color: #000;
     }
   }
 
-  // Keep the hover wash on the current item, but let the rule sit on top.
-  &.active:hover {
-    background-color: $ink-soft;
+  #navbarCollapse {
+    flex-grow: 0;
+    margin-left: auto;
+    background: none;
+    padding: 0;
+
+    .navbar-nav { margin: 0 !important; }
   }
+
+  .navbar-nav .dropdown-toggle::after { display: none; }
+
+  #quarto-search { margin-left: 1.2rem; }
 }
 
-// The site title is repeated as the first navbar item, so the Bootstrap brand
-// is redundant on desktop. Keep it for the collapsed mobile navbar, where the
-// nav items are hidden behind the toggle.
-@media (min-width: 992px) {
-  .navbar-brand-container,
-  .navbar .navbar-brand { display: none !important; }
+.navbar,
+.navbar .navbar-title {
+  font-family: $font-krub;
 }
 
-.navbar-nav .nav-link {
-  padding: 0.2rem 0.55rem !important;
-  font-size: 0.9rem;
-  line-height: 1.2;
+// "Climate" in the logo is gold at every width, including the collapsed navbar.
+.navbar .navbar-title .logo-accent { color: $home-orange; }
+
+.navbar .navbar-nav .nav-link {
+  padding: sc(13px) clamp(sc(6px), 0.7vw, sc(22px)) !important;
+  font-family: $font-inter;
+  // 16px on wide screens, easing down toward 12px at 1200px so the links keep clear of the logo.
+  font-size: clamp(12px, 1vw, 16px);
+  font-weight: 700;
+  line-height: normal;
+  color: #000;
 }
 
 .quarto-navbar-tools > a,
@@ -228,6 +331,15 @@ nav.navbar {
   align-items: center;
 }
 
+// Labels stay on one line (the row is collapsed before it runs out of room).
+.navbar-nav .nav-link .menu-text { white-space: nowrap !important; }
+
+// Keep the navbar on screen while scrolling (Quarto's headroom would slide it away).
+#quarto-header.headroom--unpinned { transform: none !important; }
+
+// Empty on this site; as a flex item it would still take up space in the bar.
+.quarto-navbar-tools:not(:has(*)) { display: none !important; }
+
 .navbar-nav {
   @media (min-width: 768px) {
     flex-wrap: nowrap !important;
@@ -237,33 +349,14 @@ nav.navbar {
     .nav-link {
       display: flex;
       align-items: center;
-      gap: 0.3rem;
+      gap: 10px;
       height: 100%;
       .bi { flex: none; }
     }
     .nav-link .menu-text { white-space: normal; text-wrap: balance; }
 
-    // Spacing + dividers between items, in both the left and right groups
-    & {
-      gap: 1.75rem;
-      &.ms-auto { padding-left: 1.75rem; }
-
-      .nav-item + .nav-item {
-        position: relative;
-
-        &::before {
-          content: '';
-          position: absolute;
-          left: -0.875rem;
-          top: 50%;
-          transform: translateY(-50%);
-          width: 1px;
-          height: 1rem;
-          background-color: rgba(255, 255, 255, 0.28);
-          pointer-events: none;
-        }
-      }
-    }
+    // Spacing between items
+    & { gap: clamp(0.2rem, 1.2vw, 2.4rem); }
   }
 }
 
@@ -277,20 +370,27 @@ nav.navbar {
   }
 }
 
+// The first entry of each navbar menu is that section's landing page. On
+// desktop the label itself links there (chunks/nav-click.html), so the entry
+// is hidden; in the collapsed menu the label only toggles, so it stays.
+@media (min-width: 1200px) {
+  .navbar .dropdown-menu > li:first-child { display: none; }
+}
+
 .navbar .dropdown-menu {
-  background-color: $ink;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background-color: $navbar-bg;
+  border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 4px;
 
   .dropdown-item {
-    color: rgba(255, 255, 255, 0.85);
+    color: $ink;
     font-size: 0.9rem;
 
     &:hover,
     &:focus,
     &.active {
-      background-color: $ink-soft;
-      color: #ffffff;
+      background-color: darken($navbar-bg, 6%);
+      color: $ink;
     }
   }
 }
@@ -372,65 +472,585 @@ main.content {
   padding-bottom: 3em;
 }
 
-/* Home page navigation pills — the whole tile is one link to its page. Warm
-   panel surface with the accent blue on hover, mirroring the listing cards.
-   A CSS grid makes pills in the same row stretch to equal height. */
-.home-pills {
+/* ---- Home page, from the Figma frame. Full-bleed bands: each .home-band
+   breaks out of Quarto's content column to the viewport width. Figma's fixed
+   pixel heights are min-heights here so the page reflows on small screens. */
+body:has(.home-band) { overflow-x: clip; }
+
+// Let the hero start directly under the navbar.
+body:has(.home-band) main.content {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0;
+}
+body:has(.home-band) .quarto-title-block { display: none; }
+
+.home-band {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  padding-left: $home-gutter;
+  padding-right: $home-gutter;
+  font-family: $font-krub;
+  color: #000;
+  background: #fff;
+
+  h1, h2, h3 { font-family: $font-inter; font-weight: 800; border: 0; margin: 0; padding: 0; }
+  p { margin: 0; }
+  // Quarto wraps each heading in a <section>; keep it out of the layout.
+  section:not([class*="home-"]):not([class*="about-"]) { display: contents; }
+}
+
+.home-hero {
+  background: $home-green;
+  color: #fff;
+  min-height: sc(894px);
+  display: grid;
+  grid-template-columns: minmax(0, sc(855px)) 1fr;
+  align-items: center;
+  column-gap: 2rem;
+
+  .home-hero-text h2 { font-size: sc(55px); line-height: sc(60px); color: #fff; margin-bottom: sc(24px); }
+  p { font-size: sc(21px); max-width: sc(665px); }
+  a { color: #fff; }
+
+  .home-hero-img {
+    justify-self: end;
+    align-self: center;
+    width: sc(520px);
+
+    img { width: 100%; height: auto; display: block; margin: 0; }
+  }
+}
+
+.home-mission {
+  padding-top: sc(59px);
+  padding-bottom: sc(60px);
+
+  p {
+    border-left: 4px solid $green;
+    box-shadow: -2px 0 8px rgba($green, 0.2);
+    padding: sc(20px) 0 sc(20px) sc(24px);
+    max-width: sc(1061px);
+    font-size: sc(21px);
+    line-height: 1.5;
+    color: $green-dark;
+  }
+}
+
+// Two feature cards: copy on one side, image slot on the other.
+.home-feature {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-  margin: 1rem 0 1.5rem;
+  min-height: sc(606px);
+  margin-bottom: sc(92px);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+
+  .home-feature-text {
+    padding: sc(96px) sc(56px) sc(96px) sc(96px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: sc(26px);
+  }
+  h2 { font-size: sc(44px); line-height: 1.12; }
+  p { font-size: sc(17px); line-height: 1.6; }
+  .home-feature-eyebrow { font-family: $font-inter; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+  .home-feature-link { font-family: $font-inter; font-size: 15px; font-weight: 600; text-decoration: none; padding: 6px 0; }
+  .home-feature-img { min-height: sc(300px); }
+  .home-feature-img { position: relative; }
+  .home-feature-img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; margin: 0; }
+
+  &.indicators { background: $home-navy; color: #fff; h2, a { color: #fff; } h2 { font-size: sc(49px); line-height: 1.12; } .home-feature-img { background: rgba(255, 255, 255, 0.12); } }
+  &.story { background: $home-sand; color: #000; h2, a { color: #000; } .home-feature-img { background: rgba(0, 0, 0, 0.08); order: -1; } }
+}
+
+.home-section {
+  padding-top: sc(50px);
+  padding-bottom: sc(50px);
+
+  h2 { font-size: sc(44px); line-height: 1.12; margin-bottom: sc(26px); }
+  p { font-size: sc(17px); line-height: 1.6; max-width: sc(1089px); }
+  p a { color: #000; text-decoration: underline; }
+
+  &.first { box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03); h2 { font-size: sc(42px); } }
+}
+
+.home-btn {
+  display: inline-block;
+  margin-top: sc(26px);
+  padding: 12px 16px;
+  background: $home-sand;
+  border-radius: 12px;
+  color: #000 !important;
+  font-family: $font-inter;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.home-statement {
+  background: $home-green;
+  color: #fff;
+  min-height: sc(316px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  p { max-width: sc(868px); font-size: sc(32px); font-weight: 700; line-height: 1.35; }
+}
+
+.home-footer {
+  background: $footer-grey;
+  color: #fff;
+  padding-top: sc(129px);
+  padding-bottom: sc(60px);
+  font-family: $font-inter;
+
+  .home-footer-cols {
+    display: grid;
+    grid-template-columns: 1fr repeat(4, minmax(0, auto));
+    gap: sc(60px);
+    padding-bottom: sc(40px);
+    border-bottom: 1px solid #8c8c8c;
+  }
+  .home-footer-org { font-size: 14px; }
+  .home-footer-org p { margin: 0 0 1em; color: #fff; }
+  h3 { font-size: 13px; font-weight: 900; color: #fff; margin: 0 0 1.2em; }
+  ul { list-style: none; margin: 0; padding: 0; }
+  li { font-family: $font-krub; font-size: 13px; line-height: 40px; }
+  a { color: #fff; text-decoration: none !important; }
+  a:hover { text-decoration: underline !important; }
+
+  .home-footer-legal ul {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: sc(40px);
+    padding-top: sc(24px);
+  }
+  .home-footer-legal li { font-family: $font-inter; font-size: 14px; font-weight: 900; text-transform: uppercase; }
+}
+
+@media (max-width: 991.98px) {
+  .home-feature { grid-template-columns: 1fr; }
+  .home-feature.story .home-feature-img { order: 0; }
+  .home-footer .home-footer-cols { grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width: 767.98px) {
-  // Single column, compact, left-aligned. grid-auto-rows: 1fr stretches every
-  // row to the tallest, so all single-column pills share one height.
-  .home-pills { grid-template-columns: 1fr; grid-auto-rows: 1fr; gap: 0.75rem; }
-
-  .home-pill {
-    padding: 0.9rem 1.1rem;
-    text-align: left;
-    align-items: flex-start;
-  }
-
-  .home-pill-label { font-size: 1.1rem; margin-bottom: 0.2rem; }
+  .home-band { padding-left: 1.5rem; padding-right: 1.5rem; }
+  .home-hero { grid-template-columns: 1fr; padding-top: 2rem; padding-bottom: 2rem; }
+  .home-hero .home-hero-text h2 { font-size: 2.25rem; line-height: 1.1; }
+  .home-hero p, .home-mission p { font-size: 1rem; }
+  .home-hero .home-hero-img { justify-self: start; margin-top: 1.5rem; }
+  .home-feature .home-feature-text { padding: 2rem 1.5rem; }
+  .home-section h2, .home-feature h2 { font-size: 2rem; }
+  .home-statement p { font-size: 1.3rem; }
+  .home-footer .home-footer-legal ul { justify-content: flex-start; }
 }
 
-.home-pill {
+/* ---- About page, from the Figma frame. Reuses .home-band and the footer. */
+.about-intro {
+  background: $home-navy;
+  color: #fff;
+  padding-top: sc(96px);
+  padding-bottom: sc(59px);
+
+  h2 { font-size: sc(55px); line-height: 1.12; color: #fff; margin-bottom: sc(30px); }
+  p { font-size: sc(20px); line-height: 1.6; max-width: sc(1293px); }
+}
+
+.about-collab-wrap {
+  padding-top: sc(58px);
+  padding-bottom: sc(50px);
+  padding-left: 3.6vw;
+  padding-right: 3.6vw;
+}
+
+.about-collab {
+  display: grid;
+  grid-template-columns: 1.24fr 1fr;
+  min-height: sc(515px);
+  background: $periwinkle;
+  color: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+
+  .about-collab-text { padding: sc(44px); }
+  h2 { font-size: sc(50px); line-height: 1.12; color: #fff; margin-bottom: sc(24px); }
+  p { font-size: sc(20px); line-height: 1.6; }
+  .about-collab-img { min-height: sc(300px); background: rgba(255, 255, 255, 0.18); }
+  .about-collab-img { position: relative; }
+  .about-collab-img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; margin: 0; }
+}
+
+.about-section {
+  padding-top: sc(50px);
+  padding-bottom: sc(96px);
+
+  h2 { font-size: sc(44px); line-height: 1.12; margin-bottom: sc(28px); }
+  p { font-size: sc(20px); line-height: 1.6; max-width: sc(1094px); margin-bottom: sc(28px); }
+  p:last-child { margin-bottom: 0; }
+
+  &.ruled { border-bottom: 2px solid rgba(0, 0, 0, 0.14); }
+}
+
+.about-cards {
+  display: grid;
+  grid-template-columns: 612fr 662fr;
+  gap: sc(40px);
+  align-items: start;
+  margin-bottom: sc(61px);
+}
+
+.about-card {
+  background: $periwinkle-tint;
+  border-radius: 12px;
+  padding: sc(28px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+
+  h3 { font-size: sc(32px); line-height: 1.12; margin-bottom: sc(20px); }
+  p { font-size: sc(18px); line-height: 1.6; max-width: none; margin-bottom: sc(20px); }
+  .home-btn { margin-top: 0; background: $navy; color: #fff !important; }
+}
+
+.about-find {
+  background: $navy;
+  color: #fff;
+  padding-top: sc(96px);
+  padding-bottom: sc(96px);
+
+  h2 { font-size: sc(44px); line-height: 1.12; color: #fff; margin-bottom: sc(28px); }
+  p { font-size: sc(20px); line-height: 1.6; max-width: sc(1316px); margin-bottom: sc(28px); }
+  p:last-child { margin-bottom: 0; }
+}
+
+.about-commit {
+  padding-top: sc(75px);
+
+  ul { list-style: none; margin: 0; padding: 0; }
+  li {
+    font-family: $font-inter;
+    font-size: sc(23px);
+    line-height: 1.6;
+    padding: sc(24px) 0;
+    border-top: 1px solid #B9C7D0;
+    max-width: sc(1000px);
+    box-sizing: content-box;
+  }
+}
+
+/* ---- Where We're Heading, from the Figma frame. Reuses .home-band and the footer. */
+.where-intro {
+  background: $where-gold;
+  color: #fff;
+  padding-top: sc(96px);
+  padding-bottom: sc(96px);
+
+  h2 { font-size: sc(55px); line-height: 1.12; color: #fff; margin-bottom: sc(28px); }
+  p { font-size: sc(22px); line-height: 1.6; max-width: sc(970px); }
+}
+
+.where-section {
+  padding-top: sc(46px);
+  padding-bottom: sc(96px);
+
+  h2 { font-size: sc(44px); line-height: 1.12; margin-bottom: sc(28px); }
+  p { font-size: sc(20px); line-height: 1.6; margin-bottom: sc(28px); }
+  p:last-child { margin-bottom: 0; }
+
+  &.ruled { border-bottom: 1px solid rgba(0, 0, 0, 0.07); }
+
+  .where-img { height: sc(324px); background: $panel; margin-bottom: sc(28px); }
+  .where-img img { width: 100%; height: 100%; object-fit: cover; display: block; margin: 0; }
+}
+
+.where-users {
+  padding-top: sc(71px);
+  padding-bottom: sc(71px);
+
+  // Quarto turns this div into a <section>, which the .home-band rule above sets
+  // to display: contents; the extra classes outrank that rule.
+  &.home-band > section.where-users-head.level2 {
+    display: grid;
+    grid-template-columns: 539fr 729fr;
+    column-gap: sc(20px);
+    align-items: start;
+    margin-bottom: sc(28px);
+  }
+  h2 { font-size: sc(42px); line-height: 1.12; }
+  .where-users-head p { font-size: sc(22px); line-height: 1.6; }
+  .where-users-foot { font-size: sc(17px); line-height: 1.6; margin-top: sc(28px); }
+}
+
+.where-list {
+  max-width: sc(1087px);
+  font-family: $font-inter;
+}
+
+.where-item {
+  display: flex;
+  align-items: center;
+  gap: sc(24px);
+  padding: sc(24px) 0;
+  border-top: 1px solid #B9C7D0;
+
+  .where-num { flex: none; width: sc(32px); font-size: 13px; color: #606866; }
+  p { font-size: sc(18px); line-height: 1.6; font-weight: 400; margin: 0; }
+  strong { font-size: sc(23px); font-weight: 800; }
+}
+
+.where-next {
+  background: $where-rust;
+  color: #fff;
+  padding-top: sc(52px);
+  padding-bottom: sc(96px);
+
+  h2 { font-size: sc(42px); line-height: 1.12; color: #fff; margin-bottom: sc(28px); }
+  p, li { font-size: sc(20px); line-height: 1.6; max-width: sc(970px); }
+  p { margin-bottom: sc(20px); }
+  p:last-child { margin-bottom: 0; }
+  ul { margin: 0 0 sc(20px); padding-left: 1.25rem; }
+  a { color: #fff; text-decoration: underline; }
+}
+
+@media (max-width: 991.98px) {
+  .about-collab, .about-cards { grid-template-columns: 1fr; }
+  .where-users.home-band > section.where-users-head.level2 { grid-template-columns: 1fr; row-gap: 1rem; }
+}
+
+@media (max-width: 767.98px) {
+  .about-collab-wrap { padding-left: 1.5rem; padding-right: 1.5rem; }
+  .about-collab .about-collab-text { padding: 2rem 1.5rem; }
+  .about-intro h2, .about-collab h2, .about-section h2, .about-find h2 { font-size: 2rem; }
+  .about-intro p, .about-collab p, .about-section p, .about-find p { font-size: 1rem; }
+  .where-intro h2, .where-section h2, .where-users h2, .where-next h2 { font-size: 2rem; }
+  .where-intro p, .where-section p, .where-users p, .where-next p, .where-next li { font-size: 1rem; }
+}
+
+/* ---- Methodology, from the Figma frame. Reuses .home-band and the footer. */
+.method-hero {
+  background: $home-navy;
+  color: #fff;
+  min-height: sc(762px);
   display: flex;
   flex-direction: column;
-  padding: 1.15rem 1.35rem;
-  border: 1px solid $rule;
-  border-radius: 4px;
-  background: $panel;
-  text-decoration: none !important;
-  color: inherit;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.12s ease;
+  justify-content: center;
 
-  &:hover {
-    border-color: $accent;
-    color: inherit;
-    box-shadow: 0 0 0 1px $accent, 0 4px 14px rgba(40, 130, 230, 0.16);
-  }
-  &:active {
-    border-color: $accent-dark;
-    box-shadow: 0 0 0 1px $accent-dark;
-    transform: scale(0.995);
+  h2 { font-size: sc(48px); line-height: 1.2; font-weight: 900; color: #fff; margin-bottom: sc(24px); }
+  p { font-size: sc(21px); line-height: 1.6; max-width: sc(544px); }
+}
+
+.method-process {
+  padding-top: sc(100px);
+  padding-bottom: sc(60px);
+
+  h2 { font-size: sc(48px); line-height: 1.2; margin-bottom: sc(16px); max-width: sc(993px); }
+  p { font-size: sc(21px); line-height: 1.6; max-width: sc(1198px); margin-bottom: sc(20px); }
+}
+
+$method-gap: sc(80px);
+$method-squiggle: 12px;   // line thickness band, matches the tile height in the masks below
+
+.method-steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: $method-gap;
+  margin-top: sc(40px);
+}
+
+.method-step {
+  background: $home-navy;
+  color: #fff;
+  border-radius: 30px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.25);
+  padding: sc(60px) sc(30px);
+  font-family: $font-inter;
+  font-size: sc(40px);
+  font-weight: 800;
+  line-height: 1.45;
+
+  .method-step-num { font-weight: 400; margin-right: 0.25em; }
+}
+
+.method-doc-wrap { padding-top: sc(50px); padding-bottom: sc(90px); }
+
+.method-doc {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: sc(1090px);
+  margin: 0 auto;
+  background: $periwinkle-tint;
+  border-radius: 12px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+  padding: sc(83px);
+
+  .method-doc-title { font-family: $font-inter; font-size: sc(32px); font-weight: 800; line-height: 1.12; margin-bottom: sc(20px); }
+  p { font-size: sc(18px); line-height: 1.6; max-width: sc(467px); margin-bottom: sc(20px); }
+  .method-doc-btn {
+    justify-self: start;
+    background: #000;
+    color: #fff !important;
+    font-family: $font-inter;
+    font-weight: 500;
+    text-decoration: underline;
+    border-radius: 12px;
+    padding: 12px 16px;
   }
 }
 
-.home-pill-label {
-  font-weight: 700;
-  font-size: 1.2rem;
-  color: $accent;
-  margin-bottom: 0.35rem;
+.method-next {
+  background: $where-rust;
+  color: #fff;
+  padding-top: sc(130px);
+  padding-bottom: sc(110px);
 
-  i { margin-right: 0.5rem; }
+  h2 { font-size: sc(48px); line-height: 1.2; font-weight: 900; color: #fff; margin-bottom: sc(24px); }
+  p { font-size: sc(31px); line-height: 1.5; max-width: sc(1086px); }
 }
 
-.home-pill-desc {
-  color: $body-text;
-  line-height: 1.5;
+.method-plan {
+  padding-top: sc(50px);
+  padding-bottom: sc(96px);
+  font-family: $font-inter;
+
+  .method-plan-title { display: block; font-size: sc(44px); font-weight: 800; line-height: 1.12; margin-bottom: sc(28px); }
+}
+
+.method-plan-item {
+  max-width: sc(1000px);
+  padding: sc(24px) 0;
+  border-top: 1px solid #B9C7D0;
+  font-family: $font-krub;
+  font-size: sc(23px);
+  line-height: 1.6;
+
+  .method-plan-num { font-family: $font-inter; font-size: 13px; color: #606866; display: inline-block; width: sc(40px); }
+}
+
+@media (max-width: 991.98px) {
+  .method-steps { grid-template-columns: 1fr; }
+  .method-doc { padding: 2rem 1.5rem; }
+}
+
+@media (max-width: 767.98px) {
+  .method-hero h2, .method-process h2, .method-next h2, .method-plan .method-plan-title { font-size: 2rem; }
+  .method-hero p, .method-process p, .method-next p, .method-plan-item { font-size: 1rem; }
+  .method-step { font-size: 1.75rem; }
+}
+
+/* ---- Emissions & Climate Resources ("The Whole Story"), from the Figma frame. Reuses .home-band and the footer. */
+$story-teal: $teal;
+$story-mist: $green-tint;
+
+.story-hero {
+  background: $story-teal;
+  color: #fff;
+  min-height: sc(534px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h2 { font-size: sc(55px); line-height: 1.12; color: #fff; }
+}
+
+.story-arc {
+  padding-top: sc(112px);
+  padding-bottom: sc(70px);
+
+  h2 { font-size: sc(55px); line-height: 1.12; margin-bottom: sc(25px); }
+  > p, section > p { font-size: sc(31px); line-height: 1.12; max-width: sc(1088px); margin-bottom: sc(60px); }
+}
+
+.story-arc-card {
+  background: $story-mist;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+  padding: sc(70px) sc(60px);
+  font-size: sc(20px);
+  line-height: 1.55;
+  max-width: sc(1313px);
+
+  p { max-width: sc(608px); margin-bottom: sc(20px); }
+  .story-link { font-family: $font-inter; font-size: 15px; font-weight: 600; color: #000; text-decoration: none; }
+}
+
+.story-emissions-wrap { padding-top: sc(60px); padding-bottom: sc(60px); }
+
+.story-emissions,
+.story-emissions-wrap.home-band > section.story-emissions.level2 {
+  display: block;
+  background: $home-green;
+  color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+  padding: sc(96px) sc(85px);
+
+  h2 { font-size: sc(48px); line-height: 1.12; color: #fff; margin-bottom: sc(27px); }
+  p { font-size: sc(20px); line-height: 1.6; max-width: sc(1040px); margin-bottom: sc(20px); }
+  p:last-child { margin-bottom: 0; }
+}
+
+.story-local {
+  padding-top: sc(100px);
+  padding-bottom: sc(60px);
+  border-bottom: 2px solid #EDEDED;
+
+  h2 { font-size: sc(44px); line-height: 1.12; margin-bottom: sc(18px); }
+  p { font-size: sc(20px); line-height: 1.6; margin-bottom: sc(28px); }
+}
+
+.story-landscape {
+  padding-top: sc(85px);
+  padding-bottom: sc(96px);
+
+  h2 { font-size: sc(44px); line-height: 1.12; margin-bottom: sc(28px); }
+  p { font-size: sc(20px); line-height: 1.6; max-width: sc(1319px); margin-bottom: sc(24px); }
+}
+
+.story-org {
+  background: $story-mist;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  padding: sc(28px) sc(29px);
+  margin-top: sc(34px);
+  max-width: sc(1319px);
+
+  .story-org-title { display: block; font-family: $font-inter; font-size: sc(32px); font-weight: 600; line-height: 1.12; margin-bottom: sc(20px); }
+  p { font-size: sc(18px); max-width: sc(504px); }
+}
+
+.story-btn {
+  display: inline-block;
+  background: $green-dark;
+  color: #fff !important;
+  font-family: $font-inter;
+  font-weight: 500;
+  text-decoration: underline;
+  border-radius: 12px;
+  padding: 12px 16px;
+}
+
+.story-refs {
+  background: #757575;
+  color: #F5F5F5;
+  padding-top: sc(60px);
+  padding-bottom: sc(60px);
+
+  h2 { font-size: sc(44px); line-height: 1.12; color: #F5F5F5; margin-bottom: sc(28px); }
+  p { font-size: sc(18px); line-height: 1.6; max-width: sc(1145px); }
+  a { color: #F5F5F5; text-decoration: underline; }
+}
+
+@media (max-width: 767.98px) {
+  .story-hero h2, .story-arc h2, .story-local h2, .story-landscape h2, .story-refs h2, .story-emissions h2 { font-size: 2rem; }
+  .story-arc p, .story-arc-card, .story-emissions p, .story-local p, .story-landscape p, .story-org p { font-size: 1rem; }
+  .story-emissions { padding: 2rem 1.5rem; }
 }
 
 /* ---- Listing cards: Indicators grid (.quarto-grid-item) + any post list
@@ -670,4 +1290,720 @@ table thead th {
   &:hover {
     background: $accent-dark;
   }
+}
+
+/* ---- Additional Resources, from the Figma frame. Reuses .home-band and the footer. */
+$res-card-bg: $teal-light;
+
+.res-hero {
+  background: $story-teal;
+  color: #fff;
+  min-height: sc(762px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h2 { font-size: sc(55px); line-height: 1.12; color: #fff; margin-bottom: sc(25px); }
+  p { font-size: sc(21px); line-height: 1.6; max-width: sc(544px); }
+}
+
+.res-reports {
+  padding-top: sc(130px);
+  padding-bottom: sc(90px);
+
+  h2 { font-size: sc(48px); line-height: 1.2; max-width: sc(645px); margin-bottom: sc(40px); }
+  > p, section > p { font-size: sc(21px); line-height: 1.6; max-width: sc(1039px); margin-bottom: sc(24px); }
+}
+
+.res-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: sc(18px);
+  margin-top: sc(40px);
+}
+
+.res-card {
+  background: $res-card-bg;
+  color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+  padding: sc(50px) sc(46px);
+  font-family: $font-inter;
+  font-size: sc(21px);
+  line-height: 1.4;
+
+  .res-card-title { font-weight: 800; }
+  p { font-family: $font-krub; font-size: 14px; line-height: 1.45; margin-top: sc(26px); }
+  .res-card-link { color: #fff; font-family: $font-krub; font-size: 14px; text-decoration: underline; }
+}
+
+.res-tools {
+  padding-top: sc(50px);
+  padding-bottom: sc(96px);
+
+  h2 { font-size: sc(48px); line-height: 1.2; margin-bottom: sc(28px); }
+}
+
+.res-tool {
+  border-top: 1px solid #B9C7D0;
+  padding: sc(24px) 0;
+  max-width: sc(1000px);
+  font-size: 18px;
+  line-height: 1.65;
+  overflow-wrap: anywhere;
+
+  .res-tool-title { font-family: $font-inter; font-size: sc(23px); font-weight: 700; }
+}
+
+@media (max-width: 767.98px) {
+  .res-cards { grid-template-columns: 1fr; }
+  .res-hero h2, .res-reports h2, .res-tools h2 { font-size: 2rem; }
+  .res-hero p, .res-reports p, .res-card { font-size: 1rem; }
+}
+
+/* ---- Greenhouse Gases, from the Figma frame. Reuses .home-band and the footer. */
+$ghg-rule: #B9C7D0;
+$ghg-ink:  #0C0D1B;
+
+.ghg-hero {
+  background: $story-teal;
+  color: #fff;
+  min-height: sc(762px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h2 { font-size: sc(55px); line-height: 1.2; color: #fff; margin-bottom: sc(25px); }
+  p { font-size: sc(21px); line-height: 1.6; max-width: sc(544px); }
+}
+
+.ghg-why-wrap { padding-top: sc(136px); padding-bottom: sc(80px); }
+
+.ghg-why,
+.ghg-why-wrap.home-band > section.ghg-why.level2 {
+  display: block;
+  background: $res-card-bg;
+  color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+  padding: sc(115px) sc(56px);
+
+  h2 { font-size: sc(48px); line-height: 1.12; color: #fff; margin-bottom: sc(26px); }
+  p { font-size: sc(20px); line-height: 1.6; max-width: sc(900px); }
+}
+
+.ghg-topics { padding-bottom: sc(60px); }
+
+.ghg-topic {
+  border-top: 1px solid $ghg-rule;
+  padding: sc(15px) 0 sc(24px);
+  max-width: sc(1100px);
+  margin-bottom: sc(30px);
+  font-size: 18px;
+  line-height: 1.6;
+
+  .ghg-topic-title { font-family: $font-inter; font-size: sc(23px); font-weight: 700; }
+}
+
+.ghg-gases {
+  padding-top: sc(60px);
+  padding-bottom: sc(80px);
+
+  h2 { font-size: sc(48px); line-height: 1.2; max-width: sc(1088px); margin-bottom: sc(30px); }
+}
+
+.ghg-table-wrap { overflow-x: auto; border-radius: 15px 15px 0 0; }
+
+.ghg-table {
+  width: 100%;
+  min-width: 720px;
+  border-collapse: collapse;
+  font-family: Roboto, $font-family-sans-serif;
+  color: $ghg-ink;
+
+  th, td { padding: 16px 21px; vertical-align: top; border-right: 1px solid #D2D3DD; border-bottom: 1px solid #D2D3DD; font-size: 19.5px; line-height: 24px; }
+  th:last-child, td:last-child { border-right: 0; }
+  thead th { background: $story-teal; color: #fff; font-size: 21px; font-weight: 700; vertical-align: middle; height: 72px; border-color: rgba(255, 255, 255, 0.33); }
+  tbody th { font-size: 22px; font-weight: 700; padding-left: 11px; width: 212px; text-align: left; }
+  td strong { font-size: 22px; }
+}
+
+.ghg-table-notes {
+  margin-top: sc(30px);
+  font-size: 16px;
+  line-height: 1.25;
+  color: $ghg-ink;
+
+  p { margin-bottom: 12px; }
+}
+
+.ghg-refs-wrap { padding-bottom: sc(60px); }
+
+.ghg-refs {
+  background: #757575;
+  color: #F5F5F5;
+  border-radius: 15px;
+  padding: 40px;
+  font-size: 18px;
+  line-height: 1.6;
+
+  .ghg-refs-title { display: block; font-family: $font-inter; font-size: sc(32px); font-weight: 800; margin-bottom: 28px; }
+  p { margin: 0; }
+  a { color: #F5F5F5; text-decoration: underline; }
+}
+
+.ghg-us {
+  background: $story-teal;
+  color: #fff;
+  padding-top: sc(96px);
+  padding-bottom: sc(96px);
+
+  .ghg-us-source { font-family: $font-inter; font-size: 11px; font-weight: 600; text-transform: uppercase; line-height: 1.4; margin-bottom: sc(26px); }
+  h2 { font-size: sc(49px); line-height: 1.12; color: #fff; margin-bottom: sc(26px); }
+  p { font-size: sc(20px); line-height: 1.6; max-width: sc(1100px); margin-bottom: sc(24px); }
+}
+
+.ghg-section {
+  padding-top: sc(60px);
+  padding-bottom: sc(40px);
+  color: $ghg-ink;
+
+  h2 { font-size: sc(48px); line-height: 1.3; margin-bottom: sc(20px); }
+  h3 { font-size: sc(36px); font-style: italic; line-height: 1.3; margin-bottom: sc(30px); }
+  p { font-size: 18px; line-height: 1.6; max-width: sc(1312px); margin-bottom: 1.2em; }
+}
+
+.ghg-figure-title { display: block; font-size: 16px; font-weight: 700; line-height: 1.4; margin-top: sc(20px); }
+
+img.ghg-figure-img { display: block; max-width: sc(976px); width: 100%; height: auto; }
+
+.ghg-figure-pair {
+  align-items: start;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: sc(24px);
+}
+
+.ghg-link-card {
+  max-width: sc(1085px);
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 21px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  padding: sc(32px);
+
+  .ghg-link-card-title { display: block; font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+  p { font-size: 15px; color: rgba(0, 0, 0, 0.55); }
+  .ghg-link-card-cta { font-family: $font-inter; font-size: 15px; font-weight: 900; color: #000; text-decoration: none; }
+}
+
+@media (max-width: 767.98px) {
+  .ghg-hero h2, .ghg-why h2, .ghg-gases h2, .ghg-us h2, .ghg-section h2 { font-size: 2rem; }
+  .ghg-section h3 { font-size: 1.5rem; }
+  .ghg-hero p, .ghg-why p, .ghg-us p { font-size: 1rem; }
+  .ghg-why { padding: 2rem 1.5rem; }
+  .ghg-figure-pair { grid-template-columns: 1fr; }
+}
+
+/* ---- Global Climate Indicators, from the Figma frame. Reuses .ghg-section, .ghg-figure-title, .ghg-link-card and the footer. */
+.gci-hero {
+  background: $home-navy;
+  color: #fff;
+  min-height: sc(762px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h2 { font-size: sc(55px); line-height: 1.2; color: #fff; margin-bottom: sc(25px); }
+  p { font-size: sc(21px); line-height: 1.6; max-width: sc(562px); margin-bottom: 1.2em; }
+  a { color: #fff; text-decoration: underline; }
+}
+
+.gci-section {
+  h2 { font-size: sc(55px); }
+  p { font-size: sc(21px); line-height: 1.6; }
+}
+
+.gci-refs { font-size: 14px; line-height: 1.45; margin-bottom: 1.2em; p { font-size: 14px; } }
+
+@media (max-width: 767.98px) {
+  .gci-hero h2, .gci-section h2 { font-size: 2rem; }
+  .gci-hero p, .gci-section p { font-size: 1rem; }
+}
+
+/* ---- Indicator category pages (Weather and Extreme Events, etc.), from the Figma frame.
+   Reuses .home-band and the footer. The hero takes its colour from the same
+   $card-category-map variables as the sidebar; swap in the Figma banner image later. */
+$cat-card-border: #C8C8C8;
+
+@each $name, $colour in (
+  cat-weather-extremes: $cat-weather-extremes, cat-cryosphere: $cat-cryosphere,
+  cat-coastal-marine: $cat-coastal-marine, cat-freshwater: $cat-freshwater,
+  cat-ecosystems: $cat-ecosystems, cat-temperature-health: $cat-temperature-health,
+  cat-vector-health: $cat-vector-health, cat-societal: $cat-societal
+) {
+  .cat-hero.#{$name} { background: $colour; }
+}
+
+.cat-hero.cat-all { background: $home-green; }
+
+// Darkens the category photo so the white heading stays readable.
+.cat-hero.hero-bg .hero-bg-img::after { content: ""; position: absolute; inset: 0; background: rgba(0, 0, 0, 0.35); }
+
+.cat-hero {
+  min-height: sc(485px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+
+  h2 { font-size: sc(55px); line-height: 1.2; color: #fff; }
+}
+
+.cat-body { padding-top: sc(70px); padding-bottom: sc(90px); }
+
+.cat-intro {
+  max-width: sc(833px);
+  border-left: 3px solid $green;
+  box-shadow: -2px 0 8px rgba($green, 0.2);
+  padding: sc(30px) 0 sc(30px) sc(28px);
+  margin-bottom: sc(60px);
+  font-size: sc(24px);
+  line-height: 1.5;
+  color: $green-dark;
+}
+
+.cat-columns {
+  display: grid;
+  grid-template-columns: sc(221px) 1fr;
+  column-gap: sc(110px);
+  align-items: start;
+}
+
+.cat-side {
+  .cat-side-title { display: block; font-family: $font-inter; font-size: sc(30px); font-weight: 800; margin-bottom: sc(34px); }
+  ul { list-style: none; padding: 0; margin: 0; }
+  li { margin-bottom: sc(29px); }
+  a { color: #000; font-family: $font-krub; font-size: 16px; line-height: 1.5; text-decoration: none !important; }
+  a:hover { text-decoration: underline !important; }
+  a.is-current { font-weight: 600; }
+}
+
+.cat-main {
+  // Search box from Quarto's listing filter, shaped like the Figma pill.
+  .listing-filter, .quarto-listing-filter input, input.search {
+    width: sc(278px);
+    border: 2px solid #8C8C8C;
+    border-radius: 30px;
+    padding: 0.6rem 1.2rem;
+    font-family: $font-krub;
+    font-size: 18px;
+  }
+  .listing-actions-group { justify-content: flex-start; }
+  .quarto-listing-filter { margin-bottom: sc(24px); .input-group-text { display: none; } }
+
+  .quarto-grid-item.card {
+    border: 2px solid $cat-card-border;
+    border-radius: 21px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+    padding: sc(32px) sc(24px);
+
+    // The category-colour icon the Indicators grid shows is not part of this design.
+    .card-title::before { content: none !important; }
+    .card-title { font-family: $font-inter; font-size: 20px; font-weight: 900; color: #000; }
+    .card-text, .listing-description { font-family: $font-krub; font-size: 15px; color: rgba(0, 0, 0, 0.55); }
+    .card-body::after { content: "Explore \2192"; display: block; margin-top: 12px; font-family: $font-inter; font-size: 15px; font-weight: 900; color: #000; }
+  }
+}
+
+.cat-viewall {
+  display: block;
+  width: fit-content;
+  margin: sc(60px) auto 0;
+  background: $home-charcoal;
+  color: #F5F5F5 !important;
+  font-family: $font-inter;
+  font-size: 24px;
+  font-weight: 900;
+  text-decoration: none !important;
+  border-radius: 20px;
+  padding: 12px 36px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 991.98px) {
+  .cat-columns { grid-template-columns: 1fr; row-gap: 2rem; }
+  .cat-hero h2 { font-size: 2rem; }
+  .cat-intro { font-size: 1.1rem; }
+}
+
+/* ---- Climate, Health and Environmental Indicators landing page, from the Figma frame.
+   Reuses .home-band and the footer. Card image slots take the category colour until
+   the Figma images are supplied. */
+.che-hero {
+  // The .home-band rule turns plain sections into display: contents; these
+  // section classes do not contain "home-" or "about-", so restore their boxes.
+  &.home-band > section.che-hero-text.level2 { display: block; }
+  background: $home-green;
+  color: #fff;
+  min-height: sc(762px);
+  display: grid;
+  grid-template-columns: minmax(0, sc(674px)) 1fr;
+  align-items: center;
+  column-gap: 2rem;
+
+  h2 { font-size: sc(55px); line-height: sc(60px); color: #fff; margin-bottom: sc(24px); }
+  p { font-size: sc(24px); line-height: 1.5; max-width: sc(658px); }
+
+  // Flush to the right edge and the full band height, as in the Figma frame.
+  padding-right: 0;
+  .che-hero-img {
+    justify-self: end;
+    align-self: stretch;
+    width: sc(629px);
+    img { width: 100%; height: 100%; object-fit: cover; display: block; margin: 0; }
+  }
+}
+
+.che-indicators {
+  padding-top: sc(80px);
+  padding-bottom: sc(80px);
+
+  h2 { font-size: sc(55px); line-height: 1.2; }
+  // One continuous rule down the heading and the line under it.
+  > h2, > p:first-of-type {
+    border-left: 4px solid $green;
+    padding-left: sc(20px);
+  }
+  > h2 { padding-top: sc(8px); }
+  > p:first-of-type {
+    font-size: sc(31px);
+    padding-bottom: sc(8px);
+    margin-bottom: sc(40px);
+  }
+}
+
+.che-search {
+  display: block;
+  width: sc(278px);
+  border: 2px solid #8C8C8C;
+  border-radius: 30px;
+  padding: 0.6rem 1.2rem;
+  font-family: $font-krub;
+  font-size: 18px;
+  margin-bottom: sc(40px);
+}
+
+.che-cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-rows: repeat(2, auto);
+  grid-auto-flow: column;
+  gap: sc(20px);
+}
+
+.che-card,
+.home-band section.che-card.level3 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 21px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  padding: 0 sc(24px) sc(24px);
+  border-top: sc(199px) solid $stone;
+
+  h3 { font-size: 20px; font-weight: 900; margin: sc(20px) 0 sc(12px); }
+  p { font-size: 15px; color: rgba(0, 0, 0, 0.55); flex: 1; }
+  .che-card-link {
+    margin-top: sc(16px);
+    font-family: $font-inter;
+    font-size: 15px;
+    font-weight: 900;
+    color: #000;
+    text-decoration: none !important;
+    // Stretch the link over the whole card.
+    &::after { content: ""; position: absolute; inset: 0; }
+  }
+}
+
+@each $cls, $colour in (
+  cat-weather-extremes: $cat-weather-extremes, cat-cryosphere: $cat-cryosphere,
+  cat-coastal-marine: $cat-coastal-marine, cat-freshwater: $cat-freshwater,
+  cat-ecosystems: $cat-ecosystems, cat-temperature-health: $cat-temperature-health,
+  cat-vector-health: $cat-vector-health, cat-societal: $cat-societal
+) {
+  .che-card.#{$cls} { border-top-color: $colour; }
+}
+
+.che-about-wrap {
+  padding-bottom: sc(60px);
+}
+
+.che-about,
+.home-band section.che-about.level2 {
+  display: block;
+  background: $rust-dark;
+  color: #fff;
+  border-radius: 15px;
+  padding: sc(96px);
+
+  h2 { font-size: sc(55px); line-height: 1.12; color: #fff; margin-bottom: sc(28px); }
+  p { font-size: sc(18px); line-height: 1.6; margin-bottom: 1.4em; }
+  p:last-child { margin-bottom: 0; }
+}
+
+.che-refs {
+  background: #757575;
+  color: #F5F5F5;
+  padding-top: sc(60px);
+  padding-bottom: sc(60px);
+
+  h2 { font-size: sc(44px); line-height: 1.12; margin-bottom: sc(28px); }
+  p { font-size: sc(18px); line-height: 1.6; margin-bottom: 1em; overflow-wrap: anywhere; }
+  a { color: #F5F5F5; text-decoration: underline; }
+}
+
+@media (max-width: 1199.98px) {
+  .che-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: none; grid-auto-flow: row; }
+}
+
+@media (max-width: 767.98px) {
+  .che-hero { grid-template-columns: 1fr; padding-top: 2rem; padding-bottom: 0; padding-right: 1.5rem; }
+  .che-hero .che-hero-img { justify-self: start; width: 100%; margin-top: 1.5rem; }
+  .che-cards { grid-template-columns: 1fr; grid-template-rows: none; grid-auto-flow: row; }
+  .che-card { border-top-width: 120px; }
+  .che-about { padding: 2rem 1.5rem; }
+  .che-hero h2, .che-indicators h2, .che-about h2 { font-size: 2rem; line-height: 1.15; }
+  .che-hero p, .che-about p, .che-refs p { font-size: 1rem; }
+}
+
+/* ---- Hero with a photo column flush to the right edge (Figma 756 x 762), used by the
+   Methodology, Additional Resources and Greenhouse Gases pages. Declared after the
+   individual hero rules so the grid replaces their flex column. */
+.hero-split {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) sc(756px);
+  align-items: center;
+  column-gap: 2rem;
+  padding-right: 0;
+
+  &.home-band > section.hero-split-text.level2 { display: block; }
+
+  .hero-split-img {
+    align-self: stretch;
+    // The hero's own `p` rule caps paragraph width; the photo wrapper is a <p> too.
+    p { margin: 0; height: 100%; max-width: none; }
+    img { width: 100%; height: 100%; object-fit: cover; display: block; margin: 0; }
+  }
+}
+
+/* ---- Hero with a full-bleed photo behind the heading (Emissions & Climate Resources). */
+.hero-bg {
+  position: relative;
+  overflow: hidden;
+
+  .hero-bg-img {
+    position: absolute;
+    inset: 0;
+    p { margin: 0; height: 100%; }
+    img { width: 100%; height: 100%; object-fit: cover; display: block; margin: 0; }
+  }
+  h2 { position: relative; z-index: 1; }
+}
+
+/* ---- Footer logo (Figma: 202 x 169, above the address). */
+.home-footer .home-footer-logo {
+  display: block;
+  width: sc(202px);
+  height: auto;
+  margin: 0 0 sc(30px);
+}
+
+@media (max-width: 767.98px) {
+  .hero-split { grid-template-columns: 1fr; padding-top: 2rem; padding-bottom: 0; padding-right: 1.5rem; }
+  .hero-split .hero-split-img { margin-top: 1.5rem; }
+}
+
+/* ---- Emissions & Climate Resources: card with the photo on the left, and the two
+   photo-and-caption columns under "Some greenhouse gases also have direct impacts". */
+.story-arc-card {
+  display: grid;
+  grid-template-columns: sc(604px) minmax(0, 1fr);
+  column-gap: sc(60px);
+  align-items: center;
+
+  .story-arc-img p { margin: 0; max-width: none; }
+  .story-arc-img img { width: 100%; height: auto; display: block; margin: 0; border-radius: 15px; }
+}
+
+.story-impacts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: sc(40px);
+  margin-top: sc(24px);
+
+  .story-impact img { width: 100%; height: auto; display: block; margin: 0 0 sc(16px); }
+  .story-impact p { margin-bottom: 0; }
+}
+
+@media (max-width: 767.98px) {
+  .story-arc-card { grid-template-columns: 1fr; row-gap: 1.5rem; padding: 2rem 1.5rem; }
+  .story-impacts { grid-template-columns: 1fr; row-gap: 1.5rem; }
+}
+
+.story-local img { width: 100%; height: auto; display: block; margin: 0; }
+
+// Organisation cards: text on the left, photo on the right.
+.story-org {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) sc(310px);
+  column-gap: sc(40px);
+  align-items: center;
+
+  .story-org-img p { margin: 0; max-width: none; }
+  .story-org-img img { width: 100%; height: auto; display: block; margin: 0; }
+}
+
+@media (max-width: 767.98px) {
+  .story-org { grid-template-columns: 1fr; row-gap: 1.5rem; }
+}
+
+/* ---- Methodology: wavy connectors between the process steps, in reading order
+   (01 > 02 > 03, then down and back across to 04, then 04 > 05 > 06). The line is a
+   mask over a $home-navy fill, so it takes its colour from the variable. */
+$squiggle-h: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='12' viewBox='0 0 24 12'%3E%3Cpath d='M0 6 Q6 0 12 6 T24 6' fill='none' stroke='black' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E");
+$squiggle-v: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='24' viewBox='0 0 12 24'%3E%3Cpath d='M6 0 Q0 6 6 12 T6 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E");
+
+.method-step {
+  position: relative;
+
+  &::before, &::after { content: ""; position: absolute; background: $home-navy; pointer-events: none; }
+
+  // Across the column gap, to the next step in the same row.
+  &:is(:nth-child(1), :nth-child(2), :nth-child(4), :nth-child(5))::after {
+    left: 100%;
+    top: 50%;
+    width: $method-gap;
+    height: $method-squiggle;
+    margin-top: calc(#{$method-squiggle} / -2);
+    -webkit-mask: $squiggle-h round no-repeat center / auto 100%;
+    mask: $squiggle-h round no-repeat center / auto 100%;
+  }
+
+  // Step 03 to step 04: down into the row gap, back across to the first column, down again.
+  &:nth-child(3)::after,
+  &:nth-child(4)::before {
+    left: 50%;
+    width: $method-squiggle;
+    height: $method-gap * 0.5;
+    margin-left: calc(#{$method-squiggle} / -2);
+    -webkit-mask: $squiggle-v no-repeat round center / 100% auto;
+    mask: $squiggle-v no-repeat round center / 100% auto;
+  }
+  &:nth-child(3)::after { top: 100%; }
+  &:nth-child(4)::before { bottom: 100%; }
+
+  &:nth-child(3)::before {
+    right: 50%;
+    top: calc(100% + #{$method-gap * 0.5});
+    width: calc(200% + #{$method-gap * 2});
+    height: $method-squiggle;
+    margin-top: calc(#{$method-squiggle} / -2);
+    -webkit-mask: $squiggle-h round no-repeat center / auto 100%;
+    mask: $squiggle-h round no-repeat center / auto 100%;
+  }
+}
+
+// One column: a short vertical squiggle under every step except the last.
+@media (max-width: 991.98px) {
+  .method-steps .method-step::before { display: none; }
+  .method-steps .method-step:not(:last-child)::after {
+    left: 50%;
+    top: 100%;
+    width: $method-squiggle;
+    height: $method-gap;
+    margin: 0 0 0 calc(#{$method-squiggle} / -2);
+    -webkit-mask: $squiggle-v no-repeat round center / 100% auto;
+    mask: $squiggle-v no-repeat round center / 100% auto;
+  }
+}
+
+/* ---- Methodology: description card that opens over a step on hover or keyboard focus
+   (tabindex on the step makes a tap or Tab reveal it too). Same width as the step,
+   square top-left corner so it reads as the step box opening up. */
+.method-step {
+  &:focus { outline: none; }
+  &:focus-visible { outline: 3px solid $accent; outline-offset: 4px; }
+
+  .method-step-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    width: 100%;
+    min-height: 100%;
+    box-sizing: border-box;
+    background: #fff;
+    color: #000;
+    border-radius: 0 sc(30px) sc(30px) sc(30px);
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.25);
+    padding: sc(50px);
+    font-weight: 400;
+    text-align: left;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.15s ease, visibility 0.15s;
+
+    .method-step-card-title { display: block; padding: sc(10px); font-family: $font-inter; font-size: sc(40px); font-weight: 800; line-height: 1.45; }
+    p, ul { font-family: $font-krub; font-size: sc(17px); line-height: 1.4; padding: 0 sc(10px); margin: 0 0 1em; }
+    strong { font-weight: 600; }
+    ul { list-style: disc; padding-left: sc(36px); margin-bottom: 0; }
+    li { margin-bottom: 0.5em; }
+  }
+
+  &:is(:hover, :focus-within) .method-step-card { opacity: 1; visibility: visible; }
+}
+
+// Technical Document card: text on the left, report cover on the right.
+.method-doc {
+  grid-template-columns: minmax(0, 1fr) sc(344px);
+  column-gap: sc(40px);
+  align-items: center;
+
+  .method-doc-img p { margin: 0; max-width: none; }
+  .method-doc-img img { width: 100%; height: auto; display: block; margin: 0; }
+}
+
+@media (max-width: 767.98px) {
+  .method-doc { grid-template-columns: 1fr; row-gap: 1.5rem; }
+}
+
+// Footer (desktop): sit the logo and address block low enough that the address lines
+// level with the Terms of Service row under the divider. Stacked layouts keep the normal flow.
+@media (min-width: 992px) {
+  .home-footer .home-footer-org {
+    align-self: end;
+    margin-bottom: sc(-155px);
+  }
+}
+
+// Global GHG emissions link card: text on the left, photo filling the right edge.
+.ghg-link-card.has-img {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) sc(465px);
+  padding: 0;
+  overflow: hidden;
+
+  .ghg-link-card-text { padding: sc(32px); align-self: center; }
+  .ghg-link-card-img { min-height: 100%; }
+  .ghg-link-card-img p { margin: 0; height: 100%; }
+  .ghg-link-card-img img { width: 100%; height: 100%; object-fit: cover; display: block; margin: 0; }
+}
+
+@media (max-width: 767.98px) {
+  .ghg-link-card.has-img { grid-template-columns: 1fr; }
+  .ghg-link-card.has-img .ghg-link-card-img img { height: auto; }
 }

@@ -1,12 +1,13 @@
 ---
 title: ""
-pagetitle: "Climate Indicators"
+pagetitle: "Tracking Climate Impacts"
 description: "Tracking the indicators that show how a changing climate is affecting people and places across the United States."
 execute:
   echo: false
   message: false
   warning: false
 page-layout: full
+anchor-sections: false
 toc: false
 back-to-top-navigation: false
 
@@ -15,19 +16,90 @@ format:
     link-external-newwindow: false
 ---
 
-# Welcome to climateindicators.us!
+::: {.home-band .home-hero}
 
-{{< include chunks/description.qmd >}}
+::: {.home-hero-text}
+## Welcome to Tracking Climate Impacts!
 
-<br>
+TrackingClimateImpacts.us is an open, reproducible collection of climate change impact indicators for the United States. Built entirely from public data--with code and sources published alongside them—these indicators track observed trends in climate-related metrics that matter to people, public health, and the environment. They offer clear, trustworthy information to support evidence-based action and help state, local and public health practitioners plan for climate impacts, while ensuring students, researchers and the public have access to critical data.
+:::
 
-{{< include /chunks/coming-soon.qmd >}}
+::: {.home-hero-img}
+![](images/hexagons.png){fig-alt=""}
+:::
 
-<br>
+:::
 
-```{=html}
-<div class="home-pills">
-  <a class="home-pill" href="about.html"><span class="home-pill-label"><i class="bi bi-info-circle"></i>About</span><span class="home-pill-desc">About the project, the data sources, and the people behind it.</span></a>
-  <a class="home-pill" href="indicators.html"><span class="home-pill-label"><i class="bi bi-graph-up"></i>Indicators</span><span class="home-pill-desc">Browse the full set of climate indicators we track.</span></a>
-</div>
-```
+::: {.home-band .home-mission}
+Our mission, at GW’s Climate and Health Institute, is to maintain and expand these climate change impact indicators as a durable and transparent resource and to strengthen collaboration among data providers, developers, and users across academia and state, local, and community practitioners.
+:::
+
+::: {.home-band}
+
+::: {.home-feature .indicators}
+
+::: {.home-feature-text}
+::: {.home-feature-eyebrow}
+The Indicators
+:::
+
+## Health & Environment Indicators
+
+Rising temperatures, shifting snow and rainfall patterns, and more frequent extreme weather events are clear signs of a changing climate. Many of these observed changes are linked to increasing greenhouse gas concentrations in the atmosphere caused by human activities. The indicators presented here document these changes and help illustrate their impacts that matter to human health, communities, ecosystems, and the environment.
+
+[View Data ↗](indicators.qmd){.home-feature-link}
+:::
+
+::: {.home-feature-img}
+![](images/reef1.png){fig-alt=""}
+:::
+
+:::
+
+::: {.home-feature .story}
+
+::: {.home-feature-text}
+## Emissions & Climate Resources
+
+Climate indicators illuminate the full arc of climate change—from trends in the greenhouse gas emissions that drive planetary warming, to shifts in Earth’s systems, to the impacts felt in communities and ecosystems. While [TrackingClimateImpacts.us]{.underline} provides a range of indicators and focuses on the impacts of climate change in the United States, understanding those impacts requires seeing them within the broader context of global change.
+
+[Understand the context ↗](emissions-and-climate-resources.qmd){.home-feature-link}
+:::
+
+::: {.home-feature-img}
+![](images/sky1.png){fig-alt=""}
+:::
+
+:::
+
+:::
+
+::: {.home-band .home-section .first}
+## Methodology
+
+This section documents the transparent, reproducible processes that underpin the indicators on [TrackingClimateImpacts.us]{.underline} and preserves the methodological foundation developed by the U.S. Environmental Protection Agency (EPA) through January 2025. It also describes how our approach will evolve as new science, data, and partnerships emerge.
+
+[Learn More](methodology.qmd){.home-btn}
+:::
+
+::: {.home-band .home-section}
+## Where We’re Heading
+
+TrackingClimateImpacts.us maintains the full technical documentation and methodological detail from EPA’s January 19, 2025 snapshot to ensure continuity, transparency, and trust.
+
+[Learn More](where-were-heading.qmd){.home-btn}
+:::
+
+::: {.home-band .home-section}
+## About
+
+TrackingClimateImpacts.us maintains the full technical documentation and methodological detail from EPA’s January 19, 2025 snapshot to ensure continuity, transparency, and trust.
+
+[Learn More](about.qmd){.home-btn}
+:::
+
+::: {.home-band .home-statement}
+This effort preserves EPA's climate change indicators and sets the stage for a durable, community-connected climate indicator system for communities, health practitioners, researchers, and the public.
+:::
+
+{{< include /chunks/footer.qmd >}}
