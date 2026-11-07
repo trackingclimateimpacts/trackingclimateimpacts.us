@@ -49,7 +49,9 @@ fig_1_plot <- function(d) {
       aes(
         x = longitude, y = latitude, fill = direction, colour = significance,
         size = sqrt(rel_mag),
-        data_id = lake,
+        # Row index, not the lake name: ggiraph rejects the apostrophe in
+        # "Bras d'Or Lake" inside a data_id attribute.
+        data_id = seq_along(lake),
         tooltip = sprintf("%s\n%.2f °F, 1985-2009\n%s", lake, value,
                           unname(SIGNIFICANCE_LABELS[as.character(significance)]))
       ),
