@@ -313,8 +313,9 @@ Two navbar details that are easy to break:
   category name and listing only that category's indicators; Quarto shows on
   each page the sidebar that contains it. It is styled like the category
   pages' left list (`.cat-side`).
-- Snowfall and Global Greenhouse Gas Emissions stay directly in `indicators/`
-  and belong to no category, so their pages show no sidebar. Global Greenhouse
+- Sea Level and Global Greenhouse Gas Emissions stay directly in `indicators/`
+  and belong to no category, so their pages show no sidebar. Sea Level is linked
+  from the Global Climate Indicators page. Global Greenhouse
   Gas Emissions is excluded from the `indicators.qmd` grid; the category
   landing pages are excluded from it too.
 

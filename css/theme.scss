@@ -90,10 +90,10 @@ $card-category-map: (
     "heat-waves", "heavy-precipitation", "tropical-cyclone-activity", "river-flooding",
     "drought", "temperature-and-drought-in-the-southwest", "wildfires"
   ),
-  $cat-coastal-marine: ("sea-surface-temperature", "sea-level", "coastal-flooding", "marine-heat-waves", "atlantic-coast",
+  $cat-coastal-marine: ("sea-surface-temperature", "coastal-flooding", "marine-heat-waves", "atlantic-coast",
     "antarctic-sea-ice", "ocean-acidity"),
   $cat-cryosphere: (
-    "glaciers-in-glacier-park", "lake-ice", "great-lakes-ice-cover", "snowpack",
+    "glaciers-in-glacier-park", "lake-ice", "great-lakes-ice-cover", "snowfall", "snowpack",
     "permafrost", "freeze-thaw-conditions", "ice-sheets", "alaskan-rivers"
   ),
   $cat-temperature-health: (

@@ -1,4 +1,4 @@
-# Figures for indicators/coastal-and-marine/sea-level.qmd.
+# Figures for indicators/sea-level.qmd.
 
 REPO <- "sea-level"
 

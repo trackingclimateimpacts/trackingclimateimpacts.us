@@ -5,7 +5,6 @@ listing:
   - id: cat-listing
     contents:
       - sea-surface-temperature.qmd
-      - sea-level.qmd
       - coastal-flooding.qmd
       - marine-heat-waves.qmd
       - atlantic-coast.qmd

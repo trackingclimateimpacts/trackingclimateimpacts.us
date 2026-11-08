@@ -106,6 +106,8 @@ website:
           href: indicators/snow-and-ice/lake-ice.qmd
         - text: "Great Lakes Ice Cover"
           href: indicators/snow-and-ice/great-lakes-ice-cover.qmd
+        - text: "Snowfall"
+          href: indicators/snow-and-ice/snowfall.qmd
         - text: "Snowpack"
           href: indicators/snow-and-ice/snowpack.qmd
         - text: "Permafrost"
@@ -124,8 +126,6 @@ website:
           href: indicators/coastal-and-marine/index.qmd
         - text: "Sea Surface Temperature"
           href: indicators/coastal-and-marine/sea-surface-temperature.qmd
-        - text: "Sea Level"
-          href: indicators/coastal-and-marine/sea-level.qmd
         - text: "Coastal Flooding"
           href: indicators/coastal-and-marine/coastal-flooding.qmd
         - text: "Marine Heat Waves"

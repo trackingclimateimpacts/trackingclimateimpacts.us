@@ -85,7 +85,7 @@ Worldwide, most glaciers are shrinking or disappearing altogether. The “climat
 
 This indicator describes how sea level has changed over time.
 
-[Explore →](indicators/coastal-and-marine/sea-level.qmd){.ghg-link-card-cta}
+[Explore →](indicators/sea-level.qmd){.ghg-link-card-cta}
 :::
 
 ::: {.ghg-link-card-img}

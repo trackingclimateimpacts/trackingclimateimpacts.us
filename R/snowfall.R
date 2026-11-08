@@ -1,4 +1,4 @@
-# Figures for indicators/snowfall.qmd.
+# Figures for indicators/snow-and-ice/snowfall.qmd.
 
 REPO <- "snowfall"
 
