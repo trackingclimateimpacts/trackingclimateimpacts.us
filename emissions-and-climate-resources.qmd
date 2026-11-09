@@ -45,7 +45,8 @@ While [TrackingClimateImpacts.us]{.underline} provides a range of indicators and
 ::: {.story-emissions}
 ## Emissions To Impacts
 
-Human‑generated greenhouse gas emissions—including carbon dioxide, methane, nitrous oxide, and fluorinated gases—come from fossil fuel combustion, industrial processes, agriculture, and other human activities. These emissions increase concentrations of greenhouse gases in the atmosphere, and these higher concentrations trap heat and warm the planet. This warming drives changes across the atmosphere, oceans, and cryosphere, altering weather patterns, accelerating sea‑level rise, reshaping ocean currents, and reducing land and sea ice.
+Human‑generated greenhouse gas emissions—including carbon dioxide, methane, nitrous oxide, and fluorinated gases—come from fossil fuel combustion, industrial processes, agriculture, and other human activities. These emissions increase concentrations of greenhouse gases in the atmosphere, and these higher concentrations trap heat and warm the planet. This warming drives changes across the atmosphere, oceans, and cryosphere, altering weather patterns, accelerating sea‑level rise, reshaping ocean currents, and reducing land and sea ice. These interconnected changes influence how climate impacts unfold regionally and locally. No single indicator tells the whole story, each is part of a larger system responding to human‑driven change and natural variability.
+
 
 **Some greenhouse gases also have direct impacts:**
 
@@ -67,20 +68,14 @@ Methane’s reaction in the atmosphere creates ozone which damages both human he
 :::
 :::
 
-::: {.home-band .story-local}
-## How change shows up locally
-
-These interconnected changes influence how climate impacts unfold regionally and locally.
-
-*No single indicator tells the whole story—each is part of a larger system responding to human‑driven change and natural variability*
-
-![](images/change_locally.png){fig-alt=""}
-:::
 
 ::: {.home-band .story-landscape}
 ## The Climate Data Landscape
 
-Our Climate, Health and Environment Indicators page provides U.S. trends in climate-related impacts including weather and extreme events, impacts on snow and ice, and various impacts on human health, society, and ecosystems. Several organizations also maintain trusted, publicly accessible resources that complement and set the context for the indicators found here. Together, these resources help track the full climate system and tell a more complete climate story—from emissions to drivers to impacts.
+Our Climate, Health and Environment Indicators page provides U.S. observed trends in climate-related impacts including  weather and extreme events, impacts on snow and ice, and various impacts on human health, society, and ecosystems. Several organizations also maintain trusted, publicly accessible resources that complement and set the context for the indicators found here. Together, these resources help track the full climate system and tell a more complete climate story—from emissions to drivers to impacts.
+We highlight material from two organizations (further information can be found at [Additional Resources](https://trackingclimateimpacts.us/additional-resources)):
+
+
 
 **We highlight material from two organizations:**
 

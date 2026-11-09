@@ -708,6 +708,7 @@ body:has(.home-band) .quarto-title-block { display: none; }
   .about-collab-text { padding: sc(44px); }
   h2 { font-size: sc(50px); line-height: 1.12; color: #fff; margin-bottom: sc(24px); }
   p { font-size: sc(20px); line-height: 1.6; }
+  a, a:hover { color: #fff; }
   .about-collab-img { min-height: sc(300px); background: rgba(255, 255, 255, 0.18); }
   .about-collab-img { position: relative; }
   .about-collab-img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; margin: 0; }
@@ -824,7 +825,6 @@ body:has(.home-band) .quarto-title-block { display: none; }
   padding: sc(24px) 0;
   border-top: 1px solid #B9C7D0;
 
-  .where-num { flex: none; width: sc(32px); font-size: 13px; color: #606866; }
   p { font-size: sc(18px); line-height: 1.6; font-weight: 400; margin: 0; }
   strong { font-size: sc(23px); font-weight: 800; }
 }
