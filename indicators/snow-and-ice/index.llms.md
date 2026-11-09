@@ -27,6 +27,10 @@ This indicator measures the amount of time that ice is present on lakes in the U
 
 This indicator measures the area and duration of ice cover in the Great Lakes.
 
+##### Snowfall
+
+This indicator uses two different measures to show how snowfall has changed in the contiguous 48 states.
+
 ##### Snowpack
 
 This indicator measures trends in the amount and timing of snowpack in the western United States.
@@ -64,7 +68,7 @@ Washington, DC 20052
 ### Emissions & Climate Resources
 
 - [Emissions & Climate Resources](../../emissions-and-climate-resources.llms.md)
-- [Green House Gases](../../greenhouse-gases.llms.md)
+- [Greenhouse Gases](../../greenhouse-gases.llms.md)
 - [Global Climate Indicators](../../global-climate-indicators.llms.md)
 - [Additional Resources](../../additional-resources.llms.md)
 

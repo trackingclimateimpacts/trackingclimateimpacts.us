@@ -36,6 +36,7 @@
       "/indicators/snow-and-ice/glaciers-in-glacier-park.html",
       "/indicators/snow-and-ice/lake-ice.html",
       "/indicators/snow-and-ice/great-lakes-ice-cover.html",
+      "/indicators/snow-and-ice/snowfall.html",
       "/indicators/snow-and-ice/snowpack.html",
       "/indicators/snow-and-ice/permafrost.html",
       "/indicators/snow-and-ice/freeze-thaw-conditions.html",
@@ -44,10 +45,32 @@
     ]
   },
   {
+    "listing": "/indicators/freshwater-systems/index.html",
+    "items": [
+      "/indicators/freshwater-systems/streamflow.html",
+      "/indicators/freshwater-systems/stream-temperature.html",
+      "/indicators/freshwater-systems/snake-river.html",
+      "/indicators/freshwater-systems/lake-temperature.html",
+      "/indicators/freshwater-systems/great-lakes.html"
+    ]
+  },
+  {
+    "listing": "/indicators/ecosystems/index.html",
+    "items": [
+      "/indicators/ecosystems/length-of-growing-season.html",
+      "/indicators/ecosystems/growing-degree-days.html",
+      "/indicators/ecosystems/ragweed-pollen-season.html",
+      "/indicators/ecosystems/leaf-and-bloom-dates.html",
+      "/indicators/ecosystems/cherry-blossom-bloom.html",
+      "/indicators/ecosystems/marine-species-distribution.html",
+      "/indicators/ecosystems/bird-wintering-ranges.html",
+      "/indicators/ecosystems/black-guillemots-cooper-island.html"
+    ]
+  },
+  {
     "listing": "/indicators/coastal-and-marine/index.html",
     "items": [
       "/indicators/coastal-and-marine/sea-surface-temperature.html",
-      "/indicators/coastal-and-marine/sea-level.html",
       "/indicators/coastal-and-marine/coastal-flooding.html",
       "/indicators/coastal-and-marine/marine-heat-waves.html",
       "/indicators/coastal-and-marine/atlantic-coast.html",
@@ -93,10 +116,10 @@
       "/indicators/ecosystems/ragweed-pollen-season.html",
       "/indicators/societal-systems/residential-energy-use.html",
       "/indicators/weather-and-extreme-events/river-flooding.html",
-      "/indicators/coastal-and-marine/sea-level.html",
+      "/indicators/sea-level.html",
       "/indicators/coastal-and-marine/sea-surface-temperature.html",
       "/indicators/weather-and-extreme-events/seasonal-temperature.html",
-      "/indicators/snowfall.html",
+      "/indicators/snow-and-ice/snowfall.html",
       "/indicators/snow-and-ice/snowpack.html",
       "/indicators/freshwater-systems/stream-temperature.html",
       "/indicators/freshwater-systems/streamflow.html",
@@ -105,29 +128,6 @@
       "/indicators/weather-and-extreme-events/us-and-global-temperature.html",
       "/indicators/vector-related-health/west-nile-virus.html",
       "/indicators/weather-and-extreme-events/wildfires.html"
-    ]
-  },
-  {
-    "listing": "/indicators/ecosystems/index.html",
-    "items": [
-      "/indicators/ecosystems/length-of-growing-season.html",
-      "/indicators/ecosystems/growing-degree-days.html",
-      "/indicators/ecosystems/ragweed-pollen-season.html",
-      "/indicators/ecosystems/leaf-and-bloom-dates.html",
-      "/indicators/ecosystems/cherry-blossom-bloom.html",
-      "/indicators/ecosystems/marine-species-distribution.html",
-      "/indicators/ecosystems/bird-wintering-ranges.html",
-      "/indicators/ecosystems/black-guillemots-cooper-island.html"
-    ]
-  },
-  {
-    "listing": "/indicators/freshwater-systems/index.html",
-    "items": [
-      "/indicators/freshwater-systems/streamflow.html",
-      "/indicators/freshwater-systems/stream-temperature.html",
-      "/indicators/freshwater-systems/snake-river.html",
-      "/indicators/freshwater-systems/lake-temperature.html",
-      "/indicators/freshwater-systems/great-lakes.html"
     ]
   },
   {

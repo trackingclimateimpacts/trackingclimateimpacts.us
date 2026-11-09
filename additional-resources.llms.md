@@ -86,7 +86,7 @@ Washington, DC 20052
 ### Emissions & Climate Resources
 
 - [Emissions & Climate Resources](emissions-and-climate-resources.llms.md)
-- [Green House Gases](greenhouse-gases.llms.md)
+- [Greenhouse Gases](greenhouse-gases.llms.md)
 - [Global Climate Indicators](global-climate-indicators.llms.md)
 - [Additional Resources](additional-resources.llms.md)
 

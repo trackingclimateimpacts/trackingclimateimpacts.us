@@ -19,10 +19,6 @@ Category
 
 This indicator describes global trends in sea surface temperature.
 
-##### Sea Level
-
-This indicator describes how sea level has changed over time. The indicator describes two types of sea level changes: absolute and relative.
-
 ##### Coastal Flooding
 
 This indicator shows how the frequency of coastal flooding has changed over time.
@@ -60,7 +56,7 @@ Washington, DC 20052
 ### Emissions & Climate Resources
 
 - [Emissions & Climate Resources](../../emissions-and-climate-resources.llms.md)
-- [Green House Gases](../../greenhouse-gases.llms.md)
+- [Greenhouse Gases](../../greenhouse-gases.llms.md)
 - [Global Climate Indicators](../../global-climate-indicators.llms.md)
 - [Additional Resources](../../additional-resources.llms.md)
 
