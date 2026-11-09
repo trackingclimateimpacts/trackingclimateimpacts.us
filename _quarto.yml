@@ -18,6 +18,10 @@ website:
   back-to-top-navigation: true
   open-graph:
     site-name: TrackingClimateImpacts.us
+    image: images/social-card.jpg
+  twitter-card:
+    card-style: summary_large_image
+    image: images/social-card.jpg
 
 
   navbar:
