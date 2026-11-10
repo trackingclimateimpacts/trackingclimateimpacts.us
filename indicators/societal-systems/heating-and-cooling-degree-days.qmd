@@ -1,7 +1,6 @@
 ---
 title: "Heating and Cooling Degree Days"
 description: "This indicator examines changing temperatures from the perspective of heating and cooling needs for buildings."
-categories: [Society, Energy]
 execute:
   eval: true
 ---

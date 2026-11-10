@@ -1,7 +1,6 @@
 ---
 title: "Sea Surface Temperature"
 description: "This indicator describes global trends in sea surface temperature."
-categories: [Oceans]
 execute:
   eval: true
 ---

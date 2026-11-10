@@ -1,7 +1,6 @@
 ---
 title: "Wildfires"
 description: "This indicator tracks the frequency, extent, and severity of wildfires in the United States."
-categories: [Environment, Wildfires]
 execute:
   eval: true
 ---

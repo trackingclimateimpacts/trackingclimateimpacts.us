@@ -14,9 +14,10 @@ anchor-sections: false
 ::: {.home-band .about-intro}
 ## About the Project
 
+Climate change indicators translate observed, empirical data into clear, accessible metrics that matter to people, infrastructure and natural systems. They distill complex science into information that resonates with the public and supports evidence‑based decisions. Viewed together, indicators offer a powerful, data‑driven picture: climate impacts are happening now, and they carry real consequences for communities and public health across the United States.
+
 This effort began by replicating the U.S. EPA’s Climate Change Indicators, a climate communications resource originally launched in 2010. The former website is now only accessible as a snapshot, digitally preserved on January 19, 2025. This replication phase ensures continued access to the scientifically rigorous, peer‑reviewed datasets and narratives that have long supported understanding and communicating the impacts of climate change in the United States. While the site design has changed, the underlying indicators, data, narratives, and documentation remain intact and continue to adhere to established standards and methodologies for transparency, reproducibility, and data integrity.
 
-Climate change indicators translate observed, empirical data into clear, accessible metrics that matter to people, infrastructure and natural systems. They distill complex science into information that resonates with the public and supports evidence‑based decisions. Viewed together, indicators offer a powerful, data‑driven picture: climate impacts are happening now, and they carry real consequences for communities and public health across the United States.
 :::
 
 ::: {.home-band .about-collab-wrap}
@@ -65,7 +66,11 @@ climate.us, the nonprofit successor to Climate.gov, offers authoritative long‑
 :::
 
 ::: {.about-card}
+::: {.about-card-head}
 ### GHGIA
+
+![](images/umd.png){.about-card-logo fig-alt="University of Maryland School of Public Policy, Center for Global Sustainability"}
+:::
 
 University of Maryland’s Center for Global Sustainability (CGS) has developed a new annual non-governmental Greenhouse Gas Inventory and Analysis (GHGIA), a transparent and analytically rigorous resource that supports continued understanding of U.S. emissions and sinks. While not an official national inventory nor a submission to the United Nations Framework Convention on Climate Change, the GHGIA aligns with international best practices and builds on EPA’s long‑standing Inventory of U.S. Greenhouse Gas Emissions and Sinks.
 
@@ -74,7 +79,7 @@ University of Maryland’s Center for Global Sustainability (CGS) has developed 
 
 :::
 
-These and other resources are linked at Emissions & Climate Resources. Together, these efforts help ensure that the public, policymakers, researchers, and communities have access to reliable, science‑based information. Future phases of our work will focus on deepening integration across these and additional efforts. 
+These and other resources are linked at Emissions & Climate Resources. Together, these efforts help ensure that the public, policymakers, researchers, and communities have access to reliable, science‑based information. Future phases of our work will focus on deepening integration across these efforts.
 :::
 
 ::: {.home-band .about-find}

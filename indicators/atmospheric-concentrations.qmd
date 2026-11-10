@@ -1,0 +1,265 @@
+---
+title: "Atmospheric Concentrations of Greenhouse Gases"
+description: "This indicator describes how the levels of major greenhouse gases in the atmosphere have changed over time."
+execute:
+  eval: true
+---
+
+```{r}
+#| label: setup
+#| include: false
+source(here::here("R", "common.R"))
+source(here::here("R", "atmospheric-concentrations.R"))
+
+meta        <- read_meta(REPO)
+co2         <- read_indicator(REPO, "co2_concentrations.csv")
+methane     <- read_indicator(REPO, "methane_concentrations.csv")
+nitrous     <- read_indicator(REPO, "nitrous_oxide_concentrations.csv")
+halogenated <- read_indicator(REPO, "halogenated_gases_concentrations.csv")
+ozone       <- read_indicator(REPO, "ozone_concentrations.csv")
+```
+
+## Figures
+
+::::: {.panel-tabset}
+
+### Figure 1
+
+```{r}
+#| label: caption-1
+#| echo: false
+#| output: asis
+figure_caption(meta, "co2_concentrations.csv", ref = 5)
+```
+
+<div class="d-flex flex-wrap gap-2 mb-3">
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/trackingclimateimpacts/atmospheric-concentrations/main/data/co2_concentrations.csv" download><i class="bi bi-filetype-csv"></i> Figure data (CSV)</a>
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/trackingclimateimpacts/atmospheric-concentrations/main/data-raw/ghg-concentrations_fig-1.csv" download><i class="bi bi-filetype-csv"></i> EPA source file (CSV)</a>
+</div>
+
+```{r}
+#| label: chart-1
+#| echo: false
+fig_1(co2)
+```
+
+This figure shows concentrations of carbon dioxide in the atmosphere from hundreds of thousands of years ago through 2023, measured in parts per million (ppm). The data come from a variety of historical ice core studies and recent air monitoring sites around the world. Each line represents a different data source.
+
+<details><summary>Show the data behind this figure</summary>
+
+```{r}
+#| label: table-1
+#| echo: false
+knitr::kable(fig_1_table(co2))
+```
+
+</details>
+
+### Figure 2
+
+```{r}
+#| label: caption-2
+#| echo: false
+#| output: asis
+figure_caption(meta, "methane_concentrations.csv", ref = 5)
+```
+
+<div class="d-flex flex-wrap gap-2 mb-3">
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/trackingclimateimpacts/atmospheric-concentrations/main/data/methane_concentrations.csv" download><i class="bi bi-filetype-csv"></i> Figure data (CSV)</a>
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/trackingclimateimpacts/atmospheric-concentrations/main/data-raw/ghg-concentrations_fig-2.csv" download><i class="bi bi-filetype-csv"></i> EPA source file (CSV)</a>
+</div>
+
+```{r}
+#| label: chart-2
+#| echo: false
+fig_2(methane)
+```
+
+This figure shows concentrations of methane in the atmosphere from hundreds of thousands of years ago through 2023, measured in parts per billion (ppb). The data come from a variety of historical ice core studies and recent air monitoring sites around the world. Each line represents a different data source.
+
+<details><summary>Show the data behind this figure</summary>
+
+```{r}
+#| label: table-2
+#| echo: false
+knitr::kable(fig_2_table(methane))
+```
+
+</details>
+
+### Figure 3
+
+```{r}
+#| label: caption-3
+#| echo: false
+#| output: asis
+figure_caption(meta, "nitrous_oxide_concentrations.csv", ref = 5)
+```
+
+<div class="d-flex flex-wrap gap-2 mb-3">
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/trackingclimateimpacts/atmospheric-concentrations/main/data/nitrous_oxide_concentrations.csv" download><i class="bi bi-filetype-csv"></i> Figure data (CSV)</a>
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/trackingclimateimpacts/atmospheric-concentrations/main/data-raw/ghg-concentrations_fig-3.csv" download><i class="bi bi-filetype-csv"></i> EPA source file (CSV)</a>
+</div>
+
+```{r}
+#| label: chart-3
+#| echo: false
+fig_3(nitrous)
+```
+
+This figure shows concentrations of nitrous oxide in the atmosphere from hundreds of thousands of years ago through 2023, measured in parts per billion (ppb). The data come from a variety of historical ice core studies and recent air monitoring sites around the world. Each line represents a different data source.
+
+<details><summary>Show the data behind this figure</summary>
+
+```{r}
+#| label: table-3
+#| echo: false
+knitr::kable(fig_3_table(nitrous))
+```
+
+</details>
+
+### Figure 4
+
+```{r}
+#| label: caption-4
+#| echo: false
+#| output: asis
+figure_caption(meta, "halogenated_gases_concentrations.csv", ref = c(6, 7, 8))
+```
+
+<div class="d-flex flex-wrap gap-2 mb-3">
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/trackingclimateimpacts/atmospheric-concentrations/main/data/halogenated_gases_concentrations.csv" download><i class="bi bi-filetype-csv"></i> Figure data (CSV)</a>
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/trackingclimateimpacts/atmospheric-concentrations/main/data-raw/ghg-concentrations_fig-4.csv" download><i class="bi bi-filetype-csv"></i> EPA source file (CSV)</a>
+</div>
+
+```{r}
+#| label: chart-4
+#| echo: false
+fig_4(halogenated)
+```
+
+This figure shows concentrations of several halogenated gases (which contain fluorine, chlorine, or bromine) in the atmosphere, measured in parts per trillion (ppt). The data come from monitoring sites around the world. Note that the scale increases by factors of 10. This is because the concentrations of different halogenated gases can vary by a few orders of magnitude. The numbers following the name of each gas (e.g., HCFC-22) are used to denote specific types of those particular gases.
+
+<details><summary>Show the data behind this figure</summary>
+
+```{r}
+#| label: table-4
+#| echo: false
+knitr::kable(fig_4_table(halogenated))
+```
+
+</details>
+
+### Figure 5
+
+```{r}
+#| label: caption-5
+#| echo: false
+#| output: asis
+figure_caption(meta, "ozone_concentrations.csv", ref = c(9, 10, 11))
+```
+
+<div class="d-flex flex-wrap gap-2 mb-3">
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/trackingclimateimpacts/atmospheric-concentrations/main/data/ozone_concentrations.csv" download><i class="bi bi-filetype-csv"></i> Figure data (CSV)</a>
+<a class="btn btn-sm btn-outline-secondary" href="https://raw.githubusercontent.com/trackingclimateimpacts/atmospheric-concentrations/main/data-raw/ghg-concentrations_fig-5.csv" download><i class="bi bi-filetype-csv"></i> EPA source file (CSV)</a>
+</div>
+
+```{r}
+#| label: chart-5
+#| echo: false
+fig_5(ozone)
+```
+
+This figure shows the average amount of ozone in the Earth’s atmosphere each year, based on satellite measurements. The total represents the “thickness” or density of ozone throughout all layers of the Earth’s atmosphere, which is called total column ozone and measured in Dobson units. Higher numbers indicate more ozone. For most years, Figure 5 shows how this ozone is divided between the troposphere (the part of the atmosphere closest to the ground) and the stratosphere. From 1994 to 1996, only the total is available, due to limited satellite coverage.
+
+<details><summary>Show the data behind this figure</summary>
+
+```{r}
+#| label: table-5
+#| echo: false
+knitr::kable(fig_5_table(ozone))
+```
+
+</details>
+
+:::::
+
+## Key Points
+
+- Global atmospheric concentrations of carbon dioxide, methane, nitrous oxide, and certain manufactured greenhouse gases have all risen significantly over the last few hundred years (see Figures 1, 2, 3, and 4).
+- Historical measurements show that the current global atmospheric concentrations of carbon dioxide, methane, and nitrous oxide are unprecedented compared with the past 800,000 years (see Figures 1, 2, and 3).
+- Carbon dioxide concentrations have increased substantially since the beginning of the industrial era, rising from an annual average of 280 ppm in the late 1700s to 419 ppm in 2023 (average of five sites in Figure 1)—a 49 percent increase. Almost all of this increase is due to human activities.^[1](#ref-1)^
+- The concentration of methane in the atmosphere has more than doubled since preindustrial times, reaching over 1,800 ppb in recent years (see the range of measurements for 2020 through 2023 in Figure 2). This increase is predominantly due to agriculture and fossil fuel use.^[2](#ref-2)^
+- Over the past 800,000 years, concentrations of nitrous oxide in the atmosphere rarely exceeded 280 ppb. Levels have risen since the 1920s, however, reaching a new high of 336 ppb in 2022 (average of four sites in Figure 3). This increase is primarily due to agriculture.^[3](#ref-3)^
+- Concentrations of many of the halogenated gases shown in Figure 4 were essentially zero a few decades ago but have increased rapidly as they have been incorporated into industrial products and processes. Some of these chemicals have been or are currently being phased out of use because they are ozone-depleting substances, meaning they also cause harm to the Earth’s protective ozone layer. As a result, concentrations of many major ozone-depleting gases have begun to stabilize or decline (see Figure 4, left panel). Concentrations of other halogenated gases have continued to rise, however, especially where the gases have emerged as substitutes for ozone-depleting chemicals (see Figure 4, right panel).
+- Overall, the total amount of ozone in the atmosphere decreased by about 4 percent between 1979 and 2020 (see Figure 5). All of the decrease happened in the stratosphere, with most of the decrease occurring between 1979 and 1994. Changes in stratospheric ozone reflect the effect of ozone-depleting substances. These chemicals have been released into the air for many years, but recently, international efforts have reduced emissions and phased out their use.
+- Globally, the amount of ozone in the troposphere increased by about 12 percent between 1979 and 2020 (see Figure 5).
+
+::: {.callout-note appearance="simple"}
+**Water Vapor as a Greenhouse Gas**
+
+Water vapor is the most abundant greenhouse gas in the atmosphere. Human activities have only a small direct influence on atmospheric concentrations of water vapor, primarily through irrigation and deforestation, so it is not included in this indicator.^[4](#ref-4)^ The surface warming caused by human production of other greenhouse gases, however, leads to an increase in atmospheric water vapor because warmer temperatures make it easier for water to evaporate and stay in the air in vapor form. This creates a positive “feedback loop” in which warming leads to more warming.
+:::
+
+## Background
+
+Since the Industrial Revolution began in the 1700s, people have added a substantial amount of greenhouse gases into the atmosphere by burning fossil fuels, cutting down forests, and conducting other activities (see the U.S. and [Global Greenhouse Gas Emissions](global-greenhouse-gas-emissions.qmd) indicators). When greenhouse gases are emitted into the atmosphere, many remain there for long time periods ranging from a decade to many millennia. Over time, these gases are removed from the atmosphere by chemical reactions or by emissions sinks, such as the oceans and vegetation, which absorb greenhouse gases from the atmosphere. As a result of human activities, however, these gases are entering the atmosphere more quickly than they are being removed from it, and thus their concentrations are increasing.
+
+Carbon dioxide, methane, nitrous oxide, and certain manufactured gases called halogenated gases (gases that contain chlorine, fluorine, or bromine) become well mixed throughout the global atmosphere because of their relatively long lifetimes and because of transport by winds. Concentrations of these greenhouse gases are measured in parts per million (ppm), parts per billion (ppb), or parts per trillion (ppt) by volume. In other words, a concentration of 1 ppb for a given gas means there is one molecule of that gas in every 1 billion molecules of air. Some halogenated gases are considered major greenhouse gases due to their very high global warming potentials and long atmospheric lifetimes even if they only exist at a few ppt (see [table](../greenhouse-gases.qmd)).
+
+::: {.callout-note appearance="simple"}
+This indicator looks at global average levels of ozone in both the stratosphere and troposphere. For trends in ground-level ozone concentrations within the United States, see EPA’s *National Air Quality Trends Report* at: [www.epa.gov/air-trends](https://19january2025snapshot.epa.gov/air-trends).
+:::
+
+Ozone is also a greenhouse gas, but it differs from other greenhouse gases in several ways. The effects of ozone depend on its altitude, or where the gas is located vertically in the atmosphere. Most ozone naturally exists in the layer of the atmosphere called the stratosphere, which ranges from approximately 6 to 30 miles above the Earth’s surface. Ozone in the stratosphere has a slight net warming effect on the planet, but it is good for life on Earth because it absorbs harmful ultraviolet radiation from the sun, preventing it from reaching the Earth’s surface. In the troposphere—the layer of the atmosphere near ground level—ozone is an air pollutant that is harmful to breathe, a main ingredient of urban smog, and an important greenhouse gas that contributes to climate change (see the Climate Forcing indicator). Unlike the other major greenhouse gases, tropospheric ozone only lasts for days to weeks, so levels often vary by location and by season.
+
+## About the Indicator
+
+This indicator describes concentrations of greenhouse gases in the atmosphere. It focuses on the major greenhouse gases that result from human activities.
+
+For carbon dioxide, methane, nitrous oxide, and halogenated gases, recent measurements come from monitoring stations around the world, while measurements of older air come from air bubbles trapped in layers of ice from Antarctica and Greenland. By determining the age of the ice layers and the concentrations of gases trapped inside, scientists can learn what the atmosphere was like thousands of years ago.
+
+This indicator also shows data from satellite instruments that measure ozone density in the troposphere, the stratosphere, and the “total column,” or all layers of the atmosphere. These satellite data are routinely compared with ground-based instruments to confirm their accuracy. Ozone data have been averaged worldwide for each year to smooth out the regional and seasonal variations.
+
+## Indicator Notes
+
+This indicator includes several of the most important halogenated gases, but some others are not shown. Many other halogenated gases are also greenhouse gases, but Figure 4 is limited to a set of common examples that represent most of the major types of these gases. The indicator also does not address certain other pollutants that can affect climate by either reflecting or absorbing energy. For example, sulfate particles can reflect sunlight away from the Earth, while black carbon aerosols (soot) absorb energy. Data for nitrogen trifluoride (Figure 4) reflect modeled averages based on measurements made in the Northern Hemisphere and some locations in the Southern Hemisphere, to represent global average concentrations over time. The global averages for ozone only cover the area between 50°N and 50°S latitude (77 percent of the Earth’s surface), because at higher latitudes the lack of sunlight in winter creates data gaps and the angle of incoming sunlight during the rest of the year reduces the accuracy of the satellite measuring technique.
+
+## Data Sources
+
+Global atmospheric concentration measurements for carbon dioxide (Figure 1), methane (Figure 2), and nitrous oxide (Figure 3) come from a variety of monitoring programs and studies published in peer-reviewed literature. Global atmospheric concentration data for selected halogenated gases (Figure 4) were compiled by the Advanced Global Atmospheric Gases Experiment and the National Oceanic and Atmospheric Administration. A similar figure with many of these gases appears in the Intergovernmental Panel on Climate Change’s Fifth Assessment Report.^[12](#ref-12)^ Satellite measurements of ozone were processed by the National Aeronautics and Space Administration and validated using ground-based measurements collected by the National Oceanic and Atmospheric Administration.
+
+## Technical Documentation
+
+```{r}
+#| label: td-link
+#| echo: false
+#| output: asis
+technical_documentation_link(meta)
+```
+
+## References
+
+<ol class="references">
+  <li id="ref-1">Marvel, K., Su, W., Delgado, R., Aarons, S., Chatterjee, A., Garcia, M. E., Hausfather, Z., Hayhoe, K., Hence, D. A., Jewett, E. B., Robel, A., Singh, D., Tripati, A., & Vose, R. S. (2023). Chapter 2: Climate trends. In USGCRP (U.S. Global Change Research Program), <em>Fifth National Climate Assessment</em>. <a href="https://doi.org/10.7930/NCA5.2023.CH2">https://doi.org/10.7930/NCA5.2023.CH2</a></li>
+  <li id="ref-2">IPCC (Intergovernmental Panel on Climate Change). (2023). <em>Climate change 2022—Mitigation of climate change: Working Group III contribution to the Sixth Assessment Report of the Intergovernmental Panel on Climate Change</em> (P. R. Shukla, J. Skea, R. Slade, R. Fradera, M. Pathak, A. A. Khourdajie, M. Belkacemi, R. van Diemen, A. Hasija, G. Lisboa, S. Luz, J. Malley, D. McCollum, S. Some, & P. Vyas, Eds.). Cambridge University Press. <a href="https://doi.org/10.1017/9781009157926">https://doi.org/10.1017/9781009157926</a></li>
+  <li id="ref-3">Bolster, C. H., Mitchell, R., Kitts, A., Campbell, A., Cosh, M., Farrigan, T. L., Franzluebbers, A. J., Hoover, D. L., Jin, V. L., Peck, D. E., Schmer, M. R., & Smith, M. D. (2023). Chapter 11: Agriculture, food systems, and rural communities. In U.S. Global Change Research Program, <em>Fifth National Climate Assessment</em>. <a href="https://nca2023.globalchange.gov/chapter/11/">https://nca2023.globalchange.gov/chapter/11</a></li>
+  <li id="ref-4">USGCRP (U.S. Global Change Research Program). (2017). <em>Climate science special report: Fourth National Climate Assessment (NCA4), volume I</em> (D. J. Wuebbles, D. W. Fahey, K. A. Hibbard, D. J. Dokken, B. C. Stewart, & T. K. Maycock, Eds.). <a href="https://doi.org/10.7930/J0J964J6">https://doi.org/10.7930/J0J964J6</a></li>
+  <li id="ref-5">(See full list provided below).</li>
+  <li id="ref-6">AGAGE (Advanced Global Atmospheric Gases Experiment). (2022). <em>ALE/GAGE/AGAGE database</em> (updated June 14, 2022) [Data set]. Retrieved March 1, 2024, from <a href="https://agage2.eas.gatech.edu/data_archive/global_mean">https://agage2.eas.gatech.edu/data_archive/global_mean</a></li>
+  <li id="ref-7">NOAA (National Oceanic and Atmospheric Administration). (2023). <em>Halocarbons and other Atmospheric Trace Species (HATS) group</em> (updated October 2023) [Data set]. Retrieved March 1, 2024, from <a href="https://gml.noaa.gov/aftp/data/hats/Total_Cl_Br">https://gml.noaa.gov/aftp/data/hats/Total_Cl_Br</a></li>
+  <li id="ref-8">Rigby, M. (2017). Update to data originally published in: Arnold, T., Harth, C. M., Mühle, J., Manning, A. J., Salameh, P. K., Kim, J., Ivy, D. J., Steele, L. P., Petrenko, V. V., Severinghaus, J. P., Baggenstos, D., & Weiss, R. F. (2013). Nitrogen trifluoride global emissions estimated from updated atmospheric measurements. <em>Proceedings of the National Academy of Sciences of the United States of America, 110</em>(6), 2029–2034. <a href="https://doi.org/10.1073/pnas.1212346110">https://doi.org/10.1073/pnas.1212346110</a></li>
+  <li id="ref-9">NASA (National Aeronautics and Space Administration). (2013). <em>Data—TOMS/SBUV TOR data products</em> [Data set]. Retrieved November 1, 2013, from <a href="https://science-data.larc.nasa.gov/TOR/data.html">https://science-data.larc.nasa.gov/TOR/data.html</a></li>
+  <li id="ref-10">NASA (National Aeronautics and Space Administration). (2021). <em>Tropospheric ozone data from AURA OMI/MLS</em> [Data set]. Retrieved May 1, 2022, from <a href="https://acd-ext.gsfc.nasa.gov/Data_services/cloud_slice/new_data.html">https://acd-ext.gsfc.nasa.gov/Data_services/cloud_slice/new_data.html</a></li>
+  <li id="ref-11">NASA (National Aeronautics and Space Administration). (2022). <em>SBUV merged ozone data set (MOD)</em> (Version 8.7, updated May 21, 2022) [Data set]. Retrieved March 1, 2024, from <a href="https://acdb-ext.gsfc.nasa.gov/Data_services/merged/index.html">https://acdb-ext.gsfc.nasa.gov/Data_services/merged/index.html</a></li>
+  <li id="ref-12">IPCC (Intergovernmental Panel on Climate Change). (2013). <em>Climate change 2013—The physical science basis: Contribution of Working Group I to the Fifth Assessment Report of the Intergovernmental Panel on Climate Change</em> (T. F. Stocker, D. Qin, G.-K. Plattner, M. Tignor, S. K. Allen, A. Boschung, A. Nauels, Y. Xia, V. Bex, & Midgley, Eds.). Cambridge University Press. <a href="https://www.ipcc.ch/report/ar5/wg1">www.ipcc.ch/report/ar5/wg1</a></li>
+</ol>
+
+::: {.callout-note appearance="simple" icon=false}
+Text on this page is EPA's own published wording (a U.S. Government work, not
+subject to domestic copyright), taken from EPA's published indicator page.
+Data and the extraction pipeline are maintained in the
+[atmospheric-concentrations](https://github.com/trackingclimateimpacts/atmospheric-concentrations)
+repository, which this page reads its data from directly.
+:::

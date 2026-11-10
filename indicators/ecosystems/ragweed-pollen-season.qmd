@@ -1,12 +1,9 @@
 ---
 title: "Ragweed Pollen Season"
-description: "How the length of ragweed pollen season has changed at 11 locations across the central United States and Canada since 1995."
-categories: [Health, Temperature, Ecosystems]
+description: "This indicator depicts changes in the length of ragweed pollen season in the United States and Canada."
 execute:
   eval: true
 ---
-
-This indicator depicts changes in the length of ragweed pollen season in the United States and Canada.
 
 ```{r}
 #| label: setup

@@ -1,7 +1,6 @@
 ---
 title: "Sea Level"
-description: "This indicator describes how sea level has changed over time. The indicator describes two types of sea level changes: absolute and relative."
-categories: [Oceans]
+description: "This indicator describes how sea level has changed over time. It describes two types of sea level changes: absolute global sea level change and relative sea level change along U.S. coasts."
 execute:
   eval: true
 ---
@@ -16,8 +15,6 @@ meta     <- read_meta(REPO)
 global   <- read_indicator(REPO, "sea_level_global_absolute_change.csv")
 stations <- read_indicator(REPO, "sea_level_relative_change_by_station.csv")
 ```
-
-This indicator describes how sea level has changed over time. The indicator describes two types of sea level changes: absolute and relative.
 
 ## Figures
 

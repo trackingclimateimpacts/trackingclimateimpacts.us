@@ -1,7 +1,6 @@
 ---
 title: "Drought"
 description: "This indicator measures drought conditions of U.S. lands."
-categories: [Weather and Climate, Drought]
 execute:
   eval: true
 ---

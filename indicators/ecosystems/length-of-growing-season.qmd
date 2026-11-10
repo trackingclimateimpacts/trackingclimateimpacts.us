@@ -1,12 +1,9 @@
 ---
 title: "Length of Growing Season"
 description: "How the length of the growing season, and the timing of spring and fall frosts, has changed across the contiguous 48 states since 1895."
-categories: [Society, Temperature, Ecosystems]
 execute:
   eval: true
 ---
-
-This indicator measures the length of the growing season in the contiguous 48 states.
 
 ```{r}
 #| label: setup

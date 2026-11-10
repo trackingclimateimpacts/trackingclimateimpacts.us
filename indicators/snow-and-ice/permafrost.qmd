@@ -1,7 +1,6 @@
 ---
 title: "Permafrost"
 description: "This indicator shows trends in permafrost temperature at select sites in Alaska."
-categories: [Cryosphere]
 execute:
   eval: true
 ---

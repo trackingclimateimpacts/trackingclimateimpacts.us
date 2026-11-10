@@ -1,7 +1,6 @@
 ---
 title: "Bird Wintering Ranges"
 description: "This indicator examines changes in the winter ranges of North American birds."
-categories: [Environment, Ecosystems]
 execute:
   eval: true
 ---

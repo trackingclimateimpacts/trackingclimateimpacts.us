@@ -1,12 +1,9 @@
 ---
 title: "Growing Degree Days"
-description: "How growing degree days have changed at 280 long-term weather stations across the contiguous 48 states since 1948, and what that suggests about pollen seasons."
-categories: [Health, Temperature, Ecosystems]
+description: "This indicator shows changes in growing degree days, which can signal changes in the timing and length of pollen seasons in the United States."
 execute:
   eval: true
 ---
-
-This indicator shows changes in growing degree days, which can signal changes in the timing and length of pollen seasons in the United States.
 
 ```{r}
 #| label: setup

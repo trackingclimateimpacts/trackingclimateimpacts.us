@@ -1,7 +1,6 @@
 ---
 title: "Coastal Flooding"
 description: "This indicator shows how the frequency of coastal flooding has changed over time."
-categories: [Oceans]
 execute:
   eval: true
 ---
@@ -16,8 +15,6 @@ meta         <- read_meta(REPO)
 flood_days   <- read_indicator(REPO, "coastal_flood_days_by_site.csv")
 flood_events <- read_indicator(REPO, "coastal_flood_events_by_site.csv")
 ```
-
-This indicator shows how the frequency of coastal flooding has changed over time.
 
 ## Figures
 

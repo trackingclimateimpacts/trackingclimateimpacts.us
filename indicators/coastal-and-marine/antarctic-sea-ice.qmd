@@ -1,7 +1,6 @@
 ---
 title: "Antarctic Sea Ice"
 description: "This indicator tracks the extent of sea ice around Antarctica."
-categories: [Oceans]
 execute:
   eval: true
 ---

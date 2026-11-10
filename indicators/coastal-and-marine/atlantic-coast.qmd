@@ -1,7 +1,6 @@
 ---
 title: "A Closer Look: Land Loss Along the Atlantic Coast"
 description: "This feature provides a closer look at one consequence of sea level rise along the Atlantic coast: the conversion of land to open water."
-categories: [Oceans]
 execute:
   eval: true
 ---
@@ -16,8 +15,6 @@ meta        <- read_meta(REPO)
 land_loss   <- read_indicator(REPO, "atlantic_coast_land_loss.csv")
 submergence <- read_indicator(REPO, "atlantic_coast_land_submergence.csv")
 ```
-
-This feature provides a closer look at one consequence of sea level rise along the Atlantic coast: the conversion of land to open water.
 
 ## Figures
 

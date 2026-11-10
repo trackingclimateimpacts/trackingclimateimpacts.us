@@ -1,7 +1,6 @@
 ---
 title: "Marine Heat Waves"
 description: "This indicator tracks the occurrence of unusually high temperatures in U.S. coastal waters."
-categories: [Oceans]
 execute:
   eval: true
 ---

@@ -1,7 +1,6 @@
 ---
 title: "U.S. and Global Temperature"
 description: "How average air temperature has changed across the contiguous United States and worldwide since 1901, and how those changes vary by climate division."
-categories: [Weather and Climate, Temperature]
 execute:
   eval: true
 ---

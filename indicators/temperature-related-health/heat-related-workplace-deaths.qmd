@@ -1,7 +1,6 @@
 ---
 title: "A Closer Look: Heat-Related Workplace Deaths"
 description: "Deaths of U.S. workers attributed to heat exposure on the job."
-categories: [Health, Temperature]
 execute:
   eval: true
 ---

@@ -1,7 +1,6 @@
 ---
 title: "A Closer Look: Temperature and Drought in the Southwest"
 description: "A closer look at trends in temperature and drought in the southwestern United States."
-categories: [Weather and Climate, Drought, Temperature]
 execute:
   eval: true
 ---

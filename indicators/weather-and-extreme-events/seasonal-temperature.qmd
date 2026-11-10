@@ -1,7 +1,6 @@
 ---
 title: "Seasonal Temperature"
 description: "Trends in average seasonal air temperature across the contiguous United States since 1896, and how the change varies by season and by state."
-categories: [Weather and Climate, Temperature]
 execute:
   eval: true
 ---

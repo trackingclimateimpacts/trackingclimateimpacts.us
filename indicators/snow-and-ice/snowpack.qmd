@@ -1,7 +1,6 @@
 ---
 title: "Snowpack"
 description: "This indicator measures trends in the amount and timing of snowpack in the western United States."
-categories: [Cryosphere]
 execute:
   eval: true
 ---

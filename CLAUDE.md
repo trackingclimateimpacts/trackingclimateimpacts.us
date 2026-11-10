@@ -328,9 +328,9 @@ Two navbar details that are easy to break:
    org and publishes `data/*.csv` plus `data/meta.yml` on `main`
 2. Create `R/<slug>.R` following the shape described above
 3. Create `indicators/<category>/<slug>.qmd` with front matter carrying `title`,
-   `description`, `categories`, and `execute: eval: true` — the `description`
-   feeds the listing grid on `indicators.qmd`, so it is not optional (the grid
-   deliberately shows no categories, neither on cards nor as a filter panel)
+   `description`, and `execute: eval: true` — the `description` feeds the
+   listing grid on `indicators.qmd`, so it is not optional. Do not add Quarto's
+   `categories:` key; the site's categories are the folders and sidebars
 4. Add a sidebar entry to that category's sidebar in `_quarto.yml`, and the
    file to the category page's `listing: contents`
 5. Add the slug to the matching section in `$card-category-map` in

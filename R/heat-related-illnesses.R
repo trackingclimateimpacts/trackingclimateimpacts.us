@@ -1,6 +1,6 @@
 # Figures for indicators/temperature-related-health/heat-related-illnesses.qmd.
 
-REPO <- "heat-related-illness-new"
+REPO <- "heat-related-illnesses"
 
 # ---- Figure 1: annual hospitalization rate, 20 states -------------------------
 

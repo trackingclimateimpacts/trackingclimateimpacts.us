@@ -1,12 +1,9 @@
 ---
 title: "Leaf and Bloom Dates"
-description: "How the timing of first leaf and first bloom dates in lilacs and honeysuckles has changed across the contiguous 48 states and Alaska."
-categories: [Ecosystems, Temperature]
+description: "This indicator examines the timing of leaf growth and flower blooms for two widely distributed plants in the United States."
 execute:
   eval: true
 ---
-
-This indicator examines the timing of leaf growth and flower blooms for two widely distributed plants in the United States.
 
 ```{r}
 #| label: setup

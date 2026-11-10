@@ -12,7 +12,7 @@ suppressPackageStartupMessages({
 #' repository's data/ directory.
 indicator_url <- function(repo, file) {
   sprintf(
-    "https://raw.githubusercontent.com/climateindicators/%s/main/data/%s",
+    "https://raw.githubusercontent.com/trackingclimateimpacts/%s/main/data/%s",
     repo, file
   )
 }

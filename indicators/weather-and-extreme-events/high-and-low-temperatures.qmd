@@ -1,7 +1,6 @@
 ---
 title: "High and Low Temperatures"
 description: "Trends in unusually hot and cold temperatures across the United States."
-categories: [Weather, Temperature]
 execute:
   eval: true
 ---

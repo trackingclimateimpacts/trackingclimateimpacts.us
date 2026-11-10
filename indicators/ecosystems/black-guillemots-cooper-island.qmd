@@ -1,7 +1,6 @@
 ---
 title: "A Closer Look: The Black Guillemots of Cooper Island"
 description: "This feature explores changes in bird populations on an island along Alaska’s Arctic northern coast."
-categories: [Environment, Ecosystems]
 execute:
   eval: true
 ---

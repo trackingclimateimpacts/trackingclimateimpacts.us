@@ -6,6 +6,7 @@ listing:
     contents:
       - "indicators/**/*.qmd"
       - "!indicators/global-greenhouse-gas-emissions.qmd"
+      - "!indicators/atmospheric-concentrations.qmd"
       - "!indicators/coastal-and-marine/index.qmd"
       - "!indicators/ecosystems/index.qmd"
       - "!indicators/freshwater-systems/index.qmd"

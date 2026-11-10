@@ -1,7 +1,6 @@
 ---
 title: "Streamflow"
 description: "How the amount and timing of streamflow in rivers and streams across the United States have changed since 1940."
-categories: [Weather and Climate, Streamflow]
 execute:
   eval: true
 ---

@@ -1,7 +1,6 @@
 ---
 title: "Great Lakes Water Levels and Temperatures"
 description: "This indicator measures water levels and surface water temperatures in the Great Lakes."
-categories: [Weather and Climate, Great Lakes]
 execute:
   eval: true
 ---

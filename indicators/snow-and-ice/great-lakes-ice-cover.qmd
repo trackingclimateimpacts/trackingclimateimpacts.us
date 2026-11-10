@@ -1,7 +1,6 @@
 ---
 title: "Great Lakes Ice Cover"
 description: "This indicator measures the area and duration of ice cover in the Great Lakes."
-categories: [Cryosphere]
 execute:
   eval: true
 ---

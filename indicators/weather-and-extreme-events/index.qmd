@@ -32,7 +32,7 @@ anchor-sections: false
 ::: {.home-band .cat-hero .cat-weather-extremes .hero-bg}
 
 ::: {.hero-bg-img}
-![](../../images/weather.jpg){fig-alt=""}
+![](../../images/climate_extreme.png){fig-alt=""}
 :::
 
 ## Weather and Extreme Events

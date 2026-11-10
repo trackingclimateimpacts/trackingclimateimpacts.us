@@ -1,7 +1,6 @@
 ---
 title: "Ice Sheets"
 description: "This indicator examines the balance between snow accumulation and melting in the ice sheets that cover Greenland and Antarctica."
-categories: [Oceans]
 execute:
   eval: true
 ---

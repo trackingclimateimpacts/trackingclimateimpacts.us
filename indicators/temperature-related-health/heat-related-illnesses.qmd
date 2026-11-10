@@ -1,7 +1,6 @@
 ---
 title: "Heat-Related Illnesses"
 description: "Hospitalizations in the United States attributed to extreme heat."
-categories: [Health, Temperature]
 execute:
   eval: true
 ---

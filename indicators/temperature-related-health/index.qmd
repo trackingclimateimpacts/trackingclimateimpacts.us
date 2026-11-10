@@ -26,7 +26,7 @@ anchor-sections: false
 ::: {.home-band .cat-hero .cat-temperature-health .hero-bg}
 
 ::: {.hero-bg-img}
-![](../../images/temperature.jpg){fig-alt=""}
+![](../../images/temp_related.jpg){fig-alt=""}
 :::
 
 ## Temperature-Related Health

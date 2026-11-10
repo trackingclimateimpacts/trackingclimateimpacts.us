@@ -1,7 +1,6 @@
 ---
 title: "Lake Temperature"
 description: "This indicator shows changes in surface water temperatures in North American lakes."
-categories: [Weather and Climate, Lake Temperature]
 execute:
   eval: true
 ---

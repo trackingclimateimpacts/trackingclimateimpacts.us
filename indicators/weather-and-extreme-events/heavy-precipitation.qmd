@@ -1,7 +1,6 @@
 ---
 title: "Heavy Precipitation"
 description: "This indicator tracks the frequency of heavy precipitation events in the United States."
-categories: [Weather and Climate, Precipitation]
 execute:
   eval: true
 ---

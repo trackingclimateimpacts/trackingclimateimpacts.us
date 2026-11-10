@@ -30,7 +30,7 @@ anchor-sections: false
 ::: {.home-band .cat-hero .cat-ecosystems .hero-bg}
 
 ::: {.hero-bg-img}
-![](../../images/ecosystems.jpg){fig-alt=""}
+![](../../images/ecosystems.png){fig-alt=""}
 :::
 
 ## Ecosystems

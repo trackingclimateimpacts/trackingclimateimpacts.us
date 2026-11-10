@@ -1,7 +1,6 @@
 ---
 title: "Global Greenhouse Gas Emissions"
 description: "This indicator describes emissions of greenhouse gases worldwide."
-categories: [Atmosphere, Emissions]
 execute:
   eval: true
 ---

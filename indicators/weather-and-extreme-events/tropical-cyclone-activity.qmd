@@ -1,7 +1,6 @@
 ---
 title: "Tropical Cyclone Activity"
 description: "Frequency, intensity, and duration of hurricanes and other tropical storms in the Atlantic Ocean, Caribbean, and Gulf of Mexico."
-categories: [Weather and Climate, Storms]
 execute:
   eval: true
 ---

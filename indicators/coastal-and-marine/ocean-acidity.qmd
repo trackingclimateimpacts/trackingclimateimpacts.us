@@ -1,7 +1,6 @@
 ---
 title: "Ocean Acidity"
 description: "This indicator describes changes in the chemistry of the ocean that relate to the amount of carbon dioxide dissolved in the water."
-categories: [Oceans]
 execute:
   eval: true
 ---
@@ -15,8 +14,6 @@ source(here::here("R", "ocean-acidity.R"))
 meta    <- read_meta(REPO)
 acidity <- read_indicator(REPO, "ocean_carbon_dioxide_acidity.csv")
 ```
-
-This indicator describes changes in the chemistry of the ocean that relate to the amount of carbon dioxide dissolved in the water.
 
 ## Figures
 

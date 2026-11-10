@@ -1,7 +1,6 @@
 ---
 title: "Marine Species Distribution"
 description: "This indicator examines changes in the location of fish, shellfish, and other marine species along U.S. coasts."
-categories: [Environment, Ecosystems]
 execute:
   eval: true
 ---
