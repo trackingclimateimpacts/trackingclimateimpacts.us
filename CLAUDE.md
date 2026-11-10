@@ -22,9 +22,10 @@ The site is built with **Quarto** and deployed to **GitHub Pages** (the
 **This repository is the website and nothing else.** It holds pages, styling,
 and the R code that draws the figures. It holds no data.
 
-There is no favicon or social-card image yet. `_quarto.yml` omits `favicon:`
-and `image:` on purpose rather than pointing at files that do not exist — add
-the assets to `images/` before adding the keys.
+The social-card image is `images/social-card.jpg` (1200x630, the site title over a
+cropped `all_indicators.jpg`), wired through `open-graph:` and `twitter-card:` in
+`_quarto.yml`. There is no favicon yet; `_quarto.yml` omits `favicon:` on
+purpose rather than pointing at a file that does not exist.
 
 ## Data Lives in the Indicator Repositories
 
