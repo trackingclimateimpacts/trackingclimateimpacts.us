@@ -55,7 +55,7 @@ A closer look at trends in temperature and drought in the southwestern United St
 
 This indicator tracks the frequency, extent, and severity of wildfires in the United States.
 
-[View All](../../health-and-environment-indicators.llms.md)
+[Back to Categories](../../health-and-environment-indicators.llms.md)
 
 ![Milken logo](../../images/milken_logo.png)
 

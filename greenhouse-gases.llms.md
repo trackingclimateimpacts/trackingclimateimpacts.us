@@ -115,6 +115,8 @@ This indicator describes how the levels of major greenhouse gases in the atmosph
 
 [Explore →](indicators/atmospheric-concentrations.llms.md)
 
+![Smokestacks at an industrial plant releasing plumes of smoke into a blue sky above a forest](images/emissions_card.jpg)
+
 ## Heating Influence
 
 Unlike oxygen and nitrogen, the most abundant gases in the atmosphere which are transparent to outgoing heat, greenhouse gases absorb heat energy and radiate it back into their surroundings, including back toward Earth’s surface. Without them, Earth’s average surface temperature would be below freezing instead of around 60 degrees Fahrenheit. Since the onset of the Industrial Revolution, human activities have been adding heat-trapping gases to the atmosphere. By adding extra greenhouse gases, we are amplifying the natural greenhouse effect and causing Earth’s surface temperature to rise.

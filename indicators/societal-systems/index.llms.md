@@ -23,7 +23,7 @@ This indicator examines changing temperatures from the perspective of heating an
 
 How much electricity and natural gas U.S. homes use for summer cooling and winter heating, alongside cooling and heating degree days.
 
-[View All](../../health-and-environment-indicators.llms.md)
+[Back to Categories](../../health-and-environment-indicators.llms.md)
 
 ![Milken logo](../../images/milken_logo.png)
 

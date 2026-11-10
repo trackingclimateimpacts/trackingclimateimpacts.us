@@ -47,7 +47,7 @@ This indicator examines changes in the winter ranges of North American birds.
 
 This feature explores changes in bird populations on an island along Alaska’s Arctic northern coast.
 
-[View All](../../health-and-environment-indicators.llms.md)
+[Back to Categories](../../health-and-environment-indicators.llms.md)
 
 ![Milken logo](../../images/milken_logo.png)
 

@@ -31,7 +31,7 @@ Hospitalizations in the United States attributed to extreme heat.
 
 Deaths in the United States attributed to extreme cold.
 
-[View All](../../health-and-environment-indicators.llms.md)
+[Back to Categories](../../health-and-environment-indicators.llms.md)
 
 ![Milken logo](../../images/milken_logo.png)
 

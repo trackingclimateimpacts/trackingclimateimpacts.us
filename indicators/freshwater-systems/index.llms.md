@@ -35,7 +35,7 @@ This indicator shows changes in surface water temperatures in North American lak
 
 This indicator measures water levels and surface water temperatures in the Great Lakes.
 
-[View All](../../health-and-environment-indicators.llms.md)
+[Back to Categories](../../health-and-environment-indicators.llms.md)
 
 ![Milken logo](../../images/milken_logo.png)
 

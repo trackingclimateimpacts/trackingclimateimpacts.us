@@ -51,7 +51,7 @@ This indicator examines the balance between snow accumulation and melting in the
 
 This feature examines the timing of spring river ice breakup in three communities that have kept detailed records for more than 100 years.
 
-[View All](../../health-and-environment-indicators.llms.md)
+[Back to Categories](../../health-and-environment-indicators.llms.md)
 
 ![Milken logo](../../images/milken_logo.png)
 

@@ -39,7 +39,7 @@ This indicator tracks the extent of sea ice around Antarctica.
 
 This indicator describes changes in the chemistry of the ocean that relate to the amount of carbon dioxide dissolved in the water.
 
-[View All](../../health-and-environment-indicators.llms.md)
+[Back to Categories](../../health-and-environment-indicators.llms.md)
 
 ![Milken logo](../../images/milken_logo.png)
 
