@@ -1,9 +1,5 @@
 # Wildfires
 
-Environment
-
-Wildfires
-
 This indicator tracks the frequency, extent, and severity of wildfires in the United States.
 
 ## Figures

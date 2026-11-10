@@ -1,9 +1,5 @@
 # Lake Temperature
 
-Weather and Climate
-
-Lake Temperature
-
 This indicator shows changes in surface water temperatures in North American lakes.
 
 ## Figures

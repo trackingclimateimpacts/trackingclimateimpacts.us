@@ -1,7 +1,5 @@
 # Permafrost
 
-Cryosphere
-
 This indicator shows trends in permafrost temperature at select sites in Alaska.
 
 ## Figures

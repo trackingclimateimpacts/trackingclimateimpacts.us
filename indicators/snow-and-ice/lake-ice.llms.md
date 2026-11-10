@@ -1,7 +1,5 @@
 # Lake Ice
 
-Cryosphere
-
 This indicator measures the amount of time that ice is present on lakes in the United States.
 
 ## Figures

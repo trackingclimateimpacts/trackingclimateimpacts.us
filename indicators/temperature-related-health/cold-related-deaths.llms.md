@@ -1,9 +1,5 @@
 # Cold-Related Deaths
 
-Health
-
-Temperature
-
 Deaths in the United States attributed to extreme cold.
 
 ## Figures

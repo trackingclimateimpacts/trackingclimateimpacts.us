@@ -1,4 +1,4 @@
-## Climate, Health and Environmental Indicators
+## Climate, Health and Environment Indicators
 
 Rising temperatures, shifting snow and rainfall patterns, and more frequent extreme weather events are clear signs of a changing climate. Many of these observed changes are linked to increasing greenhouse gas concentrations in the atmosphere caused by human activities. The indicators presented here document these changes and help illustrate their impacts that matter to human health, communities, ecosystems, and the environment.
 
@@ -8,7 +8,7 @@ Rising temperatures, shifting snow and rainfall patterns, and more frequent extr
 
 Each indicator below is grouped by category.
 
-![](images/weather.jpg)
+![](images/climate_extreme.png)
 
 ### Weather and Extreme Events
 
@@ -16,7 +16,7 @@ This indicator tracks changes in national and global temperatures, precipitation
 
 [Explore →](indicators/weather-and-extreme-events/index.llms.md)
 
-![](images/ecosystems.jpg)
+![](images/ecosystems.png)
 
 ### Ecosystems
 
@@ -32,7 +32,7 @@ This indicator tracks changes in lake ice, Great Lakes ice cover, snowfall, snow
 
 [Explore →](indicators/snow-and-ice/index.llms.md)
 
-![](images/temperature.jpg)
+![](images/temp_related.jpg)
 
 ### Temperature-Related Health
 
@@ -74,7 +74,7 @@ This indicator tracks changes in heating and cooling days as well as residential
 
 ## About the Indicators
 
-Each indicator’s connection to climate change is grounded in science, though some are more directly shaped by a warming climate than others. Others are more indirectly linked to disruptions in the global climate, reflecting the complex causal chains and positive and negative feedback loops operating across natural and social systems. As with EPA’s approach, this site does not assess the degree to which observed trends are attributable to climate change. Connections between human activities, climate change, and observed indicators are extensively documented and discussed in the climate change scientific literature. (See Additional Resources). Rather, TrackingClimateImpacts.us provides high‑quality, long‑term data that document observed changes in climate‑relevant impacts, recognizing that the full scientific literature explores many additional indicators and pathways.
+Each indicator’s connection to climate change is grounded in science, though some are more directly shaped by a warming climate than others. Others are more indirectly linked to disruptions in the global climate, reflecting the complex causal chains and positive and negative feedback loops operating across natural and social systems. As with EPA’s approach, this site does not assess the degree to which observed trends are attributable to climate change. Connections between human activities, climate change, and observed indicators are extensively documented and discussed in the climate change scientific literature. (See [Additional Resources](https://trackingclimateimpacts.us/additional-resources)). Rather, TrackingClimateImpacts.us provides high‑quality, long‑term data that document observed changes in climate‑relevant impacts, recognizing that the full scientific literature explores many additional indicators and pathways.
 
 Not every indicator will display a steady trend over time—natural variability and longer‑term climate cycles influence year‑to‑year conditions. The indicators we catalog at this site may also show spatially heterogeneous trends, reflecting the highly local implications of global climate change. The local, context-specific variations revealed through health and environmental indicators provide particularly useful data to partners working to pursue climate action at the state, regional, and local levels. While the importance and relevance of each indicator will vary from context to context, we observe several overarching impact categories in the available data, deriving from changes in and intersections between physical, biological, and human systems.
 
@@ -137,6 +137,6 @@ Washington, DC 20052
 
 - Terms of Service
 - Privacy Policy
-- Contact Us
+- [Contact Us](mailto:climatehealth@gwu.edu)
 
 Back to top

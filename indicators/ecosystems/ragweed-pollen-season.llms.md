@@ -1,13 +1,5 @@
 # Ragweed Pollen Season
 
-Health
-
-Temperature
-
-Ecosystems
-
-How the length of ragweed pollen season has changed at 11 locations across the central United States and Canada since 1995.
-
 This indicator depicts changes in the length of ragweed pollen season in the United States and Canada.
 
 ## Figures

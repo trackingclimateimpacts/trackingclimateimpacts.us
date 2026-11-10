@@ -1,7 +1,5 @@
 # Sea Surface Temperature
 
-Oceans
-
 This indicator describes global trends in sea surface temperature.
 
 ## Figures

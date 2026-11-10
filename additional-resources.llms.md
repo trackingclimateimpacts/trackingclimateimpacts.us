@@ -1,7 +1,5 @@
 ## Additional Resources
 
-This section documents the transparent, reproducible processes that underpin the indicators on TrackingClimateImpacts.us and preserves the methodological foundation developed by the U.S. Environmental Protection Agency (EPA) through January 2025. It also describes how our approach will evolve as new science, data, and partnerships emerge.
-
 ![](images/rectangle_additional.png)
 
 ## Climate Change Scientific Assessment Reports
@@ -12,9 +10,9 @@ The climate change scientific literature is extensive. Connections between human
 
 The Impacts of Climate Change on Human Health in the United States: A Scientific Assessment (2016).
 
-The scientific report by the U.S. Global Change Research Program (USGCRP) discusses the effects of climate change on public health and social and environmental disparities based on peer-reviewed scientific literature and public resources.
+The scientific report by the U.S. Global Change Research Program (USGCRP) synthesizes and discusses the effects of climate change on public health and social and environmental disparities based on peer-reviewed scientific literature
 
-[Read Here](https://health2016.globalchange.gov/)
+[Read Here](https://www.academia.edu/31063713/THE_IMPACTS_OF_CLIMATE_CHANGE_ON_HUMAN_HEALTH_IN_THE_UNITED_STATES_A_Scientific_Assessment)
 
 Climate Change 2023: Synthesis Report. Contribution of Working Groups I, II, and III to the Sixth Assessment Report of the Intergovernmental Panel on Climate Change.
 
@@ -37,6 +35,7 @@ The U.S. National Academies of Sciences, Engineering, and Medicine assessment of
 ## Additional tools and Indicator resources
 
 Greenhouse Gas Inventory and Analysis GHGIA\
+<https://ghgi.cgs.umd.edu/>\
 University of Maryland’s Center for Global Sustainability (CGS) new annual non-governmental resource that supports continued understanding of U.S. emissions and sinks.
 
 CDC Heat and Health Tracker\
@@ -114,6 +113,6 @@ Washington, DC 20052
 
 - Terms of Service
 - Privacy Policy
-- Contact Us
+- [Contact Us](mailto:climatehealth@gwu.edu)
 
 Back to top

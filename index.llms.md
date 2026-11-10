@@ -32,17 +32,15 @@ This section documents the transparent, reproducible processes that underpin the
 
 ## Where We’re Heading
 
-TrackingClimateImpacts.us maintains the full technical documentation and methodological detail from EPA’s January 19, 2025 snapshot to ensure continuity, transparency, and trust.
+GW’s Climate & Health Institute is preserving EPA’s climate change indicators and setting the stage for a durable, impact-focused, and community-connected system for use by practitioners, policy developers and the public.
 
 [Learn More](where-were-heading.llms.md)
 
 ## About
 
-TrackingClimateImpacts.us maintains the full technical documentation and methodological detail from EPA’s January 19, 2025 snapshot to ensure continuity, transparency, and trust.
+Learn about who we are and our approach.
 
 [Learn More](about.llms.md)
-
-This effort preserves EPA’s climate change indicators and sets the stage for a durable, community-connected climate indicator system for communities, health practitioners, researchers, and the public.
 
 ![Milken logo](./images/milken_logo.png)
 
@@ -87,4 +85,4 @@ Washington, DC 20052
 
 - Terms of Service
 - Privacy Policy
-- Contact Us
+- [Contact Us](mailto:climatehealth@gwu.edu)

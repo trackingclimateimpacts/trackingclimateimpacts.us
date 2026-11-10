@@ -1,9 +1,5 @@
 # Tropical Cyclone Activity
 
-Weather and Climate
-
-Storms
-
 Frequency, intensity, and duration of hurricanes and other tropical storms in the Atlantic Ocean, Caribbean, and Gulf of Mexico.
 
 This indicator examines the frequency, intensity, and duration of hurricanes and other tropical storms in the Atlantic Ocean, Caribbean, and Gulf of Mexico.

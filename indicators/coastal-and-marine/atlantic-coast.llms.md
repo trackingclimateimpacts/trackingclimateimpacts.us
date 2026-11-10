@@ -1,9 +1,5 @@
 # A Closer Look: Land Loss Along the Atlantic Coast
 
-Oceans
-
-This feature provides a closer look at one consequence of sea level rise along the Atlantic coast: the conversion of land to open water.
-
 This feature provides a closer look at one consequence of sea level rise along the Atlantic coast: the conversion of land to open water.
 
 ## Figures

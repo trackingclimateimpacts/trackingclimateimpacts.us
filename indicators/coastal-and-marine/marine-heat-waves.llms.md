@@ -1,7 +1,5 @@
 # Marine Heat Waves
 
-Oceans
-
 This indicator tracks the occurrence of unusually high temperatures in U.S. coastal waters.
 
 ## Figures

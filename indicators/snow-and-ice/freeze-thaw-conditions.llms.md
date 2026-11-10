@@ -1,7 +1,5 @@
 # Freeze-Thaw Conditions
 
-Cryosphere
-
 This indicator tracks the number of days the U.S. and North American landscape is not frozen.
 
 ## Figures

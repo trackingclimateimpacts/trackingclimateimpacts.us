@@ -1,7 +1,5 @@
 # Snowpack
 
-Cryosphere
-
 This indicator measures trends in the amount and timing of snowpack in the western United States.
 
 ## Figures

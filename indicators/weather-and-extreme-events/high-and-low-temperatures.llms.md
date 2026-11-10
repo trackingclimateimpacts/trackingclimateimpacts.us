@@ -1,9 +1,5 @@
 # High and Low Temperatures
 
-Weather
-
-Temperature
-
 Trends in unusually hot and cold temperatures across the United States.
 
 This indicator describes trends in unusually hot and cold temperatures across the United States.

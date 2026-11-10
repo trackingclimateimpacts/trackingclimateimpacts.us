@@ -1,9 +1,5 @@
 # Marine Species Distribution
 
-Environment
-
-Ecosystems
-
 This indicator examines changes in the location of fish, shellfish, and other marine species along U.S. coasts.
 
 ## Figures

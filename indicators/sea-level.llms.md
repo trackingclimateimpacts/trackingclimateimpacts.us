@@ -1,10 +1,6 @@
 # Sea Level
 
-Oceans
-
-This indicator describes how sea level has changed over time. The indicator describes two types of sea level changes: absolute and relative.
-
-This indicator describes how sea level has changed over time. The indicator describes two types of sea level changes: absolute and relative.
+This indicator describes how sea level has changed over time. It describes two types of sea level changes: absolute global sea level change and relative sea level change along U.S. coasts.
 
 ## Figures
 

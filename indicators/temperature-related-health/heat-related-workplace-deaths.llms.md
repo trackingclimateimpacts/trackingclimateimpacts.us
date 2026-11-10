@@ -1,9 +1,5 @@
 # A Closer Look: Heat-Related Workplace Deaths
 
-Health
-
-Temperature
-
 Deaths of U.S. workers attributed to heat exposure on the job.
 
 ## Figures

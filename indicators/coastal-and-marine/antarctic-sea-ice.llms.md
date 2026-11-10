@@ -1,7 +1,5 @@
 # Antarctic Sea Ice
 
-Oceans
-
 This indicator tracks the extent of sea ice around Antarctica.
 
 ## Figures

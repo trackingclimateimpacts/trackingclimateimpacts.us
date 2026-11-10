@@ -1,4 +1,4 @@
-![](../../images/weather.jpg)
+![](../../images/climate_extreme.png)
 
 ## Weather and Extreme Events
 
@@ -100,6 +100,6 @@ Washington, DC 20052
 
 - Terms of Service
 - Privacy Policy
-- Contact Us
+- [Contact Us](mailto:climatehealth@gwu.edu)
 
 Back to top

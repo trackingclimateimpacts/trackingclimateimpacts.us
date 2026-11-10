@@ -1,12 +1,6 @@
 # Community Connection: Cherry Blossom Bloom Dates in Washington, D.C.
 
-Ecosystems
-
-Temperature
-
 How the peak bloom date of Washington, D.C.’s Yoshino cherry trees has changed since 1921, alongside the dates of the National Cherry Blossom Festival.
-
-This feature tracks the annual peak bloom date of Washington, D.C.’s famous cherry trees.
 
 ## Figures
 

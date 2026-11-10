@@ -1,9 +1,5 @@
 # Coastal Flooding
 
-Oceans
-
-This indicator shows how the frequency of coastal flooding has changed over time.
-
 This indicator shows how the frequency of coastal flooding has changed over time.
 
 ## Figures

@@ -1,9 +1,5 @@
 # Lyme Disease
 
-Health
-
-Disease
-
 This indicator tracks the rate of reported Lyme disease cases across the United States.
 
 ## Figures

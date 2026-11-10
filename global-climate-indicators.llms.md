@@ -18,6 +18,8 @@ Concentrations of heat-trapping greenhouse gases are increasing in the Earth’s
 
 Excerpted from U.S. Environmental Protection Agency. (2024). Climate change indicators in the United States (Fifth ed., EPA 430-R-24-003).
 
+![Global average surface temperature, 1850 to 2025, as the difference from the 1901-2000 average](images/global_1.png)
+
 This figure shows yearly surface temperature from 1880 - 2024 compared to the 20th-century average. Blue bars indicate cooler-than-average years; red bars show warmer-than-average years. The Climate.us figure is based on data from the National Centers for Environmental Information.
 
 Given the tremendous size and heat capacity of the global oceans, it takes a massive amount of added heat energy to raise Earth’s average surface temperature even a small amount. The roughly 2-degree-Fahrenheit (1-degree-Celsius) increase in global average surface temperature that has occurred since the pre-industrial era (1850-1900 in NOAA’s record) might seem small, but it represents a significant increase in heat energy circulating through all parts of the Earth system, including the oceans, frozen landscapes, and the atmosphere.
@@ -42,9 +44,15 @@ The ocean is storing an estimated 9/10 of the excess heat energy trapped in the 
 
 Worldwide, most glaciers are shrinking or disappearing altogether. The “climate reference glaciers” tracked by the World Glacier Monitoring Service have lost ice mass equivalent to more than 30 meters of liquid water through 2025—the same as slicing roughly 33 meters (108 feet) of ice off the entire surface of each glacier in the network. Glaciers have shrunk every year for the past 39 years. Ice loss in mountain glaciers is accelerating with each of the last three complete decades has brought bigger declines than the decade before. Melting glaciers and ice sheets are the biggest cause of sea level rise in recent decades. (climate.us)
 
+![Global sea level change since 1880 compared to the 1993-2008 average](images/glocal_2.png)
+
 Seasonal (3-month) sea level estimates (Church and White, 2011) - light blue line, and University of Hawaii Fast Delivery sea level data - dark blue. The values are shown as change in sea level in millimeters compared to the 1993-2008 average. Climate.us image based on analysis and data from Philip Thompson, University of Hawaii Sea Level Center
 
+![Global ocean heat content, upper 700 and 2000 meters](images/global_3.png)
+
 Seasonal heat content compared to the 1955-2006 average for the upper 700 meters of the ocean (light blue-green) and in the upper 2000 meters (dark blue-green). Heat content in the global ocean has been above-average since the mid-1990s. Graph by Climate.us, based on data from NOAA NCEI.
+
+![Mass balance of the World Glacier Monitoring Service climate reference glaciers since 1970](images/global_4.png)
 
 Ice loss relative to 1970 for the glaciers in the World Glacier Monitoring Service’s (WGMS) climate reference network. Glacier mass balance is the annual balance between how much snow accumulates on a glacier and how much ice is lost through melting, sublimation (evaporation), or iceberg calving. Through 2025, these glaciers have lost more than 28 meters of water equivalent, which is roughly the same as slicing a 100-foot slab off the top of each glacier in the network. Climate.us image, based on data from the WGMS.
 
@@ -101,6 +109,6 @@ Washington, DC 20052
 
 - Terms of Service
 - Privacy Policy
-- Contact Us
+- [Contact Us](mailto:climatehealth@gwu.edu)
 
 Back to top

@@ -1,9 +1,5 @@
 # Streamflow
 
-Weather and Climate
-
-Streamflow
-
 How the amount and timing of streamflow in rivers and streams across the United States have changed since 1940.
 
 ## Figures

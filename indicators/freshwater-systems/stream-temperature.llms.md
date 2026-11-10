@@ -1,9 +1,5 @@
 # Stream Temperature
 
-Weather and Climate
-
-Stream Temperature
-
 This indicator shows how stream water temperatures have changed at 129 stream gauges across the Chesapeake Bay region from 1960 to 2014.
 
 ## Figures

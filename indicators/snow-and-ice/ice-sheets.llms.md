@@ -1,7 +1,5 @@
 # Ice Sheets
 
-Oceans
-
 This indicator examines the balance between snow accumulation and melting in the ice sheets that cover Greenland and Antarctica.
 
 ## Figures

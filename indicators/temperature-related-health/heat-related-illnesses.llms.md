@@ -1,9 +1,5 @@
 # Heat-Related Illnesses
 
-Health
-
-Temperature
-
 Hospitalizations in the United States attributed to extreme heat.
 
 ## Figures

@@ -1,6 +1,6 @@
 ## Where We’re Heading
 
-Currently, each indicator includes technical documentation, data sources, and reproducible code. Future updates will continue this approach to transparency while expanding and contextualizing impact indicators, incorporating new research, and reflecting input from data providers, students, scientists, and community partners.
+Future updates will continue a rigorous approach to transparency while expanding and contextualizing impact indicators, incorporating new research, and reflecting input from data providers, students, scientists, and community partners.
 
 ## An Ongoing Research and Communication Effort
 
@@ -8,7 +8,7 @@ We are working towards updating these indicators to reflect emerging data, and, 
 
 The project’s open-source framework creates opportunities for ongoing review, feedback, and contributions from users and experts. In turn, these collaborations help to identify areas of emerging research needs, improve methods, and strengthen connections between data providers and the organizations responding to climate impacts on the ground. The project will help identify gaps in climate impact monitoring while supporting development of actionable indicators.
 
-![](images/where_were_heading1.jpg)
+![](images/where_were_heading_dry_land.jpg)
 
 As climate impacts science advances and communities consider how best to adapt to changing conditions, so will the indicators. This resource provides a foundation for ongoing research, visualization, communication, and applied learning efforts that make climate impacts understandable, accessible, and actionable.
 
@@ -16,34 +16,24 @@ As climate impacts science advances and communities consider how best to adapt t
 
 Climate impact indicators transform complex data into meaningful insights that support decisions, strengthen resilience, and inform public understanding. Key users may include:
 
-01
-
 **Local and state decision‑makers**\
 who use indicators to inform planning, resilience investments, policy development, and public communication.
-
-02
 
 **Public health practitioners**\
 who use indicators to assess climate‑related health risks, identify vulnerable populations, and support preparedness efforts.
 
-03
-
 **Students and educators**\
 who use indicators to explore how climate impacts are measured, analyzed and communicated.
 
-04
-
 **Researchers and data providers**\
 who contribute new data streams, refine methods, and develop new indicators.
-
-05
 
 **Community organizations**\
 who use indicators to support planning, engagement, outreach, and local action.
 
 Looking ahead, we are exploring audience-specific resources that feature examples, case studies, and practical applications. New formats such as blog posts, StoryMaps, data stories, and short features will broaden access to climate impact indicators and deepen public engagement.
 
-## The Next Generation of Indicators
+## The Next Generation of Indicators Informed through Engagement
 
 The science of climate change and its impacts on health, communities, infrastructure and ecosystems continues to evolve and [TrackingClimateImpacts.us](https://trackingclimateimpacts.us) is designed to evolve with it.
 
@@ -100,6 +90,6 @@ Washington, DC 20052
 
 - Terms of Service
 - Privacy Policy
-- Contact Us
+- [Contact Us](mailto:climatehealth@gwu.edu)
 
 Back to top

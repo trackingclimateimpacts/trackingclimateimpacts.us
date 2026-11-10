@@ -1,13 +1,5 @@
 # Growing Degree Days
 
-Health
-
-Temperature
-
-Ecosystems
-
-How growing degree days have changed at 280 long-term weather stations across the contiguous 48 states since 1948, and what that suggests about pollen seasons.
-
 This indicator shows changes in growing degree days, which can signal changes in the timing and length of pollen seasons in the United States.
 
 ## Figures

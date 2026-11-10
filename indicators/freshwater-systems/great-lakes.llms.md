@@ -1,9 +1,5 @@
 # Great Lakes Water Levels and Temperatures
 
-Weather and Climate
-
-Great Lakes
-
 This indicator measures water levels and surface water temperatures in the Great Lakes.
 
 ## Figures

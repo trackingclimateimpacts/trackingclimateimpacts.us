@@ -1,11 +1,5 @@
 # A Closer Look: Temperature and Drought in the Southwest
 
-Weather and Climate
-
-Drought
-
-Temperature
-
 A closer look at trends in temperature and drought in the southwestern United States.
 
 This feature provides a closer look at trends in temperature and drought in the southwestern United States.

@@ -1,7 +1,5 @@
 # Community Connection: Ice Breakup in Three Alaskan Rivers
 
-Cryosphere
-
 This feature examines the timing of spring river ice breakup in three communities that have kept detailed records for more than 100 years.
 
 This feature examines the timing of spring river ice breakup in three communities that have kept detailed records for more than 100 years.

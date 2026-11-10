@@ -1,7 +1,5 @@
 # Great Lakes Ice Cover
 
-Cryosphere
-
 This indicator measures the area and duration of ice cover in the Great Lakes.
 
 ## Figures

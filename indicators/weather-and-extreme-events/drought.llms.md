@@ -1,9 +1,5 @@
 # Drought
 
-Weather and Climate
-
-Drought
-
 This indicator measures drought conditions of U.S. lands.
 
 ## Figures

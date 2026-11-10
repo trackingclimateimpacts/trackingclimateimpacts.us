@@ -1,9 +1,5 @@
 # Seasonal Temperature
 
-Weather and Climate
-
-Temperature
-
 Trends in average seasonal air temperature across the contiguous United States since 1896, and how the change varies by season and by state.
 
 ## Figures

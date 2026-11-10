@@ -1,9 +1,5 @@
 # Heating and Cooling Degree Days
 
-Society
-
-Energy
-
 This indicator examines changing temperatures from the perspective of heating and cooling needs for buildings.
 
 ## Figures

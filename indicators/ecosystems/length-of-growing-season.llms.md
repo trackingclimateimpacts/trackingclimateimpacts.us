@@ -1,14 +1,6 @@
 # Length of Growing Season
 
-Society
-
-Temperature
-
-Ecosystems
-
 How the length of the growing season, and the timing of spring and fall frosts, has changed across the contiguous 48 states since 1895.
-
-This indicator measures the length of the growing season in the contiguous 48 states.
 
 ## Figures
 

@@ -1,11 +1,5 @@
 # Tribal Connection: Trends in Stream Temperature in the Snake River
 
-Weather and Climate
-
-Stream Temperature
-
-This feature tracks the summer water temperature of the Snake River.
-
 This feature tracks the summer water temperature of the Snake River.
 
 ## Figures

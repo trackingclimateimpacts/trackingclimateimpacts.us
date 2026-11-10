@@ -1,7 +1,5 @@
 # Snowfall
 
-Cryosphere
-
 This indicator uses two different measures to show how snowfall has changed in the contiguous 48 states.
 
 This indicator uses two different measures to show how snowfall has changed in the contiguous 48 states.

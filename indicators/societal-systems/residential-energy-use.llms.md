@@ -1,12 +1,6 @@
 # Residential Energy Use
 
-Society
-
-Energy
-
 How much electricity and natural gas U.S. homes use for summer cooling and winter heating, alongside cooling and heating degree days.
-
-This indicator examines trends related to home air conditioning and heating by tracking the amount of electricity used by U.S. homes in the summer and energy used in the winter.
 
 ## Figures
 

@@ -1,9 +1,5 @@
 # Heat-Related Deaths
 
-Health
-
-Temperature
-
 Deaths in the United States attributed to extreme heat.
 
 ## Figures

@@ -37,17 +37,17 @@ This table shows 100-year global warming potentials, which describe the effects 
 
 \*\* Methane’s global warming potential is shown as a range that includes methane from both fossil and non-fossil sources.
 
+Excerpted from U.S. Environmental Protection Agency. (2024). Climate change indicators in the United States (Fifth ed., EPA 430-R-24-003).
+
 References
 
 ¹ IPCC (Intergovernmental Panel on Climate Change). 2021. Climate change 2021: The physical science basis. Working Group I contribution to the IPCC Sixth Assessment Report. Cambridge, United Kingdom: Cambridge University Press. [www.ipcc.ch/assessment-report/ar6](https://www.ipcc.ch/assessment-report/ar6/).\
 ² IPCC (Intergovernmental Panel on Climate Change). 2021. Climate change 2021: The physical science basis. Working Group I contribution to the IPCC Sixth Assessment Report. Cambridge, United Kingdom: Cambridge University Press. [www.ipcc.ch/assessment-report/ar6](https://www.ipcc.ch/assessment-report/ar6/).\
 ³ IPCC (Intergovernmental Panel on Climate Change). 2021. Climate change 2021: The physical science basis. Working Group I contribution to the IPCC Sixth Assessment Report. Cambridge, United Kingdom: Cambridge University Press. [www.ipcc.ch/assessment-report/ar6](https://www.ipcc.ch/assessment-report/ar6/).
 
-Excerpted from U.S. Environmental Protection Agency. (2024). Climate change indicators in the United States (Fifth ed., EPA 430-R-24-003).
-
 ## U.S. Greenhouse Gas Emissions
 
-The University of Maryland’s Center for Global Sustainability provides comprehensive information regarding greenhouse gas emissions and sinks in the United States, including quantities of specific gases being emitted and from what economic sectors. The GHGIA provides the Greenhouse Gas Inventory and Analysis for the United States, 1990-2024, the Methodology Report for Greenhouse Gas Inventory and Analysis by U.S. State, 1990-2024, and an accompanying State Inventory Tool.
+The University of Maryland’s Center for Global Sustainability provides comprehensive information regarding greenhouse gas emissions and sinks in the United States, including quantities of specific gases being emitted and from what economic sectors. While not an official national inventory, the GHGIA provides the *Greenhouse Gas Inventory and Analysis for the United States, 1990-2024., Also available: Methodology Report for Greenhouse Gas Inventory and Analysis by U.S. State, 1990-2024*, and an accompanying State Inventory Tool.
 
 **Here, we provide several examples from the GHGIA.**
 
@@ -97,13 +97,23 @@ Additional information and clarification pertaining to the historical global GHG
 
 ![Smokestack releasing a plume of smoke into a blue sky](images/air_sub.png)
 
-## Atmospheric Concentration of Carbon Dioxide
+## Atmospheric Concentration of Greenhouse Gasses
+
+### Carbon Dioxide
 
 Each year, human activities release more carbon dioxide into the atmosphere than natural processes can remove, raising atmospheric carbon dioxide levels. The global average carbon dioxide set a new record high in 2025: 425.62 parts per million (“ppm” for short). The increase over 2024 amounts was 2.83 ppm, which makes it the third-largest one-year increase on record. Atmospheric carbon dioxide is now 50 percent higher than it was before the Industrial Revolution. The annual rate of increase in atmospheric carbon dioxide over the past 60 years is about 100 times faster than previous natural increases, such as those that occurred at the end of the last ice age 11,000-17,000 years ago. (climate.us)
 
 ![Monthly average carbon dioxide at Mauna Loa Observatory since 1958](images/graph_6.png)
 
-Monthly average carbon dioxide at Mauna Loa Observatory since 1958 in parts per million (ppm). The seasonal cycle of highs and lows (small peaks and valleys) is driven by the Northern Hemisphere growing season. The long-term trend of rising carbon dioxide levels is driven by human activities. At Mauna Loa, the highest monthly value each year occurs in May. In May 2026, carbon dioxide hit 432.34 ppm, a new record. Climate.us image, based on Mauna Loa monthly mean data from NOAA Global Monitoring Lab.
+Monthly average carbon dioxide at Mauna Loa Observatory since 1958 in parts per million (ppm). The seasonal cycle of highs and lows (small peaks and valleys) is driven by the Northern Hemisphere growing season. The long-term trend of rising carbon dioxide levels is driven by human activities. At Mauna Loa, the highest monthly value each year occurs in May. In May 2026, carbon dioxide hit 432.34 ppm, a new record. Climate.us image, based on Mauna Loa monthly mean data from NOAA Global Monitoring Lab. ([Climate.us](https://www.climate.us/) image, used under a [CC license](https://creativecommons.org/licenses/by-sa/4.0/deed.en).)
+
+### Additional information regarding Atmospheric Concentrations of Greenhouse Gases
+
+Atmospheric Concentrations of Greenhouse Gases
+
+This indicator describes how the levels of major greenhouse gases in the atmosphere have changed over time.
+
+[Explore →](indicators/atmospheric-concentrations.llms.md)
 
 ## Heating Influence
 
@@ -158,6 +168,6 @@ Washington, DC 20052
 
 - Terms of Service
 - Privacy Policy
-- Contact Us
+- [Contact Us](mailto:climatehealth@gwu.edu)
 
 Back to top

@@ -1,9 +1,5 @@
 # Global Greenhouse Gas Emissions
 
-Atmosphere
-
-Emissions
-
 This indicator describes emissions of greenhouse gases worldwide.
 
 ## Figures

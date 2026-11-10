@@ -1,9 +1,5 @@
 # West Nile Virus
 
-Health
-
-Disease
-
 This indicator tracks the rate of reported West Nile neuroinvasive disease cases across the United States.
 
 ## Figures

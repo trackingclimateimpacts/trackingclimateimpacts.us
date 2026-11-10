@@ -1,9 +1,5 @@
 # River Flooding
 
-Weather and Climate
-
-Flooding
-
 How the magnitude and frequency of river flooding have changed at stream gauge stations across the United States since 1965.
 
 ## Figures

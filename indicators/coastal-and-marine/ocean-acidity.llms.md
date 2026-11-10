@@ -1,9 +1,5 @@
 # Ocean Acidity
 
-Oceans
-
-This indicator describes changes in the chemistry of the ocean that relate to the amount of carbon dioxide dissolved in the water.
-
 This indicator describes changes in the chemistry of the ocean that relate to the amount of carbon dioxide dissolved in the water.
 
 ## Figures

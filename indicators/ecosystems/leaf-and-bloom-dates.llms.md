@@ -1,11 +1,5 @@
 # Leaf and Bloom Dates
 
-Ecosystems
-
-Temperature
-
-How the timing of first leaf and first bloom dates in lilacs and honeysuckles has changed across the contiguous 48 states and Alaska.
-
 This indicator examines the timing of leaf growth and flower blooms for two widely distributed plants in the United States.
 
 ## Figures

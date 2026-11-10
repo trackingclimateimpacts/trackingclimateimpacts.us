@@ -1,9 +1,5 @@
 # Bird Wintering Ranges
 
-Environment
-
-Ecosystems
-
 This indicator examines changes in the winter ranges of North American birds.
 
 ## Figures

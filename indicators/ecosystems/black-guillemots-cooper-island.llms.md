@@ -1,9 +1,5 @@
 # A Closer Look: The Black Guillemots of Cooper Island
 
-Environment
-
-Ecosystems
-
 This feature explores changes in bird populations on an island along Alaska’s Arctic northern coast.
 
 ## Figures

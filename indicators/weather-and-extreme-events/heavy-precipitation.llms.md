@@ -1,9 +1,5 @@
 # Heavy Precipitation
 
-Weather and Climate
-
-Precipitation
-
 This indicator tracks the frequency of heavy precipitation events in the United States.
 
 Trends in extreme one-day precipitation events and unusually high annual precipitation across the contiguous 48 states, 1895-2023.

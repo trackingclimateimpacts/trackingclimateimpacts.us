@@ -1,4 +1,4 @@
-![](../../images/ecosystems.jpg)
+![](../../images/ecosystems.png)
 
 ## Ecosystems
 
@@ -21,15 +21,15 @@ How the length of the growing season, and the timing of spring and fall frosts, 
 
 ##### Growing Degree Days
 
-How growing degree days have changed at 280 long-term weather stations across the contiguous 48 states since 1948, and what that suggests about pollen seasons.
+This indicator shows changes in growing degree days, which can signal changes in the timing and length of pollen seasons in the United States.
 
 ##### Ragweed Pollen Season
 
-How the length of ragweed pollen season has changed at 11 locations across the central United States and Canada since 1995.
+This indicator depicts changes in the length of ragweed pollen season in the United States and Canada.
 
 ##### Leaf and Bloom Dates
 
-How the timing of first leaf and first bloom dates in lilacs and honeysuckles has changed across the contiguous 48 states and Alaska.
+This indicator examines the timing of leaf growth and flower blooms for two widely distributed plants in the United States.
 
 ##### Community Connection: Cherry Blossom Bloom Dates in Washington, D.C.
 
@@ -92,6 +92,6 @@ Washington, DC 20052
 
 - Terms of Service
 - Privacy Policy
-- Contact Us
+- [Contact Us](mailto:climatehealth@gwu.edu)
 
 Back to top

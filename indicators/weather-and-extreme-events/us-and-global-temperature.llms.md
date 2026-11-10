@@ -1,9 +1,5 @@
 # U.S. and Global Temperature
 
-Weather and Climate
-
-Temperature
-
 How average air temperature has changed across the contiguous United States and worldwide since 1901, and how those changes vary by climate division.
 
 This indicator describes trends in average surface temperature for the United States and the world.

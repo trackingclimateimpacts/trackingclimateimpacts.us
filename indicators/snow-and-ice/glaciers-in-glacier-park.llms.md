@@ -1,7 +1,5 @@
 # A Closer Look: Glaciers in Glacier National Park
 
-Cryosphere
-
 This regional feature examines how the surface area of glaciers in Glacier National Park in Montana has changed since 1966.
 
 ## Figures

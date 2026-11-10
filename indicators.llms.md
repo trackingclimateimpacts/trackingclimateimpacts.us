@@ -77,7 +77,7 @@ This indicator measures water levels and surface water temperatures in the Great
 
 ##### Growing Degree Days
 
-How growing degree days have changed at 280 long-term weather stations across the contiguous 48 states since 1948, and what that suggests about pollen seasons.
+This indicator shows changes in growing degree days, which can signal changes in the timing and length of pollen seasons in the United States.
 
 ##### Heat Waves
 
@@ -117,7 +117,7 @@ This indicator shows changes in surface water temperatures in North American lak
 
 ##### Leaf and Bloom Dates
 
-How the timing of first leaf and first bloom dates in lilacs and honeysuckles has changed across the contiguous 48 states and Alaska.
+This indicator examines the timing of leaf growth and flower blooms for two widely distributed plants in the United States.
 
 ##### Length of Growing Season
 
@@ -145,7 +145,7 @@ This indicator shows trends in permafrost temperature at select sites in Alaska.
 
 ##### Ragweed Pollen Season
 
-How the length of ragweed pollen season has changed at 11 locations across the central United States and Canada since 1995.
+This indicator depicts changes in the length of ragweed pollen season in the United States and Canada.
 
 ##### Residential Energy Use
 
@@ -157,7 +157,7 @@ How the magnitude and frequency of river flooding have changed at stream gauge s
 
 ##### Sea Level
 
-This indicator describes how sea level has changed over time. The indicator describes two types of sea level changes: absolute and relative.
+This indicator describes how sea level has changed over time. It describes two types of sea level changes: absolute global sea level change and relative sea level change…
 
 ##### Sea Surface Temperature
 
@@ -246,6 +246,6 @@ Washington, DC 20052
 
 - Terms of Service
 - Privacy Policy
-- Contact Us
+- [Contact Us](mailto:climatehealth@gwu.edu)
 
 Back to top
