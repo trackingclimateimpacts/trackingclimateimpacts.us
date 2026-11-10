@@ -49,7 +49,7 @@ These indicators track changes in the length of the growing season, growing degr
 ::: {#cat-listing}
 :::
 
-[View All](/health-and-environment-indicators.qmd){.cat-viewall}
+[Back to Categories](/health-and-environment-indicators.qmd){.cat-viewall}
 :::
 :::
 :::

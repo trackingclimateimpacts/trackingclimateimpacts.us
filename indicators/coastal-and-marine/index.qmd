@@ -46,7 +46,7 @@ This indicator tracks marine heat waves, sea levels, coastal flooding, ocean aci
 ::: {#cat-listing}
 :::
 
-[View All](/health-and-environment-indicators.qmd){.cat-viewall}
+[Back to Categories](/health-and-environment-indicators.qmd){.cat-viewall}
 :::
 :::
 :::

@@ -1832,6 +1832,9 @@ $cat-card-border: #C8C8C8;
   }
 }
 
+// The smokestacks and plume sit in the left half of the photo, so anchor the crop left of centre.
+.ghg-hero .hero-split-img img { object-position: 15% 50%; }
+
 /* ---- Hero with a full-bleed photo behind the heading (Emissions & Climate Resources). */
 .hero-bg {
   position: relative;

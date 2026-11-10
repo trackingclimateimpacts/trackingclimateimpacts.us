@@ -43,7 +43,7 @@ These indicators track heating and cooling degree days and residential energy us
 ::: {#cat-listing}
 :::
 
-[View All](/health-and-environment-indicators.qmd){.cat-viewall}
+[Back to Categories](/health-and-environment-indicators.qmd){.cat-viewall}
 :::
 :::
 :::

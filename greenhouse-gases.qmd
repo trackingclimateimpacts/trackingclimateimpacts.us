@@ -190,7 +190,7 @@ Each year, human activities release more carbon dioxide into the atmosphere than
 ::: {.home-band .ghg-section}
 ### Additional information regarding Atmospheric Concentrations of Greenhouse Gases
 
-::: {.ghg-link-card}
+::: {.ghg-link-card .has-img}
 
 ::: {.ghg-link-card-text}
 [Atmospheric Concentrations of Greenhouse Gases]{.ghg-link-card-title}
@@ -198,6 +198,10 @@ Each year, human activities release more carbon dioxide into the atmosphere than
 This indicator describes how the levels of major greenhouse gases in the atmosphere have changed over time.
 
 [Explore →](indicators/atmospheric-concentrations.qmd){.ghg-link-card-cta}
+:::
+
+::: {.ghg-link-card-img}
+![](images/emissions_card.jpg){fig-alt="Smokestacks at an industrial plant releasing plumes of smoke into a blue sky above a forest"}
 :::
 
 :::

@@ -50,7 +50,7 @@ This indicator tracks changes in national and global temperatures, precipitation
 ::: {#cat-listing}
 :::
 
-[View All](/health-and-environment-indicators.qmd){.cat-viewall}
+[Back to Categories](/health-and-environment-indicators.qmd){.cat-viewall}
 :::
 :::
 :::

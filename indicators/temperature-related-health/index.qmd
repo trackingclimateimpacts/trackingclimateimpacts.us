@@ -45,7 +45,7 @@ These indicators track heat-related deaths, heat-related workplace deaths, heat-
 ::: {#cat-listing}
 :::
 
-[View All](/health-and-environment-indicators.qmd){.cat-viewall}
+[Back to Categories](/health-and-environment-indicators.qmd){.cat-viewall}
 :::
 :::
 :::
