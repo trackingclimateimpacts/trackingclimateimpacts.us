@@ -43,6 +43,10 @@ These indicators track heating and cooling degree days and residential energy us
 ::: {#cat-listing}
 :::
 
+::: {.cat-note}
+This is an active area of research and data development in the climate and health arena. This category of indicators is likely to expand as the science advances. Stay tuned!
+:::
+
 [Back to Categories](/health-and-environment-indicators.qmd){.cat-viewall}
 :::
 :::

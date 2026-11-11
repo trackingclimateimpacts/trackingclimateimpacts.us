@@ -45,7 +45,7 @@ The Indicators
 
 ## Health & Environment Indicators
 
-Rising temperatures, shifting snow and rainfall patterns, and more frequent extreme weather events are clear signs of a changing climate. Many of these observed changes are linked to increasing greenhouse gas concentrations in the atmosphere caused by human activities. The indicators presented here document these changes and help illustrate their impacts that matter to human health, communities, ecosystems, and the environment.
+Rising temperatures, shifting snow and rainfall patterns, and more frequent extreme weather events are clear signs of a changing climate. Many of these observed changes are linked to increasing greenhouse gas concentrations in the atmosphere caused by human activities. The indicators presented here document these changes and help illustrate impacts that matter to human health, communities, ecosystems, and the environment.
 
 [View Data ↗](indicators.qmd){.home-feature-link}
 :::

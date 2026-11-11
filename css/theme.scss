@@ -1619,8 +1619,6 @@ img.ghg-figure-img { display: block; max-width: sc(976px); width: 100%; height: 
   p { font-size: sc(21px); line-height: 1.6; }
 }
 
-.gci-refs { font-size: 14px; line-height: 1.45; margin-bottom: 1.2em; p { font-size: 14px; } }
-
 @media (max-width: 767.98px) {
   .gci-hero h2, .gci-section h2 { font-size: 2rem; }
   .gci-hero p, .gci-section p { font-size: 1rem; }
@@ -1710,6 +1708,18 @@ $cat-card-border: #C8C8C8;
     .card-text, .listing-description { font-family: $font-krub; font-size: 15px; color: rgba(0, 0, 0, 0.55); }
     .card-body::after { content: "Explore \2192"; display: block; margin-top: 12px; font-family: $font-inter; font-size: 15px; font-weight: 900; color: #000; }
   }
+}
+
+// Short note under a category's last indicator tile.
+.cat-note {
+  margin-top: sc(32px);
+  background: $green-tint;
+  border-left: 3px solid $green;
+  border-radius: 12px;
+  padding: sc(24px) sc(28px);
+  font-size: sc(20px);
+  line-height: 1.5;
+  color: $green-dark;
 }
 
 .cat-viewall {
