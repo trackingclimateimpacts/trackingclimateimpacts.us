@@ -88,7 +88,7 @@ Looking ahead, we are exploring audience-specific resources that feature example
 ## The Next Generation of Indicators Informed through Engagement
 
 
-The science of climate change and its impacts on health, communities, infrastructure and ecosystems continues to evolve and [TrackingClimateImpacts.us](https://trackingclimateimpacts.us) is designed to evolve with it.
+The science of climate change and its impacts on health, communities, infrastructure and ecosystems continues to evolve and [TrackingClimateImpacts.us](https://trackingclimateimpacts.us){.no-underline} is designed to evolve with it.
 
 **Future work will focus on:**
 
