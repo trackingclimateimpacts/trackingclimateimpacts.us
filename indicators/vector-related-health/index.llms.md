@@ -23,6 +23,8 @@ This indicator tracks the rate of reported Lyme disease cases across the United 
 
 This indicator tracks the rate of reported West Nile neuroinvasive disease cases across the United States.
 
+This is an active area of research and data development in the climate and health arena. This category of indicators is likely to expand as the science advances. Stay tuned!
+
 [Back to Categories](../../health-and-environment-indicators.llms.md)
 
 ![Milken logo](../../images/milken_logo.png)
