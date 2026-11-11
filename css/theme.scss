@@ -255,6 +255,12 @@ header#quarto-header.headroom.headroom--unpinned {
   }
 }
 
+// The Figma header draws the third item, "Climate, Health & Environment", with the
+// same outline at all times. Quarto only marks plain links as .active, never a
+// dropdown's label, so the rule above cannot do this for a menu; address the item
+// by position instead (keep it third in website.navbar.right in _quarto.yml).
+.navbar-nav > .nav-item:nth-child(3) > .nav-link { border-color: $nav-outline; }
+
 // The nav items sit in a grey pill. Collapsed (mobile) it is the toggled panel.
 #navbarCollapse {
   background-color: $navbar-bg;
@@ -285,13 +291,6 @@ header#quarto-header.headroom.headroom--unpinned {
   .navbar .navbar-brand {
     margin: 0;
     overflow: visible;
-
-    .navbar-title {
-      font-size: clamp(22px, 2.4vw, 30px);
-      line-height: 27px;
-      font-weight: 700;
-      color: #000;
-    }
   }
 
   #navbarCollapse {
@@ -315,6 +314,61 @@ header#quarto-header.headroom.headroom--unpinned {
 
 // "Climate" in the logo is gold at every width, including the collapsed navbar.
 .navbar .navbar-title .logo-accent { color: $home-orange; }
+
+// Brand lockup, from the Figma header: GW logo, "Climate & Health Institute", a
+// vertical rule, then the stacked Tracking / Climate / Impacts wordmark. The
+// institute name and rule drop out once the nav collapses (below 1200px).
+.navbar .navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: sc(12px);
+
+  .navbar-logo { width: sc(67px); height: auto; max-height: none; margin: 0; }
+
+  .navbar-title {
+    display: flex;
+    align-items: center;
+    gap: sc(12px);
+  }
+
+  .brand-institute {
+    font-size: sc(20px);
+    font-weight: 500;
+    line-height: sc(27px);
+    text-transform: capitalize;
+    color: #000;
+  }
+
+  .brand-divider {
+    flex: none;
+    height: sc(110px);
+    border-left: 2px solid #000;
+    margin: 0 sc(8px);
+  }
+
+  .brand-wordmark {
+    font-size: sc(32px);
+    font-weight: 600;
+    line-height: sc(30px);
+    letter-spacing: sc(0.96px);
+    text-transform: capitalize;
+    color: #000;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .navbar .navbar-brand {
+    .brand-institute, .brand-divider { display: none; }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .navbar .navbar-brand {
+    gap: 8px;
+    .navbar-logo { width: 44px; }
+    .brand-wordmark { font-size: 18px; line-height: 17px; letter-spacing: 0.5px; }
+  }
+}
 
 .navbar .navbar-nav .nav-link {
   padding: sc(13px) clamp(sc(6px), 0.7vw, sc(22px)) !important;

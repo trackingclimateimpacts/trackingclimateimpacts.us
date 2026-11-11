@@ -25,7 +25,9 @@ website:
 
 
   navbar:
-    title: "Tracking<span class='logo-accent'>Climate</span>Impacts"
+    logo: images/gw_logo.png
+    logo-alt: "GW"
+    title: "<span class='brand-institute'>Climate &amp;<br>Health Institute</span><span class='brand-divider' aria-hidden='true'></span><span class='brand-wordmark'>Tracking<br><span class='logo-accent'>Climate</span><br>Impacts</span>"
     background: light
     collapse-below: xl
     search: true
@@ -36,7 +38,7 @@ website:
             href: about.qmd
           - text: "Where We’re Heading"
             href: where-were-heading.qmd
-      - text: "Emissions & Climate Resources"
+      - text: "The Whole Story"
         menu:
           - text: "Emissions & Climate Resources"
             href: emissions-and-climate-resources.qmd
@@ -46,7 +48,7 @@ website:
             href: global-climate-indicators.qmd
           - text: "Additional Resources"
             href: additional-resources.qmd
-      - text: "Health & Environment Indicators"
+      - text: "Climate, Health & Environment"
         menu:
           - text: "Health & Environment Indicators"
             href: health-and-environment-indicators.qmd
