@@ -12,7 +12,7 @@ The Impacts of Climate Change on Human Health in the United States: A Scientific
 
 The scientific report by the U.S. Global Change Research Program (USGCRP) synthesizes and discusses the effects of climate change on public health and social and environmental disparities based on peer-reviewed scientific literature
 
-[Read Here](https://www.academia.edu/31063713/THE_IMPACTS_OF_CLIMATE_CHANGE_ON_HUMAN_HEALTH_IN_THE_UNITED_STATES_A_Scientific_Assessment)
+[Read Here](THE_IMPACTS_OF_CLIMATE_CHANGE_ON_HUMAN_H-compressed.pdf)
 
 Climate Change 2023: Synthesis Report. Contribution of Working Groups I, II, and III to the Sixth Assessment Report of the Intergovernmental Panel on Climate Change.
 

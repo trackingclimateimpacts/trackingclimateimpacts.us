@@ -1,6 +1,6 @@
 ## About the Project
 
-Climate change indicators translate observed, empirical data into clear, accessible metrics that matter to people, infrastructure and natural systems. They distill complex science into information that resonates with the public and supports evidence‑based decisions. Viewed together, indicators offer a powerful, data‑driven picture: climate impacts are happening now, and they carry real consequences for communities and public health across the United States.
+Climate change indicators translate observed, empirical data into clear, accessible metrics that matter to people, communities, and decision-makers. They distill complex science into information that resonates with the public and supports evidence‑based decisions. Viewed together, indicators offer a powerful, data‑driven picture: climate impacts are happening now, and they carry real consequences for communities and public health across the United States.
 
 This effort began by replicating the U.S. EPA’s Climate Change Indicators, a climate communications resource originally launched in 2010. The former website is now only accessible as a snapshot, digitally preserved on January 19, 2025. This replication phase ensures continued access to the scientifically rigorous, peer‑reviewed datasets and narratives that have long supported understanding and communicating the impacts of climate change in the United States. While the site design has changed, the underlying indicators, data, narratives, and documentation remain intact and continue to adhere to established standards and methodologies for transparency, reproducibility, and data integrity.
 
@@ -20,11 +20,11 @@ See [Where We’re Heading](https://climatehealth.gwu.edu/) for a fuller discuss
 
 ## The Climate Data Landscape
 
-This TrackingClimateImpacts.us project is part of a broader ecosystem of organizations dedicated to maintaining trusted, publicly accessible climate information. Two organizations, in particular, provide foundational climate data that have long supported global and national indicator efforts.
+This TrackingClimateImpacts.us project is part of a broader ecosystem of organizations dedicated to maintaining trusted, publicly accessible climate information. Two organizations in particular provide foundational climate data that have long supported global and national indicator efforts.
 
 ### Climate.us
 
-climate.us, the nonprofit successor to Climate.gov, offers authoritative long‑term climate data, information on climate drivers and variability, and many other resources that advance public climate literacy. It also hosts the U.S. Global Change Research Program’s Fifth National Climate Assessment, the most recent and comprehensive assessment of climate change in the United States.
+Climate.us, the nonprofit successor to Climate.gov, offers authoritative long‑term climate data, information on climate drivers and variability, and many other resources that advance public climate literacy. It also hosts the U.S. Global Change Research Program’s Fifth National Climate Assessment, the most recent and comprehensive assessment of climate change in the United States.
 
 [Learn More](https://www.climate.us/)
 
@@ -40,10 +40,11 @@ These and other resources are linked at Emissions & Climate Resources. Together,
 
 ## What You’ll Find Here
 
-TrackingClimateImpacts.us focuses on indicators that connect scientific observation to human and societal consequences. Climate Health and Environment provides a wide range of climate impact indicators along with detailed technical documentation for each including data sources and reproducible code. An overview of the methodology used by EPA (through January, 2025) to identify, develop and document indicators, along with EPA’s most recent Technical Documentation, can be found in Methodology.
+TrackingClimateImpacts.us focuses on indicators that connect scientific observation to human and societal consequences. [Health & Environment Indicators](health-and-environment-indicators.llms.md) provides a wide range of climate impact indicators along with detailed technical documentation for each, including data sources and reproducible code. An overview of the methodology used by EPA (through January, 2025) to identify, develop and document indicators, along with EPA’s most recent Technical Documentation, can be found in Methodology.
 
-Indicators of global and U.S. emissions as well as changes in Earth and climatic systems are included for context. In Emissions & Climate Resources, we refer to GHGIA for data and figures pertaining to U.S. greenhouse gas emissions. Methodology and FAQs can be found at GHGIA. We refer to climate.us for many climate change drivers, variability and other global climate change data. Climate.us provides their methodology, documentation and further discussion.\
-Emissions & Climate Resources also provides easy access to additional climate change resources
+Indicators of global and U.S. emissions as well as changes in Earth and climatic systems are included for context. In [Emissions & Climate Resources](emissions-and-climate-resources.llms.md), we refer to GHGIA for data and figures pertaining to U.S. greenhouse gas emissions. Methodology and FAQs can be found at GHGIA. We refer to climate.us for many climate change drivers, variability and other global climate change data. Climate.us provides their methodology, documentation and further discussion.
+
+[Emissions & Climate Resources](emissions-and-climate-resources.llms.md) also provides easy access to additional climate change resources.
 
 ## We are committed to:
 

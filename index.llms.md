@@ -18,7 +18,7 @@ Rising temperatures, shifting snow and rainfall patterns, and more frequent extr
 
 ## Emissions & Climate Resources
 
-Climate indicators illuminate the full arc of climate change—from trends in the greenhouse gas emissions that drive planetary warming, to shifts in Earth’s systems, to the impacts felt in communities and ecosystems. While *TrackingClimateImpacts.us* provides a range of indicators and focuses on the impacts of climate change in the United States, understanding those impacts requires seeing them within the broader context of global change.
+Climate indicators illuminate the full arc of climate change—from trends in the greenhouse gas emissions that drive planetary warming, to shifts in Earth’s systems, to the impacts felt in communities and ecosystems. While TrackingClimateImpacts.us provides a range of indicators and focuses on the impacts of climate change in the United States, understanding those impacts requires seeing them within the broader context of global change.
 
 [Understand the context ↗](emissions-and-climate-resources.llms.md)
 
@@ -26,7 +26,7 @@ Climate indicators illuminate the full arc of climate change—from trends in th
 
 ## Methodology
 
-This section documents the transparent, reproducible processes that underpin the indicators on *TrackingClimateImpacts.us* and preserves the methodological foundation developed by the U.S. Environmental Protection Agency (EPA) through January 2025. It also describes how our approach will evolve as new science, data, and partnerships emerge.
+This section documents the transparent, reproducible processes that underpin the indicators on TrackingClimateImpacts.us and preserves the methodological foundation developed by the U.S. Environmental Protection Agency (EPA) through January 2025. It also describes how our approach will evolve as new science, data, and partnerships emerge.
 
 [Learn More](methodology.llms.md)
 

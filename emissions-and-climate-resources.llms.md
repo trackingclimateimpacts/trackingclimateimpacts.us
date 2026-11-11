@@ -10,7 +10,7 @@ Climate indicators illuminate the full arc of climate change—from trends in th
 
 ![Satellite view of Earth's clouds and continents](images/earth_resources.png)
 
-While *TrackingClimateImpacts.us* provides a range of indicators and focuses on the impacts of climate change in the United States, understanding those impacts requires seeing them within the broader context of global change.
+While TrackingClimateImpacts.us provides a range of indicators and focuses on the impacts of climate change in the United States, understanding those impacts requires seeing them within the broader context of global change.
 
 [Climate Indicators ↗](health-and-environment-indicators.llms.md)
 
