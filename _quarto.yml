@@ -9,6 +9,7 @@ project:
     - "**/*.qmd"
   resources:
     - images/
+    - THE_IMPACTS_OF_CLIMATE_CHANGE_ON_HUMAN_H-compressed.pdf
 
 website:
   title: TrackingClimateImpacts.us
