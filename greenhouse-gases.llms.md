@@ -97,7 +97,7 @@ Additional information and clarification pertaining to the historical global GHG
 
 ![Smokestack releasing a plume of smoke into a blue sky](images/air_sub.png)
 
-## Atmospheric Concentration of Greenhouse Gasses
+## Atmospheric Concentration of Greenhouse Gases
 
 ### Carbon Dioxide
 

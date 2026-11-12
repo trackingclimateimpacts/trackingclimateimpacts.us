@@ -1,6 +1,8 @@
 ## Methodology
 
-This section documents the transparent, reproducible processes that underpin the indicators on TrackingClimateImpacts.us and preserves the methodological foundation developed by the U.S. Environmental Protection Agency (EPA) through January 2025. It also describes how our approach will evolve as new science, data, and partnerships emerge.
+This section documents the transparent, reproducible processes that underpin the indicators on Tracking
+
+ClimateImpacts.us and preserves the methodological foundation developed by the U.S. Environmental Protection Agency (EPA) through January 2025. It also describes how our approach will evolve as new science, data, and partnerships emerge.
 
 ![](images/Rectangle_methodology.png)
 

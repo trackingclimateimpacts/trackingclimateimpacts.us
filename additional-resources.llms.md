@@ -2,7 +2,9 @@
 
 ![](images/rectangle_additional.png)
 
-## Climate Change Scientific Assessment Reports
+Climate Change\
+Scientific Assessment Reports
+-----------------------------
 
 The climate change scientific literature is extensive. Connections between human activities, climate change, and resulting impacts are synthesized in major scientific assessments.
 
@@ -14,11 +16,15 @@ The scientific report by the U.S. Global Change Research Program (USGCRP) synthe
 
 [Read Here](THE_IMPACTS_OF_CLIMATE_CHANGE_ON_HUMAN_H-compressed.pdf)
 
+![](images/impact_of_climate_cover.jpg)
+
 Climate Change 2023: Synthesis Report. Contribution of Working Groups I, II, and III to the Sixth Assessment Report of the Intergovernmental Panel on Climate Change.
 
 The IPCC report summarizes scientific knowledge about global climate change, climate impacts and risks, associated uncertainties and potential mitigation pathways.
 
 [Read Here](https://www.ipcc.ch/assessment-report/ar6/)
+
+![](images/climate_change_cover.png)
 
 Fifth National Climate Assessment (2023).
 
@@ -31,6 +37,8 @@ Effects of Human-Caused Greenhouse Gas Emissions on U.S. Climate, Health, and We
 The U.S. National Academies of Sciences, Engineering, and Medicine assessment of how human-caused greenhouse gas emissions affect U.S. climate, health, and welfare.
 
 [Read Here](https://www.nationalacademies.org/read/29239/chapter/1)
+
+![](images/effects_of_ghg_cover_cropped.jpg)
 
 ## Additional tools and Indicator resources
 

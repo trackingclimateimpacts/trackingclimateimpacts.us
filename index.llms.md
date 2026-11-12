@@ -1,4 +1,6 @@
-## Welcome to Tracking Climate Impacts!
+## Welcome to Tracking
+
+## Climate Impacts!
 
 TrackingClimateImpacts.us is an open, reproducible collection of climate change impact indicators for the United States. Built entirely from public data–with code and sources published alongside them—these indicators track observed trends in climate-related metrics that matter to people, public health, and the environment. They offer clear, trustworthy information to support evidence-based action and help state, local and public health practitioners plan for climate impacts, while ensuring students, researchers and the public have access to critical data.
 
