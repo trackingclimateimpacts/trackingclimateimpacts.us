@@ -176,7 +176,7 @@ Additional information and clarification pertaining to the historical global GHG
 :::
 
 ::: {.home-band .ghg-section}
-## Atmospheric Concentration of Greenhouse Gasses
+## Atmospheric Concentration of Greenhouse Gases
 
 ### Carbon Dioxide
 
