@@ -53,8 +53,6 @@ website:
         menu:
           - text: "Health & Environment Indicators"
             href: health-and-environment-indicators.qmd
-          - text: "All Indicators"
-            href: indicators.qmd
           - text: "Weather and Extreme Events"
             href: indicators/weather-and-extreme-events/index.qmd
           - text: "Snow and Ice"
@@ -71,6 +69,8 @@ website:
             href: indicators/vector-related-health/index.qmd
           - text: "Societal Systems"
             href: indicators/societal-systems/index.qmd
+          - text: "All Indicators"
+            href: indicators.qmd
       - text: "Methodology"
         href: methodology.qmd
 
