@@ -597,7 +597,6 @@ body:has(.home-footer) main.content { margin-bottom: 0; }
 
   .home-hero-text h2 { font-size: sc(55px); line-height: sc(60px); color: #fff; margin-bottom: sc(24px); }
   p { font-size: sc(22px); max-width: sc(665px); }
-  .home-hero-text p:first-of-type { font-family: $font-krub; font-weight: 400; font-size: sc(30px); }
   a { color: #fff; }
 
   .home-hero-img {
@@ -762,7 +761,6 @@ body:has(.home-footer) main.content { margin-bottom: 0; }
 
   h2 { font-size: sc(55px); line-height: 1.12; color: #fff; margin-bottom: sc(30px); }
   p { font-size: sc(22px); line-height: 1.6; max-width: sc(1293px); margin-bottom: sc(28px); }
-  p:first-of-type { font-family: $font-krub; font-weight: 400; font-size: sc(30px); }
   p:last-child { margin-bottom: 0; }
 }
 
@@ -862,7 +860,6 @@ body:has(.home-footer) main.content { margin-bottom: 0; }
 
   h2 { font-size: sc(55px); line-height: 1.12; color: #fff; margin-bottom: sc(28px); }
   p { font-size: sc(22px); line-height: 1.6; max-width: sc(970px); }
-  p:first-of-type { font-family: $font-krub; font-weight: 400; font-size: sc(30px); }
 }
 
 .where-section {
@@ -871,6 +868,7 @@ body:has(.home-footer) main.content { margin-bottom: 0; }
 
   h2 { font-size: sc(55px); line-height: 1.12; margin-bottom: sc(28px); }
   p { font-size: sc(20px); line-height: 1.6; margin-bottom: sc(28px); }
+  > p, > section > p { font-family: $font-krub; font-weight: 400; font-size: sc(30px); }
   p:last-child { margin-bottom: 0; }
 
   &.ruled { border-bottom: 1px solid rgba(0, 0, 0, 0.07); }
@@ -940,7 +938,6 @@ body:has(.home-footer) main.content { margin-bottom: 0; }
   .about-intro p, .about-collab p, .about-section p, .about-find p { font-size: 1rem; }
   .where-intro h2, .where-section h2, .where-users h2, .where-next h2 { font-size: 2rem; }
   .where-intro p, .where-section p, .where-users p, .where-next p, .where-next li { font-size: 1rem; }
-  .home-hero-text p:first-of-type, .about-intro p:first-of-type, .where-intro p:first-of-type, .che-indicators > p:first-of-type { font-size: 1.25rem; }
 }
 
 /* ---- Methodology, from the Figma frame. Reuses .home-band and the footer. */
@@ -962,16 +959,16 @@ body:has(.home-footer) main.content { margin-bottom: 0; }
 
   h2 { font-size: sc(55px); line-height: 1.2; margin-bottom: sc(16px); max-width: sc(993px); }
   p { font-size: sc(21px); line-height: 1.6; max-width: sc(1198px); margin-bottom: sc(20px); }
+  > p, > section > p { font-family: $font-krub; font-weight: 400; font-size: sc(30px); }
 }
 
 $method-gap: sc(80px);
-$method-squiggle: 12px;   // line thickness band, matches the tile height in the masks below
 
 .method-steps {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: $method-gap;
-  margin-top: sc(40px);
+  margin-top: sc(70px);
 }
 
 .method-step {
@@ -1074,7 +1071,7 @@ $story-mist: $green-tint;
   padding-bottom: sc(70px);
 
   h2 { font-size: sc(55px); line-height: 1.12; margin-bottom: sc(25px); }
-  > p, section > p { font-size: sc(31px); line-height: 1.12; max-width: sc(1088px); margin-bottom: sc(60px); }
+  > p, section > p { font-size: sc(30px); font-family: $font-krub; font-weight: 400; line-height: 1.12; max-width: sc(1088px); margin-bottom: sc(60px); }
 }
 
 .story-arc-card {
@@ -1427,6 +1424,7 @@ $res-card-bg: $teal-light;
 
   h2 { font-size: sc(55px); line-height: 1.2; max-width: none; margin-bottom: sc(40px); }
   > p, section > p { font-size: sc(21px); line-height: 1.6; max-width: sc(1039px); margin-bottom: sc(24px); }
+  > p, > section > p { font-family: $font-krub; font-weight: 400; font-size: sc(30px); }
 }
 
 .res-cards {
@@ -1662,6 +1660,7 @@ img.ghg-figure-img { display: block; max-width: sc(976px); width: 100%; height: 
   h2 { font-size: sc(55px); }
   p { font-size: sc(21px); line-height: 1.6; }
 }
+.gci-hero + .gci-section > p:nth-of-type(-n+2), .gci-hero + .gci-section > section > p:nth-of-type(-n+2) { font-family: $font-krub; font-weight: 400; font-size: sc(30px); }
 
 @media (max-width: 767.98px) {
   .gci-hero h2, .gci-section h2 { font-size: 2rem; }
@@ -2039,76 +2038,107 @@ $cat-card-border: #C8C8C8;
   .story-org { grid-template-columns: 1fr; row-gap: 1.5rem; }
 }
 
-/* ---- Methodology: wavy connectors between the process steps, in reading order
-   (01 > 02 > 03, then down and back across to 04, then 04 > 05 > 06). The line is a
-   mask over a $home-navy fill, so it takes its colour from the variable. */
-$squiggle-h: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='12' viewBox='0 0 24 12'%3E%3Cpath d='M0 6 Q6 0 12 6 T24 6' fill='none' stroke='black' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E");
-$squiggle-v: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='24' viewBox='0 0 12 24'%3E%3Cpath d='M6 0 Q0 6 6 12 T6 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E");
+/* ---- Methodology: grey elbow connectors between the process steps, in reading order
+   (01 > 02 > 03, then down and back across to 04, then 04 > 05 > 06). Each connector is
+   built from rounded-corner boxes drawn with borders only, so each step carries at most two
+   pseudo-elements: ::before for the piece that arrives at it, ::after for the piece that leaves. */
+$line-w: 4px;
+$line-r: 14px;
+$line-rise: 22px;                   // how far the 01>02 and 04>05 elbows climb past the step edge
+$line-col: #C8C8C8;
 
 .method-step {
   position: relative;
 
-  &::before, &::after { content: ""; position: absolute; background: $home-navy; pointer-events: none; }
+  &::before, &::after {
+    content: "";
+    position: absolute;
+    box-sizing: border-box;
+    pointer-events: none;
+    border: 0 solid $line-col;
+  }
 
-  // Across the column gap, to the next step in the same row.
-  &:is(:nth-child(1), :nth-child(2), :nth-child(4), :nth-child(5))::after {
+  // Top row: out of the right edge, up over the gap, across and down into the next step's top.
+  &:is(:nth-child(1), :nth-child(2))::after {
     left: 100%;
-    top: 50%;
-    width: $method-gap;
-    height: $method-squiggle;
-    margin-top: calc(#{$method-squiggle} / -2);
-    -webkit-mask: $squiggle-h round no-repeat center / auto 100%;
-    mask: $squiggle-h round no-repeat center / auto 100%;
+    top: calc(#{$line-r} - #{$line-rise});
+    width: calc(#{$method-gap} / 2 + #{$line-w} / 2);
+    height: calc(50% + #{$line-w} / 2 + #{$line-rise} - #{$line-r});
+    border-width: 0 $line-w $line-w 0;
+    border-bottom-right-radius: $line-r;
+  }
+  &:is(:nth-child(2), :nth-child(3))::before {
+    left: calc(-#{$method-gap} / 2 - #{$line-w} / 2);
+    top: -$line-rise;
+    width: calc(50% + #{$method-gap} / 2 + #{$line-w});
+    height: $line-rise;
+    border-width: $line-w $line-w 0 $line-w;
+    border-radius: $line-r $line-r 0 0;
+  }
+
+  // Bottom row: out of the right edge, down under the gap, across and up into the next step's bottom.
+  &:is(:nth-child(4), :nth-child(5))::after {
+    left: 100%;
+    top: calc(50% - #{$line-w} / 2);
+    width: calc(#{$method-gap} / 2 + #{$line-w} / 2);
+    height: calc(50% + #{$line-w} / 2 + #{$line-rise} - #{$line-r});
+    border-width: $line-w $line-w 0 0;
+    border-top-right-radius: $line-r;
+  }
+  &:is(:nth-child(5), :nth-child(6))::before {
+    left: calc(-#{$method-gap} / 2 - #{$line-w} / 2);
+    top: 100%;
+    width: calc(50% + #{$method-gap} / 2 + #{$line-w});
+    height: $line-rise;
+    border-width: 0 $line-w $line-w $line-w;
+    border-radius: 0 0 $line-r $line-r;
   }
 
   // Step 03 to step 04: down into the row gap, back across to the first column, down again.
-  &:nth-child(3)::after,
-  &:nth-child(4)::before {
-    left: 50%;
-    width: $method-squiggle;
-    height: $method-gap * 0.5;
-    margin-left: calc(#{$method-squiggle} / -2);
-    -webkit-mask: $squiggle-v no-repeat round center / 100% auto;
-    mask: $squiggle-v no-repeat round center / 100% auto;
+  &:nth-child(3)::after {
+    right: calc(50% - #{$line-w} / 2);
+    top: 100%;
+    width: calc(200% + #{$method-gap} * 2 + #{$line-w} - #{$line-r});
+    height: calc(#{$method-gap} / 2 + #{$line-w} / 2);
+    border-width: 0 $line-w $line-w 0;
+    border-bottom-right-radius: $line-r;
   }
-  &:nth-child(3)::after { top: 100%; }
-  &:nth-child(4)::before { bottom: 100%; }
-
-  &:nth-child(3)::before {
-    right: 50%;
-    top: calc(100% + #{$method-gap * 0.5});
-    width: calc(200% + #{$method-gap * 2});
-    height: $method-squiggle;
-    margin-top: calc(#{$method-squiggle} / -2);
-    -webkit-mask: $squiggle-h round no-repeat center / auto 100%;
-    mask: $squiggle-h round no-repeat center / auto 100%;
+  &:nth-child(4)::before {
+    left: calc(50% - #{$line-w} / 2);
+    bottom: 100%;
+    width: $line-r;
+    height: calc(#{$method-gap} / 2 + #{$line-w} / 2);
+    border-width: $line-w 0 0 $line-w;
+    border-top-left-radius: $line-r;
   }
 }
 
-// One column: a short vertical squiggle under every step except the last.
+// One column: a short straight line under every step except the last.
 @media (max-width: 991.98px) {
   .method-steps .method-step::before { display: none; }
   .method-steps .method-step:not(:last-child)::after {
-    left: 50%;
+    left: calc(50% - #{$line-w} / 2);
     top: 100%;
-    width: $method-squiggle;
+    right: auto;
+    width: $line-w;
     height: $method-gap;
-    margin: 0 0 0 calc(#{$method-squiggle} / -2);
-    -webkit-mask: $squiggle-v no-repeat round center / 100% auto;
-    mask: $squiggle-v no-repeat round center / 100% auto;
+    border: 0;
+    border-radius: 0;
+    background: $line-col;
   }
 }
 
 /* ---- Methodology: description card that opens over a step on hover or keyboard focus
    (tabindex on the step makes a tap or Tab reveal it too). Same width as the step,
-   square top-left corner so it reads as the step box opening up. */
+   square top-left corner so it reads as the step box opening up. It starts a third of the way
+   down, so the top third of the step stays visible above it. */
 .method-step {
   &:focus { outline: none; }
   &:focus-visible { outline: 3px solid $accent; outline-offset: 4px; }
 
   .method-step-card {
     position: absolute;
-    top: 0;
+    top: 33.333%;
     left: 0;
     z-index: 3;
     width: 100%;
@@ -2174,4 +2204,9 @@ $squiggle-v: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' w
 @media (max-width: 767.98px) {
   .ghg-link-card.has-img { grid-template-columns: 1fr; }
   .ghg-link-card.has-img .ghg-link-card-img img { height: auto; }
+}
+
+// Phones: the paragraphs in the first section after each page's banner step down from 30px.
+@media (max-width: 767.98px) {
+  .che-indicators > p, .where-section > p, .where-section > section > p, .method-process > p, .method-process > section > p, .story-arc > p, .story-arc > section > p, .res-reports > p, .res-reports > section > p, .gci-hero + .gci-section > p:nth-of-type(-n+2), .gci-hero + .gci-section > section > p:nth-of-type(-n+2) { font-size: 1.25rem; }
 }
