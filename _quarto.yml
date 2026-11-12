@@ -39,7 +39,7 @@ website:
             href: about.qmd
           - text: "Where We’re Heading"
             href: where-were-heading.qmd
-      - text: "The Whole Story"
+      - text: "Emissions & Climate Resources"
         menu:
           - text: "Emissions & Climate Resources"
             href: emissions-and-climate-resources.qmd

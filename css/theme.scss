@@ -167,6 +167,15 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   color: $ink;
 }
 
+// Sub headers (###) in page content. :where() keeps this at the lowest specificity,
+// so card titles and the footer column titles keep their own sizes.
+:where(main.content) h3 {
+  font-family: $font-inter;
+  font-weight: 800;
+  font-size: sc(36px);
+  line-height: 1.3;
+}
+
 p {
   margin-bottom: 8px;
 }
@@ -557,6 +566,11 @@ body:has(.home-band) main.content {
 }
 body:has(.home-band) .quarto-title-block { display: none; }
 
+// Quarto reserves a 60px row under <main> plus a bottom margin on it, which shows
+// as a white strip below the footer band. The footer is the last thing on the page.
+body:has(.home-footer) #quarto-content { grid-template-rows: [content-top] auto [content-bottom] 0 [page-bottom]; }
+body:has(.home-footer) main.content { margin-bottom: 0; }
+
 .home-band {
   width: 100vw;
   margin-left: calc(50% - 50vw);
@@ -577,12 +591,13 @@ body:has(.home-band) .quarto-title-block { display: none; }
   color: #fff;
   min-height: sc(894px);
   display: grid;
-  grid-template-columns: minmax(0, sc(855px)) 1fr;
+  grid-template-columns: minmax(0, sc(700px)) 1fr;
   align-items: center;
   column-gap: 2rem;
 
   .home-hero-text h2 { font-size: sc(55px); line-height: sc(60px); color: #fff; margin-bottom: sc(24px); }
-  p { font-size: sc(20px); max-width: sc(665px); }
+  p { font-size: sc(22px); max-width: sc(665px); }
+  .home-hero-text p:first-of-type { font-family: $font-krub; font-weight: 400; font-size: sc(30px); }
   a { color: #fff; }
 
   .home-hero-img {
@@ -591,7 +606,8 @@ body:has(.home-band) .quarto-title-block { display: none; }
     // Fills whatever the text column leaves, rather than a fixed width.
     width: 100%;
 
-    img { width: 100%; height: auto; display: block; margin: 0; }
+    // Capped taller than the banner min-height, so the banner grows with the graphic.
+    img { width: auto; max-width: 100%; max-height: sc(1150px); height: auto; display: block; margin: 0 0 0 auto; }
   }
 }
 
@@ -601,7 +617,6 @@ body:has(.home-band) .quarto-title-block { display: none; }
 
   p {
     border-left: 4px solid $green;
-    box-shadow: -2px 0 8px rgba($green, 0.2);
     padding: sc(20px) 0 sc(20px) sc(24px);
     max-width: sc(1061px);
     font-size: sc(21px);
@@ -677,6 +692,7 @@ body:has(.home-band) .quarto-title-block { display: none; }
 }
 
 .home-footer {
+  margin-top: sc(100px);
   background: $footer-grey;
   color: #fff;
   padding-top: sc(129px);
@@ -745,7 +761,8 @@ body:has(.home-band) .quarto-title-block { display: none; }
   padding-bottom: sc(59px);
 
   h2 { font-size: sc(55px); line-height: 1.12; color: #fff; margin-bottom: sc(30px); }
-  p { font-size: sc(20px); line-height: 1.6; max-width: sc(1293px); margin-bottom: sc(28px); }
+  p { font-size: sc(22px); line-height: 1.6; max-width: sc(1293px); margin-bottom: sc(28px); }
+  p:first-of-type { font-family: $font-krub; font-weight: 400; font-size: sc(30px); }
   p:last-child { margin-bottom: 0; }
 }
 
@@ -844,7 +861,8 @@ body:has(.home-band) .quarto-title-block { display: none; }
   padding-bottom: sc(96px);
 
   h2 { font-size: sc(55px); line-height: 1.12; color: #fff; margin-bottom: sc(28px); }
-  p { font-size: sc(20px); line-height: 1.6; max-width: sc(970px); }
+  p { font-size: sc(22px); line-height: 1.6; max-width: sc(970px); }
+  p:first-of-type { font-family: $font-krub; font-weight: 400; font-size: sc(30px); }
 }
 
 .where-section {
@@ -922,6 +940,7 @@ body:has(.home-band) .quarto-title-block { display: none; }
   .about-intro p, .about-collab p, .about-section p, .about-find p { font-size: 1rem; }
   .where-intro h2, .where-section h2, .where-users h2, .where-next h2 { font-size: 2rem; }
   .where-intro p, .where-section p, .where-users p, .where-next p, .where-next li { font-size: 1rem; }
+  .home-hero-text p:first-of-type, .about-intro p:first-of-type, .where-intro p:first-of-type, .che-indicators > p:first-of-type { font-size: 1.25rem; }
 }
 
 /* ---- Methodology, from the Figma frame. Reuses .home-band and the footer. */
@@ -934,7 +953,7 @@ body:has(.home-band) .quarto-title-block { display: none; }
   justify-content: center;
 
   h2 { font-size: sc(55px); line-height: 1.2; font-weight: 900; color: #fff; margin-bottom: sc(24px); }
-  p { font-size: sc(20px); line-height: 1.6; max-width: sc(544px); }
+  p { font-size: sc(22px); line-height: 1.6; max-width: sc(544px); }
 }
 
 .method-process {
@@ -1066,6 +1085,8 @@ $story-mist: $green-tint;
   font-size: sc(20px);
   line-height: 1.55;
   max-width: sc(1313px);
+  margin-left: auto;
+  margin-right: auto;
 
   p { max-width: sc(608px); margin-bottom: sc(20px); }
   .story-link { font-family: $font-inter; font-size: 15px; font-weight: 600; color: #000; text-decoration: none; }
@@ -1111,6 +1132,8 @@ $story-mist: $green-tint;
   padding: sc(28px) sc(29px);
   margin-top: sc(34px);
   max-width: sc(1319px);
+  margin-left: auto;
+  margin-right: auto;
 
   .story-org-title { display: block; font-family: $font-inter; font-size: sc(32px); font-weight: 600; line-height: 1.12; margin-bottom: sc(20px); }
   p { font-size: sc(18px); max-width: sc(504px); }
@@ -1395,7 +1418,7 @@ $res-card-bg: $teal-light;
   justify-content: center;
 
   h2 { font-size: sc(55px); line-height: 1.12; color: #fff; margin-bottom: sc(25px); }
-  p { font-size: sc(20px); line-height: 1.6; max-width: sc(544px); }
+  p { font-size: sc(22px); line-height: 1.6; max-width: sc(544px); }
 }
 
 .res-reports {
@@ -1428,6 +1451,13 @@ $res-card-bg: $teal-light;
   > p:first-child { font-family: $font-inter; }
   p { font-family: $font-krub; font-size: sc(20px); line-height: 1.45; margin-top: sc(26px); }
   .res-card-link { color: #fff; font-family: $font-krub; font-size: sc(20px); text-decoration: underline; }
+
+  // Body text on the left, the report cover beside it on the right.
+  .res-card-row { display: flex; align-items: flex-start; gap: sc(30px); margin-top: sc(26px); }
+  .res-card-text { flex: 1 1 auto; min-width: 0; }
+  .res-card-text > p:first-child { margin-top: 0; }
+  .res-card-row > p { flex: 0 0 sc(190px); margin: 0; }
+  .res-card-cover { display: block; width: 100%; height: auto; border-radius: 4px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); }
 }
 
 .res-tools {
@@ -1468,7 +1498,7 @@ $ghg-ink:  #0C0D1B;
   justify-content: center;
 
   h2 { font-size: sc(55px); line-height: 1.2; color: #fff; margin-bottom: sc(25px); }
-  p { font-size: sc(20px); line-height: 1.6; max-width: sc(544px); }
+  p { font-size: sc(22px); line-height: 1.6; max-width: sc(544px); }
 }
 
 .ghg-why-wrap { padding-top: sc(136px); padding-bottom: sc(80px); }
@@ -1512,7 +1542,7 @@ $ghg-ink:  #0C0D1B;
   h2 { font-size: sc(55px); line-height: 1.2; max-width: sc(1088px); margin-bottom: sc(30px); }
 }
 
-.ghg-table-wrap { overflow-x: auto; border-radius: 15px 15px 0 0; }
+.ghg-table-wrap { overflow-x: auto; }
 
 .ghg-table {
   width: 100%;
@@ -1537,7 +1567,7 @@ $ghg-ink:  #0C0D1B;
   p { margin-bottom: 12px; }
 }
 
-.ghg-refs-wrap { padding-bottom: sc(60px); }
+.ghg-refs-wrap { padding-bottom: sc(120px); }
 
 .ghg-refs {
   background: #757575;
@@ -1547,7 +1577,7 @@ $ghg-ink:  #0C0D1B;
   font-size: 13.5px;
   line-height: 1.6;
 
-  .ghg-refs-title { display: block; font-family: $font-inter; font-size: sc(24px); font-weight: 800; margin-bottom: 21px; }
+  .ghg-refs-title { display: block; font-family: $font-inter; font-size: sc(35px); font-weight: 700; margin-bottom: 21px; }
   p { margin: 0; }
   a { color: #F5F5F5; text-decoration: underline; }
 }
@@ -1563,13 +1593,22 @@ $ghg-ink:  #0C0D1B;
 }
 
 .ghg-section {
-  padding-top: sc(60px);
-  padding-bottom: sc(40px);
+  padding-top: sc(100px);
+  padding-bottom: sc(60px);
   color: $ghg-ink;
 
   h2 { font-size: sc(55px); line-height: 1.3; margin-bottom: sc(20px); }
-  h3 { font-size: sc(36px); font-style: italic; line-height: 1.3; margin-bottom: sc(30px); }
+  h3 { font-size: sc(36px); line-height: 1.3; margin-bottom: sc(30px); }
   p { font-size: 18px; line-height: 1.6; max-width: sc(1312px); margin-bottom: 1.2em; }
+}
+
+// Grey rule above each Greenhouse Gases section that opens with an h2.
+body:has(.ghg-refs-wrap) .ghg-section:has(h2)::before {
+  content: "";
+  display: block;
+  height: 2px;
+  background: $ghg-rule;
+  margin-bottom: sc(50px);
 }
 
 .ghg-figure-title { display: block; font-size: 16px; font-weight: 700; line-height: 1.4; margin-top: sc(20px); }
@@ -1615,7 +1654,7 @@ img.ghg-figure-img { display: block; max-width: sc(976px); width: 100%; height: 
   justify-content: center;
 
   h2 { font-size: sc(55px); line-height: 1.2; color: #fff; margin-bottom: sc(25px); }
-  p { font-size: sc(20px); line-height: 1.6; max-width: sc(562px); margin-bottom: 1.2em; }
+  p { font-size: sc(22px); line-height: 1.6; max-width: sc(562px); margin-bottom: 1.2em; }
   a { color: #fff; text-decoration: underline; }
 }
 
@@ -1664,7 +1703,6 @@ $cat-card-border: #C8C8C8;
 .cat-intro {
   max-width: sc(833px);
   border-left: 3px solid $green;
-  box-shadow: -2px 0 8px rgba($green, 0.2);
   padding: sc(30px) 0 sc(30px) sc(28px);
   margin-bottom: sc(60px);
   font-size: sc(24px);
@@ -1767,7 +1805,7 @@ $cat-card-border: #C8C8C8;
   padding-left: 0;
 
   h2 { font-size: sc(55px); line-height: sc(60px); color: #fff; margin-bottom: sc(24px); }
-  p { font-size: sc(20px); line-height: 1.5; max-width: sc(658px); }
+  p { font-size: sc(22px); line-height: 1.5; max-width: sc(658px); }
 
   // Flush to the right edge and the full band height, as in the Figma frame.
   padding-right: 0;
@@ -1776,7 +1814,9 @@ $cat-card-border: #C8C8C8;
     align-self: stretch;
     width: 100%;
     // The hero's own `p` rule caps paragraph width; the photo wrapper is a <p> too.
-    p { margin: 0; height: 100%; max-width: none; }
+    // Absolute fill: the photo never sets the banner height (see .hero-split-img).
+    position: relative;
+    p { position: absolute; inset: 0; margin: 0; max-width: none; }
     img { width: 100%; height: 100%; object-fit: cover; display: block; margin: 0; }
   }
 }
@@ -1793,7 +1833,9 @@ $cat-card-border: #C8C8C8;
   }
   > h2 { padding-top: sc(8px); }
   > p:first-of-type {
-    font-size: sc(31px);
+    font-family: $font-krub;
+    font-weight: 400;
+    font-size: sc(30px);
     padding-bottom: sc(8px);
     margin-bottom: sc(40px);
   }
@@ -1887,7 +1929,7 @@ $cat-card-border: #C8C8C8;
 @media (max-width: 767.98px) {
   .che-hero { grid-template-columns: 1fr; padding-top: 2rem; padding-bottom: 0; padding-left: 1.5rem; padding-right: 1.5rem; }
   .che-hero.home-band > section.che-hero-text.level2 { padding-left: 0; padding-right: 0; }
-  .che-hero .che-hero-img { justify-self: start; width: 100%; margin-top: 1.5rem; }
+  .che-hero .che-hero-img { justify-self: start; width: 100%; margin-top: 1.5rem; aspect-ratio: 629 / 762; }
   .che-cards { grid-template-columns: 1fr; grid-template-rows: none; grid-auto-flow: row; }
   .che-card .che-card-img { height: 120px; }
   .che-about { padding: 2rem 1.5rem; }
@@ -1913,7 +1955,10 @@ $cat-card-border: #C8C8C8;
   .hero-split-img {
     align-self: stretch;
     // The hero's own `p` rule caps paragraph width; the photo wrapper is a <p> too.
-    p { margin: 0; height: 100%; max-width: none; }
+    // The photo fills the row without setting its height, so a wider photo never
+    // makes the banner taller than its min-height.
+    position: relative;
+    p { position: absolute; inset: 0; margin: 0; max-width: none; }
     img { width: 100%; height: 100%; object-fit: cover; display: block; margin: 0; }
   }
 }
@@ -1946,7 +1991,8 @@ $cat-card-border: #C8C8C8;
 @media (max-width: 767.98px) {
   .hero-split { grid-template-columns: 1fr; padding-top: 2rem; padding-bottom: 0; padding-left: 1.5rem; padding-right: 1.5rem; }
   .hero-split.home-band > section.hero-split-text.level2 { padding-left: 0; padding-right: 0; }
-  .hero-split .hero-split-img { margin-top: 1.5rem; }
+  // Stacked, the absolutely filled photo needs its own height.
+  .hero-split .hero-split-img { margin-top: 1.5rem; aspect-ratio: 756 / 762; }
 }
 
 /* ---- Emissions & Climate Resources: card with the photo on the left, and the two

@@ -36,18 +36,32 @@ The climate change scientific literature is extensive. Connections between human
 ::: {.res-card}
 [The Impacts of Climate Change on Human Health in the United States:]{.res-card-title} A Scientific Assessment (2016).
 
+::: {.res-card-row}
+::: {.res-card-text}
 The scientific report by the U.S. Global Change Research Program (USGCRP) synthesizes and discusses the effects of climate change on public health and social and environmental disparities based on peer-reviewed scientific literature
 
 
 [Read Here](THE_IMPACTS_OF_CLIMATE_CHANGE_ON_HUMAN_H-compressed.pdf){.res-card-link download="The-Impacts-of-Climate-Change-on-Human-Health-in-the-United-States-2016.pdf"}
 :::
 
+![](images/impact_of_climate_cover.jpg){.res-card-cover fig-alt=""}
+:::
+
+:::
+
 ::: {.res-card}
 [Climate Change 2023:]{.res-card-title} Synthesis Report. Contribution of Working Groups I, II, and III to the Sixth Assessment Report of the Intergovernmental Panel on Climate Change.
 
+::: {.res-card-row}
+::: {.res-card-text}
 The IPCC report summarizes scientific knowledge about global climate change, climate impacts and risks, associated uncertainties and potential mitigation pathways.
 
 [Read Here](https://www.ipcc.ch/assessment-report/ar6/){.res-card-link}
+:::
+
+![](images/climate_change_cover.png){.res-card-cover fig-alt=""}
+:::
+
 :::
 
 ::: {.res-card}
@@ -61,9 +75,16 @@ Developed by the U.S. Global Change Research Program (USGCRP) this report is the
 ::: {.res-card}
 [Effects of Human-Caused Greenhouse Gas Emissions on U.S. Climate, Health, and Welfare (2025).]{.res-card-title}
 
+::: {.res-card-row}
+::: {.res-card-text}
 The U.S. National Academies of Sciences, Engineering, and Medicine assessment of how human-caused greenhouse gas emissions affect U.S. climate, health, and welfare.
 
 [Read Here](https://www.nationalacademies.org/read/29239/chapter/1){.res-card-link}
+:::
+
+![](images/effects_of_ghg_cover_cropped.jpg){.res-card-cover fig-alt=""}
+:::
+
 :::
 :::
 :::
