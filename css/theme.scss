@@ -1767,16 +1767,19 @@ $cat-card-border: #C8C8C8;
 .cat-viewall {
   display: block;
   width: fit-content;
-  margin: sc(60px) auto 0;
-  background: $home-charcoal;
-  color: #F5F5F5 !important;
+  margin: sc(60px) 0 0 auto;
+  background: #fff;
+  color: $accent !important;
+  border: 1px solid $accent;
   font-family: $font-inter;
   font-size: 20px;
   font-weight: 900;
   text-decoration: none !important;
-  border-radius: 20px;
+  border-radius: 0;
   padding: 12px 36px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+
+  // Hover matches the listing's page numbers: darker blue on a light grey fill.
+  &:hover { color: shade-color($accent, 20%) !important; border-color: shade-color($accent, 20%); background: $gray-100; }
 }
 
 @media (max-width: 991.98px) {
