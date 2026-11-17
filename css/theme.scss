@@ -1588,6 +1588,7 @@ $ghg-ink:  #0C0D1B;
 
   h2 { font-size: sc(55px); line-height: 1.12; color: #fff; margin-bottom: sc(26px); }
   p { font-size: sc(20px); line-height: 1.6; max-width: sc(1100px); margin-bottom: sc(24px); }
+  a { color: #fff; text-decoration: underline; font-weight: inherit; }
 }
 
 .ghg-section {
@@ -1660,7 +1661,7 @@ img.ghg-figure-img { display: block; max-width: sc(976px); width: 100%; height: 
   h2 { font-size: sc(55px); }
   p { font-size: sc(21px); line-height: 1.6; }
 }
-.gci-hero + .gci-section > p:nth-of-type(-n+2), .gci-hero + .gci-section > section > p:nth-of-type(-n+2) { font-family: $font-krub; font-weight: 400; font-size: sc(30px); }
+.gci-hero + .gci-section > p:nth-of-type(-n+2), .gci-hero + .gci-section > section > p:nth-of-type(-n+2), .gci-sea > p:nth-of-type(-n+3), .gci-sea > section > p:nth-of-type(-n+3) { font-family: $font-krub; font-weight: 400; font-size: sc(30px); }
 
 @media (max-width: 767.98px) {
   .gci-hero h2, .gci-section h2 { font-size: 2rem; }
@@ -1911,6 +1912,7 @@ $cat-card-border: #C8C8C8;
   h2 { font-size: sc(55px); line-height: 1.12; color: #fff; margin-bottom: sc(28px); }
   p { font-size: sc(18px); line-height: 1.6; margin-bottom: 1.4em; }
   p:last-child { margin-bottom: 0; }
+  a { color: #fff; text-decoration: underline; }
 }
 
 .che-refs {

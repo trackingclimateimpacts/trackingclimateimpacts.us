@@ -18,7 +18,7 @@ anchor-sections: false
 
 Multiple metrics provide clear signals of global change in temperature, sea level, ice sheets, ocean heat, and more. Several key indicators are highlighted here. Extensive documentation and discussion regarding drivers of climate change, earth systems, attribution, and variability can also be found in the climate assessment literature linked at [Additional Climate Change Resources](additional-resources.qmd).
 
-A more complete set of indicators and narratives focused on climate drivers and variability can be found at [climate.us](https://www.climate.us/). We provide several examples from climate.us (CC BY-SA 4.0 Attribution-ShareAlike 4.0 International).
+A more complete set of indicators and narratives focused on climate drivers and variability can be found at [Climate.us](https://www.climate.us/). We provide several examples from Climate.us (CC BY-SA 4.0 Attribution-ShareAlike 4.0 International).
 :::
 
 ::: {.hero-split-img}
@@ -42,10 +42,10 @@ Excerpted from U.S. Environmental Protection Agency. (2024). Climate change indi
 
 Given the tremendous size and heat capacity of the global oceans, it takes a massive amount of added heat energy to raise Earth’s average surface temperature even a small amount. The roughly 2-degree-Fahrenheit (1-degree-Celsius) increase in global average surface temperature that has occurred since the pre-industrial era (1850-1900 in NOAA's record) might seem small, but it represents a significant increase in heat energy circulating through all parts of the Earth system, including the oceans, frozen landscapes, and the atmosphere.
 
-Earth’s temperature has risen by an average of 0.11° Fahrenheit (0.06° Celsius) per decade since 1850, or about 2° F in total. The rate of warming since the early 1980s is more than three times as fast: 0.38° F (0.21° C) per decade. 2025 was the third-warmest year since global records began in 1850 according to NOAA's record. The 10 warmest years in the 176-year record have all occurred since 2015. (climate.us)
+Earth’s temperature has risen by an average of 0.11° Fahrenheit (0.06° Celsius) per decade since 1850, or about 2° F in total. The rate of warming since the early 1980s is more than three times as fast: 0.38° F (0.21° C) per decade. 2025 was the third-warmest year since global records began in 1850 according to NOAA's record. The 10 warmest years in the 176-year record have all occurred since 2015. (Climate.us)
 :::
 
-::: {.home-band .ghg-section .gci-section}
+::: {.home-band .ghg-section .gci-section .gci-sea}
 ## Global Sea Level
 
 As the temperature of the Earth changes, so does sea level. Temperature and sea level are linked for two main reasons. First, changes in the volume of water and ice on land (namely glaciers and ice sheets) can increase or decrease the volume of water in the ocean. Second, as water warms, it expands slightly—an effect that is cumulative over the entire depth of the oceans.
@@ -54,15 +54,15 @@ Changing sea level can affect human activities in coastal areas. Rising sea leve
 
 The sea level changes that affect coastal systems involve more than expanding oceans, however, because the Earth’s continents can also rise and fall relative to the oceans. Land can rise through processes such as sediment accumulation (the process that built the Mississippi River delta) and geological uplift (for example, as glaciers melt and the land below is no longer weighed down by heavy ice). In other areas, land can sink because of erosion, sediment compaction, natural subsidence (sinking due to geologic changes), groundwater withdrawal, or engineering projects that prevent rivers from naturally depositing sediments along their banks. Changes in ocean currents such as the Gulf Stream can also affect sea level by pushing more water against some coastlines and pulling it away from others, raising or lowering sea levels accordingly.
 
-Excerpted from U.S. Environmental Protection Agency. (2024). Climate change indicators in the United States (Fifth ed., EPA 430-R-24-003).
+(Excerpted from U.S. Environmental Protection Agency. (2024). Climate change indicators in the United States (Fifth ed., EPA 430-R-24-003).)
 
-As Earth's temperatures rise, so does sea level. Water lost from melting glaciers and ice sheets ends up in the oceans, directly contributing to rising sea level. Warmer ocean temperatures also cause the water itself to expand. The climate.us figures below show long-term trends in Global Sea Level, Ocean Heat and Glacier Mass Balance.
+As Earth's temperatures rise, so does sea level. Water lost from melting glaciers and ice sheets ends up in the oceans, directly contributing to rising sea level. Warmer ocean temperatures also cause the water itself to expand. The Climate.us figures below show long-term trends in Global Sea Level, Ocean Heat and Glacier Mass Balance.
 
 Global average sea level has risen at least 8–9 inches (21–24 centimeters) since 1880. In 2024, global average sea level set a new record high—105.8 mm (4.17 inches) above the 1993 average. The rate of global sea level rise is accelerating. The average yearly increase from 2006-2015 (0.14 inches, or 3.6 millimeters, per year) was more than twice as fast as the average over most of the twentieth century (0.06 inches, or 1.4 millimeters, per year).
 
 The ocean is storing an estimated 9/10 of the excess heat energy trapped in the Earth's climate system by excess greenhouse gases. Increasing ocean heat content is contributing to sea level rise, ocean heat waves and coral bleaching, heavier rain events, and melting of ocean-terminating glaciers and ice sheets around Greenland and Antarctica.
 
-Worldwide, most glaciers are shrinking or disappearing altogether. The “climate reference glaciers” tracked by the World Glacier Monitoring Service have lost ice mass equivalent to more than 30 meters of liquid water through 2025—the same as slicing roughly 33 meters (108 feet) of ice off the entire surface of each glacier in the network. Glaciers have shrunk every year for the past 39 years. Ice loss in mountain glaciers is accelerating with each of the last three complete decades has brought bigger declines than the decade before. Melting glaciers and ice sheets are the biggest cause of sea level rise in recent decades. (climate.us)
+Worldwide, most glaciers are shrinking or disappearing altogether. The “climate reference glaciers” tracked by the World Glacier Monitoring Service have lost ice mass equivalent to more than 30 meters of liquid water through 2025—the same as slicing roughly 33 meters (108 feet) of ice off the entire surface of each glacier in the network. Glaciers have shrunk every year for the past 39 years. Ice loss in mountain glaciers is accelerating with each of the last three complete decades has brought bigger declines than the decade before. Melting glaciers and ice sheets are the biggest cause of sea level rise in recent decades. (Climate.us)
 
 ![](images/glocal_2.png){.ghg-figure-img fig-alt="Global sea level change since 1880 compared to the 1993-2008 average"}
 
