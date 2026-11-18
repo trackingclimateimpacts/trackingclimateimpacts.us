@@ -45,14 +45,18 @@ jobs:
           install.packages('remotes')
           saveRDS(remotes::dev_package_deps(dependencies = TRUE), ".github/depends.Rds", version = 2)
           writeLines(sprintf("R-%i.%i", getRversion()$major, getRversion()$minor), ".github/R-version")
+          file.copy("/etc/os-release", ".github/os-release", overwrite = TRUE)
         shell: Rscript {0}
 
       - name: Cache R packages
         uses: actions/cache@v4
         with:
           path: ${{ env.R_LIBS_USER }}
-          key: ${{ runner.os }}-${{ env.R_VERSION }}-1-${{ hashFiles('.github/depends.Rds') }}
-          restore-keys: ${{ runner.os }}-${{ env.R_VERSION }}-1-
+          # The os-release hash keeps a cache built against one Ubuntu release's
+          # system libraries from being restored onto another: sf binaries built
+          # on 24.04 link libgdal.so.34, which 26.04 no longer ships.
+          key: ${{ runner.os }}-${{ hashFiles('.github/os-release') }}-${{ env.R_VERSION }}-1-${{ hashFiles('.github/depends.Rds') }}
+          restore-keys: ${{ runner.os }}-${{ hashFiles('.github/os-release') }}-${{ env.R_VERSION }}-1-
 
       - name: Install R dependencies
         run: |
