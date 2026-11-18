@@ -49,7 +49,9 @@ References
 
 The University of Maryland’s Center for Global Sustainability provides comprehensive information regarding greenhouse gas emissions and sinks in the United States, including quantities of specific gases being emitted and from what economic sectors. While not an official national inventory, the GHGIA provides the *Greenhouse Gas Inventory and Analysis for the United States, 1990-2024., Also available: Methodology Report for Greenhouse Gas Inventory and Analysis by U.S. State, 1990-2024*, and an accompanying State Inventory Tool.
 
-**Here, we provide several examples from the GHGIA.**
+**Here, we provide several examples from the [GHGIA](https://ghgi.cgs.umd.edu/).**
+
+Citation: Desai, M., Camobreco, V., Hedger, T., Irving, W., Rewcastle, K., Steller, J., Barbieri, L., Weitz, M., Murumkar, T., Fawcett, A., Lou, J., Cui, R., & Hultman, N. (2026). Greenhouse Gas Inventory and Analysis for the United States: 1990-2024. Center for Global Sustainability, University of Maryland, College Park. <https://doi.org/10.13016/g1xw-qftw>
 
 ## Summary of Trends
 
@@ -101,7 +103,7 @@ Additional information and clarification pertaining to the historical global GHG
 
 ### Carbon Dioxide
 
-Each year, human activities release more carbon dioxide into the atmosphere than natural processes can remove, raising atmospheric carbon dioxide levels. The global average carbon dioxide set a new record high in 2025: 425.62 parts per million (“ppm” for short). The increase over 2024 amounts was 2.83 ppm, which makes it the third-largest one-year increase on record. Atmospheric carbon dioxide is now 50 percent higher than it was before the Industrial Revolution. The annual rate of increase in atmospheric carbon dioxide over the past 60 years is about 100 times faster than previous natural increases, such as those that occurred at the end of the last ice age 11,000-17,000 years ago. (climate.us)
+Each year, human activities release more carbon dioxide into the atmosphere than natural processes can remove, raising atmospheric carbon dioxide levels. The global average carbon dioxide set a new record high in 2025: 425.62 parts per million (“ppm” for short). The increase over 2024 amounts was 2.83 ppm, which makes it the third-largest one-year increase on record. Atmospheric carbon dioxide is now 50 percent higher than it was before the Industrial Revolution. The annual rate of increase in atmospheric carbon dioxide over the past 60 years is about 100 times faster than previous natural increases, such as those that occurred at the end of the last ice age 11,000-17,000 years ago. (Climate.us)
 
 ![Monthly average carbon dioxide at Mauna Loa Observatory since 1958](images/graph_6.png)
 
@@ -115,13 +117,13 @@ This indicator describes how the levels of major greenhouse gases in the atmosph
 
 [Explore →](indicators/atmospheric-concentrations.llms.md)
 
-![Smokestacks at an industrial plant releasing plumes of smoke into a blue sky above a forest](images/emissions_card.jpg)
+![Mauna Loa Observatory station buildings and instrument towers with a volcanic mountain behind them](images/manua_loa.jpeg)
 
 ## Heating Influence
 
 Unlike oxygen and nitrogen, the most abundant gases in the atmosphere which are transparent to outgoing heat, greenhouse gases absorb heat energy and radiate it back into their surroundings, including back toward Earth’s surface. Without them, Earth’s average surface temperature would be below freezing instead of around 60 degrees Fahrenheit. Since the onset of the Industrial Revolution, human activities have been adding heat-trapping gases to the atmosphere. By adding extra greenhouse gases, we are amplifying the natural greenhouse effect and causing Earth’s surface temperature to rise.
 
-How much are human-produced greenhouse gases influencing today’s climate? NOAA’s Annual Greenhouse Gas Index (“AGGI”) estimates the direct warming influence of human-produced greenhouse gases has risen 54 percent since 1990. Most of the warming influence (66 percent) is due to carbon dioxide. Methane is the second-largest contributor (16 percent). The third-largest contributor is the chlorofluorocarbons (CFCs) category (8.4 percent). (Although CFCs are now controlled, because they are extremely long-lived in the atmosphere, they continue to play a role in Earth’s heating imbalance.) climate.us
+How much are human-produced greenhouse gases influencing today’s climate? NOAA’s Annual Greenhouse Gas Index (“AGGI”) estimates the direct warming influence of human-produced greenhouse gases has risen 54 percent since 1990. Most of the warming influence (66 percent) is due to carbon dioxide. Methane is the second-largest contributor (16 percent). The third-largest contributor is the chlorofluorocarbons (CFCs) category (8.4 percent). (Although CFCs are now controlled, because they are extremely long-lived in the atmosphere, they continue to play a role in Earth’s heating imbalance.) (Climate.us)
 
 ![Heating influence of major human-produced greenhouse gases since 1750](images/graph_7.png)
 
