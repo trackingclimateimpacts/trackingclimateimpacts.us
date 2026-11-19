@@ -62,7 +62,7 @@ This indicator describes how sea level has changed over time.
 
 ![Sea level](images/sea_level.png)
 
-References
+## References
 
 ¹ Marvel, K., Su, W., Delgado, R., Aarons, S., Chatterjee, A., Garcia, M. E., Hausfather, Z., Hayhoe, K., Hence, D. A., Jewett, E. B., Robel, A., Singh, D., Tripati, A., & Vose, R. S. (2023). Chapter 2: Climate trends. In USGCRP (U.S. Global Change Research Program), Fifth National Climate Assessment. <https://doi.org/10.7930/NCA5.2023.CH2>
 
