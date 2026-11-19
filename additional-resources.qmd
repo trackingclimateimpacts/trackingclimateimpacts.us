@@ -30,7 +30,9 @@ anchor-sections: false
 
 The climate change scientific literature is extensive. Connections between human activities, climate change, and resulting impacts are synthesized in major scientific assessments.
 
+::: {.res-lead}
 **We provide several suggestions here:**
+:::
 
 ::: {.res-cards}
 ::: {.res-card}

@@ -79,7 +79,7 @@ We highlight material from two organizations (further information can be found a
 
 **We highlight material from two organizations:**
 
-::: {.story-org}
+::: {.story-org .story-org-wide}
 
 ::: {.story-org-text}
 [Climate.us]{.story-org-title}

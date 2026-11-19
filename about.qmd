@@ -38,7 +38,7 @@ George Washington University’s [Climate and Health Institute (CHI)](https://cl
 
 :::
 
-::: {.home-band .about-section .ruled}
+::: {.home-band .about-section .about-next .ruled}
 ## Next Steps
 
 We are working towards updating these indicators to reflect emerging data, and, in particular, expanding and contextualizing U.S. impact indicators to reach new audiences and applications. The next phase will leverage growing research, support the development of new climate‑health expertise, and connect students, scientists, and practitioners to ensure indicators remain robust, accessible, and relevant.
