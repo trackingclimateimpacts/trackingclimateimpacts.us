@@ -56,7 +56,7 @@ The sea level changes that affect coastal systems involve more than expanding oc
 
 (Excerpted from U.S. Environmental Protection Agency. (2024). Climate change indicators in the United States (Fifth ed., EPA 430-R-24-003).)
 
-As Earth's temperatures rise, so does sea level. Water lost from melting glaciers and ice sheets ends up in the oceans, directly contributing to rising sea level. Warmer ocean temperatures also cause the water itself to expand. The Climate.us figures below show long-term trends in Global Sea Level, Ocean Heat and Glacier Mass Balance.
+The Climate.us figures below show long-term trends in Global Sea Level, Ocean Heat and Glacier Mass Balance.
 
 Global average sea level has risen at least 8–9 inches (21–24 centimeters) since 1880. In 2024, global average sea level set a new record high—105.8 mm (4.17 inches) above the 1993 average. The rate of global sea level rise is accelerating. The average yearly increase from 2006-2015 (0.14 inches, or 3.6 millimeters, per year) was more than twice as fast as the average over most of the twentieth century (0.06 inches, or 1.4 millimeters, per year).
 
